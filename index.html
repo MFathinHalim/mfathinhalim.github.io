@@ -1,894 +1,439 @@
 <!DOCTYPE html>
-<!-- saved from url=(0040)https://portofolio.mfathinhalim.repl.co/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-    />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M.Fathin Halim</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Montserrat:wght@500&display=swap"
-      rel="stylesheet"
-    />
-
-    <style type="text/css" media="screen">
-      body {
-        font-family: "Karla";
-	      cursor: none;
-      }
-
-html {
-  scroll-behavior: smooth;
-}
-/* Media query untuk perangkat dekstop (contoh: lebar layar minimal 768px) */
-@media (min-width: 768px) {
-  /* Aturan CSS tambahan untuk dekstop */
-  img:hover {
-    cursor: none;
-  }
-	#Name{
-		  font-size: 5vw !important; /* Misalnya, ukuran font diatur ke 5% dari lebar viewport */
-
-	}
-				/* CSS umum untuk kursor */
-#cursor {
-  position: fixed;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: white;
-  transition: transform 350ms ease;
-  transform: translate(-50%, -50%) scale(.3);
-  z-index: 3000;
-}
-
-.custom-cursor--link {
-  transform: translate(-50%, -50%) scale(.7) !important;
-}
-}
-
-      p {
-        text-align: justify;
-      }
-      h3 {
-        font-family: "Montserrat";
-      }
-      body::-webkit-scrollbar {
-        width: 0em; /* Lebar scrollbar */
-      }
-
-      body::-webkit-scrollbar-thumb {
-        background-color: darkgray; /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
-      }
-
-      body::-webkit-scrollbar-track {
-        background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
-      }
-      #Name {
-        font-family: "Space Mono", monospace;
-        transition:
-          background 0.3s,
-          color 0.3s,
-          border-radius 0.3s;
-				  font-size: 10vw; /* Misalnya, ukuran font diatur ke 5% dari lebar viewport */
-
-        display: inline; /* Mengikuti lebar teks */
-        background: -webkit-linear-gradient(#d76d77, #f27121);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      #link {
-        background: -webkit-linear-gradient(#d76d77, #f27121);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .bg-dark {
-        background: #090807!important;
-				color: #EFEBE9 !important;
-      }
-      .jumbotron {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), #090807),
-          url("https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?cs=srgb&dl=pexels-stephan-seeber-1261728.jpg&fm=jpg");
-
-        background-size: cover;
-        background-position: center;
-        color: white; /* Warna teks di dalam jumbotron */
-        text-align: center;
-      }
-
-      .card-body,
-      .card, .modal-header,
-      .modal-content,
-      .modal-body  {
-        background: #221E1C !important;
-      }
-      .btn-primary {
-        background: #A8A886 !important;
-				color: black;
-        border: none;
-      }
-      img {
-        border: 2px solid transparent;
-        border-image-source: linear-gradient(
-          to right,
-          rgba(215, 109, 119, 0.5),
-          rgba(242, 113, 33, 0.5)
-        ); /* Opasitas 50% pada linear gradient */
-        border-image-slice: 1;
-      }
-			.progress-container {
-  width: 100%;
-  height: 8px;
-  background: rgba(0,0,0,0);
-}
-
-.progress-bar {
-  height: 4px;
-  background: -webkit-linear-gradient(#d76d77, #f27121); /* Fix the missing closing parenthesis */
-  width: 0%;
-}
-
-    </style>
+    <!--Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet" />
+  <style type="text/css" media="screen">
+    body,
+    #who > h3,
+    #award > h3,
+    #skills > h3 {
+      font-family: "Montserrat";
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body::-webkit-scrollbar {
+      width: 0em; /* Lebar scrollbar */
+    }
 
-  <body class="bg-dark text-white" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-		<span class="cursor" id="cursor" style="left: 953px; top: 939px;"></span>
-<div class="progress-container fixed-top">
-    <div class="progress-bar" id="myBar" style="width: 100%;"></div>
-  </div>  
-    <header class="jumbotron text-center position-relative" id="learn-more" style="
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      ">
-      <h4 id="Name" data-value="M.FATHIN HALIM" class="display-2">
-        M.FATHIN HALIM
-      </h4>
-      <p class="lead" style="text-align: center">
-        Young
-        <mark style="
-            background: rgba(0, 0, 0, 0);
-            text-decoration: underline;
-            text-decoration-color: white;
-            color: white;
-          ">Programmer</mark>
-        With a Dream!
-      </p>
-      <div class="mt-3">
-        <a href="https://www.instagram.com/mfathin_halim/" class="btn btn-light mr-2 rounded-circle" role="button"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Doma-Tomoharu" class="btn btn-light mr-2 rounded-circle" role="button"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/" class="btn btn-light rounded-circle" role="button"><i class="fab fa-linkedin"></i></a>
+    body::-webkit-scrollbar-thumb {
+      background-color: darkgray; /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
+    }
+
+    body::-webkit-scrollbar-track {
+      background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
+    }
+    div {
+      font-family: "Karla";
+    }
+    :root {
+      --text: #eceeee;
+      --background: #030807;
+      --primary: #e28242;
+      --secondary: #756b6b;
+      --accent: #dd8241;
+    }
+    @media (min-width: 768px) {
+      /* Aturan CSS tambahan untuk dekstop */
+      body {
+        cursor: none;
+      }
+      /* CSS umum untuk kursor */
+      #cursor {
+        position: fixed;
+        pointer-events: none;
+        mix-blend-mode: difference;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: white;
+        transition: transform 350ms ease;
+        transform: translate(-50%, -50%) scale(0.3);
+        z-index: 3000;
+      }
+
+      .custom-cursor--link {
+        transform: translate(-50%, -50%) scale(0.7) !important;
+      }
+    }
+    body {
+      background: var(--background);
+      color: var(--text);
+    }
+    .bg-secondary {
+      background-color: var(--secondary);
+    }
+    strong,
+    h3 {
+      color: var(--accent);
+    }
+    .bg-orange-700 {
+      background-color: var(--primary) !important;
+    }
+    .bg-orange-700:hover {
+      background-color: var(--accent) !important;
+    }
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(0, 0, 0, 0);
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: -webkit-linear-gradient(
+        #d76d77,
+        #f27121
+      ); /* Fix the missing closing parenthesis */
+      width: 0%;
+    }
+  </style>
+  <body>
+    <div class="progress-container fixed m-0">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+    <span class="cursor" id="cursor" style="left: 953px; top: 939px"></span>
+
+    <section
+      class="bg-center bg-no-repeat max-h-screen-xl bg-[url('https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg')] bg-gray-700 bg-blend-multiply">
+      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+          M.Fathin Halim
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+          Embark on a Journey with M.Fathin Halim, a Passionate Middle School
+          Programmer, Fueled by Dreams and a Boundless Enthusiasm for Learning!
+        </p>
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+          <a
+            href="#who"
+            class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+            Who ?
+          </a>
+          <a
+            href="#"
+            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-lg bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Chat Here
+            <svg
+              class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 10">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        </div>
       </div>
-    </header>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <!-- Informasi teks disini -->
-          <h3>About M.Fathin Halim</h3>
-          <hr style="
-              border: none;
-              height: 2px;
-              background: linear-gradient(
-                to right,
-                #d76d77,
-                #f27121
-              ); /* Warna linear gradient */
-            ">
-          <p>
-              <strong id="link">M.Fathin Halim</strong> is a student
-              secondary school in Indonesia with a strong interest in <strong id="link">Programming</strong>
-              since childhood. He has a deep love for Japan and
-              the technology. Fathin has developed various innovative applications,
-              Including in the fields of education and social media, with
-              <strong id="link">Creativity</strong> and enthusiasm for learning. Through dedication and
-              enthusiasm, Fathin succeeded in creating several innovative applications
-              covers various fields, from <strong id="link">Educational Applications</strong> to
-              social media. Every app he creates is a result of
-              creativity and determination to continue learning and developing.
+    </section>
+    <section class="container mx-auto p-0">
+      <article id="who" class="mb-8">
+        <h3 class="text-3xl m-3">Who Is M.Fathin Halim ?</h3>
+        <hr class="my-2" />
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <article>
+            <p class="p-3 text-justify">
+              <strong>M.Fathin Halim</strong> is a student secondary school in
+              Indonesia with a strong interest in
+              <strong>Programming</strong> since childhood. He has a deep love
+              for <strong>Japan</strong> and the technology. Fathin has
+              developed various innovative applications, Including in the fields
+              of education and social media, with
+              <strong>Creativity</strong> and enthusiasm for learning. Through
+              dedication and enthusiasm, Fathin succeeded in creating several
+              innovative applications covers various fields, from
+              <strong>Educational Applications</strong> to social media. Every
+              app he creates is a result of creativity and determination to
+              <strong>continue learning</strong> and developing.
             </p>
+            <ul
+              id="contact"
+              class="space-y-1 list-disc list-inside p-3 bg-gray-800 rounded-lg">
+              <h6 class="text-lg"><strong>Contact Me!</strong></h6>
+              <li>
+                <a href="halimfathin7@gmail.com">halimfathin7@gmail.com</a>
+              </li>
+              <li>
+                <a href="https://discord%20app.com/users/923182213779062804"
+                  >Discord</a
+                >
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
+                  >Linkedin</a
+                >
+              </li>
+              <li>+62 822 8162 7963</li>
+            </ul>
+          </article>
 
-          <h3>Skills</h3>
-          <hr style="
-              border: none;
-              height: 2px;
-              background: linear-gradient(
-                to right,
-                #d76d77,
-                #f27121
-              ); /* Warna linear gradient */
-            ">
-          <ul>
-            <li>Programming Languages: Python, <strong style="color: #FF5E01">JavaScript</strong>, Java, C#</li>
-            <li><strong style="color: #FF5E01">Web</strong> Development: <strong style="color: #FF5E01">HTML5</strong>, CSS3, Bootstrap</li>
+          <img
+            class="mt-3 mx-auto sm:mx-0 m-3 rounded-lg"
+            src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
+            alt="M.Fathin Halim" />
+        </div>
+      </article>
+      <article>
+        <h3 class="text-3xl m-3">Skills</h3>
+        <hr class="my-2" />
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <ul class="space-y-1 list-disc list-inside p-3">
+            <li>
+              Programming Languages: Python, <strong>JavaScript</strong>, Java,
+              C#
+            </li>
+            <li>
+              <strong>Web Development</strong>: HTML5, CSS3, Bootstrap,
+              TailwindCSS
+            </li>
             <li>Game Development: Unity</li>
           </ul>
-        </div>
-        <div class="col-md-4">
-          <!-- Gambar disini -->
-          <img src="./M.Fathin Halim_files/6193dca3e8165c52e89c7f2b_florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="M.Fathin Halim" class="img-fluid" style="
-              height: 400px;
-              object-fit: cover;
-              border: 2px solid transparent; /* Atur border dengan ketebalan dan warna transparan */
-              border-image: linear-gradient(
-                to right,
-                #d76d77,
-                #f27121
-              ); /* Warna linear gradient sebagai border */
-              border-image-slice: 1; /* Atur potongan border image */
-              transform: rotate(4deg);
-            ">
-        </div>
-      </div>
-
-      <div class="mt-3">
-        <h3 class="mb-3">Certifications and Awards</h3>
-        <hr style="
-            border: none;
-            height: 2px;
-            background: linear-gradient(
-              to right,
-              #d76d77,
-              #f27121
-            ); /* Warna linear gradient */
-          ">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 order-md-1">
-              <!-- Your image carousel goes here -->
-              <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item">
-                    <img class="d-block w-100" style="
-                        box-shadow:
-                          1px 1px,
-                          2px 2px,
-                          3px 3px,
-                          4px 4px;
-                        height: 480px !important;
-                        object-fit: cover;
-                      " src="./M.Fathin Halim_files/f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg" alt="First slide">
-                  </div>
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" style="
-                        box-shadow:
-                          1px 1px,
-                          2px 2px,
-                          3px 3px,
-                          4px 4px;
-                        height: 480px !important;
-                        object-fit: cover;
-                      " src="./M.Fathin Halim_files/d0b63ae6f9cd158a6e887e7b1204e062.jpg" alt="Second slide">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 order-md-2">
-              <!-- Your content goes here -->
-              <h4>Award for the Rejang Language Dictionary Project</h4>
-              <hr style="
-                  border: none;
-                  height: 2px;
-                  background: linear-gradient(
-                    to right,
-                    #d76d77,
-                    #f27121
-                  ); /* Warna linear gradient */
-                ">
-              <p><strong>Year:</strong> 2020</p>
-              <p>
-                <strong>Description:</strong> The Rejang Language Dictionary
-                project aimed to preserve and promote the rich linguistic
-                heritage of the Rejang community. This initiative involved
-                extensive research, collaboration with language experts, and the
-                development of a comprehensive dictionary that encompasses the
-                nuances and intricacies of the Rejang language. The award
-                recognizes the dedication and innovative efforts put forth in
-                creating a valuable resource for both the Rejang-speaking
-                population and those interested in the linguistic diversity of
-                the region.
-              </p>
-            </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-4 grid-cols-2 m-3">
+            <img
+              class="mt-3"
+              style="max-width: 100px; max-height: 100px"
+              src="data:image/png;base64,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" />
+            <img
+              class="mt-3"
+              style="max-width: 100px; max-height: 100px"
+              src="data:image/png;base64,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" />
+            <img
+              class="mt-3"
+              style="max-width: 100px; max-height: 100px"
+              src="https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png" />
+            <img
+              class="mt-3"
+              style="max-width: 100px; max-height: 100px"
+              src="https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png" />
           </div>
         </div>
-        <div class="card mb-4 mt-3" id="services" style="background: rgba(0, 0, 0, 0) !important">
-          <div class="card-body" style="background: rgba(0, 0, 0, 0) !important">
-            <h3 class="card-title">Website Development Services</h3>
-            <hr style="
-                border: none;
-                height: 2px;
-                background: linear-gradient(
-                  to right,
-                  #d76d77,
-                  #f27121
-                ); /* Warna linear gradient */
-              ">
-            <p>
-              Want to have a website like M.Fathin Halim? We provide
-              professional quality website development services with attractive
-              designs. Discuss your needs with M.Fathin Halim through Discord or
-              Email!
+      </article>
+      <article id="awards" class="mb-8 p-3">
+        <h3 class="text-3xl">Awards</h3>
+        <hr class="my-2" />
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <img
+            class="mt-3 mx-auto sm:mx-0 m-3 rounded-lg"
+            src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/d0b63ae6f9cd158a6e887e7b1204e062.jpg"
+            alt="M.Fathin Halim" />
+          <section class="p-3">
+            <h6 class="text-2xl">
+              Award for the Rejang Language Dictionary Project
+            </h6>
+            <p class="mt-3 mb-3"><strong>Year: </strong> 2020</p>
+            <p class="text-justify">
+              <strong>Description: </strong> The Rejang Language Dictionary
+              project aimed to preserve and promote the rich linguistic heritage
+              of the Rejang community. This initiative involved extensive
+              research, collaboration with language experts, and the development
+              of a comprehensive dictionary that encompasses the nuances and
+              intricacies of the Rejang language. The award recognizes the
+              dedication and innovative efforts put forth in creating a valuable
+              resource for both the Rejang-speaking population and those
+              interested in the linguistic diversity of the region.
             </p>
-            <ul>
-              <li>Simple Portfolio</li>
-              <li>An Application with Simple Backend</li>
-              <li>Website for a class or school</li>
-              <li>Personal Website</li>
-              <li>Team Website</li>
-              <li>And more</li>
-            </ul>
-            <p>
-              We use Express-based NodeJS as the Backend and Bootstrap for
-              styling on the Frontend to create responsive and attractive
-              websites.
-            </p>
-            <a class="btn btn-outline-primary text-white" href="https://discordapp.com/users/1156486226094870569">Interested? Let's Chat!</a>
-          </div>
+          </section>
         </div>
-        <h3>Projects Completed</h3>
-        <hr style="
-            border: none;
-            height: 2px;
-            background: linear-gradient(
-              to right,
-              #d76d77,
-              #f27121
-            ); /* Warna linear gradient */
-          ">
-        <div class="row">
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/kamus.png" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  Kamus Bahasa Rejang
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalKamusBahasaRejang">See More</a>
-              </div>
+      </article>
+      <article id="project" class="mb-8 p-3">
+        <h3 class="text-3xl">Projects</h3>
+        <hr class="my-2" />
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 underline">
+          <!-- Image Cards -->
+          <div class="flex flex-col gap-4">
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/kamus.png"
+                alt="Kamus Bahasa Rejang" />
+              <a href="https://kamusrejang.rejanglebongkab.go.id/"
+                >Kamus Bahasa Rejang</a
+              >
+            </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo.png"
+                alt="rejangpedia" />
+              <a href="https://rejang-pedia.mfathinhalim.repl.co/"
+                >rejangpedia</a
+              >
             </div>
           </div>
 
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalKamusBahasaRejang" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">Kamus Bahasa Rejang</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
+          <div class="flex flex-col gap-4">
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/LogoISK.gif"
+                alt="Intergalactic Science Kingdom Website" />
+              <a href="https://sciencekingdom.gg/"
+                >Intergalactic Science Kingdom Website</a
+              >
+            </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/medium.jpg"
+                alt="Smart AI" />
+              <a href="https://cerdasai.fatih-jihadijih.repl.co/">Cerdas AI</a>
+            </div>
 
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/kamus.png" alt="Kamus Bahasa Rejang Image">
-                  </div>
-                  <h6>A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://kamusrejang.rejanglebongkab.go.id/">Link</a>
-                </div>
-              </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/PVZ.png"
+                alt="Plane VS Zombies" />
+              <a href="https://nabeela.itch.io/plane-vs-zombie-desktop"
+                >Plane VS Zombies</a
+              >
             </div>
           </div>
 
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/logo.png" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  rejangpedia
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalrejangpedia">See More</a>
-              </div>
+          <div class="flex flex-col gap-4">
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo(1).png"
+                alt="SMP Negeri 1 Rejang Lebong Website" />
+              <a href="https://smpn1rl.glitch.me/"
+                >SMP Negeri 1 Rejang Lebong's Website</a
+              >
+            </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg m-3"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images(1)"
+                alt="Shared Gallery" />
+              <a href="https://shared-gallery.mfathinhalim.repl.co/"
+                >Shared Gallery</a
+              >
+            </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images"
+                alt="My Simple Notes" />
+              <a href="https://my-simple-notes.mfathinhalim.repl.co/"
+                >My Simple Notes</a
+              >
             </div>
           </div>
 
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalrejangpedia" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">rejangpedia</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/logo.png" alt="rejangpedia Image">
-                  </div>
-                  <h6>rejangpedia is an all-in application with a spirit of mutual cooperation in preserving Bengkulu culture in general and Rejang Lebong in particular in the form of digital literacy where everyone can participate.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://rejang-pedia.mfathinhalim.repl.co/">Link</a>
-                </div>
-              </div>
+          <div class="flex flex-col gap-4">
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
+                alt="MediaVibe" />
+              <a href="https://domusic.mfathinhalim.repl.co/">Media Vibe</a>
             </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/images" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  My Simple Notes
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalMySimpleNotes">See More</a>
-              </div>
+            <div class="image-container bg-secondary p-4 rounded-lg">
+              <img
+                class="rounded-lg"
+                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
+                alt="DoMusic" />
+              <a href="https://domusic.mfathinhalim.repl.co/">Do Music</a>
             </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalMySimpleNotes" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">My Simple Notes</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/images" alt="My Simple Notes Image">
-                  </div>
-                  <h6>A website where you can save your notes! M.Fathin Halim made it to keep his notes and to learn the ReactJS framework</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://my-simple-notes.mfathinhalim.repl.co/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/LogoISK.gif" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  Intergalactic Science Kingdom Website
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalIntergalacticScienceKingdomWebsite">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalIntergalacticScienceKingdomWebsite" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">Intergalactic Science Kingdom Website</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/LogoISK.gif" alt="Intergalactic Science Kingdom Website Image">
-                  </div>
-                  <h6>A website dedicated to exploring science content via the Discord Server owned by Fajrul Fx on YouTube.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://sciencekingdom.gg/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/medium.jpg" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  Smart AI
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalSmartAI">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalSmartAI" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">Smart AI</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/medium.jpg" alt="Smart AI Image">
-                  </div>
-                  <h6>Smart AI is a user-friendly bot app that brings the benefits of AI to everyone, including parents, without the need to log in, making it easily accessible via platforms like WhatsApp.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://cerdasai.fatih-jihadijih.repl.co/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/PVZ.png" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  Plane VS Zombies
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalPlaneVSZombies">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalPlaneVSZombies" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">Plane VS Zombies</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/PVZ.png" alt="Plane VS Zombies Image">
-                  </div>
-                  <h6>A fun game where players have to control a plane to fight off an incessant zombie attack.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://nabeela.itch.io/plane-vs-zombie-desktop">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/logo(1).png" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  SMP Negeri 1 Rejang Lebong Website
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalSMPNegeri1RejangLebongWebsite">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalSMPNegeri1RejangLebongWebsite" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">SMP Negeri 1 Rejang Lebong Website</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/logo(1).png" alt="SMP Negeri 1 Rejang Lebong Website Image">
-                  </div>
-                  <h6>Website page for SMP Negeri 1 Rejang Lebong.</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://smpn1rl.glitch.me/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/images(1)" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  Shared Gallery
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalSharedGallery">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalSharedGallery" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">Shared Gallery</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/images(1)" alt="Shared Gallery Image">
-                  </div>
-                  <h6>A website where you can save and share your images with other people</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://shared-gallery.mfathinhalim.repl.co/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  DoMusic
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalDoMusic">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalDoMusic" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">DoMusic</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg" alt="DoMusic Image">
-                  </div>
-                  <h6>A Music Player That M.Fathin Halim's Make!</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://domusic.mfathinhalim.repl.co/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="col-lg-4 col-md-6 col-12 mb-4 aos-init aos-animate" data-aos="zoom-in">
-            <div class="card">
-              <img class="card-img-top" src="./M.Fathin Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg" style="height: 300px; object-fit: cover; border:0;">
-              <div class="card-body">
-                <h4 class="card-title" style="
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  ">
-                  MediaVibe
-                </h4>
-                <a href="https://portofolio.mfathinhalim.repl.co/#" class="btn btn-primary" data-toggle="modal" data-target="#descriptionModalMediaVibe">See More</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal for Description -->
-          <!-- Modal for Description -->
-          <div class="modal fade" id="descriptionModalMediaVibe" tabindex="-1" role="dialog" aria-labelledby="descriptionModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="card-title">MediaVibe</h4>
-                  <button type="button" class="m-2 btn btn-outline-light" style="border: 2px solid; width: fit-content" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-                  <div class="col-md-4">
-                    <img class="modal-image mb-3" style="width: 100%; height: 100%; object-fit: cover" src="./M.Fathin Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg" alt="MediaVibe Image">
-                  </div>
-                  <h6>A Video Player That M.Fathin Halim's Make!</h6>
-                  <!-- Close the h6 tag properly -->
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-light" href="https://media-vibe.mfathinhalim.repl.co/">Link</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-
-      <footer class="mt-5 py-4 text-center footer" id="contact" style="
-          width: 100% !important;
-          border: 2px solid transparent; /* Atur border dengan ketebalan dan warna transparan */
-          border-image: linear-gradient(
-            to right,
-            #d76d77,
-            #f27121
-          ); /* Warna linear gradient sebagai border */
-          border-image-slice: 1; /* Atur potongan border image */
-        ">
-        <div class="p-3">
-          <div class="row">
-            <div class="col-md-6">
-              <h4>Contact Me</h4>
-              <p>
-                If you are interested in collaborating or have further
-                questions, feel free to contact me through one of the methods
-                below:
+            <section
+              class="bg-secondary rounded-lg p-8 h-300 flex items-center justify-center">
+              <p
+                class="text-white text-center"
+                style="text-decoration: none !important">
+                Explore more projects on GitHub and CodePen!
               </p>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="mailto:halimfathin7@gmail.com" id="link">halimfathin7@gmail.com</a>
-                </li>
-                <li>
-                  <a href="https://discord%20app.com/users/923182213779062804" id="link">Discord
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/" id="link">LinkedIn</a>
-                </li>
-                <li id="link">+62 822 8162 7963</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h4>Useful Links</h4>
-              <ul class="list-unstyled">
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#learn-more" id="link">About Me</a></li>
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#profileCarousel" id="link">Profile</a></li>
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#skills" id="link">Skills</a></li>
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#projects" id="link">Projects</a></li>
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#education" id="link">Education</a></li>
-                <li><a href="https://portofolio.mfathinhalim.repl.co/#services" id="link">Services</a></li>
-                <li>
-                  <a href="https://my-template.mfathinhalim.repl.co/" id="link">Template</a>
-                </li>
-              </ul>
-            </div>
+            </section>
           </div>
         </div>
-        <p class="mt-3" style="text-align: center">
-          © 2023 M.Fathin Halim - All rights reserved
-        </p>
-      </footer>
+      </article>
+    </section>
 
-      <!-- Bootstrap JS and Popper.js (Optional) -->
-      <script src="./M.Fathin Halim_files/jquery-3.3.1.slim.min.js"></script>
-      <script src="./M.Fathin Halim_files/popper.min.js"></script>
-      <script src="./M.Fathin Halim_files/bootstrap.min.js"></script>
-      <script src="./M.Fathin Halim_files/aos.js"></script>
+    <footer class="rounded-lg shadow m-4">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023 M.Fathin Halim
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+            <a href="#project" class="hover:underline me-4 md:me-6">Project</a>
+          </li>
+          <li>
+            <a href="#award" class="hover:underline me-4 md:me-6">Awards</a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script>
+    var h = document.querySelectorAll("a");
+    var c = document.getElementById("cursor");
+    var timer;
 
-      <script>
-				var h =document.querySelectorAll('a');
-var c= document.getElementById("cursor");
-var timer;
+    document.body.onmousemove = function (e) {
+      clearTimeout(timer);
+      var links = document.querySelectorAll("a, h3, strong, h4");
+      var initCursor = false;
 
-document.body.onmousemove = function(e) {
-  clearTimeout(timer);
-var links = document.querySelectorAll("a, h3, strong, h4");
-  var initCursor = false;
+      for (var i = 0; i < links.length; i++) {
+        var selfLink = links[i];
 
-  for (var i = 0; i < links.length; i++) {
-    var selfLink = links[i];
+        selfLink.addEventListener("mouseover", function () {
+          cursor.classList.add("custom-cursor--link");
+        });
+        selfLink.addEventListener("mouseout", function () {
+          cursor.classList.remove("custom-cursor--link");
+        });
+      }
+      // Menunda pergerakan kursor selama 500 milidetik (0.5 detik)
+      /* Adjust the cursor position */
+      c.style.left = e.clientX + "px";
+      c.style.top = e.clientY + "px";
+    };
 
-    selfLink.addEventListener("mouseover", function() {
-      cursor.classList.add("custom-cursor--link");
-    });
-    selfLink.addEventListener("mouseout", function() {
-      cursor.classList.remove("custom-cursor--link");
-    });
-  }
-  // Menunda pergerakan kursor selama 500 milidetik (0.5 detik)
-    /* Adjust the cursor position */
-    c.style.left = e.clientX + 'px';
-    c.style.top = e.clientY + 'px';
-}
+    function resetScale() {
+      // Mengatur skala kembali ke 0.3 jika kursor berhenti bergerak
+      scaleValue = 0.3;
+    }
 
+    window.onscroll = function () {
+      myFunction();
+    };
 
-function resetScale() {
-  // Mengatur skala kembali ke 0.3 jika kursor berhenti bergerak
-  scaleValue = 0.3;
-}
-
-        AOS.init();
-        window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-      </script>
-    </div>
-  
-
-<scribe-shadow id="crxjs-ext" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; z-index: 2147483647; overflow: visible;"><template shadowrootmode="open"><div id="root-scribe-elem" style="position: fixed; width: 0px; height: 0px; top: 0px; left: 0px; overflow: visible; color: rgb(15, 23, 42);"><div></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 bottom-auto right-0 z-[10000000] flex max-h-screen min-w-[300px] max-w-[360px] p-4"></ol></div></div><link rel="stylesheet" href="chrome-extension://okfkdaglfjjjfefdcppliegebpoegaii/assets/style.css"></template></scribe-shadow></body></html>
+    function myFunction() {
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+  </script>
+</html>
