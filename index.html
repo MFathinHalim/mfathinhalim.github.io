@@ -6,135 +6,135 @@
     <title>M.Fathin Halim</title>
     <!--Tailwind-->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Montserrat:wght@500&display=swap"
-    rel="stylesheet" />
-  <meta property="og:title" content="M.Fathin Halim" />
-  <meta
-    property="og:description"
-    content="A Middle School Programmer With Dream" />
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="https://static.thenounproject.com/png/1002261-200.png" />
-  <meta
-    property="og:image"
-    content="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Montserrat:wght@500&display=swap"
+      rel="stylesheet" />
+    <meta property="og:title" content="M.Fathin Halim" />
+    <meta
+      property="og:description"
+      content="A Middle School Programmer With Dream" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.thenounproject.com/png/1002261-200.png" />
+    <meta
+      property="og:image"
+      content="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta property="og:url" content="mfathinhalim.github.io" />
+    <!--Style CSS-->
+    <style type="text/css" media="screen">
+      body,
+      #who > h3,
+      #award > h3,
+      #skills > h3 {
+        font-family: "Montserrat";
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body::-webkit-scrollbar {
+        width: 0em; /* Lebar scrollbar */
+      }
 
-  <meta property="og:url" content="mfathinhalim.github.io" />
-  <style type="text/css" media="screen">
-    body,
-    #who > h3,
-    #award > h3,
-    #skills > h3 {
-      font-family: "Montserrat";
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body::-webkit-scrollbar {
-      width: 0em; /* Lebar scrollbar */
-    }
+      body::-webkit-scrollbar-thumb {
+        background-color: darkgray; /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
+      }
 
-    body::-webkit-scrollbar-thumb {
-      background-color: darkgray; /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
-    }
+      body::-webkit-scrollbar-track {
+        background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
+      }
+      div {
+        font-family: "Karla";
+      }
+      :root {
+        --text: #eceeee;
+        --background: #030807;
+        --primary: #25b3ef;
+        --secondary: #756b6b;
+        --accent: #22a4db;
+      }
+      @media (min-width: 768px) {
+        /* Aturan CSS tambahan untuk dekstop */
+        body {
+          cursor: none;
+          transition: 0.3s;
+        }
+        /* CSS umum untuk kursor */
+        #cursor {
+          position: fixed;
+          pointer-events: none;
+          mix-blend-mode: difference;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-color: var(--text);
+          transition: transform 350ms ease;
+          transform: translate(-50%, -50%) scale(0.3);
+          z-index: 3000;
+        }
 
-    body::-webkit-scrollbar-track {
-      background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
-    }
-    div {
-      font-family: "Karla";
-    }
-    :root {
-      --text: #eceeee;
-      --background: #030807;
-      --primary: #25b3ef;
-      --secondary: #756b6b;
-      --accent: #22a4db;
-    }
-    @media (min-width: 768px) {
-      /* Aturan CSS tambahan untuk dekstop */
+        .custom-cursor--link {
+          transform: translate(-50%, -50%) scale(0.7) !important;
+        }
+      }
       body {
-        cursor: none;
-        transition: 0.3s;
+        background: var(--background);
+        color: var(--text);
       }
-      /* CSS umum untuk kursor */
-      #cursor {
-        position: fixed;
-        pointer-events: none;
-        mix-blend-mode: difference;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: var(--text);
-        transition: transform 350ms ease;
-        transform: translate(-50%, -50%) scale(0.3);
-        z-index: 3000;
+      strong,
+      h3 {
+        color: var(--accent);
+      }
+      .bg-orange-700 {
+        background-color: var(--primary) !important;
+      }
+      a {
+        transition: 0.3s !important;
+      }
+      .bg-orange-700:hover {
+        background-color: var(--accent) !important;
+      }
+      .progress-container {
+        width: 100%;
+        height: 8px;
+        background: rgba(0, 0, 0, 0);
+        z-index: 10000;
       }
 
-      .custom-cursor--link {
-        transform: translate(-50%, -50%) scale(0.7) !important;
+      .progress-bar {
+        height: 4px;
+        background: -webkit-linear-gradient(
+          var(--primary),
+          var(--accent)
+        ); /* Fix the missing closing parenthesis */
+        width: 0%;
       }
-    }
-    body {
-      background: var(--background);
-      color: var(--text);
-    }
-    strong,
-    h3 {
-      color: var(--accent);
-    }
-    .bg-orange-700 {
-      background-color: var(--primary) !important;
-    }
-    a {
-      transition: 0.3s !important;
-    }
-    .bg-orange-700:hover {
-      background-color: var(--accent) !important;
-    }
-    .progress-container {
-      width: 100%;
-      height: 8px;
-      background: rgba(0, 0, 0, 0);
-      z-index: 10000;
-    }
-
-    .progress-bar {
-      height: 4px;
-      background: -webkit-linear-gradient(
-        var(--primary),
-        var(--accent)
-      ); /* Fix the missing closing parenthesis */
-      width: 0%;
-    }
-    @keyframes glowing {
-      0% {
-        box-shadow: 0 0 -10px var(--primary);
+      @keyframes glowing {
+        0% {
+          box-shadow: 0 0 -10px var(--primary);
+        }
+        40% {
+          box-shadow: 0 0 20px var(--primary);
+        }
+        60% {
+          box-shadow: 0 0 20px var(--primary);
+        }
+        100% {
+          box-shadow: 0 0 -10px var(--primary);
+        }
       }
-      40% {
-        box-shadow: 0 0 20px var(--primary);
-      }
-      60% {
-        box-shadow: 0 0 20px var(--primary);
-      }
-      100% {
-        box-shadow: 0 0 -10px var(--primary);
-      }
-    }
-  </style>
+    </style>
+  </head>
   <body>
     <div class="progress-container fixed m-0">
       <div class="progress-bar" id="myBar"></div>
     </div>
     <span class="cursor" id="cursor" style="left: 953px; top: 939px"></span>
-
+    <!------------------------------------------------------------------------------>
     <section
       style="background-size: cover"
       class="bg-center bg-no-repeat max-h-screen-xl bg-[url('https://ik.imagekit.io/9hpbqscxd/SG/image-84.jpg')] bg-gray-700 bg-blend-multiply">
@@ -369,7 +369,7 @@
               style="max-height: 300px" />
             <a
               class="text-2xl mt-3 font-semibold underline decoration-blue-500"
-              href="https://rejang-pedia.mfathinhalim.repl.co/"
+              href="https://rejangpedia.glitch.me/"
               >rejangpedia</a
             >
             <p>
@@ -379,7 +379,7 @@
               everyone can participate.
             </p>
             <a
-              href="https://rejang-pedia.mfathinhalim.repl.co/"
+              href="https://rejangpedia.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
               Open !
             </a>
@@ -487,7 +487,7 @@
               style="max-height: 300px" />
             <a
               class="text-2xl mt-3 font-semibold underline decoration-blue-500"
-              href="https://shared-gallery.mfathinhalim.repl.co/"
+              href="https://shared-gallery.glitch.me/"
               >Shared Gallery</a
             >
             <p>
@@ -495,7 +495,7 @@
               people
             </p>
             <a
-              href="https://shared-gallery.mfathinhalim.repl.co/"
+              href="https://shared-gallery.glitch.me"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
               Open !
             </a>
@@ -510,7 +510,7 @@
               style="max-height: 300px" />
             <a
               class="text-2xl mt-3 font-semibold underline decoration-blue-500"
-              href="https://my-simple-notes.mfathinhalim.repl.co/"
+              href="https://mysimplenotes.glitch.me/"
               >My Simple Notes</a
             >
             <p>
@@ -518,7 +518,7 @@
               keep his notes and to learn the ReactJS framework
             </p>
             <a
-              href="https://my-simple-notes.mfathinhalim.repl.co/"
+              href="https://mysimplenotes.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
               Open !
             </a>
