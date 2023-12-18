@@ -17,6 +17,11 @@
   <meta
     property="og:image"
     content="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
   <meta property="og:url" content="doma-tomoharu.github.io" />
   <style type="text/css" media="screen">
     body,
@@ -45,9 +50,9 @@
     :root {
       --text: #eceeee;
       --background: #030807;
-      --primary: #e28242;
+      --primary: #25b3ef;
       --secondary: #756b6b;
-      --accent: #dd8241;
+      --accent: #22a4db;
     }
     @media (min-width: 768px) {
       /* Aturan CSS tambahan untuk dekstop */
@@ -62,7 +67,7 @@
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background-color: white;
+        background-color: var(--text);
         transition: transform 350ms ease;
         transform: translate(-50%, -50%) scale(0.3);
         z-index: 3000;
@@ -76,15 +81,15 @@
       background: var(--background);
       color: var(--text);
     }
-    .bg-secondary {
-      background-color: var(--secondary);
-    }
     strong,
     h3 {
       color: var(--accent);
     }
     .bg-orange-700 {
       background-color: var(--primary) !important;
+    }
+    a {
+      transition: 0.3s;
     }
     .bg-orange-700:hover {
       background-color: var(--accent) !important;
@@ -93,15 +98,30 @@
       width: 100%;
       height: 8px;
       background: rgba(0, 0, 0, 0);
+      z-index: 10000;
     }
 
     .progress-bar {
       height: 4px;
       background: -webkit-linear-gradient(
-        #d76d77,
-        #f27121
+        var(--primary),
+        var(--accent)
       ); /* Fix the missing closing parenthesis */
       width: 0%;
+    }
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 -10px var(--primary);
+      }
+      40% {
+        box-shadow: 0 0 20px var(--primary);
+      }
+      60% {
+        box-shadow: 0 0 20px var(--primary);
+      }
+      100% {
+        box-shadow: 0 0 -10px var(--primary);
+      }
     }
   </style>
   <body>
@@ -111,48 +131,45 @@
     <span class="cursor" id="cursor" style="left: 953px; top: 939px"></span>
 
     <section
-      class="bg-center bg-no-repeat max-h-screen-xl bg-[url('https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg')] bg-gray-700 bg-blend-multiply">
-      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+      class="bg-center bg-no-repeat max-h-screen-xl bg-[url('https://ik.imagekit.io/9hpbqscxd/SG/image-84.jpg')] bg-gray-700 bg-blend-multiply">
+      <div
+        class="px-4 mx-auto max-w-screen-xl max-h-screen-xl text-center py-24 lg:py-56">
+        <img
+          class="mb-4 mx-auto object-center rounded-full border-4 border-transparent border-x-blue-500"
+          style="height: 150px; width: 150px; object-fit: cover"
+          src="https://ik.imagekit.io/9hpbqscxd/SG/image-82.jpg" />
         <h1
-          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+          style="font-family: 'Montserrat'">
           M.Fathin Halim
         </h1>
         <p
           class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-          Embark on a Journey with M.Fathin Halim, a Passionate Middle School
-          Programmer, Fueled by Dreams and a Boundless Enthusiasm for Learning!
+          Embark on a Journey with <strong>M.Fathin Halim</strong>, a Passionate
+          Middle School <strong>Programmer</strong>, a Boundless Enthusiasm for
+          Learning and Fueled by <strong>Dreams</strong>
         </p>
         <div
           class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
           <a
             href="#who"
-            class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
             Who ?
           </a>
           <a
-            href="#"
-            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-lg bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-            Chat Here
-            <svg
-              class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10">
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg>
+            href="https://discord%20app.com/users/923182213779062804"
+            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            Discord <i class="fa fa-comment ml-2" aria-hidden="true"></i>
           </a>
         </div>
+        <a class="absolute w-6 mx-auto animate-bounce" style="margin-top: 60px">
+          <i class="fa fa-arrow-down text-white text-2xl"></i>
+        </a>
       </div>
     </section>
     <section class="container mx-auto p-0">
       <article id="who" class="mb-8">
-        <h3 class="text-3xl m-3">Who Is M.Fathin Halim ?</h3>
+        <h3 class="text-2xl m-3">Who Is M.Fathin Halim ?</h3>
         <hr class="my-2" />
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <article>
@@ -170,28 +187,30 @@
               app he creates is a result of creativity and determination to
               <strong>continue learning</strong> and developing.
             </p>
-            <ul
-              id="contact"
-              class="space-y-1 list-disc list-inside p-3 bg-gray-800 rounded-lg">
-              <h6 class="text-lg"><strong>Contact Me!</strong></h6>
-              <li>
-                <a href="halimfathin7@gmail.com">halimfathin7@gmail.com</a>
-              </li>
-              <li>
-                <a href="https://discord%20app.com/users/923182213779062804"
-                  >Discord</a
-                >
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
-                  >Linkedin</a
-                >
-              </li>
-              <li>+62 822 8162 7963</li>
-            </ul>
+            <div class="p-3 bg-gray-800 rounded-lg" data-aos="fade-right">
+              <h6 class="text-lg ml-2"><strong>Contact Me!</strong></h6>
+              <ul id="contact" class="space-y-1 list-disc list-inside p-3">
+                <li>
+                  <a href="halimfathin7@gmail.com">halimfathin7@gmail.com</a>
+                </li>
+                <li>
+                  <a href="https://discord%20app.com/users/923182213779062804"
+                    >Discord</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
+                    >Linkedin</a
+                  >
+                </li>
+                <li>+62 822 8162 7963</li>
+              </ul>
+            </div>
           </article>
 
           <img
+            data-aos="fade-down"
             class="mt-3 mx-auto sm:mx-0 m-3 rounded-lg"
             src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
             alt="M.Fathin Halim" />
@@ -204,19 +223,22 @@
           <ul class="space-y-1 list-disc list-inside p-3">
             <li>
               Programming Languages: Python, <strong>JavaScript</strong>, Java,
-              C#
+              C#, <strong>TypeScript</strong>
             </li>
             <li>
               <strong>Web Development</strong>: HTML5, CSS3, Bootstrap,
               TailwindCSS
             </li>
             <li>Game Development: Unity</li>
+            <li>Database: <strong>MongoDB</strong></li>
           </ul>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-4 grid-cols-2 m-3">
+          <div
+            class="grid grid-cols-1 gap-6 sm:grid-cols-4 grid-cols-2 m-3"
+            data-aos="fade-up">
             <img
               class="mt-3"
               style="max-width: 100px; max-height: 100px"
-              src="data:image/png;base64,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" />
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" />
             <img
               class="mt-3"
               style="max-width: 100px; max-height: 100px"
@@ -232,6 +254,7 @@
           </div>
         </div>
       </article>
+
       <article id="awards" class="mb-8 p-3">
         <h3 class="text-3xl">Awards</h3>
         <hr class="my-2" />
@@ -240,7 +263,8 @@
           <img
             class="mt-3 mx-auto sm:mx-0 m-3 rounded-lg"
             src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/d0b63ae6f9cd158a6e887e7b1204e062.jpg"
-            alt="M.Fathin Halim" />
+            alt="M.Fathin Halim"
+            data-aos="fade-right" />
           <section class="p-3">
             <h6 class="text-2xl">
               Award for the Rejang Language Dictionary Project
@@ -260,117 +284,288 @@
           </section>
         </div>
       </article>
+      <div id="services" class="mb-8">
+        <div class="p-3">
+          <h3 class="text-3xl">Website Development Services</h3>
+          <hr class="mt-3 mb-3" />
+          <p>
+            Want to have a website like M.Fathin Halim? We provide professional
+            quality website development services with attractive designs.
+            Discuss your needs with M.Fathin Halim through Discord or Email!
+          </p>
+          <ul class="list-disc pl-4">
+            <li>Simple Portfolio</li>
+            <li>An Application with Simple Backend</li>
+            <li>Website for a class or school</li>
+            <li>Personal Website</li>
+            <li>Team Website</li>
+            <li>And more</li>
+          </ul>
+          <p>
+            We use Express-based NodeJS as the Backend and Bootstrap for styling
+            on the Frontend to create responsive and attractive websites.
+          </p>
+        </div>
+        <a
+          class="p-3 m-3 bg-orange-700 rounded-lg text-white hover:bg-orange-800"
+          style="animation: glowing 5000ms infinite"
+          href="https://discordapp.com/users/1156486226094870569">
+          Interested? Chat At Discord !
+        </a>
+      </div>
       <article id="project" class="mb-8 p-3">
         <h3 class="text-3xl">Projects</h3>
         <hr class="my-2" />
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 underline">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <!-- Image Cards -->
-          <div class="flex flex-col gap-4">
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/kamus.png"
-                alt="Kamus Bahasa Rejang" />
-              <a href="https://kamusrejang.rejanglebongkab.go.id/"
-                >Kamus Bahasa Rejang</a
-              >
-            </div>
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo.png"
-                alt="rejangpedia" />
-              <a href="https://rejang-pedia.mfathinhalim.repl.co/"
-                >rejangpedia</a
-              >
-            </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/kamus.png"
+              alt="Kamus Bahasa Rejang"
+              style="max-height: 300px" />
+            <a
+              class="mt-3 text-2xl"
+              href="https://kamusrejang.rejanglebongkab.go.id/"
+              >Kamus Bahasa Rejang</a
+            >
+            <p>
+              A digital dictionary application that helps users understand and
+              learn the Rejang language, one of the regional languages in
+              Indonesia.
+            </p>
+            <a
+              href="https://kamusrejang.rejanglebongkab.go.id/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo.png"
+              alt="rejangpedia"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://rejang-pedia.mfathinhalim.repl.co/"
+              >rejangpedia</a
+            >
+            <p>
+              rejangpedia is an all-in application with a spirit of mutual
+              cooperation in preserving Bengkulu culture in general and Rejang
+              Lebong in particular in the form of digital literacy where
+              everyone can participate.
+            </p>
+            <a
+              href="https://rejang-pedia.mfathinhalim.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
           </div>
 
-          <div class="flex flex-col gap-4">
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/LogoISK.gif"
-                alt="Intergalactic Science Kingdom Website" />
-              <a href="https://sciencekingdom.gg/"
-                >Intergalactic Science Kingdom Website</a
-              >
-            </div>
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/medium.jpg"
-                alt="Smart AI" />
-              <a href="https://cerdasai.fatih-jihadijih.repl.co/">Cerdas AI</a>
-            </div>
-
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/PVZ.png"
-                alt="Plane VS Zombies" />
-              <a href="https://nabeela.itch.io/plane-vs-zombie-desktop"
-                >Plane VS Zombies</a
-              >
-            </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/LogoISK.gif"
+              alt="Intergalactic Science Kingdom Website"
+              style="max-height: 300px" />
+            <a class="text-2xl mt-3" href="https://sciencekingdom.gg/"
+              >Intergalactic Science Kingdom Website</a
+            >
+            <p>
+              A website dedica ted to exploring science content via the Discord
+              Server owned by Fajrul Fx on YouTube.
+            </p>
+            <a
+              href="https://sciencekingdom.gg/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/medium.jpg"
+              alt="Smart AI"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://cerdasai.fatih-jihadijih.repl.co/"
+              >Cerdas AI</a
+            >
+            <p>
+              a user-friendly bot app that brings the benefits of AI to
+              everyone, including parents, without the need to log in, making it
+              easily accessible via platforms like WhatsApp.
+            </p>
+            <a
+              href="https://cerdasai.fatih-jihadijih.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
           </div>
 
-          <div class="flex flex-col gap-4">
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo(1).png"
-                alt="SMP Negeri 1 Rejang Lebong Website" />
-              <a href="https://smpn1rl.glitch.me/"
-                >SMP Negeri 1 Rejang Lebong's Website</a
-              >
-            </div>
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg m-3"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images(1)"
-                alt="Shared Gallery" />
-              <a href="https://shared-gallery.mfathinhalim.repl.co/"
-                >Shared Gallery</a
-              >
-            </div>
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images"
-                alt="My Simple Notes" />
-              <a href="https://my-simple-notes.mfathinhalim.repl.co/"
-                >My Simple Notes</a
-              >
-            </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/PVZ.png"
+              alt="Plane VS Zombies"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://nabeela.itch.io/plane-vs-zombie-desktop"
+              >Plane VS Zombies</a
+            >
+            <p>
+              A fun game where players have to control a plane to fight off an
+              incessant zombie attack.
+            </p>
+            <a
+              href="https://nabeela.itch.io/plane-vs-zombie-desktop"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
           </div>
 
-          <div class="flex flex-col gap-4">
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
-                alt="MediaVibe" />
-              <a href="https://domusic.mfathinhalim.repl.co/">Media Vibe</a>
-            </div>
-            <div class="image-container bg-secondary p-4 rounded-lg">
-              <img
-                class="rounded-lg"
-                src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
-                alt="DoMusic" />
-              <a href="https://domusic.mfathinhalim.repl.co/">Do Music</a>
-            </div>
-            <section
-              class="bg-secondary rounded-lg p-8 h-300 flex items-center justify-center">
-              <p
-                class="text-white text-center"
-                style="text-decoration: none !important">
-                Explore more projects on GitHub and CodePen!
-              </p>
-            </section>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/logo(1).png"
+              alt="SMP Negeri 1 Rejang Lebong Website"
+              style="max-height: 300px" />
+            <a class="text-2xl mt-3" href="https://smpn1rl.glitch.me/"
+              >SMP Negeri 1 Rejang Lebong's Website</a
+            >
+            <p>Website page for SMP Negeri 1 Rejang Lebong.</p>
+            <a
+              href="https://smpn1rl.glitch.me/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
           </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg m-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images(1)"
+              alt="Shared Gallery"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://shared-gallery.mfathinhalim.repl.co/"
+              >Shared Gallery</a
+            >
+            <p>
+              A website where you can save and share your images with other
+              people
+            </p>
+            <a
+              href="https://shared-gallery.mfathinhalim.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/images"
+              alt="My Simple Notes"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://my-simple-notes.mfathinhalim.repl.co/"
+              >My Simple Notes</a
+            >
+            <p>
+              A website where you can save your notes! M.Fathin Halim made it to
+              keep his notes and to learn the ReactJS framework
+            </p>
+            <a
+              href="https://my-simple-notes.mfathinhalim.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
+              alt="MediaVibe"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://domusic.mfathinhalim.repl.co/"
+              >Media Vibe</a
+            >
+            <p>A Video Player That M.Fathin Halim's Make!</p>
+            <a
+              href="https://domusic.mfathinhalim.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+          <div
+            data-aos="fade-up"
+            class="image-container max-w-full bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              class="rounded-lg mb-3"
+              src="https://doma-tomoharu.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
+              alt="DoMusic"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3"
+              href="https://domusic.mfathinhalim.repl.co/"
+              >Do Music</a
+            >
+            <p>A Music Player That M.Fathin Halim's Make!</p>
+            <a
+              href="https://domusic.mfathinhalim.repl.co/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Open !
+            </a>
+          </div>
+          <section
+            class="rounded-lg p-8 h-300 flex items-center justify-center"
+            style="background-color: #3b3b3b">
+            <a
+              href="https://github.com/Doma-Tomoharu"
+              class="text-white text-center"
+              style="text-decoration: none !important">
+              <i class="fa fa-github" aria-hidden="true"></i> Explore more
+              projects on GitHub
+            </a>
+          </section>
+          <section
+            class="rounded-lg p-8 h-300 flex items-center justify-center"
+            style="background-color: #395d27">
+            <a
+              href="https://codepen.io/MFathin-Halim-Doma"
+              class="text-white text-center"
+              style="text-decoration: none !important">
+              <i class="fa fa-codepen" aria-hidden="true"></i> Explore more
+              projects on Codepen!
+            </a>
+          </section>
         </div>
       </article>
     </section>
@@ -379,27 +574,37 @@
       <div
         class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-          >© 2023 M.Fathin Halim
+          >Made By M.Fathin Halim
         </span>
         <ul
           class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
           <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            <a href="#" class="hover:text-2xl mt-3 me-4 md:me-6">About</a>
           </li>
           <li>
-            <a href="#project" class="hover:underline me-4 md:me-6">Project</a>
+            <a href="#project" class="hover:text-2xl mt-3 me-4 md:me-6"
+              >Project</a
+            >
           </li>
           <li>
-            <a href="#award" class="hover:underline me-4 md:me-6">Awards</a>
+            <a href="#award" class="hover:text-2xl mt-3 me-4 md:me-6">Awards</a>
           </li>
           <li>
-            <a href="#contact" class="hover:underline">Contact</a>
+            <a href="#contact" class="hover:text-2xl mt-3 me-4 md:me-6"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="#services" class="hover:text-2xl mt-3">Service</a>
           </li>
         </ul>
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script>
+    AOS.init();
     var h = document.querySelectorAll("a");
     var c = document.getElementById("cursor");
     var timer;
