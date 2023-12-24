@@ -33,14 +33,19 @@
         font-family: "Montserrat";
         font-weight: bolder;
       }
-      html, body {
+      html,
+      body {
         scroll-behavior: smooth;
       }
       body::-webkit-scrollbar {
         width: 0em; /* Lebar scrollbar */
       }
       body::-webkit-scrollbar-thumb {
-        background-color: rgb(234, 234, 234); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
+        background-color: rgb(
+          234,
+          234,
+          234
+        ); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
       }
 
       body::-webkit-scrollbar-track {
@@ -123,16 +128,16 @@
       }
       @keyframes glowing {
         0% {
-          box-shadow: 0 0 -10px  #5539CC;
+          box-shadow: 0 0 -10px #5539cc;
         }
         40% {
-          box-shadow: 0 0 20px  #5539CC;
+          box-shadow: 0 0 20px #5539cc;
         }
         60% {
-          box-shadow: 0 0 20px  #5539CC;
+          box-shadow: 0 0 20px #5539cc;
         }
         100% {
-          box-shadow: 0 0 -10px  #5539CC;
+          box-shadow: 0 0 -10px #5539cc;
         }
       }
     </style>
@@ -223,11 +228,12 @@
               <p class="text-sm ml-2">(Click For The Link)</p>
               <ul id="contact" class="space-y-1 list-disc list-inside p-3">
                 <li>
-                  <a href="https://discordapp.com/users/1156486226094870569"><i class="fa-brands fa-discord"></i> Discord</a
+                  <a href="https://discordapp.com/users/1156486226094870569"
+                    ><i class="fa-brands fa-discord"></i> Discord</a
                   >
                 </li>
                 <li>
-                  <a href="halimfathin7@gmail.com"></a>
+                  <a href="halimfathin7@gmail.com">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                     halimfathin7@gmail.com</a
                   >
@@ -235,8 +241,8 @@
                 <li>
                   <a
                     href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/">
-                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                    Linkedin</a
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i
+                    >Linkedin</a
                   >
                 </li>
                 <li>
@@ -358,7 +364,7 @@
         <a
           href="https://discordapp.com/users/1156486226094870569"
           class="button p-3 m-3 rounded-lg text-white hover:bg-orange-800 transition-all duration-300"
-          style="animation: glowing 5000ms infinite; background:#5539CC;">
+          style="animation: glowing 5000ms infinite; background: #5539cc">
           <i class="fa-brands fa-discord"></i> Interested? Chat on Discord!
         </a>
       </div>
@@ -366,11 +372,11 @@
         <h3 class="text-3xl">Projects</h3>
         <hr class="my-2" />
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <!-- Image Cards -->
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-700 p-4 rounded-lg h-auto">
+            class="max-w-full border-gray-700 bg-gray-700 p-4 rounded-lg">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -395,7 +401,7 @@
           </div>
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
+            class="max-w-full sm:col-span-2 border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -422,7 +428,7 @@
 
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
+            class="max-w-full border-gray-700 bg-gray-800 p-4 sm:col-span-2 rounded-lg h-auto">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -469,10 +475,34 @@
               Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
-
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-700 p-4 rounded-lg h-auto">
+            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
+            <img
+              draggable="false"
+              class="rounded-lg m-3"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/images(1)"
+              alt="Shared Gallery"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              href="https://shared-gallery.glitch.me/"
+              >Shared Gallery</a
+            >
+            <p>
+              imagine a platform where you can effortlessly preserve and
+              exchange your cherished moments through images. facilitates
+              seamless sharing with friends or a community.
+            </p>
+            <a
+              href="https://shared-gallery.glitch.me"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+            </a>
+          </div>
+          <div
+            data-aos="fade-up"
+            class="max-w-full border-gray-700 bg-gray-700 p-4 sm:col-span-2 rounded-lg h-auto">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -497,52 +527,7 @@
 
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
-            <img
-              draggable="false"
-              class="rounded-lg mb-3"
-              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/logo(1).png"
-              alt="SMP Negeri 1 Rejang Lebong Website"
-              style="max-height: 300px" />
-            <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
-              href="https://smpn1rl.glitch.me/"
-              >SMP Negeri 1 Rejang Lebong's Website</a
-            >
-            <p>Website page for SMP Negeri 1 Rejang Lebong.</p>
-            <a
-              href="https://smpn1rl.glitch.me/"
-              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-            </a>
-          </div>
-          <div
-            data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
-            <img
-              draggable="false"
-              class="rounded-lg m-3"
-              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/images(1)"
-              alt="Shared Gallery"
-              style="max-height: 300px" />
-            <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
-              href="https://shared-gallery.glitch.me/"
-              >Shared Gallery</a
-            >
-            <p>
-              A website where you can save and share your images with other
-              people
-            </p>
-            <a
-              href="https://shared-gallery.glitch.me"
-              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
-            </a>
-          </div>
-          <div
-            data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-700 p-4 rounded-lg h-auto">
+            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto sm:col-span-2">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -555,8 +540,10 @@
               >My Simple Notes</a
             >
             <p>
-              A website where you can save your notes! M.Fathin Halim made it to
-              keep his notes and to learn the ReactJS framework
+              M.Fathin Halim created a website to store and organize his notes
+              while mastering the ReactJS framework. This platform offers a
+              simple and efficient solution for users to securely save their
+              valuable insights and learnings.
             </p>
             <a
               href="https://mysimplenotes.glitch.me/"
@@ -588,7 +575,7 @@
           </div>
           <div
             data-aos="fade-up"
-            class="max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto">
+            class="max-w-full border-gray-700 bg-gray-700 p-4 rounded-lg h-auto">
             <img
               draggable="false"
               class="rounded-lg mb-3"
@@ -607,15 +594,37 @@
               Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
+          <div
+            data-aos="fade-up"
+            class="max-w-full border-gray-700 bg-gray-800 sm:col-span-2 p-4 rounded-lg h-auto">
+            <img
+              draggable="false"
+              class="rounded-lg mb-3"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/logo(1).png"
+              alt="SMP Negeri 1 Rejang Lebong Website"
+              style="max-height: 300px" />
+            <a
+              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              href="https://smpn1rl.glitch.me/"
+              >SMP Negeri 1 Rejang Lebong's Website</a
+            >
+            <p>Website page for SMP Negeri 1 Rejang Lebong.</p>
+            <a
+              href="https://smpn1rl.glitch.me/"
+              class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+            </a>
+          </div>
           <section
             data-aos="zoom-in"
-            class="rounded-md p-8 h-300 flex items-center justify-center"
+            class="rounded-md p-8 h-300 flex items-center justify-center sm:col-span-2"
             style="background-color: #3b3b3b">
             <a
               href="https://github.com/mfathinhalim"
               class="text-xl text-white text-center"
               style="text-decoration: none !important">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </section>
           <section
@@ -626,7 +635,8 @@
               href="https://codepen.io/MFathin-Halim-Doma"
               class="text-xl text-white text-center"
               style="text-decoration: none !important">
-              <i class="fa-brands fa-codepen" aria-hidden="true"></i> Codepen! <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i class="fa-brands fa-codepen" aria-hidden="true"></i> Codepen!
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </section>
         </div>
@@ -665,7 +675,7 @@
           <li>
             <a
               href="#contact"
-              class="hover:text-2xl hover:underline  mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >Contact</a
             >
           </li>
@@ -702,30 +712,30 @@
       selfLink.addEventListener("mouseout", function () {
         cursor.classList.remove("custom-cursor--link");
       });
-      document.getElementById("Name").onmouseenter = event => {  
+      document.getElementById("Name").onmouseenter = (event) => {
         let iteration = 0;
-        
+
         clearInterval(interval);
-        
+
         interval = setInterval(() => {
           event.target.innerText = event.target.innerText
             .split("")
             .map((letter, index) => {
-              if(index < iteration) {
+              if (index < iteration) {
                 return event.target.dataset.value[index];
               }
-            
-              return letters[Math.floor(Math.random() * 26)]
+
+              return letters[Math.floor(Math.random() * 26)];
             })
             .join("");
-          
-          if(iteration >= event.target.dataset.value.length){ 
+
+          if (iteration >= event.target.dataset.value.length) {
             clearInterval(interval);
           }
-          
+
           iteration += 1 / 3;
         }, 30);
-      }
+      };
     }
     document.addEventListener("mousedown", function () {
       cursor.classList.add("custom-cursor--link");
@@ -758,6 +768,5 @@
       var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
     }
-    
   </script>
 </html>
