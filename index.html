@@ -54,6 +54,9 @@
       div {
         font-family: "Karla";
       }
+      hr {
+        margin-bottom: 30px !important;
+      }
       :root {
         --text: #eceeee;
         --background: #030807;
@@ -126,6 +129,7 @@
         ); /* Fix the missing closing parenthesis */
         width: 0%;
       }
+
       @keyframes glowing {
         0% {
           box-shadow: 0 0 -10px #5539cc;
@@ -139,6 +143,9 @@
         100% {
           box-shadow: 0 0 -10px #5539cc;
         }
+      }
+      p {
+        letter-spacing: 0.7px;
       }
     </style>
   </head>
@@ -185,20 +192,23 @@
             data-aos="zoom-in"
             href="https://discordapp.com/users/1156486226094870569"
             class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-            Discord <i class="fa-brands fa-discord ml-2" aria-hidden="true"></i>
+            Discord
+            <i
+              style="color: white"
+              class="fa-brands fa-discord ml-2"
+              aria-hidden="true"></i>
           </a>
         </div>
         <a class="absolute w-6 mx-auto animate-bounce" style="margin-top: 60px">
-          <i class="fa fa-arrow-down text-white text-2xl"></i>
+          <i
+            style="color: white"
+            class="fa fa-arrow-down text-white text-2xl"></i>
         </a>
       </div>
     </section>
     <section class="container mx-auto p-0">
       <article id="who" class="mb-8">
-        <h3 class="text-2xl m-3">
-          Who Is <br />
-          M.Fathin Halim ?
-        </h3>
+        <h3 class="text-3xl m-3">Who is M.Fathin Halim ?</h3>
         <hr class="my-2" />
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <article>
@@ -225,29 +235,41 @@
                 class="fa fa-address-book text-3xl pl-3 w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
                 aria-hidden="true"></i>
               <h6 class="text-2xl ml-2"><strong>Contact</strong></h6>
-              <p class="text-sm ml-2">(Click For The Link)</p>
-              <ul id="contact" class="space-y-1 list-disc list-inside p-3">
+              <ul id="contact" class="space-y-1 list-inside p-3">
                 <li>
-                  <a href="https://discordapp.com/users/1156486226094870569"
-                    ><i class="fa-brands fa-discord"></i> Discord</a
+                  <a
+                    style="color: #25b3ef"
+                    href="https://discordapp.com/users/1156486226094870569"
+                    ><i style="color: white" class="fa-brands fa-discord"></i>
+                    Discord</a
                   >
                 </li>
                 <li>
-                  <a href="halimfathin7@gmail.com">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <a style="color: #25b3ef" href="halimfathin7@gmail.com">
+                    <i
+                      style="color: white"
+                      class="fa fa-envelope"
+                      aria-hidden="true"></i>
                     halimfathin7@gmail.com</a
                   >
                 </li>
                 <li>
                   <a
+                    style="color: #25b3ef"
                     href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/">
-                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i
-                    >Linkedin</a
+                    <i
+                      style="color: white"
+                      class="fa-brands fa-linkedin"
+                      aria-hidden="true"></i>
+                    Linkedin</a
                   >
                 </li>
                 <li>
-                  <a href="https://wa.me/+6282281627963">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                  <a style="color: #25b3ef" href="https://wa.me/+6282281627963">
+                    <i
+                      style="color: white"
+                      class="fa-brands fa-whatsapp"
+                      aria-hidden="true"></i>
                     WhatsApp: +62 822 8162 7963</a
                   >
                 </li>
@@ -264,85 +286,170 @@
           </article>
         </div>
       </article>
-      <article>
+      <article style="margin-top: 100px">
         <h3 class="text-3xl m-3">Tools</h3>
         <hr class="my-2" />
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <ul class="space-y-1 list-disc list-inside p-3">
-            <li>
-              Programming Languages: Python, <strong>JavaScript</strong>, Java,
-              C#, <strong>TypeScript</strong>
-            </li>
-            <li>
-              <strong>Web Development</strong>: HTML5, CSS3, Bootstrap,
-              TailwindCSS, React
-            </li>
-            <li>
-              <strong>Mobile Development</strong>: Android Studio, React Native
-            </li>
-            <li>Database: <strong>MongoDB</strong></li>
-          </ul>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-4 grid-cols-2 m-3">
-            <img
-              draggable="false"
-              class="mt-3"
-              data-aos="fade-up"
-              style="max-width: 100px; max-height: 100px"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" />
-            <img
-              draggable="false"
-              class="mt-3"
-              data-aos="fade-down"
-              style="max-width: 100px; max-height: 100px"
-              src="data:image/png;base64,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" />
-            <img
-              draggable="false"
-              class="mt-3"
-              data-aos="fade-up"
-              style="max-width: 100px; max-height: 100px"
-              src="https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png" />
-            <img
-              draggable="false"
-              class="mt-3"
-              data-aos="fade-down"
-              style="max-width: 100px; max-height: 100px"
-              src="https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png" />
-          </div>
+        <ul class="space-y-1 list-disc list-inside p-3">
+          <li>
+            Programming Languages: Python, <strong>JavaScript</strong>, Java,C#,
+            <strong>TypeScript</strong>
+          </li>
+          <li>
+            <strong>Web Development</strong>: HTML5, CSS3, Bootstrap,
+            TailwindCSS, React
+          </li>
+          <li>
+            <strong>Mobile Development</strong>: Android Studio, React Native
+          </li>
+          <li>Database: <strong>MongoDB</strong></li>
+        </ul>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-6 grid-cols-2 p-3 m-3">
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="max-width: 100px; max-height: 100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="max-width: 100px; max-height: 100px"
+            src="data:image/png;base64,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" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://w7.pngwing.com/pngs/201/90/png-transparent-logo-html-html5.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png" />
+
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="min-width: 100px; height: 100px"
+            src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="max-width: 100px; max-height: 100px"
+            src="https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/1024px-CSS3_logo.svg.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="max-width: 100px; max-height: 100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/512px-Android_Studio_Icon_%282014-2019%29.svg.png?20210301045443" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://cdn.sanity.io/images/fuvbjjlp/production/bd6440647fa19b1863cd025fa45f8dad98d33181-2000x2000.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-down"
+            style="max-width: 100px; max-height: 100px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" />
+          <img
+            draggable="false"
+            class="mt-3"
+            data-aos="fade-up"
+            style="max-width: 100px; max-height: 100px"
+            src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/181_Java_logo_logos-512.png" />
         </div>
       </article>
 
-      <article id="awards" class="mb-8 p-3">
+      <article id="awards" class="mb-8 p-3" style="margin-top: 100px">
         <h3 class="text-3xl">Awards</h3>
         <hr class="my-2" />
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          <img
-            draggable="false"
-            class="mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
-            src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/d0b63ae6f9cd158a6e887e7b1204e062.jpg"
-            alt="M.Fathin Halim"
-            data-aos="fade-right" />
+          <section class="grid grid-cols-1 gap-6 xl:grid-cols-5 grid-cols-2">
+            <img
+              draggable="false"
+              class="mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
+              style="max-height: 400px; object-fit: contain; width: auto"
+              src="https://play-lh.googleusercontent.com/AleA5pJ6XfoXT1RtdvLw5U0oYccWrebhD5DNpFc7oTrcfPWxHvbZFmSGgKeJlS0Qtw=w2560-h1440-rw"
+              alt="M.Fathin Halim"
+              data-aos="fade-right" />
+            <img
+              draggable="false"
+              class="mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
+              style="max-height: 400px; object-fit: contain; width: auto"
+              src="https://play-lh.googleusercontent.com/UgCNG2x18CiA6nu4TUHwP9b-QhH3FnlU3WP0812FMMpRmBs6YO5phTLZ9PM3Ab5Jd2o=w2560-h1440-rw"
+              alt="M.Fathin Halim"
+              data-aos="fade-right" />
+            <img
+              draggable="false"
+              class="hidden sm:block mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
+              style="max-height: 400px; object-fit: contain; width: auto"
+              src="https://play-lh.googleusercontent.com/3fhgLTwjgwe54k4bxKDhqycMTFH6rsada5Q9pxOriV1LxMcrSgWt8GPk5owY18v3mPg=w2560-h1440-rw"
+              alt="M.Fathin Halim"
+              data-aos="fade-right" />
+            <img
+              draggable="false"
+              class="hidden sm:block mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
+              style="max-height: 400px; object-fit: contain; width: auto"
+              src="https://play-lh.googleusercontent.com/RnSF5NQufxx1jKw_iz7B9bplU3YdJVPQNW-RMq4BbUauVDIS25rdicBn-k6FFyGznA=w2560-h1440-rw"
+              alt="M.Fathin Halim"
+              data-aos="fade-right" />
+            <img
+              draggable="false"
+              class="hidden sm:block mt-3 w-full mx-auto sm:mx-0 m-3 rounded-lg"
+              style="max-height: 400px; object-fit: contain; width: auto"
+              src="https://play-lh.googleusercontent.com/R2v1riYM-0nRwqaqtUZCpVCRiExf9x0xcY72HDt50HcvqPubyGMR2xQzAWknb3y2QQY=w2560-h1440-rw"
+              alt="M.Fathin Halim"
+              data-aos="fade-right" />
+          </section>
+
           <section class="p-3">
             <h6 class="text-2xl">
               Award for the Rejang Language Dictionary Project
             </h6>
             <p class="mt-3 mb-3"><strong>Year: </strong> 2020</p>
             <p class="text-justify">
-              <strong>Description:</strong> The <strong>Rejang</strong> Language
-              Dictionary project aimed to preserve and promote the rich
-              linguistic heritage of the Rejang community. This initiative
-              involved extensive research, collaboration with language experts,
-              and the development of a comprehensive dictionary that encompasses
-              the nuances and intricacies of the Rejang language. The
-              <strong>award</strong> recognizes the dedication and innovative
-              efforts put forth in creating a valuable resource for both the
-              Rejang-speaking population and those interested in the linguistic
-              diversity of the region.
+              <strong>Description:</strong>
+              <strong>The Rejang Language Dictionary project</strong> preserves
+              and promotes the community's linguistic heritage through research,
+              collaboration, and the development of a comprehensive dictionary.
+              The <strong>award</strong> recognizes dedication and innovation in
+              creating a valuable resource for Rejang speakers and those
+              interested in the region's linguistic diversity.
             </p>
+            <a
+              href="https://play.google.com/store/apps/details?id=org.kamusbahasarejang.kamusbahasarejang"
+              class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 mt-3 px-4 rounded inline-flex items-center">
+              See The Application</a
+            >
           </section>
         </div>
       </article>
-      <div id="services" class="mb-8" data-aos="zoom-in">
+      <div
+        id="services"
+        class="mb-8"
+        data-aos="zoom-in"
+        style="margin-top: 100px">
         <div class="p-3 mb-3">
           <h3 class="text-3xl">Website Development Services</h3>
           <hr class="mt-3 mb-3" />
@@ -368,10 +475,11 @@
           href="https://discordapp.com/users/1156486226094870569"
           class="button p-3 m-3 rounded-lg text-white hover:bg-orange-800 transition-all duration-300"
           style="animation: glowing 5000ms infinite; background: #5539cc">
-          <i class="fa-brands fa-discord"></i> Interested? Chat on Discord!
+          <i style="color: white" class="fa-brands fa-discord"></i> Interested?
+          Chat on Discord!
         </a>
       </div>
-      <article id="project" class="mb-8 p-3">
+      <article id="project" class="mb-8 p-3" style="margin-top: 100px">
         <h3 class="text-3xl">Projects</h3>
         <hr class="my-2" />
 
@@ -399,7 +507,10 @@
             <a
               href="https://kamusrejang.rejanglebongkab.go.id/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -425,7 +536,10 @@
             <a
               href="https://rejangpedia.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
 
@@ -450,7 +564,10 @@
             <a
               href="https://sciencekingdom.gg/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -475,7 +592,10 @@
             <a
               href="https://cerdasai.fatih-jihadijih.repl.co/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -500,7 +620,10 @@
             <a
               href="https://shared-gallery.glitch.me"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -524,7 +647,10 @@
             <a
               href="https://nabeela.itch.io/plane-vs-zombie-desktop"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
 
@@ -551,7 +677,10 @@
             <a
               href="https://mysimplenotes.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
 
@@ -573,7 +702,10 @@
             <a
               href="https://mediavibe.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -594,7 +726,10 @@
             <a
               href="https://domusik.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <div
@@ -615,7 +750,10 @@
             <a
               href="https://smpn1rl.glitch.me/"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-              Visit <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+              Visit
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
             </a>
           </div>
           <section
@@ -626,8 +764,14 @@
               href="https://github.com/mfathinhalim"
               class="text-xl text-white text-center"
               style="text-decoration: none !important">
-              <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i
+                style="color: white"
+                class="fa-brands fa-github"
+                aria-hidden="true"></i>
+              GitHub
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </section>
           <section
@@ -638,8 +782,14 @@
               href="https://codepen.io/MFathin-Halim-Doma"
               class="text-xl text-white text-center"
               style="text-decoration: none !important">
-              <i class="fa-brands fa-codepen" aria-hidden="true"></i> Codepen!
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <i
+                style="color: white"
+                class="fa-brands fa-codepen"
+                aria-hidden="true"></i>
+              Codepen!
+              <i
+                style="color: white"
+                class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </section>
         </div>
