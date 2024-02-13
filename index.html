@@ -13,10 +13,7 @@
     <meta
       property="og:description"
       content="A Middle School Programmer With Dream" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://ik.imagekit.io/9hpbqscxd/SG/image-97.jpg" />
+
     <meta
       property="og:image"
       content="https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg" />
@@ -24,7 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <meta property="og:url" content="fathin.my.id" />
+    <meta property="og:url" content="mfathinhalim.github.io" />
     <!--Style CSS-->
     <style type="text/css" media="screen">
       #who > h3,
@@ -115,7 +112,7 @@
         background-color: var(--accent) !important;
       }
       .progress-container {
-        width: 100%;
+        width: 90vh;
         height: 8px;
         background: rgba(0, 0, 0, 0);
         z-index: 10000;
@@ -147,9 +144,194 @@
       p {
         letter-spacing: 0.7px;
       }
+      .container {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          padding-left: 2% !important;
+          padding-right: 2% !important;
+        }
+      }
+
+      .flier {
+        pointer-events: none;
+        opacity: 20%;
+      }
+
+      .flier > * {
+        /* Adjust animation duration to change the element’s speed */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+        top: 0;
+        height: 60px;
+        left: 0;
+        transform: translateX(-120%) translateY(-120%) rotateZ(0);
+        position: fixed;
+        animation-delay: 1s;
+        z-index: 999999;
+      }
+
+      .box {
+        margin: 0 auto;
+        position: relative;
+        border-radius: 20px;
+      }
+
+      .box #img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        -webkit-animation: moveX 15s 0s infinite alternate,
+          moveY 3.4s 0s infinite alternate;
+        -moz-animation: moveX 15s linear 0s infinite alternate,
+          moveY 3.4s linear 0s infinite alternate;
+        -o-animation: moveX 15s linear 0s infinite alternate,
+          moveY 3.4s linear 0s infinite alternate;
+        animation: moveX 15s linear 0s infinite alternate,
+          moveY 3.4s linear 0s infinite alternate;
+        opacity: 30%;
+      }
+      #img img {
+        position: absolute;
+      }
+      #img #bla {
+        opacity: 100%;
+
+        z-index: -1;
+        width: 70px;
+        height: 70px;
+        filter: blur(10px);
+        -webkit-filter: blur(6px);
+        -moz-filter: blur(6px);
+        -o-filter: blur(6px);
+        -ms-filter: blur(6px);
+      }
+      @-webkit-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100%;
+        }
+      }
+      @-moz-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100%;
+        }
+      }
+      @-o-keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100%;
+        }
+      }
+      @keyframes moveX {
+        from {
+          left: 0;
+        }
+        to {
+          left: 100%;
+        }
+      }
+
+      @-webkit-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: 90vh;
+        }
+      }
+      @-moz-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: 90vh;
+        }
+      }
+      @-o-keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: 90vh;
+        }
+      }
+      @keyframes moveY {
+        from {
+          top: 0;
+        }
+        to {
+          top: 90vh;
+        }
+      }
+
+      /* Keyframe values control where the element will begin
+          and end its trajectory across the screen. Each rule
+          represents a path the element follows across the screen. */
+
+      @keyframes fly {
+        98.001%,
+        0% {
+          display: block;
+          transform: translateX(-200%) translateY(100vh) rotateZ(0deg);
+        }
+
+        15% {
+          transform: translateX(100vw) translateY(90vh) rotateZ(180deg);
+        }
+
+        15.001%,
+        18% {
+          transform: translateX(100vw) translateY(-30%) rotateZ(0deg);
+        }
+
+        40% {
+          transform: translateX(-200%) translateY(3vh) rotateZ(-180deg);
+        }
+
+        40.001%,
+        43% {
+          transform: translateX(-200%) translateY(-90vh) rotateZ(-180deg);
+        }
+
+        65% {
+          transform: translateX(100vw) translateY(50vh) rotateZ(0deg);
+        }
+
+        65.001%,
+        68% {
+          transform: translateX(20vw) translateY(-200%) rotateZ(180deg);
+        }
+
+        95% {
+          transform: translateX(10vw) translateY(100vh) rotateZ(0deg);
+        }
+      }
     </style>
   </head>
-  <body>
+  <body class="box">
+    <div id="img">
+      <img
+        src="https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png" />
+      <img
+        id="bla"
+        src="https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png" />
+    </div>
+
+    <div class="flier">
+      <img
+        src="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" />
+    </div>
     <div class="progress-container fixed m-0">
       <div class="progress-bar" id="myBar"></div>
     </div>
@@ -157,7 +339,7 @@
     <!------------------------------------------------------------------------------>
     <section
       style="background-size: cover"
-      class="bg-center bg-no-repeat max-h-screen-xl bg-[url('https://ik.imagekit.io/9hpbqscxd/SG/image-84.jpg')] bg-gray-700 bg-blend-multiply">
+      class="to-transparent bg-center bg-no-repeat max-h-screen-xl bg-[url('https://ik.imagekit.io/9hpbqscxd/SG/image-84.jpg')] bg-gray-700 bg-blend-multiply">
       <div
         class="px-4 mx-auto max-w-screen-xl max-h-screen-xl text-center py-24 lg:py-56">
         <img
@@ -185,13 +367,13 @@
           <a
             data-aos="zoom-in"
             href="#who"
-            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 hover:text-gray-800">
+            class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400 hover:text-gray-800">
             Who ?
           </a>
           <a
             data-aos="zoom-in"
             href="https://discordapp.com/users/1156486226094870569"
-            class="inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+            class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
             Discord
             <i
               style="color: white"
@@ -202,7 +384,7 @@
         <a class="absolute w-6 mx-auto animate-bounce" style="margin-top: 60px">
           <i
             style="color: white"
-            class="fa fa-arrow-down text-white text-2xl"></i>
+            class="fa fa-arrow-down text-white text-2xl ease-in-out delay-150"></i>
         </a>
       </div>
     </section>
@@ -234,7 +416,9 @@
               <i
                 class="fa fa-address-book text-3xl pl-3 w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
                 aria-hidden="true"></i>
-              <h6 class="text-2xl ml-2"><strong>Contact</strong></h6>
+              <h6 class="text-2xl ease-in-out delay-150 ml-2">
+                <strong>Contact</strong>
+              </h6>
               <ul id="contact" class="space-y-1 list-inside p-3">
                 <li>
                   <a
@@ -281,7 +465,7 @@
               draggable="false"
               data-aos="fade-down"
               class="mt-3 mx-auto w-full m-3 rounded-lg"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
               alt="M.Fathin Halim" />
           </article>
         </div>
@@ -351,7 +535,7 @@
             class="mt-3"
             data-aos="fade-up"
             style="max-width: 100px; max-height: 100px"
-            src="https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png?raw=true" />
+            src="https://seeklogo.com/images/M/mongodb-logo-D13D67C930-seeklogo.com.png" />
           <img
             draggable="false"
             class="mt-3"
@@ -363,7 +547,7 @@
             class="mt-3"
             data-aos="fade-up"
             style="max-width: 100px; max-height: 100px"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/512px-Android_Studio_Icon_%282014-2019%29.svg.png?raw=true?20210301045443" />
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/512px-Android_Studio_Icon_%282014-2019%29.svg.png?20210301045443" />
           <img
             draggable="false"
             class="mt-3"
@@ -423,7 +607,7 @@
           </section>
 
           <section class="p-3">
-            <h6 class="text-2xl">
+            <h6 class="text-2xl ease-in-out delay-150">
               Award for the Rejang Language Dictionary Project
             </h6>
             <p class="mt-3 mb-3"><strong>Year: </strong> 2020</p>
@@ -490,11 +674,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/kamus.png?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/kamus.png"
               alt="Kamus Bahasa Rejang"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://kamusrejang.rejanglebongkab.go.id/"
               >Kamus Bahasa Rejang</a
             >
@@ -518,11 +702,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/logo.png?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/logo.png"
               alt="rejangpedia"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://rejangpedia.glitch.me/"
               >rejangpedia</a
             >
@@ -548,11 +732,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/LogoISK.gif?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/LogoISK.gif"
               alt="Intergalactic Science Kingdom Website"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://sciencekingdom.gg/"
               >Intergalactic Science Kingdom Website</a
             >
@@ -575,11 +759,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/medium.jpg?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/medium.jpg"
               alt="Smart AI"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://cerdasai.fatih-jihadijih.repl.co/"
               >Cerdas AI</a
             >
@@ -603,19 +787,15 @@
             <img
               draggable="false"
               class="rounded-lg m-3"
-              src="https://ik.imagekit.io/9hpbqscxd/SG/image-4.jpg?updatedAt=1705798245623"
+              src="https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg"
               alt="Shared Gallery"
-              style="max-height: 300px" />
+              style="max-height: 285px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://shared-gallery.glitch.me/"
               >Shared Gallery</a
             >
-            <p>
-              imagine a platform where you can effortlessly preserve and
-              exchange your cherished moments through images. facilitates
-              seamless sharing with friends or a community.
-            </p>
+            <p>you can share cherished moments through images.</p>
             <a
               href="https://shared-gallery.glitch.me"
               class="inline-flex justify-center hover:text-gray-900 items-center py-2 mt-3 px-5 text-base font-medium text-center text-white rounded-full border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
@@ -631,11 +811,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/PVZ.png?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/PVZ.png"
               alt="Plane VS Zombies"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://nabeela.itch.io/plane-vs-zombie-desktop"
               >Plane VS Zombies</a
             >
@@ -659,11 +839,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://cdn-icons-png.flaticon.com/512/1024/1024824.png"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/images"
               alt="My Simple Notes"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://mysimplenotes.glitch.me/"
               >My Simple Notes</a
             >
@@ -689,11 +869,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg"
               alt="MediaVibe"
-              style="max-height: 300px" />
+              style="max-height: 300px; object-fit: cover" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://mediavibe.glitch.me/"
               >Media Vibe</a
             >
@@ -713,11 +893,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/gradient-lo-fi-illustrations_52683-82981.jpg?raw=true"
+              src="https://e1.pxfuel.com/desktop-wallpaper/240/812/desktop-wallpaper-best-music-electronic-no-copyright-sounds-sounds.jpg"
               alt="DoMusic"
-              style="max-height: 300px" />
+              style="max-height: 300px; object-fit: cover" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://domusik.glitch.me/"
               >Do Music</a
             >
@@ -737,11 +917,11 @@
             <img
               draggable="false"
               class="rounded-lg mb-3"
-              src="https://github.com/MFathinHalim/mfathinhalim.github.io/blob/main/M.Fathin%20Halim_files/logo(1).png?raw=true"
+              src="https://mfathinhalim.github.io/M.Fathin%20Halim_files/logo(1).png"
               alt="SMP Negeri 1 Rejang Lebong Website"
               style="max-height: 300px" />
             <a
-              class="text-2xl mt-3 font-semibold underline decoration-blue-500"
+              class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
               href="https://smpn1rl.glitch.me/"
               >SMP Negeri 1 Rejang Lebong's Website</a
             >
@@ -797,7 +977,7 @@
 
     <footer class="rounded-lg shadow m-4">
       <div
-        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        class="w-full transition-all mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
           >Made By M.Fathin Halim
         </span>
@@ -806,35 +986,35 @@
           <li>
             <a
               href="#"
-              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+              class="hover:text-2xl ease-in-out delay-150 hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >About</a
             >
           </li>
           <li>
             <a
               href="#project"
-              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+              class="hover:text-2xl ease-in-out delay-150 hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >Project</a
             >
           </li>
           <li>
             <a
               href="#award"
-              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+              class="hover:text-2xl ease-in-out delay-150 hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >Awards</a
             >
           </li>
           <li>
             <a
               href="#contact"
-              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+              class="hover:text-2xl ease-in-out delay-150 hover:underline mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >Contact</a
             >
           </li>
           <li>
             <a
               href="#services"
-              class="hover:text-2xl hover:underline mt-3 font-semibold decoration-blue-500"
+              class="hover:text-2xl ease-in-out delay-150 hover:underline mt-3 font-semibold decoration-blue-500"
               >Service</a
             >
           </li>
