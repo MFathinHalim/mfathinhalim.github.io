@@ -89,18 +89,14 @@
     background-color: var(--accent) !important;
   }
   .progress-container {
-    width: 90vh;
-    height: 8px;
+    width: 100%;
     background: rgba(0, 0, 0, 0);
     z-index: 10000;
   }
 
   .progress-bar {
-    height: 4px;
-    background: -webkit-linear-gradient(
-      var(--primary),
-      var(--accent)
-    ); /* Fix the missing closing parenthesis */
+    height: fit-content;
+    background: linear-gradient(to right, #22a4db, #7755ed);
     width: 0%;
   }
 
