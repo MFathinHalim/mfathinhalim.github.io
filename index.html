@@ -33,7 +33,7 @@
   <body class="box">
     <div id="loading" style="  transition: opacity 3s ease-in-out;" class="loader-wrapper">
       <span class="pac-man"></span>
-      <div class="loading-text"><p id="quotes" class="mt-12 text-center"></p></div>
+      <div class="loading-text"><p id="quotes" class="mt-12 text-center text-md"></p></div>
   </div>
     <div class="flier">
       <img
@@ -63,12 +63,13 @@
           class="backdrop-blur-md p-12 pt-3 pl-3 pr-3 border rounded-lg shadow bg-transparent border-gray-700"
         >
           <div class="flex flex-col space-y-4 sm:space-y-0 mb-5">
-            <p class="border rounded-full px-3 py-1" style="width: fit-content;">🇵🇸 Indie Dev | Use Arch btw</p>
+            <p class="border rounded-full px-3 py-1" style="width: fit-content;">🇵🇸 Indie Dev | btw i use Arch</p>
+            <h2 class="text-1xl px-3 py-1 text-center" style="font-family: 'Montserrat';"><span> System: <strong class="text-green-300">Success</strong></span></h2>
+
           </div>
           
 
           <div class="text-center">
-            <h2 class="text-1xl mb-4" style="font-family: 'Montserrat';"><span> System: Success</span></h2>
             <img
               draggable="false"
               data-aos="fade-down"
@@ -80,7 +81,7 @@
             <h1
               id="Name"
               data-value="M.FATHINHALIM"
-              class="p-3 mb-4 text-4xl hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto md:text-5xl lg:text-6xl mx-auto"
+              class="p-3 mb-4 text-4xl rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto md:text-5xl lg:text-6xl mx-auto"
               style="font-family: 'Rubik'; position: relative; width: fit-content; height: fit-content; transition: background-color 0.3s ease;"
             >
             M.FATHINHALIM
@@ -917,19 +918,20 @@
 
   <script>
     const arrayQuote = [
-      '"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim',
-      '"Sometimes fiction makes more sense than reality" <br> ― M.Fathin Halim',
-      '"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." <br> ― Helen Keller',
-      '"The difference between ordinary and extraordinary is that little extra." <br> ― Jimmy Johnson',
-      '"It is during our darkest moments that we must focus to see the light." <br> ― Aristotle',
-      '"Believe you can and you\'re halfway there." <br> ― Theodore Roosevelt',
-      '"Twenty years from now you will be more disappointed by the things that you didn\'t do than by the ones you did do. So throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover." <br> ― Mark Twain',
-      '"The only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle." <br> ― Steve Jobs',
-      '"The mind is everything. What you think you become." <br> ― Buddha',
-      '"The journey of a thousand miles begins with a single step." <br> ― Lao Tzu'
-    ];
-
-
+  '"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim',
+  '"Sometimes fiction makes more sense than reality" <br> ― M.Fathin Halim',
+  '"The difference between ordinary and extraordinary is that little extra." <br> ― Jimmy Johnson',
+  '"It is during our darkest moments that we must focus to see the light." <br> ― Aristotle',
+  '"Believe you can and you\'re halfway there." <br> ― Theodore Roosevelt',
+  '"The mind is everything. What you think you become." <br> ― Buddha',
+  '"The journey of a thousand miles begins with a single step." <br> ― Lao Tzu',
+  '"Failure is an opportunity to start again smarter." <br> - Henry Ford',
+  '"The only way to do great work is to love what you do." <br> - Steve Jobs',
+  '"The future belongs to those who prepare for it today." <br> - Abraham Lincoln',
+  '"Courage is doing what youre afraid of." <br> - Mark Twain',
+  '"The most important thing in life is learning how to give." <br> - Leo Tolstoy',
+  '"The only person you were destined to be is yourself." <br> - Ralph Waldo Emerson'
+];
     const quotes = document.getElementById("quotes");
 
     function getRandomQuote() {
@@ -945,8 +947,12 @@
     
     setTimeout(() => {
       element.style.opacity = 0;
-    }, 2000); // 3000 milidetik sama dengan 3 detik
-
+    
+      // Tunggu 1 detik setelah opacity 0, kemudian sembunyikan elemen
+      setTimeout(() => {
+        element.style.display = "none";
+      }, 3000);
+    }, 2000); // 2 detik untuk animasi opacity    
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ.";
     let interval = null;
@@ -970,31 +976,27 @@
       document.getElementById("Name").onmouseenter = (event) => {
         if (window.matchMedia("(min-width: 768px)").matches) {
           let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return event.target.dataset.value[index];
+        }
       
-          clearInterval(interval);
-      
-          interval = setInterval(() => {
-            const span = event.target.querySelector("span"); // Get the span element inside #Name
-      
-            if (span) {
-              span.textContent = span.textContent
-                .split("")
-                .map((letter, index) => {
-                  if (index < iteration) {
-                    return event.target.dataset.value[index];
-                  }
-      
-                  return letters[Math.floor(Math.random() * 26)];
-                })
-                .join("");
-            }
-      
-            if (iteration >= event.target.dataset.value.length) {
-              clearInterval(interval);
-            }
-      
-            iteration += 1 / 3;
-          }, 29);
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= event.target.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 30);
         }
       };
       

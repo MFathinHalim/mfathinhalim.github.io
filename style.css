@@ -493,3 +493,8 @@ box-shadow: 70px 0 0 0 #B0C5A4, 120px 0 0 0 #B0C5A4, 170px 0 0 0 #B0C5A4, 220px 
 box-shadow: 20px 0 0 0 #B0C5A4, 70px 0 0 0 #B0C5A4, 120px 0 0 0 #B0C5A4, 170px 0 0 0 #B0C5A4;
 }
 }
+h1{
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
