@@ -33,7 +33,7 @@
   <body class="box">
     <div id="loading" style="  transition: opacity 3s ease-in-out;" class="loader-wrapper">
       <span class="pac-man"></span>
-      <div class="loading-text"><p class="mt-12 text-center">"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim</p></div>
+      <div class="loading-text"><p id="quotes" class="mt-12 text-center"></p></div>
   </div>
     <div class="flier">
       <img
@@ -916,8 +916,33 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
-    const element = document.querySelector("#loading"); // Ganti dengan ID elemen yang ingin disembunyikan
+    const arrayQuote = [
+      '"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim',
+      '"Sometimes fiction makes more sense than reality" <br> ― M.Fathin Halim',
+      '"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart." <br> ― Helen Keller',
+      '"The difference between ordinary and extraordinary is that little extra." <br> ― Jimmy Johnson',
+      '"It is during our darkest moments that we must focus to see the light." <br> ― Aristotle',
+      '"Believe you can and you\'re halfway there." <br> ― Theodore Roosevelt',
+      '"Twenty years from now you will be more disappointed by the things that you didn\'t do than by the ones you did do. So throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover." <br> ― Mark Twain',
+      '"The only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle." <br> ― Steve Jobs',
+      '"The mind is everything. What you think you become." <br> ― Buddha',
+      '"The journey of a thousand miles begins with a single step." <br> ― Lao Tzu'
+    ];
 
+
+    const quotes = document.getElementById("quotes");
+
+    function getRandomQuote() {
+      // Get a random index within the array's bounds
+      const randomIndex = Math.floor(Math.random() * arrayQuote.length);
+
+      // Return the quote at the random index
+      return arrayQuote[randomIndex];
+    }
+        
+    quotes.innerHTML = getRandomQuote();
+    const element = document.querySelector("#loading"); // Ganti dengan ID elemen yang ingin disembunyikan
+    
     setTimeout(() => {
       element.style.opacity = 0;
     }, 2000); // 3000 milidetik sama dengan 3 detik
