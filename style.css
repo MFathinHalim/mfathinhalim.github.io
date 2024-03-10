@@ -71,6 +71,10 @@
   body {
     background: var(--background);
     color: var(--text);
+    font-size: larger;
+  }
+  .backdrop-blur-lg>i {
+    font-size:x-large;
   }
   strong,
   h3 {
@@ -99,7 +103,21 @@
     background: linear-gradient(to right, #22a4db, #7755ed);
     width: 0%;
   }
-
+  .h-auto{
+    border:solid 2px rgb(35, 31, 58);
+  }
+  .super-rounded{
+    border-radius:34px !important;
+  }
+  .h-auto{
+    transition: 0.5s ease;
+  }
+  .rounded-lg:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s ease;
+  }
   @keyframes glowing {
     0% {
       box-shadow: 0 0 -10px #5539cc;
