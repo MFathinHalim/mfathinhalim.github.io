@@ -558,31 +558,16 @@
                 class="fa fa-address-book text-3xl pl-3 w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
                 aria-hidden="true"
               ></i>
-              <h6 class="text-2xl ease-in-out delay-150 ml-2">
-                <strong>Contact</strong>
+              <h6  class="text-2xl ease-in-out delay-150 ml-2">
+                <strong style="color:white !important;">Contact Me!</strong>
               </h6>
               <ul id="contact" class="space-y-1 list-inside p-3">
-                <li>
+                
+                
+                <li class="py-2">
                   <a
                     style="color: #25b3ef"
-                    href="https://discordapp.com/users/1156486226094870569"
-                    ><i style="color: white" class="fa-brands  fa-discord"></i>
-                    Discord</a
-                  >
-                </li>
-                <li>
-                  <a style="color: #25b3ef" href="halimfathin7@gmail.com">
-                    <i
-                    style="color:white;"
-                      class="fa fa-envelope"
-                      aria-hidden="true"
-                    ></i>
-                    halimfathin7@gmail.com</a
-                  >
-                </li>
-                <li>
-                  <a
-                    style="color: #25b3ef"
+                    class="border p-2 rounded border-2 bg-gray-700 border-gray-600 hover:bg-gray-600"
                     href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
                   >
                     <i
@@ -593,16 +578,37 @@
                     Linkedin</a
                   >
                 </li>
-                <li>
-                  <a style="color: #25b3ef" href="https://wa.me/+6282281627963">
+                <li class="py-2">
+                  <a
+                    style="color: #25b3ef"
+                    class="border p-2 rounded border-2 bg-gray-700 border-gray-600 hover:bg-gray-600"
+                    href="https://discordapp.com/users/1156486226094870569"
+                    ><i style="color: white" class="fa-brands  fa-discord"></i>
+                    @mfathinhalim</a
+                  >
+                </li>
+                <li class="py-2">
+                  <a style="color: #25b3ef" class="border p-2 rounded border-2 bg-gray-700 border-gray-600 hover:bg-gray-600" href="https://wa.me/+6282281627963">
                     <i
                     style="color:white;"
                           class="fa-brands  fa-whatsapp"
                       aria-hidden="true"
                     ></i>
-                    WhatsApp: +62 822 8162 7963</a
+                    +62 822 8162 7963</a
                   >
                 </li>
+                <li class="py-2">
+                  <a style="color: #25b3ef"
+                  class="border p-2 rounded border-2 bg-gray-700 border-gray-600 hover:bg-gray-600" href="halimfathin7@gmail.com">
+                    <i
+                      style="color:white;"
+                      class="fa fa-envelope"
+                      aria-hidden="true"
+                    ></i>
+                    halimfathin7@gmail.com</a
+                  >
+                </li>
+                
               </ul>
             </div>
           </article>
@@ -1095,7 +1101,7 @@
               class="rounded-lg mb-3"
               src="https://e1.pxfuel.com/desktop-wallpaper/240/812/desktop-wallpaper-best-music-electronic-no-copyright-sounds-sounds.jpg"
               alt="DoMusic"
-              style="max-height: 300px; object-fit: cover"
+              style="height: 300px; max-height:100%; object-fit: cover"
             />
             <a
               class="text-2xl ease-in-out delay-150 mt-3 font-semibold underline decoration-blue-500"
@@ -1311,7 +1317,6 @@
       scaleValue = 0.3;
     }
     window.onscroll = function () {
-
       myFunction();
     };
 
@@ -1321,7 +1326,7 @@
       var height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 250;
+      var scrolled = (winScroll / height) * 100;
       document.getElementById("myBar").style.width = scrolled + "%";
     }
   </script>
