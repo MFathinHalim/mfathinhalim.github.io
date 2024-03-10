@@ -9,14 +9,10 @@
 }
 
 body::-webkit-scrollbar {
-  width: 4em; /* Lebar scrollbar */
+  width: 5px; /* Lebar scrollbar */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(
-    234,
-    234,
-    234
-  ); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
+  background-color: rgba(59, 59, 59, 0.205); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
 }
 
 body::-webkit-scrollbar-track {
@@ -39,7 +35,7 @@ hr {
   background: lightslategray;
   color: var(--text);
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   /* Aturan CSS tambahan untuk dekstop */
   a,
   body {
@@ -63,14 +59,16 @@ hr {
   #cursor2 {
     background-color: white;
   height: 34vmax;
+  pointer-events: none;
+
   aspect-ratio: 1;
   position: fixed;
   left: 50%;
   top: 50%;
-  z-index: 0;
+  z-index: -1;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, rgb(18, 140, 211), rgb(173, 180, 192));
+  background: linear-gradient(to right, rgb(6, 74, 114), rgb(173, 180, 192));
   animation: rotate 20s infinite;
   backdrop-filter: blur(200px);
   opacity: 0.6;
@@ -383,21 +381,24 @@ p {
   }
 }
 @keyframes run {
-  0% {
-    transform: rotateY(0deg);
-    left: -100px;
+  0%{
+    left: 0%;
+    transform: scaleX(-1);
   }
-  50% {
-    transform: rotateY(0deg);
-    left: 100%;
+  1%{
+    left: 0%;
+    transform: scaleX(1);
   }
-  51% {
-    transform: rotateY(180deg);
-    left: calc(100% + 100px);
+  50%{
+    left: calc(100% - 150px);
+    transform: scaleX(1);
   }
-  100% {
-    transform: rotateY(180deg);
-    left: -100px;
+  51%{
+    transform: scaleX(-1);
+  }
+  100%{
+    left: 0%;
+    transform: scaleX(-1);
   }
 }
 span:after,
