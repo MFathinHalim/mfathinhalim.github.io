@@ -7,12 +7,9 @@
   font-family: "Montserrat";
   font-weight: bolder;
 }
-html,
-body {
-  scroll-behavior: smooth;
-}
+
 body::-webkit-scrollbar {
-  width: 0em; /* Lebar scrollbar */
+  width: 4em; /* Lebar scrollbar */
 }
 body::-webkit-scrollbar-thumb {
   background-color: rgb(
@@ -23,7 +20,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #343a40; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
+  background-color: #e7e7e7; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
 }
 div {
   font-family: "Karla";
