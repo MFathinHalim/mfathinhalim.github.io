@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
         element.style.opacity = 0;
     
         setTimeout(() => {
+          element.parentNode.removeChild(element);
+
             element.style.display = "none";
-            element.parentNode.removeChild(element);
         }, 2000);
         }, 1000);
       
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const carElement = document.getElementById('car');
         const cursorElement = document.getElementById('cursor'); // Use a descriptive variable name
         const cursor2Element = document.getElementById('cursor2');
-    
+        
         if (carElement) {
           carElement.parentNode.removeChild(carElement);
         }
