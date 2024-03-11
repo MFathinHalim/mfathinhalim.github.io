@@ -4,7 +4,7 @@
 #who > h3,
 #award > h3,
 #skills > h3 {
-  font-family: "Montserrat";
+  font-family:'Rubik';
   font-weight: bolder;
 }
 
@@ -19,7 +19,7 @@ body::-webkit-scrollbar-track {
   background-color: #e7e7e7; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
 }
 div {
-  font-family: "Karla";
+  font-family:'Rubik';
 }
 #bg-img{
   background-image: url('https://github.com/MFathinHalim/mfathinhalim.github.io/raw/main/M.Fathin%20Halim_files/Header.webp');
@@ -61,7 +61,7 @@ hr {
   }
   #cursor2 {
     background-color: white;
-  height: 34vmax;
+  height: 300px;
   pointer-events: none;
 
   aspect-ratio: 1;
