@@ -330,6 +330,7 @@ span:before {
 @media (max-width: 639px) {
   #bg-img {
     background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
+    background: #030807 !important;
   }
 }
 h1 {
