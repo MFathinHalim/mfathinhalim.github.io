@@ -80,10 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('load', removeCarElementsOnMobile);
     window.addEventListener('resize', removeCarElementsOnMobile);
-    
-    
-    // Call the function on page load and resize events
-    window.addEventListener('load', removeCarOnMobile);    
+  
   
     if (!isMobile) {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
