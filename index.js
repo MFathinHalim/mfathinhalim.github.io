@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
       setTimeout(() => {
         element.style.display = "none";
-      }, 3000);
-    }, 2000);
+      }, 2000);
+    }, 1000);
   
     socialElements.forEach(socialElement => {
       const socialData = socialElement.dataset.social;
