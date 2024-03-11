@@ -49,6 +49,14 @@ hr {
   background: lightslategray;
   color: var(--text);
 }
+body {
+  cursor:auto;
+  transition: 0.3s;
+}
+#navbar {
+  transition: top 0.3s ease-in-out;
+}
+
 @media (min-width: 1280px) {
   /* Aturan CSS tambahan untuk dekstop */
   a,

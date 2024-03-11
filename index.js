@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      var navbar = document.getElementById("navbar");
+
+      if (prevScrollpos > currentScrollPos) {
+        // Scroll ke atas, tampilkan navbar khusus HP
+        navbar.style.top = "10px";
+      } else {
+        // Scroll ke n sembunyikan navbar khusus HP
+        navbar.style.top = "-100px"; // Ubah sesuai dengan tinggi navbar
+      }
+      prevScrollpos = currentScrollPos;
+    };
     const socialElements = document.querySelectorAll(".social");
     const isMobile = window.innerWidth <= 639;
     const quotes = document.getElementById("quotes");
@@ -84,8 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
     if (!isMobile) {
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      let interval = null;
       const links = document.querySelectorAll("a, strong, .underlinee, #Name");
       var cursor = document.getElementById("cursor");
       var c2 = document.getElementById("cursor2");
@@ -121,33 +133,47 @@ document.addEventListener('DOMContentLoaded', () => {
       function resetScale() {
         scaleValue = 0.3;
       }
-  
-      document.getElementById("Name").onmouseenter = (event) => {
-        if (window.matchMedia("(min-width: 768px)").matches) {
-          let iteration = 0;
-  
-          clearInterval(interval);
-          
-          interval = setInterval(() => {
-            event.target.innerText = event.target.innerText
-              .split("")
-              .map((letter, index) => {
-                if(index < iteration) {
-                  return event.target.dataset.value[index];
-                }
-              
-                return letters[Math.floor(Math.random() * 26)]
-              })
-              .join("");
-            
-            if(iteration >= event.target.dataset.value.length){ 
-              clearInterval(interval);
-            }
-            
-            iteration += 1 / 3;
-          }, 30);
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let interval = null;
+
+document.getElementById("Name").onmouseenter = (event) => {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    let iteration = 0;
+    const targetValue = event.target.dataset.value; // Cache target value
+    const originalWidth = event.target.offsetWidth; // Capture initial width
+
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+      let updatedText = targetValue.split("").map((letter, index) => {
+        if (index < iteration) {
+          return letter; // Preserve revealed letters
         }
-      };
+
+        // Randomize within the target value length
+        const randomIndex = Math.floor(Math.random() * targetValue.length);
+        return targetValue[randomIndex];
+      }).join("");
+
+      // Prevent overflow by truncating if necessary
+      if (updatedText.length > targetValue.length) {
+        updatedText = updatedText.substring(0, targetValue.length);
+      }
+
+      event.target.innerText = updatedText;
+
+      // Set width explicitly to maintain original size
+      event.target.style.width = originalWidth + "px";
+
+      if (iteration >= targetValue.length) {
+        clearInterval(interval);
+      }
+
+      iteration += 1 / 3;
+    }, 30);
+  }
+};
+
     }
 
   });

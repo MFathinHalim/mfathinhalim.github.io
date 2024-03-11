@@ -81,7 +81,7 @@
               draggable="false"
               data-aos="fade-down"
               class="mb-4 mx-auto object-center rounded-full border-4 border-transparent border-x-blue-500 border-y-gray-700"
-              style="height: 14vh; width:14vh; object-fit: cover"
+              style="height: 150px; width:150px; object-fit: cover"
               alt="Fathin"
               src="./image-82.webp"
             />
@@ -94,6 +94,7 @@
                 position: relative;
                 width: fit-content;
                 height: fit-content;
+                overflow:hidden;
                 transition: background-color 0.3s ease;
               "
             >
@@ -212,7 +213,7 @@
       </div>
     </section>
     <section class="container mx-auto p-0 mt-8">
-      <nav class="super-rounded border border-slate-600 shadow m-6 sticky top-3 backdrop-blur-lg mt-4 mx-auto" style="
+      <nav id="navbar" class="super-rounded border border-slate-600 shadow m-6 sticky top-3 backdrop-blur-lg mt-4 mx-auto" style="
           z-index: 600;
           width: fit-content;
           background: rgba(30, 41, 59, 0.4);
@@ -220,7 +221,7 @@
         <div class="transition-all justify-content-center p-4 pt-1 sm:pt-4 md:flex md:items-center md:justify-between">
           <ul class="flex flex-wrap items-center mt-3 text-sm font-medium super-rounded text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
-              <a href="#" class="text-1xl hover:text-2xl ease-in-out backdrop-blur-lg bg-gray-700 rounded border border-slate-700 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6">About</a>
+              <a href="#" class="text-1xl hover:text-2xl ease-in-out backdrop-blur-lg bg-gray-800 rounded border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6">About</a>
             </li>
             <li>
               <a href="#award" class="text-1xl hover:text-2xl ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6">Awards</a>
@@ -451,12 +452,13 @@
           </div>
           <div class="grid gap-4">
             <div
+            style="height: 100%;"
               id="randomParent"
               class="bg-gray-700 hover:bg-gray-800 border-slate-600 rounded-lg h-full text-gray-600"
             >
               <img
               loading="lazy" 
-                style="object-fit: cover"
+                style="object-fit: cover;"
                 data-aos="fade-up"
                 class="h-full max-w-full rounded-lg"
                 src="./desktop-wallpaper-bootstrap-css-framework.jpg"
@@ -861,10 +863,10 @@
           </a>
         </div>
       </article>
-      <div id="services" class="mb-8 text-center" data-aos="zoom-in">
+      <div id="services" class="mb-8 " data-aos="zoom-in">
         <div class="p-3 mb-3">
           <h1
-            class="text-4xl sm:text-7xl text-blue-400 "
+            class="text-4xl sm:text-7xl text-blue-400 text-center"
             style="margin-top: 50px; font-family: sans-serif; font-weight: bold"
           >
             Service
@@ -875,7 +877,7 @@
             quality website development services with attractive designs.
             Discuss your needs with M.Fathin Halim through Discord or Email!
           </p>
-          <ul class="p-4">
+          <ul class="p-4 text-left">
             <li>An Application with Simple Backend</li>
             <li>Website for a class or school</li>
             <li>Personal Website</li>
