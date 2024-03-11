@@ -23,6 +23,10 @@ body::-webkit-scrollbar-track {
 }
 #bg-img{
   background-image: url('./Header.webp');
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 hr {
   margin-bottom: 30px !important;
@@ -160,7 +164,7 @@ a {
   border: solid 2px rgb(35, 31, 58);
 }
 .super-rounded {
-  border-radius: 34px !important;
+  border-radius: 14px !important;
 }
 .h-auto {
   transition: 0.5s ease;
@@ -220,11 +224,7 @@ p {
   }
 }
 
-.box {
-  margin: 0 auto;
-  position: relative;
-  border-radius: 20px;
-}
+
 
 .box #img {
   width: 60px;
@@ -336,8 +336,10 @@ span:before {
 }
 @media (max-width: 639px) {
   #bg-img {
-    background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
     background: #030807 !important;
+    background-size: auto;
+    background-image: none;
+    background-attachment:scroll;
   }
 }
 h1 {
