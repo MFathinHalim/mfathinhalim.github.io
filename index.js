@@ -83,14 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.classList.remove("custom-cursor--link");
       });
   
-      document.body.onmousemove = function (e) {
+      window.onmousemove = function (e) {
         cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
         c2.animate({
           left: `${e.clientX}px`,
           top: `${e.clientY}px`
-        }, {duration: 3000, fill:"forwards"})
-      };
+        }, {duration: 3000, fill: "forwards"});
+    };
+    
   
       function resetScale() {
         scaleValue = 0.3;
