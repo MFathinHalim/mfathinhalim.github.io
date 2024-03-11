@@ -192,6 +192,29 @@ p {
     padding-right: 2% !important;
   }
 }
+@media(min-width: 641px) {
+  @keyframes run {
+    0%{
+      left: 0%;
+      transform: scaleX(-1);
+    }
+    1%{
+      left: 0%;
+      transform: scaleX(1);
+    }
+    50%{
+      left: calc(100% - 150px);
+      transform: scaleX(1);
+    }
+    51%{
+      transform: scaleX(-1);
+    }
+    100%{
+      left: 0%;
+      transform: scaleX(-1);
+    }
+  }
+}
 
 .box {
   margin: 0 auto;
@@ -261,27 +284,7 @@ p {
     width: 100%; /* Lebar saat dihover */
   }
 }
-@keyframes run {
-  0%{
-    left: 0%;
-    transform: scaleX(-1);
-  }
-  1%{
-    left: 0%;
-    transform: scaleX(1);
-  }
-  50%{
-    left: calc(100% - 150px);
-    transform: scaleX(1);
-  }
-  51%{
-    transform: scaleX(-1);
-  }
-  100%{
-    left: 0%;
-    transform: scaleX(-1);
-  }
-}
+
 span:after,
 span:before {
   content: "\00a0\00a0\00a0\00a0\00a0";
