@@ -334,6 +334,7 @@ span:before {
   #bg-img {
     background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
     background: #030807 !important;
+    background-image: none;
   }
 }
 h1 {

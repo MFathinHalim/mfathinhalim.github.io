@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
             element.parentNode.removeChild(element);
         }, 2000);
         }, 1000);
-  
+      
     
     socialElements.forEach(socialElement => {
       const socialData = socialElement.dataset.social;
       const originalHTML = socialElement.innerHTML;
-  
-      if (!originalHTML.includes(socialData)) {
+      if (isMobile && !originalHTML.includes(socialData)) {
         socialElement.innerHTML = isMobile ? originalHTML + `${socialData} ` : originalHTML;
       }
+      
   
       if (!isMobile) {
         socialElement.innerHTML = originalHTML.replace(socialData, "");
@@ -58,19 +58,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     AOS.init();
-    function removeCarOnMobile() {
+    function removeCarElementsOnMobile() {
       if (window.matchMedia('(max-width: 768px)').matches) {
         const carElement = document.getElementById('car');
+        const cursorElement = document.getElementById('cursor'); // Use a descriptive variable name
+        const cursor2Element = document.getElementById('cursor2');
+    
         if (carElement) {
           carElement.parentNode.removeChild(carElement);
+        }
+    
+        if (cursorElement) {
+          cursorElement.parentNode.removeChild(cursorElement); // Remove cursorElement
+        }
+    
+        if (cursor2Element) {
+          cursor2Element.parentNode.removeChild(cursor2Element); // Remove cursor2Element
         }
       }
     }
     
-    // Call the function on page load and resize events
-    window.addEventListener('load', removeCarOnMobile);
-    window.addEventListener('resize', removeCarOnMobile);
+    window.addEventListener('load', removeCarElementsOnMobile);
+    window.addEventListener('resize', removeCarElementsOnMobile);
     
+    
+    // Call the function on page load and resize events
+    window.addEventListener('load', removeCarOnMobile);    
   
     if (!isMobile) {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
