@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         setTimeout(() => {
             element.style.display = "none";
+            element.parentNode.removeChild(element);
         }, 2000);
         }, 1000);
   
