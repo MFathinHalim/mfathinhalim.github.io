@@ -24,7 +24,8 @@ body::-webkit-scrollbar-track {
 #bg-img{
   background-image: url('./Header.webp');
   position: relative;
-
+  background-attachment: fixed;
+  background-position: center;
 }
 hr {
   margin-bottom: 30px !important;
