@@ -98,11 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
     if (!isMobile) {
-      const links = document.querySelectorAll("a, strong, .underlinee, #Name");
+      const links = document.querySelectorAll("a");
+      const notLinks = document.querySelectorAll("strong, .underlinee, #Name")
       var cursor = document.getElementById("cursor");
       var c2 = document.getElementById("cursor2");
   
       links.forEach(link => {
+        link.addEventListener("mouseover", () => {
+          document.querySelector("body").style = "cursor: pointer !important;"
+          cursor.classList.add("custom-cursor--link");
+        });
+  
+        link.addEventListener("mouseout", () => {
+          cursor.classList.remove("custom-cursor--link");
+          document.querySelector("body").style = "cursor: none;"
+
+        });
+      });
+
+      notLinks.forEach(link => {
         link.addEventListener("mouseover", () => {
           cursor.classList.add("custom-cursor--link");
         });

@@ -50,7 +50,7 @@ hr {
   color: var(--text);
 }
 body {
-  cursor:auto;
+  cursor: none;
   transition: 0.3s;
 }
 #navbar {
@@ -61,16 +61,16 @@ body {
   /* Aturan CSS tambahan untuk dekstop */
   a,
   body {
-    cursor: none;
     transition: 0.3s;
   }
   /* CSS umum untuk kursor */
   #cursor {
+
     position: fixed;
     pointer-events: none;
     mix-blend-mode: difference;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     transition: 2s;
     border-radius: 50%;
     background-color: var(--text);
@@ -100,6 +100,7 @@ body {
 
   .custom-cursor--link {
     transform: translate(-50%, -50%) scale(1) !important;
+    cursor: pointer !important;
   }
 }
 .underlinee {
@@ -194,6 +195,9 @@ p {
 }
 
 @media (max-width: 640px) {
+  body {
+    cursor:auto;
+  }
   .hide-on-mobile {
     display: none;
   }
