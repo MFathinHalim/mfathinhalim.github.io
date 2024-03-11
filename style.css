@@ -322,8 +322,7 @@ span:before {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #161f2867;
-  backdrop-filter: blur(30px);
+  background-color: #111314f1;
   display: flex;
   justify-content: center;
   align-items: center;
