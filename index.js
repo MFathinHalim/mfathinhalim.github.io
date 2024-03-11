@@ -57,6 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
     AOS.init();
+    function removeCarOnMobile() {
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        const carElement = document.getElementById('car');
+        if (carElement) {
+          carElement.parentNode.removeChild(carElement);
+        }
+      }
+    }
+    
+    // Call the function on page load and resize events
+    window.addEventListener('load', removeCarOnMobile);
+    window.addEventListener('resize', removeCarOnMobile);
+    
   
     if (!isMobile) {
       const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
