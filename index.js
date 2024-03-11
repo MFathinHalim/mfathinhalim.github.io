@@ -1,31 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const socialElements = document.querySelectorAll(".social");
     const isMobile = window.innerWidth <= 639;
-    const quotes = document.getElementById("quotes");
-  
-    const arrayQuote = [
-        '"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim',
-        '"Sometimes fiction makes more sense than reality" <br> ― M.Fathin Halim',
-        '"The difference between ordinary and extraordinary is that little extra." <br> ― Jimmy Johnson',
-        '"It is during our darkest moments that we must focus to see the light." <br> ― Aristotle',
-        '"Believe you can and you\'re halfway there." <br> ― Theodore Roosevelt',
-        '"The mind is everything. What you think you become." <br> ― Buddha',
-        '"The journey of a thousand miles begins with a single step." <br> ― Lao Tzu',
-        '"Failure is an opportunity to start again smarter." <br> - Henry Ford',
-        '"The only way to do great work is to love what you do." <br> - Steve Jobs',
-        '"The future belongs to those who prepare for it today." <br> - Abraham Lincoln',
-        '"Courage is doing what youre afraid of." <br> - Mark Twain',
-        '"The most important thing in life is learning how to give." <br> - Leo Tolstoy',
-        '"The only person you were destined to be is yourself." <br> - Ralph Waldo Emerson',
-      ];
-  
-    function getRandomQuote() {
-      const randomIndex = Math.floor(Math.random() * arrayQuote.length);
-      return arrayQuote[randomIndex];
-    }
+
+
     const element = document.getElementById("loading");
 
-        quotes.innerHTML = getRandomQuote();
         setTimeout(() => {
         element.style.opacity = 0;
     

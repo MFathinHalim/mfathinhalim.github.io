@@ -27,6 +27,14 @@ body::-webkit-scrollbar-track {
   background-attachment: fixed;
   background-position: center;
 }
+@media  (max-width:720px) {
+  #bg-img{
+    background-attachment: scroll;
+    background-size: auto;
+    background-color: #030807;
+    background-image: none;
+  }
+}
 hr {
   margin-bottom: 30px !important;
 }
@@ -168,20 +176,7 @@ a {
 .h-auto {
   transition: 0.5s ease;
 }
-@keyframes glowing {
-  0% {
-    box-shadow: 0 0 -10px #5539cc;
-  }
-  40% {
-    box-shadow: 0 0 20px #5539cc;
-  }
-  60% {
-    box-shadow: 0 0 20px #5539cc;
-  }
-  100% {
-    box-shadow: 0 0 -10px #5539cc;
-  }
-}
+
 p {
   letter-spacing: 0.7px;
 }
