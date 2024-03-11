@@ -23,18 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const randomIndex = Math.floor(Math.random() * arrayQuote.length);
       return arrayQuote[randomIndex];
     }
-  
-    quotes.innerHTML = getRandomQuote();
-  
-    setTimeout(() => {
-      const element = document.getElementById("loading");
-      element.style.opacity = 0;
-  
-      setTimeout(() => {
-        element.style.display = "none";
-      }, 2000);
-    }, 1000);
-  
+    const element = document.getElementById("loading");
+
+    if(!isMobile){
+        quotes.innerHTML = getRandomQuote();
+        setTimeout(() => {
+        element.style.opacity = 0;
+    
+        setTimeout(() => {
+            element.style.display = "none";
+        }, 2000);
+        }, 1000);
+    }else{
+        element.style.display = "none"
+    }
+    
     socialElements.forEach(socialElement => {
       const socialData = socialElement.dataset.social;
       const originalHTML = socialElement.innerHTML;
