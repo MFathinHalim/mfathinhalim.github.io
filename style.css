@@ -289,6 +289,12 @@ span:before {
   padding: 3px;
 }
 
+#cursor:after, #cursor:before , #cursor2:after, #cursor2:before{
+  content: "";
+  text-decoration: none;
+  padding: none;
+}
+
 /* The loader was developed by Iddar Olivares (https://codepen.io/iddar/pen/xwXowq) */
 .loading-text {
   width: 100%;
@@ -320,12 +326,6 @@ span:before {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-@media (max-width: 639px) {
-  #bg-img {
-    background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
-    background: #030807 !important;
-  }
 }
 h1 {
   -webkit-user-select: none; /* Safari */
