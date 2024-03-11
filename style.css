@@ -24,9 +24,7 @@ body::-webkit-scrollbar-track {
 #bg-img{
   background-image: url('./Header.webp');
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 hr {
   margin-bottom: 30px !important;
@@ -334,14 +332,7 @@ span:before {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 639px) {
-  #bg-img {
-    background: #030807 !important;
-    background-size: auto;
-    background-image: none;
-    background-attachment:scroll;
-  }
-}
+
 h1 {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
