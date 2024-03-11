@@ -375,7 +375,14 @@ span:before {
   justify-content: center;
   align-items: center;
 }
-
+#bg-img{
+  background-image: url('https://i.pinimg.com/originals/8b/35/fe/8b35fef55fba1a201c9c7a11d3ec3d64.gif');
+}
+@media (max-width: 639px) {
+  #bg-img {
+    background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
+  }
+}
 h1 {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
