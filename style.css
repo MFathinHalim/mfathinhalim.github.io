@@ -21,6 +21,9 @@ body::-webkit-scrollbar-track {
 div {
   font-family: "Karla";
 }
+#bg-img{
+  background-image: url('./M.Fathin\ Halim_files/Header.jpg')
+}
 hr {
   margin-bottom: 30px !important;
 }
@@ -321,6 +324,7 @@ span:before {
 @media (max-width: 639px) {
   #bg-img {
     background-attachment: scroll; /* Mengubah attachment menjadi scroll untuk perangkat seluler */
+    background: #030807;
   }
 }
 h1 {
