@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const randomIndex = Math.floor(Math.random() * arrayQuote.length);
       return arrayQuote[randomIndex];
     }
-    const element = document.getElementById("loading");
+    /*const element = document.getElementById("loading");
 
         quotes.innerHTML = getRandomQuote();
         setTimeout(() => {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             element.style.display = "none";
         }, 2000);
-        }, 1000);
+        }, 1000);*/
       
     
     socialElements.forEach(socialElement => {
