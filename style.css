@@ -50,7 +50,6 @@ hr {
   color: var(--text);
 }
 body {
-  cursor: none;
   transition: 0.3s;
 }
 #navbar {
@@ -63,7 +62,7 @@ body {
   body {
     transition: 0.3s;
   }
-  /* CSS umum untuk kursor */
+  /* CSS umum untuk kursor 
   #cursor {
 
     position: fixed;
@@ -77,7 +76,7 @@ body {
     transition: transform 350ms ease;
     transform: translate(-50%, -50%) scale(0.3);
     z-index: 3000;
-  }
+  }*/
   #cursor2 {
     background-color: white;
   height: 300px;
@@ -90,11 +89,11 @@ body {
   z-index: -1;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, rgb(6, 74, 114), rgb(173, 180, 192));
+  background: linear-gradient(to right, rgb(6, 110, 171), rgb(215, 219, 226));
   animation: rotate 20s infinite;
-  backdrop-filter: blur(200px);
+  backdrop-filter: blur(150px);
   opacity: 0.6;
-  filter:blur(200px)
+  filter:blur(140px)
   }
 
 

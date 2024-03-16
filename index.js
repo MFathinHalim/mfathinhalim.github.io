@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
     if (!isMobile) {
-      const links = document.querySelectorAll("a");
-      const notLinks = document.querySelectorAll("strong, .underlinee, #Name")
-      var cursor = document.getElementById("cursor");
+      //const links = document.querySelectorAll("a");
+      //const notLinks = document.querySelectorAll("strong, .underlinee, #Name")
+      //var cursor = document.getElementById("cursor");
       var c2 = document.getElementById("cursor2");
   
-      links.forEach(link => {
+      /*links.forEach(link => {
         link.addEventListener("mouseover", () => {
           document.querySelector("body").style = "cursor: pointer !important;"
           cursor.classList.add("custom-cursor--link");
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
       document.addEventListener("mouseup", () => {
         cursor.classList.remove("custom-cursor--link");
-      });
+      });*/
   
       window.onmousemove = function (e) {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
+        //cursor.style.left = e.clientX + "px";
+        //cursor.style.top = e.clientY + "px";
         c2.animate({
           left: `${e.clientX}px`,
           top: `${e.clientY}px`
