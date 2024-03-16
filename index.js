@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     const socialElements = document.querySelectorAll(".social");
     const isMobile = window.innerWidth <= 639;
-    const quotes = document.getElementById("quotes");
+    /*const quotes = document.getElementById("quotes");
   
     const arrayQuote = [
         '"Everyone has beautiful dreams, but not everyone has an easy path" <br> ― M.Fathin Halim',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const randomIndex = Math.floor(Math.random() * arrayQuote.length);
       return arrayQuote[randomIndex];
     }
-    /*const element = document.getElementById("loading");
+    const element = document.getElementById("loading");
 
         quotes.innerHTML = getRandomQuote();
         setTimeout(() => {
