@@ -113,18 +113,6 @@ body {
   position: relative;
   text-decoration: none !important;
 }
-#randomParent {
-  overflow: hidden;
-  font-weight: 500;
-  word-wrap: break-word;
-  height: 460px;
-  -webkit-mask-image: radial-gradient(
-    calc(var(--card-size) * 0.8) circle at var(--x) var(--y),
-    rgb(255 255 255) 20%,
-    rgb(255 255 255 / 25%),
-    transparent
-  );
-}
 
 .underlinee::before {
   content: "";
