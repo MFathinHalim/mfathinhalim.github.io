@@ -2,70 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 #loading {
-    transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+#who > h3,
+#award > h3,
+#skills > h3 {
+  font-family: "Rubik", Arial;
+  font-weight: bolder;
+}
+
+body::-webkit-scrollbar {
+  width: 5px; /* Lebar scrollbar */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    59,
+    59,
+    59,
+    0.205
+  ); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #e7e7e7; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
+}
+* {
+  font-family: -apple-system, "Arial", BlinkMacSystemFont, sans-serif;
+}
+#bg-img {
+  background-image: url("/Header.webp");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+}
+@media (max-width: 720px) {
+  #bg-img {
+    background-attachment: scroll;
+    background-size: auto;
+    background-color: #030807;
+    background-image: none;
   }
-  #who > h3,
-  #award > h3,
-  #skills > h3 {
-    font-family:'Rubik', Arial;
-    font-weight: bolder;
-  }
-  
-  body::-webkit-scrollbar {
-    width: 5px; /* Lebar scrollbar */
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: rgba(59, 59, 59, 0.205); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background-color: #e7e7e7; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
-  }
-  * {
-    font-family:  -apple-system, 'Arial', BlinkMacSystemFont, sans-serif;
-  }
-  #bg-img{
-    background-image: url('/Header.webp');
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  @media  (max-width:720px) {
-    #bg-img{
-      background-attachment: scroll;
-      background-size: auto;
-      background-color: #030807;
-      background-image: none;
-    }
-  }
-  hr {
-    margin-bottom: 30px !important;
-  }
-  :root {
-    --text: #eceeee;
-    --background: #030807;
-    --primary: #25b3ef;
-    --secondary: #756b6b;
-    --accent: #22a4db;
-  }
-  ::selection {
-    background: lightslategray;
-    color: var(--text);
-  }
+}
+hr {
+  margin-bottom: 30px !important;
+}
+:root {
+  --text: #eceeee;
+  --background: #030807;
+  --primary: #25b3ef;
+  --secondary: #756b6b;
+  --accent: #22a4db;
+}
+::selection {
+  background: lightslategray;
+  color: var(--text);
+}
+body {
+  transition: 0.3s;
+}
+#navbar {
+  transition: top 0.3s ease-in-out;
+}
+
+@media (min-width: 1280px) {
+  /* Aturan CSS tambahan untuk dekstop */
+  a,
   body {
     transition: 0.3s;
   }
-  #navbar {
-    transition: top 0.3s ease-in-out;
-  }
-  
-  @media (min-width: 1280px) {
-    /* Aturan CSS tambahan untuk dekstop */
-    a,
-    body {
-      transition: 0.3s;
-    }
-    /* CSS umum untuk kursor 
+  /* CSS umum untuk kursor 
     #cursor {
   
       position: fixed;
@@ -80,11 +85,11 @@
       transform: translate(-50%, -50%) scale(0.3);
       z-index: 3000;
     }*/
-    #cursor2 {
-      background-color: white;
+  #cursor2 {
+    background-color: white;
     height: 300px;
     pointer-events: none;
-  
+
     aspect-ratio: 1;
     position: fixed;
     left: 50%;
@@ -96,254 +101,249 @@
     animation: rotate 20s infinite;
     backdrop-filter: blur(150px);
     opacity: 0.6;
-    filter:blur(140px)
-    }
-  
-  
-    .custom-cursor--link {
-      transform: translate(-50%, -50%) scale(1) !important;
-      cursor: pointer !important;
-    }
+    filter: blur(140px);
   }
-  .underlinee {
-    position: relative;
-    text-decoration: none !important;
+
+  .custom-cursor--link {
+    transform: translate(-50%, -50%) scale(1) !important;
+    cursor: pointer !important;
   }
-  #randomParent{
-    
-    overflow: hidden;
-    font-weight: 500;
-    word-wrap: break-word;
-    height: 460px;
-    -webkit-mask-image: radial-gradient(
-      calc(var(--card-size) * 0.8) circle at var(--x) var(--y), 
-      rgb(255 255 255) 20%, 
-      rgb(255 255 255 / 25%), 
-      transparent
-    );
-  }
-  
-  .underlinee::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    background-color: #edf1f3;
-    bottom: 0;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-  }
-  
-  .underlinee:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-  body{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-  
+}
+.underlinee {
+  position: relative;
+  text-decoration: none !important;
+}
+#randomParent {
+  overflow: hidden;
+  font-weight: 500;
+  word-wrap: break-word;
+  height: 460px;
+  -webkit-mask-image: radial-gradient(
+    calc(var(--card-size) * 0.8) circle at var(--x) var(--y),
+    rgb(255 255 255) 20%,
+    rgb(255 255 255 / 25%),
+    transparent
+  );
+}
+
+.underlinee::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #edf1f3;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.underlinee:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-size: larger;
+}
+.backdrop-blur-lg > i {
+  font-size: x-large;
+}
+strong,
+h3 {
+  color: var(--accent);
+}
+.bg-orange-700 {
+  background: -webkit-linear-gradient(var(--primary), var(--accent)) !important;
+}
+a {
+  transition: 0.3s !important;
+}
+.bg-orange-700:hover {
+  background-color: var(--accent) !important;
+}
+.progress-container {
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 10000;
+}
+
+.progress-bar {
+  height: fit-content;
+  background: linear-gradient(to right, #22a4db, #7755ed);
+  width: 0%;
+}
+.h-auto {
+  border: solid 2px rgb(35, 31, 58);
+}
+.super-rounded {
+  border-radius: 14px !important;
+}
+.h-auto {
+  transition: 0.5s ease;
+}
+
+p {
+  letter-spacing: 0.7px;
+}
+.container {
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+@media (max-width: 640px) {
   body {
-    background: var(--background);
-    color: var(--text);
-    font-size: larger;
+    cursor: auto;
   }
-  .backdrop-blur-lg > i {
-    font-size: x-large;
-  }
-  strong,
-  h3 {
-    color: var(--accent);
-  }
-  .bg-orange-700 {
-    background: -webkit-linear-gradient(var(--primary), var(--accent)) !important;
-  }
-  a {
-    transition: 0.3s !important;
-  }
-  .bg-orange-700:hover {
-    background-color: var(--accent) !important;
-  }
-  .progress-container {
-    width: 100%;
-    background: rgba(0, 0, 0, 0);
-    z-index: 10000;
-  }
-  
-  .progress-bar {
-    height: fit-content;
-    background: linear-gradient(to right, #22a4db, #7755ed);
-    width: 0%;
-  }
-  .h-auto {
-    border: solid 2px rgb(35, 31, 58);
-  }
-  .super-rounded {
-    border-radius: 14px !important;
-  }
-  .h-auto {
-    transition: 0.5s ease;
-  }
-  
-  p {
-    letter-spacing: 0.7px;
+  .hide-on-mobile {
+    display: none;
   }
   .container {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
   }
-  
-  @media (max-width: 640px) {
-    body {
-      cursor:auto;
+}
+@media (min-width: 641px) {
+  @keyframes run {
+    0% {
+      left: 0%;
+      transform: scaleX(-1);
     }
-    .hide-on-mobile {
-      display: none;
+    1% {
+      left: 0%;
+      transform: scaleX(1);
     }
-    .container {
-      padding-left: 2% !important;
-      padding-right: 2% !important;
+    50% {
+      left: calc(100% - 150px);
+      transform: scaleX(1);
     }
-  }
-  @media(min-width: 641px) {
-    @keyframes run {
-      0%{
-        left: 0%;
-        transform: scaleX(-1);
-      }
-      1%{
-        left: 0%;
-        transform: scaleX(1);
-      }
-      50%{
-        left: calc(100% - 150px);
-        transform: scaleX(1);
-      }
-      51%{
-        transform: scaleX(-1);
-      }
-      100%{
-        left: 0%;
-        transform: scaleX(-1);
-      }
+    51% {
+      transform: scaleX(-1);
+    }
+    100% {
+      left: 0%;
+      transform: scaleX(-1);
     }
   }
-  
-  
-  
-  .box #img {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    -webkit-animation:
-      moveX 15s 0s infinite alternate,
-      moveY 3.4s 0s infinite alternate;
-    -moz-animation:
-      moveX 15s linear 0s infinite alternate,
-      moveY 3.4s linear 0s infinite alternate;
-    -o-animation:
-      moveX 15s linear 0s infinite alternate,
-      moveY 3.4s linear 0s infinite alternate;
-    animation:
-      moveX 15s linear 0s infinite alternate,
-      moveY 3.4s linear 0s infinite alternate;
-    opacity: 30%;
-  }
-  #img img {
-    position: absolute;
-  }
-  #img #bla {
-    opacity: 100%;
-  
-    z-index: -1;
-    width: 70px;
-    height: 70px;
-    filter: blur(10px);
-    -webkit-filter: blur(6px);
-    -moz-filter: blur(6px);
-    -o-filter: blur(6px);
-    -ms-filter: blur(6px);
-  }
-  
-  /* Keyframe values control where the element will begin
+}
+
+.box #img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  -webkit-animation: moveX 15s 0s infinite alternate,
+    moveY 3.4s 0s infinite alternate;
+  -moz-animation: moveX 15s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 15s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 15s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  opacity: 30%;
+}
+#img img {
+  position: absolute;
+}
+#img #bla {
+  opacity: 100%;
+
+  z-index: -1;
+  width: 70px;
+  height: 70px;
+  filter: blur(10px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+}
+
+/* Keyframe values control where the element will begin
         and end its trajectory across the screen. Each rule
         represents a path the element follows across the screen. */
-  .car-movement {
-    overflow: hidden;
-  }
-  .car-movement > .car {
-    position: absolute;
-    display: inline-block;
-    animation: run 8s linear infinite;
-  }
+.car-movement {
+  overflow: hidden;
+}
+.car-movement > .car {
+  position: absolute;
+  display: inline-block;
+  animation: run 8s linear infinite;
+}
+.social {
+  width: 70px; /* Lebar awal */
+  transition: all 0.2s ease; /* Transisi lebar */
+  max-width: 100%;
+}
+
+.social:hover {
+  width: 200px; /* Lebar saat dihover */
+}
+@media only screen and (max-width: 639px) {
   .social {
-    width: 70px; /* Lebar awal */
-    transition: all 0.2s ease; /* Transisi lebar */
-    max-width: 100%;
+    width: 100%;
   }
-  
   .social:hover {
-    width: 200px; /* Lebar saat dihover */
+    width: 100%; /* Lebar saat dihover */
   }
-  @media only screen and (max-width: 639px) {
-    .social{
-      width: 100%;
-    }
-    .social:hover {
-      width: 100%; /* Lebar saat dihover */
-    }
-  }
-  
-  span:after,
-  span:before {
-    content: "\00a0\00a0\00a0\00a0\00a0";
-    text-decoration: line-through;
-    padding: 3px;
-  }
-  
-  #cursor:after, #cursor:before , #cursor2:after, #cursor2:before{
-    content: "";
-    text-decoration: none;
-    padding: none;
-  }
-  
-  /* The loader was developed by Iddar Olivares (https://codepen.io/iddar/pen/xwXowq) */
-  .loading-text {
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    color: white;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 80px;
-    margin-left: 10px;
-  }
-  .loader-wrapper {
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #111314f1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  h1 {
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-  }
+}
+
+span:after,
+span:before {
+  content: "\00a0\00a0\00a0\00a0\00a0";
+  text-decoration: line-through;
+  padding: 3px;
+}
+
+#cursor:after,
+#cursor:before,
+#cursor2:after,
+#cursor2:before {
+  content: "";
+  text-decoration: none;
+  padding: none;
+}
+
+/* The loader was developed by Iddar Olivares (https://codepen.io/iddar/pen/xwXowq) */
+.loading-text {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 80px;
+  margin-left: 10px;
+}
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111314f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}

@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Header from './Header.jsx'
-import Navbar from './Navbar.jsx'
-import './index.css'
-import Intro from './Intro.jsx'
-import Award from './Award.jsx'
-import Portofolio from './Portofolio.jsx'
-import Service from './Service.jsx'
-import Footer from './Footer.jsx'
-import 'aos/dist/aos.css';
-import Aos from 'aos';
-import Cursor from './Cursor.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./Header.jsx";
+import Navbar from "./Navbar.jsx";
+import "./index.css";
+import Intro from "./Intro.jsx";
+import Award from "./Award.jsx";
+import Portofolio from "./Portofolio.jsx";
+import Service from "./Service.jsx";
+import Footer from "./Footer.jsx";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import Cursor from "./Cursor.jsx";
 Aos.init();
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Cursor/>
+    <Cursor />
     <Header />
-    <div className='container mx-auto p-0 mt-8'>
+    <div className="container mx-auto p-0 mt-8">
       <Navbar />
       <Intro />
       <h1
@@ -30,12 +30,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         More About Me
       </h1>
 
-      <Award/>
-      <Portofolio/>
-      <Service/>
-      <Footer/>
+      <Award />
+      <Portofolio />
+      <Service />
+      <Footer />
     </div>
-  </React.StrictMode>,
-)
-
-
+  </React.StrictMode>
+);
