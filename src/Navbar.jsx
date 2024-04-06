@@ -28,32 +28,44 @@ function Navbar() {
           <ul className="flex flex-wrap items-center mt-3 text-sm font-medium super-rounded text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
               <a
+                style={{
+                  zIndex: 1000,
+                }}
                 href="#"
-                className="text-1xl hover:text-2xl ease-in-out backdrop-blur-lg bg-gray-800 rounded border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl  ease-in-out backdrop-blur-lg bg-gray-800 rounded border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 About
               </a>
             </li>
             <li>
               <a
+                style={{
+                  zIndex: 1000,
+                }}
                 href="#award"
-                className="text-1xl hover:text-2xl ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 Awards
               </a>
             </li>
             <li>
               <a
+                style={{
+                  zIndex: 1000,
+                }}
                 href="#contact"
-                className="text-1xl hover:text-2xl ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 Contact
               </a>
             </li>
             <li>
               <a
+                style={{
+                  zIndex: 1000,
+                }}
                 href="#services"
-                className="text-1xl hover:text-2xl ease-in-out mt-3 font-semibold decoration-blue-500"
+                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500"
               >
                 Service
               </a>
