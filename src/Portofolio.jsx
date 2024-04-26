@@ -1,7 +1,7 @@
 function Portofolio() {
   const projects = [
     {
-      class: "max-w-full border-gray-700 bg-gray-800 p-4 super-rounded h-auto",
+      class: "max-w-full border-gray-700 bg-gray-800 p-4 super-rounded h-auto sm:col-span-2 lg:col-span-1",
       image: "./LogoISK.jpg",
       title: "ISK Website",
       desc: "A website dedicated to exploring science content by Fajrul Fx.",
@@ -17,7 +17,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full sm:col-span-2 border-gray-700 bg-gray-800 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full sm:col-span-2 border-gray-700 bg-gray-800 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
       image: "./logo.png",
       title: "rejangpedia",
       desc: "rejangpedia is an all-in application with a spirit of mutual cooperation in preserving Bengkulu culture in general and Rejang Lebong in particular in the form of digital literacy where everyone can participate.",
@@ -25,7 +25,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
       image: "./medium.jpg",
       title: "Cerdas AI",
       desc: "a user-friendly bot app that bring AI to everyone, without the need to log in.",
@@ -33,7 +33,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full border-gray-700 bg-gray-800 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
       image: "https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg",
       title: "Shared Gallery",
       desc: "you can share cherished moments through images.",
@@ -43,9 +43,9 @@ function Portofolio() {
       class:
         "max-w-full border-gray-600 border bg-gray-700 p-4 sm:col-span-2 super-rounded h-auto",
       image: "./PVZ.png",
-      title: "Plane VS Zombies",
-      desc: "A fun game where players have to control a plane to fight off an incessant zombie attack.",
-      link: "https://nabeela.itch.io/plane-vs-zombie-desktop",
+      title: "Yunation",
+      desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
+      link: "https://yunation.glitch.me",
     },
     {
       class:
@@ -57,7 +57,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
       image: "./gradient-lo-fi-illustrations_52683-82981.jpg",
       title: "Media Vibe",
       desc: "A Video Player That M.Fathin Halim's Make!",
@@ -65,7 +65,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full border-gray-600 border bg-gray-700 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
       image:
         "https://e1.pxfuel.com/desktop-wallpaper/240/812/desktop-wallpaper-best-music-electronic-no-copyright-sounds-sounds.jpg",
       title: "Do Music",
@@ -137,7 +137,7 @@ function Portofolio() {
           <a
             data-aos="zoom-in"
             href="https://codepen.io/MFathin-Halim-Doma"
-            className="text-xl text-white text-center rounded-md p-8 h-300 flex items-center justify-center bg-green-700 hover:bg-green-800"
+            className="text-xl text-white text-center rounded-md p-8 h-300 flex items-center justify-center bg-green-700 hover:bg-green-800 lg:col-span-1 sm:col-span-2"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-codepen" aria-hidden="true" />
