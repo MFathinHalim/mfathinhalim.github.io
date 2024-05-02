@@ -40,7 +40,7 @@ function Intro() {
                 >
                   <i
                     style={{ color: "white", marginRight: "4px" }}
-                    className="fa-brands fa-linkedin"
+                    className="fa-brands fa-linkedin text-1xl"
                     aria-hidden="true"
                   />
                   M.Fathin Halim
@@ -52,7 +52,7 @@ function Intro() {
                 >
                   <i
                     style={{ color: "white", marginRight: "4px" }}
-                    className="fa-brands fa-discord"
+                    className="fa-brands fa-discord text-1xl"
                   />
                   @mfathinhalim
                 </a>
@@ -63,7 +63,7 @@ function Intro() {
                 >
                   <i
                     style={{ color: "white", marginRight: "4px" }}
-                    className="fa-brands fa-whatsapp"
+                    className="fa-brands fa-whatsapp text-1xl"
                     aria-hidden="true"
                   />
                   +62 822 8162 7963
@@ -75,7 +75,7 @@ function Intro() {
                 >
                   <i
                     style={{ color: "white", marginRight: "4px" }}
-                    className="fa fa-envelope"
+                    className="fa fa-envelope text-1xl"
                     aria-hidden="true"
                   />
                   halimfathin7@gmail.com
@@ -209,12 +209,12 @@ function Intro() {
             <div
               style={{ height: "100%" }}
               id="randomParent"
+              data-aos="fade-up"
               className="bg-gray-700 hover:bg-gray-800 border-slate-600 rounded-lg h-full text-gray-600"
             >
               <img
                 loading="lazy"
                 style={{ objectFit: "cover" }}
-                data-aos="fade-up"
                 className="h-full max-w-full rounded-lg"
                 src="./desktop-wallpaper-bootstrap-css-framework.jpg"
                 alt=""

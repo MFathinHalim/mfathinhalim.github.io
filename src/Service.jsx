@@ -34,10 +34,9 @@ function Service() {
         </div>
         <a
           href="https://discordapp.com/users/1156486226094870569"
-          className="button p-3 m-3 rounded-lg text-white hover:bg-orange-800 transition-all duration-300"
+          className="button p-3 m-3 rounded-lg text-white hover:bg-indigo-800 bg-indigo-600 transition-all duration-300"
           style={{
             animation: "glowing 5000ms infinite",
-            background: "#5539cc",
           }}
         >
           <i style={{ color: "white" }} className="fa-brands fa-discord" />{" "}

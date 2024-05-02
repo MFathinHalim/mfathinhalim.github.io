@@ -44,7 +44,7 @@ function Award() {
                   key={image}
                   loading="lazy"
                   draggable="false"
-                  className="mt-3 w-full h-full mx-auto sm:mx-0 m-3 rounded-lg"
+                  className="mt-3 w-full h-full mx-auto sm:mx-0 m-3 super-rounded"
                   style={{ objectFit: "contain", height: 460 }}
                   src={image}
                   alt="M.Fathin Halim"

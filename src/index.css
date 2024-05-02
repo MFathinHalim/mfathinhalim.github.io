@@ -59,11 +59,20 @@ hr {
 }
 body {
   transition: 0.3s;
+  background-color: var(--background);
+  background-image: radial-gradient(
+    rgba(186, 187, 255, 0.381) 1px,
+    transparent 0
+  );
+  background-size: 100px 100px;
+}
+.bg-b {
+  background: var(--background);
+  padding: 20px;
 }
 #navbar {
   transition: top 0.3s ease-in-out;
 }
-
 @media (min-width: 1280px) {
   /* Aturan CSS tambahan untuk dekstop */
   a,
@@ -85,6 +94,7 @@ body {
       transform: translate(-50%, -50%) scale(0.3);
       z-index: 3000;
     }*/
+
   #cursor2 {
     background-color: white;
     height: 300px;
@@ -138,7 +148,6 @@ body {
 }
 
 body {
-  background: var(--background);
   color: var(--text);
   font-size: larger;
 }
@@ -170,7 +179,7 @@ a {
   width: 0%;
 }
 .h-auto {
-  border: solid 2px rgb(35, 31, 58);
+  border: solid 1px rgb(75, 85, 99);
 }
 .super-rounded {
   border-radius: 14px !important;

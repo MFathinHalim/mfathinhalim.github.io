@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Cursor />
     <Header />
-    <div className="container mx-auto p-0 mt-8">
+    <div className="container mx-auto p-0 mt-8 ">
       <Navbar />
       <Intro />
       <h1
@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         data-aos-easing="linear"
         data-aos-duration={1000}
         className="text-4xl sm:text-8xl m-3 text-gray-600"
-        style={{ marginTop: 120, fontFamily: "sans-serif", fontWeight: "bold" }}
+        style={{ marginTop: 120, fontFamily: "Open Sans", fontWeight: "bold" }}
       >
         More About Me
       </h1>
