@@ -4,7 +4,7 @@ function Navbar() {
     var currentScrollPos = window.pageYOffset;
     var navbar = document.getElementById("navbar");
 
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos - 5) {
       // Scroll ke atas, tampilkan navbar khusus HP
       navbar.style.top = "10px";
     } else {
@@ -32,7 +32,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#"
-                className="text-1xl  ease-in-out backdrop-blur-lg bg-gray-800 rounded border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg bg-gray-800 rounded border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 About
               </a>
@@ -43,7 +43,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#award"
-                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded md:hover:border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 Awards
               </a>
@@ -53,10 +53,10 @@ function Navbar() {
                 style={{
                   zIndex: 1000,
                 }}
-                href="#contact"
-                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                href="#project"
+                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded md:hover:border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
-                Contact
+                Portofolio
               </a>
             </li>
             <li>
@@ -65,7 +65,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#services"
-                className="text-1xl  ease-in-out mt-3 font-semibold decoration-blue-500"
+                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded md:hover:border border-slate-800 p-2 super-rounded mt-3 font-semibold decoration-blue-500 "
               >
                 Service
               </a>

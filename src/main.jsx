@@ -35,5 +35,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Service />
       <Footer />
     </div>
+    <img
+      src="waves.svg"
+      style={{
+        width: "100%",
+        objectFit: "cover",
+        height: "300px",
+      }}
+    />
   </React.StrictMode>
 );
