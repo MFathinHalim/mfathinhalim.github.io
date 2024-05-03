@@ -37,6 +37,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </div>
     <img
       src="waves.svg"
+      draggable="false"
       style={{
         width: "100%",
         objectFit: "cover",
