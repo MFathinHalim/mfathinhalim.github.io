@@ -61,9 +61,11 @@ body {
   transition: 0.3s;
   background-color: var(--background);
   background-image: radial-gradient(
-    rgba(186, 187, 255, 0.381) 1px,
-    transparent 0
-  );
+      rgba(186, 187, 255, 0.381) 1px,
+      transparent 0
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.1) 0.6px, transparent 0.6px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0.6px, transparent 0.6px);
   background-size: 100px 100px;
 }
 .bg-b {
