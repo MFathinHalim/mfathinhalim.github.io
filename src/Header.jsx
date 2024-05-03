@@ -76,10 +76,9 @@ function Header() {
                 data-aos="fade-right"
                 className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-justify sm:text-center"
               >
-                Embark on a Journey with <strong>M.Fathin Halim</strong>, a
-                Passionate Middle School <strong>Programmer</strong>, a
-                Boundless Enthusiasm for Learning and Fueled by{" "}
-                <strong>Dreams</strong>
+                Embark on a journey with <strong>M.Fathin Halim</strong>, a
+                indie middle school <strong>Programmer</strong>, a Boundless
+                enthusiasm for learning and fueled by <strong>Dreams</strong>
               </p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mb-8">
                 <div className="mr-4 flex items-center">
@@ -103,14 +102,14 @@ function Header() {
                   href="https://saweria.co/mfathinhalim"
                   className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
-                  <i className="fa fa-coffee mr-2" aria-hidden="true" /> Buy Me
-                  a Coffee
+                  <i className="fa fa-coffee mr-2" aria-hidden="true" /> Buy me
+                  a coffee
                 </a>
                 <a
                   href="https://discordapp.com/users/1156486226094870569"
                   className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
                 >
-                  Chat Me!
+                  Chat me
                   <i className="fa-brands fa-discord ml-2" aria-hidden="true" />
                 </a>
               </div>
@@ -186,16 +185,16 @@ function Header() {
 /*
   * <div
   !  id="car"
-  !  className="car-movement hide-on-mobile"
-  !  style={{ zIndex: "-1000 !important" }}>
-  *  <div className="car">
-  *   <img
-  !      loading="lazy"
+  ?  className="car-movement hide-on-mobile"
+  *  style={{ zIndex: "-1000 !important" }}>
+  !  <div className="car">
+  ?   <img
+  *      loading="lazy"
   !      draggable="false"
-  !      alt="anime"
-  !      style={{ width: 150, height: 150 }}
+  ?      alt="anime"
+  *      style={{ width: 150, height: 150 }}
   !      src="./ngoding.webp"
-  *    />
+  ?    />
   *  </div>
-  * </div>*/
+  ! </div>*/
 export default Header;
