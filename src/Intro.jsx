@@ -117,19 +117,28 @@ function Intro() {
           Tools
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out">
+          <div
+            data-aos="fade-down"
+            className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out"
+          >
             <h3 className="text-lg font-medium mb-2">Programming Languages</h3>
             <ul className="space-y-1 list-disc list-inside">
               <li>Python, Java, TypeScript</li>
             </ul>
           </div>
-          <div className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out">
+          <div
+            data-aos="fade-up"
+            className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out"
+          >
             <h3 className="text-lg font-medium mb-2">Web Development</h3>
             <ul className="space-y-1 list-disc list-inside">
               <li>Bootstrap, TailwindCSS, React</li>
             </ul>
           </div>
-          <div className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out">
+          <div
+            data-aos="fade-down"
+            className="bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out"
+          >
             <h3 className="text-lg font-medium mb-2">Mobile Development</h3>
             <ul className="space-y-1 list-disc list-inside">
               <li>Android Studio, React Native</li>
