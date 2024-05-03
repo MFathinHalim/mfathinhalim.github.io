@@ -183,5 +183,19 @@ function Header() {
     </>
   );
 }
-
+/*
+  * <div
+  !  id="car"
+  !  className="car-movement hide-on-mobile"
+  !  style={{ zIndex: "-1000 !important" }}>
+  *  <div className="car">
+  *   <img
+  !      loading="lazy"
+  !      draggable="false"
+  !      alt="anime"
+  !      style={{ width: 150, height: 150 }}
+  !      src="./ngoding.webp"
+  *    />
+  *  </div>
+  * </div>*/
 export default Header;
