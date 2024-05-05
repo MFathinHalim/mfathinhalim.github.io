@@ -23,7 +23,7 @@ function Award() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="text-4xl sm:text-8xl m-3 text-green-600"
+          className="text-4xl text-center sm:text-8xl m-3 text-green-600"
           style={{
             marginTop: 120,
             fontFamily: "sans-serif",

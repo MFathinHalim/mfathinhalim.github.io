@@ -4,7 +4,7 @@ function Service() {
       <div id="services" className="mb-8 " data-aos="zoom-in">
         <div className="p-3 mb-3">
           <h1
-            className="text-4xl sm:text-7xl text-blue-400 text-center"
+            className="text-4xl sm:text-7xl text-blue-400 text-center mb-3"
             style={{
               marginTop: 50,
               fontFamily: "sans-serif",
@@ -13,7 +13,7 @@ function Service() {
           >
             Service
           </h1>
-          <hr className="mt-3 mb-3" />
+          
           <p>
             Want to have a website like M.Fathin Halim? We provide professional
             quality website development services with attractive designs.

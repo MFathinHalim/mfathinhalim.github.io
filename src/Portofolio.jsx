@@ -88,7 +88,7 @@ function Portofolio() {
         <h1
           data-aos="fade-up"
           data-aos-easing="linear"
-          className="text-6xl text-center sm:text-8xl m-3 mb-0 text-gray-600"
+          className="text-6xl text-center sm:text-8xl m-3 mb-2 text-gray-600"
           style={{ fontFamily: "sans-serif", fontWeight: "bold" }}
         >
           Portofolio
