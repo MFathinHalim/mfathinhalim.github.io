@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 function Header() {
   const [hover, setHover] = useState("");
   const onHover = (req) => {
-    setHover(req);
+    setTimeout(() => {
+      setHover(req);
+    }, 100); // 1000 milidetik = 1 detik
   };
+
   const onLeave = () => {
     setHover("");
   };
@@ -56,7 +59,7 @@ function Header() {
                 className="mb-4 mx-auto object-center rounded-full border-4 border-transparent border-x-blue-500 border-y-gray-700"
                 style={{ height: 150, width: 150, objectFit: "cover" }}
                 alt="Fathin"
-                src="./image-82.webp"
+                src="./aa.jpg"
               />
               <h1
                 id="Name"
@@ -103,7 +106,7 @@ function Header() {
                   className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i className="fa fa-coffee mr-2" aria-hidden="true" /> Buy me
-                  a coffee
+                  a Coffee
                 </a>
                 <a
                   href="https://discordapp.com/users/1156486226094870569"

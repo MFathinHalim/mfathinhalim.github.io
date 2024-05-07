@@ -2,7 +2,7 @@ function Intro() {
   return (
     <>
       <article id="who" className="mb-8">
-        <h3 className="underlinee text-4xl sm:text-8xl m-3 text-gray-200">
+        <h3 className="underlinee text-4xl text-center sm:text-8xl m-3 text-gray-200">
           I am M.Fathin Halim
         </h3>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -107,7 +107,7 @@ function Intro() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="text-4xl sm:text-8xl m-3 text-gray-300"
+          className="text-4xl sm:text-8xl m-3 text-gray-300 text-center"
           style={{
             marginTop: 120,
             fontFamily: "sans-serif",

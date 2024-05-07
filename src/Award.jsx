@@ -63,7 +63,7 @@ function Award() {
               </p>
               <a
                 href={award.link}
-                className="bg-gray-300 hover:bg-gray-400 border border-2 border-slate-700 text-gray-800 font-bold py-2 mt-3 px-4 super-rounded inline-flex items-center"
+                className="bg-gray-300 hover:bg-gray-400 border border-2 border-slate-700 text-gray-800 font-bold py-2 mt-3 px-4 rounded-full inline-flex items-center"
               >
                 See The Application
               </a>

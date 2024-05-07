@@ -7,6 +7,7 @@ import Intro from "./Intro.jsx";
 import Award from "./Award.jsx";
 import Portofolio from "./Portofolio.jsx";
 import Service from "./Service.jsx";
+import Photography from "./Photography.jsx";
 import Footer from "./Footer.jsx";
 import "aos/dist/aos.css";
 import Aos from "aos";
@@ -24,7 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl sm:text-8xl m-3 text-gray-600"
+        className="text-4xl sm:text-8xl m-3 text-gray-800"
         style={{ marginTop: 120, fontFamily: "Open Sans", fontWeight: "bold" }}
       >
         More About Me
@@ -32,6 +33,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
       <Award />
       <Portofolio />
+      <Photography />
       <Service />
       <Footer />
     </div>

@@ -2,7 +2,7 @@ function Portofolio() {
   const projects = [
     {
       class:
-        "max-w-full border-gray-700 bg-b p-4 super-rounded h-auto sm:col-span-2 lg:col-span-1",
+        "max-w-full border-gray-700 bg-b hover:bg-gray-900 p-4 super-rounded h-auto sm:col-span-2 lg:col-span-1",
       image: "./LogoISK.jpg",
       title: "ISK Website",
       desc: "A website dedicated to exploring science content by Fajrul Fx.",
@@ -10,7 +10,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full h-auto border-gray-600 border bg-b p-4 super-rounded sm:col-span-2",
+        "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-2",
       image: "./kamus.png",
       title: "Kamus Bahasa Rejang",
       desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
@@ -18,7 +18,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full sm:col-span-2 border-gray-700 bg-b p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
+        "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
       image: "./logo.png",
       title: "rejangpedia",
       desc: "rejangpedia is an all-in application with a spirit of mutual cooperation in preserving Bengkulu culture in general and Rejang Lebong in particular in the form of digital literacy where everyone can participate.",
@@ -26,7 +26,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
       image: "./medium.jpg",
       title: "Cerdas AI",
       desc: "a user-friendly bot app that bring AI to everyone, without the need to log in.",
@@ -34,7 +34,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
+        "max-w-full border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
       image: "https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg",
       title: "Shared Gallery",
       desc: "you can share cherished moments through images.",
@@ -42,7 +42,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b p-4 sm:col-span-2 super-rounded h-auto",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
       image: "./PVZ.png",
       title: "Yunation",
       desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
@@ -50,7 +50,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b p-4 rounded-lg h-auto super-rounded sm:col-span-2",
+        "max-w-full border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2",
       image: "./images",
       title: "My Simple Notes",
       desc: "a website to store and organize notes. This platform offers a simple solution for users to securely save their valuable insights and learnings.",
@@ -58,7 +58,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
       image: "./gradient-lo-fi-illustrations_52683-82981.jpg",
       title: "Media Vibe",
       desc: "A Video Player That M.Fathin Halim's Make!",
@@ -66,7 +66,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
       image:
         "https://e1.pxfuel.com/desktop-wallpaper/240/812/desktop-wallpaper-best-music-electronic-no-copyright-sounds-sounds.jpg",
       title: "Do Music",
@@ -75,7 +75,7 @@ function Portofolio() {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
+        "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
       image: "./logo(1).png",
       title: "SMP Negeri 1 Rejang Lebong's Website",
       desc: "Website page for SMP Negeri 1 Rejang Lebong.",
@@ -91,7 +91,7 @@ function Portofolio() {
           className="text-6xl text-center sm:text-8xl m-3 mb-2 text-gray-600"
           style={{ fontFamily: "sans-serif", fontWeight: "bold" }}
         >
-          Portofolio
+          Projects
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0">
           {projects.map((project) => (

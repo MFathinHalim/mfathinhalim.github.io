@@ -13,7 +13,7 @@ function Service() {
           >
             Service
           </h1>
-          
+
           <p>
             Want to have a website like M.Fathin Halim? We provide professional
             quality website development services with attractive designs.
@@ -34,7 +34,7 @@ function Service() {
         </div>
         <a
           href="https://discordapp.com/users/1156486226094870569"
-          className="button p-3 m-3 rounded-lg text-white hover:bg-indigo-800 bg-indigo-600 transition-all duration-300"
+          className="button p-3 m-3 rounded-full text-white hover:bg-indigo-800 bg-indigo-600 transition-all duration-300"
           style={{
             animation: "glowing 5000ms infinite",
           }}
