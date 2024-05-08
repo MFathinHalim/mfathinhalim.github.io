@@ -5,7 +5,7 @@ function Header() {
   const onHover = (req) => {
     setTimeout(() => {
       setHover(req);
-    }, 100); // 1000 milidetik = 1 detik
+    }, 5); // 1000 milidetik = 1 detik
   };
 
   const onLeave = () => {
