@@ -28,10 +28,13 @@ function Header() {
       <section
         id="bg-img"
         className="pb-0 bg-no-repeat max-h-screen-xl bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
+        style={{
+          borderBottom: "2px dashed dark-gray",
+        }}
       >
         <div className="px-0 md:px-4 mx-auto max-w-screen-xl max-h-screen-xl py-0 md:py-24">
           <div
-            data-aos="zoom-in"
+            data-aos="fade-top"
             data-aos-easing="linear"
             data-aos-duration={3100}
             id="card"
