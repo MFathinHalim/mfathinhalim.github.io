@@ -32,13 +32,13 @@ function Service() {
             on the Frontend to create responsive and attractive websites.
           </p>
         </div>
-        <div className="text-center">
+        <div className="text-center pt-3">
           <a
             href="https://discordapp.com/users/1156486226094870569"
             className="button p-3 m-3 rounded-full text-white hover:bg-indigo-600 bg-indigo-500 transition-all duration-300"
           >
             <i style={{ color: "white" }} className="fa-brands fa-discord" />{" "}
-            Interested? Chat on Discord!
+            Chat on Discord!
           </a>
         </div>
       </div>

@@ -31,7 +31,7 @@ function Award() {
         {awards.map((award) => (
           <div
             key={award.name}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2 border-double border-4  p-3 rounded-xl border-sky-500"
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2"
           >
             <section className="grid grid-cols-2 gap-4">
               {award.img.map((image) => (
