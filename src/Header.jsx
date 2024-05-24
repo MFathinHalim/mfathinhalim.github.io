@@ -64,7 +64,7 @@ function Header() {
               <h1
                 id="Name"
                 data-value="MFATHINHALIM"
-                className="p-3 mb-4 text-4xl md:text-8xl rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto mx-auto"
+                className="p-3 mb-4 text-5xl md:text-7xl text-center rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto mx-auto"
                 style={{
                   position: "relative",
                   width: "fit-content",
@@ -73,7 +73,7 @@ function Header() {
                   transition: "background-color 0.3s ease",
                 }}
               >
-                MFATHINHALIM
+                M. Fathin Halim
               </h1>
               <p
                 data-aos="fade-right"
@@ -125,7 +125,12 @@ function Header() {
                   href="https://www.youtube.com/channel/UCP3UJwwVcg4UvaVve2pxbAw"
                   className="social group backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-red-600"
                 >
-                  <i className="fa-brands fa-youtube pr-1" aria-hidden="true" />{" "}
+                  <i
+                    className={`fa-brands fa-youtube ${
+                      hover === "Youtube" ? "pr-1" : ""
+                    }`}
+                    aria-hidden="true"
+                  />{" "}
                   {hover === "Youtube" || isMobile ? "@mfathinhalim" : ""}
                 </a>
                 <a
@@ -136,7 +141,9 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-blue-600"
                 >
                   <i
-                    className="fa-brands fa-facebook pr-1"
+                    className={`fa-brands fa-facebook ${
+                      hover === "Facebook" ? "pr-1" : ""
+                    }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "Facebook" || isMobile ? "FathinHalim" : ""}
@@ -149,7 +156,9 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
-                    className="fa-brands fa-x-twitter pr-1"
+                    className={`fa-brands fa-twitter ${
+                      hover === "twitter" ? "pr-1" : ""
+                    }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "twitter" || isMobile ? "@mfathinhalim" : ""}
@@ -162,7 +171,9 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
                 >
                   <i
-                    className="fa-brands fa-instagram pr-1"
+                    className={`fa-brands fa-instagram ${
+                      hover === "ig" ? "pr-1" : ""
+                    }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "ig" || isMobile ? "@mfathin_halim" : ""}
@@ -174,7 +185,12 @@ function Header() {
                   href="https://www.threads.net/@mfathin_halim"
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
-                  <i className="fa-brands fa-threads pr-1" aria-hidden="true" />{" "}
+                  <i
+                    className={`fa-brands fa-threads ${
+                      hover === "threads" ? "pr-1" : ""
+                    }`}
+                    aria-hidden="true"
+                  />{" "}
                   {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
                 </a>
               </div>

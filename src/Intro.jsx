@@ -2,8 +2,8 @@ function Intro() {
   return (
     <>
       <article id="who" className="mb-8">
-        <h3 className="underlinee text-4xl text-center sm:text-8xl m-3 text-gray-200">
-          I am M.Fathin Halim
+        <h3 className="underlinee text-3xl text-center sm:text-7xl m-3 text-gray-200">
+          I am M. Fathin Halim
         </h3>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <article>
@@ -84,7 +84,10 @@ function Intro() {
             </div>
           </article>
           <article className="p-3">
-            <p className="p-3 pt-0 text-justify text-slate-400">
+            <p
+              className="p-3 pt-0 text-justify text-gray-500 text-2xl"
+              style={{ fontFamily: "Caveat" }}
+            >
               Being a developer is really fun for me, because programming gives
               me the power to turn my imagination into reality and every project
               is a new opportunity to learn and grow. I believe that my
@@ -95,7 +98,7 @@ function Intro() {
               draggable="false"
               data-aos="fade-down"
               className="mt-3 mx-auto w-full m-3 rounded-lg"
-              style={{ height: "68%", objectFit: "cover" }}
+              style={{ height: "65%", objectFit: "cover" }}
               src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
               alt="M.Fathin Halim"
             />
@@ -103,19 +106,15 @@ function Intro() {
         </div>
       </article>
       <article style={{ marginTop: 50 }} className="mb-3">
-        <h1
+        <h3
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
           className="text-4xl sm:text-8xl m-3 text-gray-300 text-center"
-          style={{
-            marginTop: 120,
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-          }}
+          style={{ fontWeight: "bold" }}
         >
           Tools
-        </h1>
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <div
             data-aos="fade-down"

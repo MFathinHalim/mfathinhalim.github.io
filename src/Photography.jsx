@@ -10,19 +10,15 @@ function Photography() {
   return (
     <>
       <article id="Photography" className="mb-8 p-3">
-        <h1
+        <h3
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
           className="text-4xl text-center sm:text-8xl m-3 text-gray-300"
-          style={{
-            marginTop: 120,
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-          }}
+          style={{ fontWeight: "bold" }}
         >
           Photos
-        </h1>
+        </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Photographys.map((Photography) => (

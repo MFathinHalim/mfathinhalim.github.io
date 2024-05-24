@@ -85,14 +85,14 @@ function Portofolio() {
   return (
     <>
       <article id="project" className="mb-8 p-3" style={{ marginTop: 100 }}>
-        <h1
+        <h3
           data-aos="fade-up"
           data-aos-easing="linear"
-          className="text-6xl text-center sm:text-8xl m-3 mb-2 text-gray-600"
-          style={{ fontFamily: "sans-serif", fontWeight: "bold" }}
+          className="text-6xl text-center sm:text-8xl m-3 mb-4 text-gray-600"
+          style={{ fontWeight: "bold" }}
         >
           Projects
-        </h1>
+        </h3>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0">
           {projects.map((project) => (
             <div

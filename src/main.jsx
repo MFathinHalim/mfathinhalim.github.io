@@ -21,20 +21,22 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <div className="container mx-auto p-0 mt-8 ">
       <Navbar />
       <Intro />
-      <h1
+
+      <h3
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
         className="text-4xl sm:text-8xl m-3 text-gray-800"
-        style={{ marginTop: 120, fontFamily: "Open Sans", fontWeight: "bold" }}
+        style={{ marginTop: 120, fontWeight: "bold" }}
       >
         More About Me
-      </h1>
+      </h3>
 
       <Award />
       <Portofolio />
       <Photography />
       <Service />
+
       <Footer />
     </div>
     <img

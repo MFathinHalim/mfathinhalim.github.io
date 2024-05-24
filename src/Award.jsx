@@ -19,24 +19,19 @@ function Award() {
   return (
     <>
       <article id="award" className="mb-8 p-3">
-        <h1
+        <h3
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="text-4xl text-center sm:text-8xl m-3 text-green-600"
-          style={{
-            marginTop: 120,
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-          }}
+          className="text-4xl text-center sm:text-8xl m-3 text-sky-500"
         >
           Award
-        </h1>
+        </h3>
 
         {awards.map((award) => (
           <div
             key={award.name}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+            className="grid grid-cols-1 gap-6 sm:grid-cols-2 border-double border-4  p-3 rounded-xl border-sky-500"
           >
             <section className="grid grid-cols-2 gap-4">
               {award.img.map((image) => (
@@ -55,10 +50,10 @@ function Award() {
             <section className="p-3">
               <h6 className="text-2xl ease-in-out delay-150">{award.name}</h6>
               <p className="mt-3 mb-3">
-                <strong>Year: </strong> {award.year}
+                <strong className="text-sky-400">Year: </strong> {award.year}
               </p>
               <p className="text-justify">
-                <strong>Description:</strong>
+                <strong className="text-sky-400">Description:</strong>
                 {award.desc}
               </p>
               <a
