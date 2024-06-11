@@ -76,18 +76,15 @@ function Portofolio() {
     {
       class:
         "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
-
       image:
         "https://img.itch.zone/aW1hZ2UvMTg0MzUyMy8xMDgxODczMy5wbmc=/347x500/i8%2FXQY.png",
       title: "Plane vs Zombie",
       desc: "Plane VS Zombie is game made by Fathin and Nabeel for Itch IO game jam in 2 DAYS!",
       link: "https://nabeela.itch.io/plane-vs-zombie-desktop",
     },
-
     {
       class:
         "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
-
       image: "./logo(1).png",
       title: "SMP Negeri 1 Rejang Lebong's Website",
       desc: "Website page for SMP Negeri 1 Rejang Lebong.",
