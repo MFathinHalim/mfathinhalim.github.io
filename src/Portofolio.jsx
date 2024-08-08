@@ -59,10 +59,11 @@ function Portofolio() {
     {
       class:
         "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
-      image: "./gradient-lo-fi-illustrations_52683-82981.jpg",
-      title: "Media Vibe",
-      desc: "A Video Player That M.Fathin Halim's Make!",
-      link: "https://mediavibe.glitch.me/",
+      image:
+        "https://ik.imagekit.io/9hpbqscxd/SG/image-61.jpg?updatedAt=1705798245623",
+      title: "Texter",
+      desc: "Texter, Text based social media. Inspired by Twitter(X) and Threads!",
+      link: "https://texter-id.glitch.me/",
     },
     {
       class:
