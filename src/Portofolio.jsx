@@ -62,7 +62,7 @@ function Portofolio() {
       image:
         "https://ik.imagekit.io/9hpbqscxd/SG/image-61.jpg?updatedAt=1705798245623",
       title: "Texter",
-      desc: "Texter, Text based social media. Inspired by Twitter(X) and Threads!",
+      desc: "Texter, social media inspired by Twitter(X) and Threads!",
       link: "https://texter-id.glitch.me/",
     },
     {
