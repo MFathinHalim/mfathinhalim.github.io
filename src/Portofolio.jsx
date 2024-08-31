@@ -24,13 +24,15 @@ function Portofolio() {
       desc: "rejangpedia is an all-in application with a spirit of mutual cooperation in preserving Bengkulu culture in general and Rejang Lebong in particular in the form of digital literacy where everyone can participate.",
       link: "https://rejangpedia.glitch.me/",
     },
-    {
+
+        {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
-      image: "./medium.jpg",
-      title: "Cerdas AI",
-      desc: "a user-friendly bot app that bring AI to everyone, without the need to log in.",
-      link: "https://cerdasai.fatih-jihadijih.repl.co/",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
+      image:
+        "https://ik.imagekit.io/9hpbqscxd/SG/image-66.jpg?updatedAt=1705798245623",
+      title: "Texter",
+      desc: "Texter, social media inspired by Twitter(X) and Threads!",
+      link: "https://texter-id.glitch.me/",
     },
     {
       class:
@@ -56,14 +58,14 @@ function Portofolio() {
       desc: "a website to store and organize notes. This platform offers a simple solution for users to securely save their valuable insights and learnings.",
       link: "https://mysimplenotes.glitch.me/",
     },
+
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded lg:col-span-1 sm:col-span-2",
-      image:
-        "https://ik.imagekit.io/9hpbqscxd/SG/image-61.jpg?updatedAt=1705798245623",
-      title: "Texter",
-      desc: "Texter, social media inspired by Twitter(X) and Threads!",
-      link: "https://texter-id.glitch.me/",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
+      image: "./medium.jpg",
+      title: "Cerdas AI",
+      desc: "a user-friendly bot app that bring AI to everyone, without the need to log in.",
+      link: "https://cerdasai.fatih-jihadijih.repl.co/",
     },
     {
       class:
@@ -100,6 +102,24 @@ function Portofolio() {
       title: "Fathin Chat",
       desc: "Simple Chatting app",
       link: "https://fathinchat.glitch.me/",
+    },
+    {
+      class:
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      title: "Learn JS",
+      desc: "Learn Javascript With Fathin",
+      link: "https://www.fathin.my.id/learnjs",
+    },
+    {
+      class:
+        "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
+      image:
+        "https://avatars.githubusercontent.com/u/99858315?v=4",
+      title: "Domainshort",
+      desc: "Domain Short is URL shorterner made by Fathin",
+      link: "https://avatars.githubusercontent.com/u/99858315?v=4",
     },
   ];
   return (
