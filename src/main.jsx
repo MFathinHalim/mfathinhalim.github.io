@@ -23,10 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Intro />
 
       <h3
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration={1000}
-        className="text-4xl sm:text-8xl m-3 text-gray-800"
+        className="text-4xl sm:text-8xl mt-3 mb-3 text-gray-800"
         style={{ marginTop: 120, fontWeight: "bold" }}
       >
         More About Me

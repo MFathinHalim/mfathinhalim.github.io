@@ -27,7 +27,7 @@ function Header() {
     <>
       <section
         id="bg-img"
-        className="pb-0 bg-no-repeat max-h-screen-xl bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
+        className="pb-0 bg-no-repeat md:h-screen lg:h-screen xl:h-screen bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
         style={{
           borderBottom: "2px dashed dark-gray",
         }}
@@ -80,7 +80,7 @@ function Header() {
               </h1>
               <p
                 data-aos="fade-right"
-                className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-justify sm:text-center"
+                className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-center sm:text-center"
               >
                 Embark on a journey with <strong>M.Fathin Halim</strong>, a
                 indie middle school <strong>Programmer</strong>, a Boundless
@@ -130,7 +130,7 @@ function Header() {
                 >
                   <i
                     className={`fa-brands fa-youtube ${
-                      hover === "Youtube" ? "pr-1" : ""
+                      hover === "Youtube" || isMobile ? "pr-1" : ""
                     }`}
                     aria-hidden="true"
                   />{" "}
@@ -145,11 +145,11 @@ function Header() {
                 >
                   <i
                     className={`fa-brands fa-facebook ${
-                      hover === "Facebook" ? "pr-1" : ""
+                      hover === "Facebook" || isMobile ? "pr-1" : ""
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "Facebook" || isMobile ? "FathinHalim" : ""}
+                  {hover === "Facebook" || isMobile ? "M.Fathin Halim" : ""}
                 </a>
                 <a
                   onMouseEnter={() => onHover("twitter")}
@@ -160,7 +160,7 @@ function Header() {
                 >
                   <i
                     className={`fa-brands fa-twitter ${
-                      hover === "twitter" ? "pr-1" : ""
+                      hover === "twitter" || isMobile ? "pr-1" : ""
                     }`}
                     aria-hidden="true"
                   />{" "}
@@ -175,7 +175,7 @@ function Header() {
                 >
                   <i
                     className={`fa-brands fa-instagram ${
-                      hover === "ig" ? "pr-1" : ""
+                      hover === "ig" || isMobile ? "pr-1" : ""
                     }`}
                     aria-hidden="true"
                   />{" "}
@@ -190,7 +190,7 @@ function Header() {
                 >
                   <i
                     className={`fa-brands fa-threads ${
-                      hover === "threads" ? "pr-1" : ""
+                      hover === "threads" || isMobile ? "pr-1" : ""
                     }`}
                     aria-hidden="true"
                   />{" "}

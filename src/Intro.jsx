@@ -1,6 +1,6 @@
 function Intro() {
   return (
-    <>
+    <div className="p-2">
       <article id="who" className="mb-8">
         <h3 className="underlinee text-3xl text-center sm:text-7xl m-3 text-gray-200">
           I am M. Fathin Halim
@@ -131,7 +131,7 @@ function Intro() {
           >
             <h3 className="text-lg font-medium mb-2">Web Development</h3>
             <ul className="space-y-1 list-disc list-inside">
-              <li>Bootstrap, TailwindCSS, React</li>
+              <li>Bootstrap, Tailwind, React</li>
             </ul>
           </div>
           <div
@@ -140,7 +140,7 @@ function Intro() {
           >
             <h3 className="text-lg font-medium mb-2">Mobile Development</h3>
             <ul className="space-y-1 list-disc list-inside">
-              <li>Android Studio, React Native</li>
+              <li>Android Studio</li>
             </ul>
           </div>
         </div>
@@ -231,7 +231,7 @@ function Intro() {
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 }
 

@@ -32,7 +32,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#"
-                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg bg-gray-800 rounded-full border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl md:hover:pl-5 md:hover:pr-5 ease-in-out backdrop-blur-lg bg-gray-800 rounded-full border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 About
               </a>
@@ -43,7 +43,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#award"
-                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl md:hover:pl-5 md:hover:pr-5 ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 Awards
               </a>
@@ -54,7 +54,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#project"
-                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
+                className="text-1xl md:hover:pl-5 md:hover:pr-5 ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 me-4 md:me-6"
               >
                 Projects
               </a>
@@ -65,7 +65,7 @@ function Navbar() {
                   zIndex: 1000,
                 }}
                 href="#services"
-                className="text-1xl md:hover:text-2xl ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 "
+                className="text-1xl md:hover:pl-5 md:hover:pr-5 ease-in-out backdrop-blur-lg md:hover:bg-gray-800 rounded-full md:hover:border border-slate-800 p-2 super-rounded-full mt-3 font-semibold decoration-blue-500 "
               >
                 Service
               </a>
