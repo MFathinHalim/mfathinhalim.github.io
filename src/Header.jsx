@@ -29,7 +29,7 @@ function Header() {
         id="bg-img"
         className="pb-0 bg-no-repeat md:h-screen lg:h-screen xl:h-screen bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
         style={{
-          borderBottom: "2px dashed dark-gray",
+          borderBottom: "1px solid rgba(59,59,59,0.6)",
         }}
       >
         <div className="px-0 md:px-4 mx-auto max-w-screen-xl max-h-screen-xl py-0 md:py-24">
@@ -67,7 +67,7 @@ function Header() {
               <h1
                 id="Name"
                 data-value="MFATHINHALIM"
-                className="p-3 mb-4 text-5xl md:text-7xl text-center rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto mx-auto"
+                className="p-3 mb-4 text-4xl md:text-7xl text-center rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto mx-auto"
                 style={{
                   position: "relative",
                   width: "fit-content",
@@ -80,9 +80,9 @@ function Header() {
               </h1>
               <p
                 data-aos="fade-right"
-                className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-center sm:text-center"
+                className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-left md:text-center"
               >
-                Embark on a journey with <strong>M.Fathin Halim</strong>, a
+                Embark on a journey with <strong>M.Fathin Halim</strong>, an
                 indie middle school <strong>Programmer</strong>, a Boundless
                 enthusiasm for learning and fueled by <strong>Dreams</strong>
               </p>
@@ -106,14 +106,14 @@ function Header() {
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <a
                   href="https://saweria.co/mfathinhalim"
-                  className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i className="fa fa-coffee mr-2" aria-hidden="true" /> Buy me
                   a Coffee
                 </a>
                 <a
                   href="https://discordapp.com/users/1156486226094870569"
-                  className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
                 >
                   Chat me
                   <i className="fa-brands fa-discord ml-2" aria-hidden="true" />
@@ -126,7 +126,7 @@ function Header() {
                   onMouseEnter={() => onHover("Youtube")}
                   onMouseLeave={onLeave}
                   href="https://www.youtube.com/channel/UCP3UJwwVcg4UvaVve2pxbAw"
-                  className="social group backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-red-600"
+                  className="social group backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-red-600"
                 >
                   <i
                     className={`fa-brands fa-youtube ${
@@ -141,7 +141,7 @@ function Header() {
                   onMouseLeave={onLeave}
                   data-social=" FathinHalim"
                   href="https://www.facebook.com/profile.php?id=100085410154411"
-                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-blue-600"
+                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-blue-600"
                 >
                   <i
                     className={`fa-brands fa-facebook ${
@@ -149,14 +149,14 @@ function Header() {
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "Facebook" || isMobile ? "M.Fathin Halim" : ""}
+                  {hover === "Facebook" || isMobile ? "@mfathinhalim" : ""}
                 </a>
                 <a
                   onMouseEnter={() => onHover("twitter")}
                   onMouseLeave={onLeave}
                   data-social=" @mfathinhalim"
                   href="https://twitter.com/mfathinhalim"
-                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
+                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
                     className={`fa-brands fa-twitter ${
@@ -171,7 +171,7 @@ function Header() {
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
                   href="https://www.instagram.com/mfathin_halim/"
-                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
+                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
                 >
                   <i
                     className={`fa-brands fa-instagram ${
@@ -186,7 +186,7 @@ function Header() {
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
                   href="https://www.threads.net/@mfathin_halim"
-                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
+                  className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
                     className={`fa-brands fa-threads ${
@@ -198,6 +198,9 @@ function Header() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="text-center max-w-screen-xl pt-7 pb-0">
+            <a href="#who"><i className="text-center fa-solid fa-arrow-down text-3xl bounce"></i></a>
           </div>
         </div>
       </section>

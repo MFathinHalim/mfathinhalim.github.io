@@ -21,7 +21,7 @@ function Portofolio() {
         "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
       image: "./logo.png",
       title: "rejangpedia",
-      desc: "rejangpedia is an all-in application with a spirit of mutual cooperation in preserving Bengkulu culture in general and Rejang Lebong in particular in the form of digital literacy where everyone can participate.",
+      desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
       link: "https://rejangpedia.glitch.me/",
     },
 
@@ -64,7 +64,7 @@ function Portofolio() {
         "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg sm:col-span-2 h-auto lg:col-span-1 super-rounded",
       image: "./medium.jpg",
       title: "Cerdas AI",
-      desc: "a user-friendly bot app that bring AI to everyone, without the need to log in.",
+      desc: "a user-friendly bot app that bring AI to everyone.",
       link: "https://cerdasai.fatih-jihadijih.repl.co/",
     },
     {
@@ -82,7 +82,7 @@ function Portofolio() {
       image:
         "https://img.itch.zone/aW1hZ2UvMTg0MzUyMy8xMDgxODczMy5wbmc=/347x500/i8%2FXQY.png",
       title: "Plane vs Zombie",
-      desc: "Plane VS Zombie is game made by Fathin and Nabeel for Itch IO game jam in 2 DAYS!",
+      desc: "PVZ is a game made by Fathin and Nabeel for a game jam in 2 DAYS!",
       link: "https://nabeela.itch.io/plane-vs-zombie-desktop",
     },
     {
@@ -134,6 +134,24 @@ function Portofolio() {
           Projects
         </h3>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0">
+        <a
+            href="https://github.com/mfathinhalim"
+            data-aos="zoom-in"
+            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center sm:col-span-2"
+            style={{ textDecoration: "none !important" }}
+          >
+            <i className="fa-brands fa-github mr-1" aria-hidden="true" />
+            GitHub
+          </a>
+          <a
+            data-aos="zoom-in"
+            href="https://codepen.io/MFathin-Halim-Doma"
+            className="text-xl text-white text-center super-rounded p-8 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700 lg:col-span-1 sm:col-span-2"
+            style={{ textDecoration: "none !important" }}
+          >
+            <i className="fa-brands fa-codepen mr-1" aria-hidden="true" />
+            Codepen
+          </a>  
           {projects.map((project) => (
             <div
               key={project.title}
@@ -165,26 +183,6 @@ function Portofolio() {
               </a>
             </div>
           ))}
-          <a
-            href="https://github.com/mfathinhalim"
-            data-aos="zoom-in"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center sm:col-span-2"
-            style={{ textDecoration: "none !important" }}
-          >
-            <i className="fa-brands fa-github mr-1" aria-hidden="true" />
-            GitHub
-            <i className="fa-solid fa-arrow-up-right-from-square ml-1" />
-          </a>
-          <a
-            data-aos="zoom-in"
-            href="https://codepen.io/MFathin-Halim-Doma"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700 lg:col-span-1 sm:col-span-2"
-            style={{ textDecoration: "none !important" }}
-          >
-            <i className="fa-brands fa-codepen mr-1" aria-hidden="true" />
-            Codepen
-            <i className="fa-solid fa-arrow-up-right-from-square ml-1" />
-          </a>
         </div>
       </article>
     </>
