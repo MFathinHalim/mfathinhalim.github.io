@@ -10,16 +10,29 @@
   font-weight: bolder;
 }
 
-body::-webkit-scrollbar {
-  width: 5px; /* Lebar scrollbar */
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(20, 152, 235); /* Warna thumb (bagian yang dapat digerakkan) scrollbar */
-  border-radius: 12px;
+[data-scroll-container] {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  position: relative; /* Relative positioning for smooth scrolling */
 }
 
-body::-webkit-scrollbar-track {
-  background-color: #181212; /* Warna track (bagian yang tidak dapat digerakkan) scrollbar */
+/* Style for the scrollbar */
+[data-scroll-container]::-webkit-scrollbar {
+  width: 3px; /* Width of the vertical scrollbar */
+}
+
+[data-scroll-container]::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+}
+
+[data-scroll-container]::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255); /* Color of the scrollbar track */
+}
+
+/* For Firefox */
+[data-scroll-container] {
+  scrollbar-color: rgba(255, 255, 255, 0.154) rgba(255, 255, 255, 0.154); /* thumb color and track color */
 }
 * {
   font-family: "Mulish", sans-serif;
@@ -291,14 +304,6 @@ p {
     width: 100%; /* Lebar saat dihover */
   }
 }
-
-span:after,
-span:before {
-  content: "\00a0\00a0\00a0\00a0\00a0";
-  text-decoration: line-through;
-  padding: 3px;
-}
-
 #cursor:after,
 #cursor:before,
 #cursor2:after,
@@ -359,4 +364,27 @@ h1 {
 
 .bounce {
   animation: bounce 2s infinite;
+}
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slide Up Animation */
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

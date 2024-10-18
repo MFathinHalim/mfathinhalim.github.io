@@ -27,7 +27,7 @@ function Header() {
     <>
       <section
         id="bg-img"
-        className="pb-0 bg-no-repeat md:h-screen lg:h-screen xl:h-screen bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
+        className="pb-0 bg-no-repeat bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.6)",
         }}
