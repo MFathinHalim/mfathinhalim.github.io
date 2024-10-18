@@ -203,24 +203,34 @@ body {
       z-index: 3000;
     }*/
 
-  #cursor2 {
-    background-color: white;
-    height: 300px;
-    pointer-events: none;
-
-    aspect-ratio: 1;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: -1;
-    translate: -50% -50%;
-    border-radius: 50%;
-    background: linear-gradient(to right, rgb(6, 110, 171), rgb(215, 219, 226));
-    animation: rotate 20s infinite;
-    backdrop-filter: blur(150px);
-    opacity: 0.6;
-    filter: blur(140px);
-  }
+    #cursor2 {
+      background-color: white;
+      height: 300px;
+      width: 300px; /* Explicit width for aspect ratio */
+      pointer-events: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%); /* Use transform for centering */
+      border-radius: 50%;
+      background: linear-gradient(to right, rgb(6, 110, 171), rgb(215, 219, 226));
+      animation: rotate 20s linear infinite; /* Changed timing function for smoother rotation */
+      backdrop-filter: blur(150px);
+      opacity: 0.6;
+      filter: blur(140px);
+      will-change: transform, opacity; /* Hint for browser optimization */
+    }
+    
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
 
   .custom-cursor--link {
     transform: translate(-50%, -50%) scale(1) !important;
