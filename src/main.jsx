@@ -57,7 +57,7 @@ function App() {
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      smartphone: { smooth: true },
+      smartphone: ({smooth: false}),
       multiplier: 2,
     });
 
@@ -73,7 +73,6 @@ function App() {
 
   return (
     <div data-scroll-container>
-      {"<Cursor />"}
       <Header />
       <Navbar />
       <div className='container mx-auto p-0 mt-8'>
