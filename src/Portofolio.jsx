@@ -116,10 +116,10 @@ function Portofolio() {
       class:
         "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
       image:
-        "https://avatars.githubusercontent.com/u/99858315?v=4",
+        "https://i.pinimg.com/originals/44/94/3b/44943b3d9b339f4b8eac2efd27024411.png",
       title: "Domainshort",
       desc: "Domain Short is URL shorterner made by Fathin",
-      link: "https://avatars.githubusercontent.com/u/99858315?v=4",
+      link: "https://domaisshort.glitch.me/",
     },
   ];
   return (

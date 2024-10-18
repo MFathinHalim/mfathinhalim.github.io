@@ -11,7 +11,7 @@ function Award() {
         interested in the region's linguistic diversity.`,
       link: "https://play.google.com/store/apps/details?id=org.kamusbahasarejang.kamusbahasarejang",
       img: [
-        "https://play-lh.googleusercontent.com/UgCNG2x18CiA6nu4TUHwP9b-QhH3FnlU3WP0812FMMpRmBs6YO5phTLZ9PM3Ab5Jd2o=w2560-h1440-rw",
+        "https://play-lh.googleusercontent.com/UgCNG2x18CiA6nu4TUHwP9b-QhH3FnlU3WP0812FMMpRmBs6YO5phTLZ9PM3Ab5Jd2o=w2560-h1440-rwhttps://play-lh.googleusercontent.com/UgCNG2x18CiA6nu4TUHwP9b-QhH3FnlU3WP0812FMMpRmBs6YO5phTLZ9PM3Ab5Jd2o=w2560-h1440",
         "https://play-lh.googleusercontent.com/AleA5pJ6XfoXT1RtdvLw5U0oYccWrebhD5DNpFc7oTrcfPWxHvbZFmSGgKeJlS0Qtw=w2560-h1440-rw",
       ],
     },
