@@ -18,22 +18,116 @@
 
 /* Style for the scrollbar */
 [data-scroll-container]::-webkit-scrollbar {
-  width: 3px; /* Width of the vertical scrollbar */
+  width: 0px !important; /* Width of the vertical scrollbar */
 }
 
 [data-scroll-container]::-webkit-scrollbar-thumb {
+  width: 0px !important; /* Width of the vertical scrollbar */
+
   background: rgb(255, 255, 255); /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners */
 }
 
 [data-scroll-container]::-webkit-scrollbar-track {
+  width: 0px !important; /* Width of the vertical scrollbar */
+
   background: rgb(255, 255, 255); /* Color of the scrollbar track */
+}
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  background-color: transparent; /* Set scrollbar background to transparent */
+  transform-origin: center right;
+  transition: transform 0.3s;
+  opacity: 1 !important; /* Always keep the scrollbar fully visible */
+  visibility: visible !important; /* Ensure scrollbar is always visible */
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar.has-scroll-scrolling .c-scrollbar,
+.c-scrollbar.has-scroll-dragging .c-scrollbar {
+  opacity: 1 !important; /* Ensure scrollbar opacity is always 100% */
+  background-color: transparent; /* Keep scrollbar background transparent */
+  visibility: visible !important; /* Ensure scrollbar is always visible */
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  background-color: transparent; /* Ensure scrollbar background is transparent */
+  transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #22a4db !important; /* Thumb color is blue */
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  opacity: 1 !important; /* Keep thumb opacity at 100% */
+  visibility: visible !important; /* Ensure thumb is always visible */
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 /* For Firefox */
-[data-scroll-container] {
-  scrollbar-color: rgba(255, 255, 255, 0.154) rgba(255, 255, 255, 0.154); /* thumb color and track color */
-}
 * {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
