@@ -172,7 +172,7 @@ function Header() {
                   onMouseEnter={() => onHover("ig")}
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
-                  href="https://www.instagram.com/mfathin.halim/"
+                  href="https://www.instagram.com/mfathin_halim/"
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
                 >
                   <i
@@ -181,13 +181,13 @@ function Header() {
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "ig" || isMobile ? "@mfathin.halim" : ""}
+                  {hover === "ig" || isMobile ? "@mfathin_halim" : ""}
                 </a>
                 <a
                   onMouseEnter={() => onHover("threads")}
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
-                  href="https://www.threads.net/@mfathin.halim"
+                  href="https://www.threads.net/@mfathin_halim"
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
@@ -196,7 +196,7 @@ function Header() {
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "threads" || isMobile ? "@mfathin.halim" : ""}
+                  {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
                 </a>
               </div>
             </div>
