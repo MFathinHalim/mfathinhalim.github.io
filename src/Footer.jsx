@@ -15,21 +15,21 @@ function Footer() {
         {/* Right Section with Q&A and Icons */}
         <div className='w-full md:w-1/2' data-aos='fade-up'>
           <div className='space-y-4'>
-            <div className='bg-gray-700 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-code text-blue-400 text-3xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Does Fathin&apos;s parent also programmers?</h4>
                 <p className='text-white mt-2'>No, they are not programmers :)</p>
               </div>
             </div>
-            <div className='bg-gray-700 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-clock text-green-400 text-4xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Since when did Fathin learn programming?</h4>
                 <p className='text-white mt-2'>Since 2020, when Fathin was in 5th grade.</p>
               </div>
             </div>
-            <div className='bg-gray-700 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-gamepad text-red-400 text-3xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Why did Fathin study programming?</h4>
