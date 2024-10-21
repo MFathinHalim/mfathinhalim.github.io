@@ -34,17 +34,19 @@ const LazyLoadIframe = ({ src }) => {
   return (
     <div ref={ref} className='parallax' data-speed='0.3'>
       {isVisible && (
-        <iframe
-          width='100%'
-          height='600'
-          src={src}
-          title='YouTube video player'
-          frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-          className='rounded-lg'
-          data-scroll
-        />
+  <iframe
+  width='100%'
+  style={{
+      height: '50vh'
+  }}
+  src={src}
+  title='YouTube video player'
+  frameBorder='0'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  allowFullScreen
+  className='rounded-lg'
+  data-scroll
+/>
       )}
     </div>
   );
