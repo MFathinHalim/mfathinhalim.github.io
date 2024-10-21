@@ -39,7 +39,7 @@ function Header() {
             data-aos-duration={3100}
             id="card"
             className="p-12 pt-3 pl-3 pr-3 border rounded-lg shadow border-gray-700"
-            style={{ backgroundColor: "rgba(28, 29, 29, 0.288)",     backdropFilter: "blur(5px)", // This applies the blur effect to the background
+            style={{ backgroundColor: "rgba(28, 29, 29, 0.288)",
 
             }}
           >
