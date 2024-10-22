@@ -105,10 +105,10 @@ function App() {
             className='text-2xl sm:text-4xl pb-0 text-gray-200 font-extrabold'
             data-scroll
           >
-            Check Out My Videos
+Check Out TVRI National Coverage About Me
           </a>
         </article>
-          <LazyLoadIframe src='https://www.youtube.com/embed/3aSt-zXln7Q' />
+          <LazyLoadIframe src='https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF' />
         <div className='parallax'>
           <Footer />
         </div>
