@@ -27,6 +27,8 @@ function Award() {
         >
           Award
         </h3>
+        <p className="text-lg text-center text-gray-400 mb-6">  Acknowledging achievements and milestones.</p>
+
 
         {awards.map((award) => (
           <div

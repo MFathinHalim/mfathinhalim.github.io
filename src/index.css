@@ -266,7 +266,7 @@ a {
   border: solid 1px rgb(75, 85, 99);
 }
 .super-rounded {
-  border-radius: 14px !important;
+  border-radius: 15px !important;
 }
 .h-auto {
   transition: 0.5s ease;

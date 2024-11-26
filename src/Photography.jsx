@@ -4,7 +4,7 @@ function Photography() {
     "https://ik.imagekit.io/9hpbqscxd/SG/image-74.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-78.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-70.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-71.jpg?updatedAt=1705798245623",
+    "https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-77.jpg?updatedAt=1705798245623",
   ];
   return (
@@ -19,13 +19,14 @@ function Photography() {
         >
           Photos
         </h3>
-
+        <p className="text-lg text-center text-gray-400 mb-6">
+        Preserving memories and narratives through photography. A curated collection of my most cherished images, each reflecting unique styles and viewpoints.        </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Photographys.map((Photography) => (
             <div key={Photography}>
               <img
-                className="h-auto filter hover:cursor-zoom-in lg:grayscale hover:grayscale-0 h-full w-full rounded-lg"
-                style={{objectFit: "cover"}}
+                className="h-auto filter hover:cursor-zoom-in lg:grayscale hover:grayscale-0 h-full w-full rounded-2xl"
+                style={{ objectFit: "cover" }}
                 src={Photography}
                 alt="image description"
               />

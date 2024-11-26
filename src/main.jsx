@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import Aos from "nitlix-aos";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
+import Path from "./Path.jsx";
 
 //@ts-ignore
 /* eslint-disable react/prop-types */
@@ -32,21 +33,34 @@ const LazyLoadIframe = ({ src }) => {
   }, []);
   
   return (
-    <div ref={ref} className='parallax' data-speed='0.3'>
+    <div ref={ref} className='parallax mt-4' data-speed='0.3'>
       {isVisible && (
-  <iframe
-  width='100%'
+        <div
   style={{
-      height: '50vh'
+    position: 'relative',
+    width: '100%',
+    paddingBottom: '56.25%', // 16:9 aspect ratio (height / width * 100)
   }}
-  src={src}
-  title='YouTube video player'
-  frameBorder='0'
-  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-  allowFullScreen
-  className='rounded-lg'
-  data-scroll
-/>
+  className="rounded-2xl overflow-hidden"
+>
+  <iframe
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+    }}
+    src={src}
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    className="rounded-lg"
+    data-scroll
+  />
+</div>
+
       )}
     </div>
   );
@@ -88,6 +102,9 @@ function App() {
         
         <div className='parallax'>
           <Service />
+        </div>
+        <div className='parallax'>
+          <Path />
         </div>
         <div className='parallax'>
           <Portofolio />

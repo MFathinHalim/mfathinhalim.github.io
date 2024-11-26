@@ -60,20 +60,21 @@ function Intro() {
         <h3 data-aos='fade-up' data-aos-easing='linear' data-aos-duration={1000} className='text-4xl sm:text-8xl m-3 text-gray-300 text-center' style={{ fontWeight: "bold" }}>
           Tools
         </h3>
+
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Programming Languages</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Python, Java, TypeScript</li>
             </ul>
           </div>
-          <div data-aos='fade-up' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-up' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Web Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Bootstrap, Tailwind, React</li>
             </ul>
           </div>
-          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-lg shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Mobile Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Android Studio</li>
@@ -85,31 +86,31 @@ function Intro() {
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
           <div className='grid gap-4'>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-up' className='h-auto max-w-full rounded-lg' src='./JavaScript-logo.png' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-up' className='h-auto max-w-full rounded-2xl' src='./JavaScript-logo.png' alt='' />
             </div>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='zoom-in' className='h-full max-w-full rounded-lg' src='./0 aZ3qgyVGmcQd488S.png' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='zoom-in' className='h-full max-w-full rounded-2xl' src='./0 aZ3qgyVGmcQd488S.png' alt='' />
             </div>
           </div>
           <div className='grid gap-4'>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-auto max-w-full rounded-lg' src='./react-1.svg' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-auto max-w-full rounded-2xl' src='./react-1.svg' alt='' />
             </div>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-full w-full rounded-lg' src='./desktop-wallpaper-python-graphic-design-graphical-user-interface-django-standing-background-python-coding.jpg' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-full w-full rounded-2xl' src='./desktop-wallpaper-python-graphic-design-graphical-user-interface-django-standing-background-python-coding.jpg' alt='' />
             </div>
           </div>
           <div className='grid gap-4'>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-auto max-w-full rounded-lg' src='./png-transparent-typescript-hd-logo-thumbnail.png' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-auto max-w-full rounded-2xl' src='./png-transparent-typescript-hd-logo-thumbnail.png' alt='' />
             </div>
             <div>
-              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-full max-w-full rounded-lg' src='./android-studio-logo-1.webp' alt='' />
+              <img loading='lazy' style={{ objectFit: "cover" }} data-aos='fade-down' className='h-full max-w-full rounded-2xl' src='./android-studio-logo-1.webp' alt='' />
             </div>
           </div>
           <div className='grid gap-4'>
-            <div style={{ height: "100%" }} id='randomParent' data-aos='fade-up' className='bg-gray-700 hover:bg-gray-800 border-slate-600 rounded-lg h-full text-gray-600'>
-              <img loading='lazy' style={{ objectFit: "cover" }} className='h-full max-w-full rounded-lg' src='./desktop-wallpaper-bootstrap-css-framework.jpg' alt='' />
+            <div style={{ height: "100%" }} id='randomParent' data-aos='fade-up' className='bg-gray-700 hover:bg-gray-800 border-slate-600 rounded-2xl h-full text-gray-600'>
+              <img loading='lazy' style={{ objectFit: "cover" }} className='h-full max-w-full rounded-2xl' src='./desktop-wallpaper-bootstrap-css-framework.jpg' alt='' />
             </div>
           </div>
         </div>

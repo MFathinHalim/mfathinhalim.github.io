@@ -38,7 +38,7 @@ function Header() {
             data-aos-easing="linear"
             data-aos-duration={3100}
             id="card"
-            className="p-12 pt-3 pl-3 pr-3 border rounded-lg shadow border-gray-700"
+            className="p-12 pt-3 pl-3 pr-3 border rounded-2xl shadow border-gray-700"
             style={{ backgroundColor: "rgba(28, 29, 29, 0.288)",
 
             }}
@@ -48,7 +48,7 @@ function Header() {
                 className="border rounded-full border-slate-600 px-3 py-1"
                 style={{ width: "fit-content" }}
               >
-                🇵🇸 Indie Dev | btw i use Arch
+                🍉Free Palestine | Indie Dev
               </p>
               <h2 className="text-1xl px-3 py-1 text-center">
                 <span>
