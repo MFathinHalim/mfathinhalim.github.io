@@ -33,7 +33,7 @@ function Photography() {
           ))}
         </div>
         <a
-          href="https://www.instagram.com/mfathin.halim/"
+          href="https://www.instagram.com/mfathin_halim/"
           className="border border-orange-500 hover:bg-orange-500 text-orange-500 hover:text-gray-200 font-bold py-2 mt-3 px-4 rounded-lg inline-flex items-center"
         >
           <i className="fa-brands fa-instagram mr-2"></i> More at Instagram

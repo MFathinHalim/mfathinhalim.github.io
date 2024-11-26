@@ -124,7 +124,7 @@ function Portofolio() {
   ];
   return (
     <>
-      <article id="project" className="mb-8 p-3" style={{ marginTop: 100 }}>
+      <article id="project" className="mb-8 p-3" style={{ marginTop: 30 }}>
         <h3
           data-aos="fade-up"
           data-aos-easing="linear"

@@ -27,9 +27,9 @@ function Header() {
     <>
       <section
         id="bg-img"
-        className="pb-0 bg-no-repeat bg-gray-700 bg-blend-multiply bg-cover bg-attachment-fixed"
+        className="pb-0 bg-no-repeat bg-gray-600 bg-blend-multiply bg-cover bg-attachment-fixed"
         style={{
-          borderBottom: "1px solid rgba(59,59,59,0.6)",
+          borderBottom: "1px solid rgba(59,59,59,0.2)",
         }}
       >
         <div className="px-0 md:px-4 mx-auto max-w-screen-xl max-h-screen-xl py-0 md:py-24">
@@ -39,7 +39,9 @@ function Header() {
             data-aos-duration={3100}
             id="card"
             className="p-12 pt-3 pl-3 pr-3 border rounded-lg shadow border-gray-700"
-            style={{ backgroundColor: "rgba(28, 29, 29, 0.288)" }}
+            style={{ backgroundColor: "rgba(28, 29, 29, 0.288)",
+
+            }}
           >
             <div className="flex flex-col space-y-4 sm:space-y-0 mb-5">
               <p
@@ -170,7 +172,7 @@ function Header() {
                   onMouseEnter={() => onHover("ig")}
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
-                  href="https://www.instagram.com/mfathin.halim/"
+                  href="https://www.instagram.com/mfathin_halim/"
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
                 >
                   <i
@@ -179,13 +181,13 @@ function Header() {
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "ig" || isMobile ? "@mfathin.halim" : ""}
+                  {hover === "ig" || isMobile ? "@mfathin_halim" : ""}
                 </a>
                 <a
                   onMouseEnter={() => onHover("threads")}
                   onMouseLeave={onLeave}
                   data-social=" @mfathin_halim"
-                  href="https://www.threads.net/@mfathin.halim"
+                  href="https://www.threads.net/@mfathin_halim"
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
@@ -194,7 +196,7 @@ function Header() {
                     }`}
                     aria-hidden="true"
                   />{" "}
-                  {hover === "threads" || isMobile ? "@mfathin.halim" : ""}
+                  {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
                 </a>
               </div>
             </div>

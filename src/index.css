@@ -187,40 +187,6 @@ body {
   body {
     transition: 0.3s;
   }
-  /* CSS umum untuk kursor 
-    #cursor {
-  
-      position: fixed;
-      pointer-events: none;
-      mix-blend-mode: difference;
-      width: 40px;
-      height: 40px;
-      transition: 2s;
-      border-radius: 50%;
-      background-color: var(--text);
-      transition: transform 350ms ease;
-      transform: translate(-50%, -50%) scale(0.3);
-      z-index: 3000;
-    }*/
-
-    #cursor2 {
-      background-color: white;
-      height: 300px;
-      width: 300px; /* Explicit width for aspect ratio */
-      pointer-events: none;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      z-index: -1;
-      transform: translate(-50%, -50%); /* Use transform for centering */
-      border-radius: 50%;
-      background: linear-gradient(to right, rgb(6, 110, 171), rgb(215, 219, 226));
-      animation: rotate 20s linear infinite; /* Changed timing function for smoother rotation */
-      backdrop-filter: blur(150px);
-      opacity: 0.6;
-      filter: blur(140px);
-      will-change: transform, opacity; /* Hint for browser optimization */
-    }
     
     @keyframes rotate {
       from {
@@ -408,6 +374,23 @@ p {
     width: 100%; /* Lebar saat dihover */
   }
 }
+.photos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.photos {
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #cursor:after,
 #cursor:before,
 #cursor2:after,
