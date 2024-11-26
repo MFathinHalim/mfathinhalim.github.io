@@ -39,22 +39,59 @@ function Header() {
             data-aos-duration={3100}
             id="card"
             className="p-12 pt-3 pl-3 pr-3 border rounded-2xl shadow border-gray-700"
-            style={{ backgroundColor: "rgba(28, 29, 29, 0.288)",
+            style={{
+              backgroundColor: "rgba(28, 29, 29, 0.288)",
 
             }}
           >
             <div className="flex flex-col space-y-4 sm:space-y-0 mb-5">
-              <p
-                className="border rounded-full border-slate-600 px-3 py-1"
-                style={{ width: "fit-content" }}
-              >
-                🍉Free Palestine | Indie Dev
-              </p>
+              <div className="flex space-x-2 justify-between">
+                <div className="flex space-x-2 px-2 py-1">
+
+                  <div
+                    className="bg-red-400"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      borderRadius: "50%",
+                      cursor: "pointer"
+                    }}
+                  ></div>
+                  <div
+                    className="bg-yellow-400"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      borderRadius: "50%",
+                      cursor: "pointer"
+                    }}
+                  ></div>
+                  <div
+                    className="bg-green-400"
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      borderRadius: "50%",
+                      cursor: "pointer"
+                    }}
+                  ></div>
+                </div>
+
+                <p
+                  className="px-2 py-1"
+                  style={{ width: "fit-content" }}
+                >
+                  🍉Free Palestine | Indie Dev
+                </p>
+
+              </div>
+
               <h2 className="text-1xl px-3 py-1 text-center">
                 <span>
                   System: <strong className="text-green-300">Success</strong>
                 </span>
               </h2>
+
             </div>
             <div className="text-center">
               <img
@@ -131,9 +168,8 @@ function Header() {
                   className="social group backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-red-600"
                 >
                   <i
-                    className={`fa-brands fa-youtube ${
-                      hover === "Youtube" || isMobile ? "pr-1" : ""
-                    }`}
+                    className={`fa-brands fa-youtube ${hover === "Youtube" || isMobile ? "pr-1" : ""
+                      }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "Youtube" || isMobile ? "@mfathinhalim" : ""}
@@ -146,9 +182,8 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-blue-600"
                 >
                   <i
-                    className={`fa-brands fa-facebook ${
-                      hover === "Facebook" || isMobile ? "pr-1" : ""
-                    }`}
+                    className={`fa-brands fa-facebook ${hover === "Facebook" || isMobile ? "pr-1" : ""
+                      }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "Facebook" || isMobile ? "@mfathinhalim" : ""}
@@ -161,9 +196,8 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
-                    className={`fa-brands fa-twitter ${
-                      hover === "twitter" || isMobile ? "pr-1" : ""
-                    }`}
+                    className={`fa-brands fa-twitter ${hover === "twitter" || isMobile ? "pr-1" : ""
+                      }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "twitter" || isMobile ? "@mfathinhalim" : ""}
@@ -176,9 +210,8 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
                 >
                   <i
-                    className={`fa-brands fa-instagram ${
-                      hover === "ig" || isMobile ? "pr-1" : ""
-                    }`}
+                    className={`fa-brands fa-instagram ${hover === "ig" || isMobile ? "pr-1" : ""
+                      }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "ig" || isMobile ? "@mfathin_halim" : ""}
@@ -191,9 +224,8 @@ function Header() {
                   className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i
-                    className={`fa-brands fa-threads ${
-                      hover === "threads" || isMobile ? "pr-1" : ""
-                    }`}
+                    className={`fa-brands fa-threads ${hover === "threads" || isMobile ? "pr-1" : ""
+                      }`}
                     aria-hidden="true"
                   />{" "}
                   {hover === "threads" || isMobile ? "@mfathin_halim" : ""}

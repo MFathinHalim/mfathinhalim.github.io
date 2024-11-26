@@ -5,37 +5,31 @@ function Path() {
       date: "Late 2020",
       title: "Started Coding",
       description: "Began my coding journey with interactive lessons on Code.org.",
-      color: "orange-400"
     },
     {
       date: "2021",
       title: "Python and App Development",
       description: "Learned Python and created a Rejang Language Dictionary application.",
-      color: "teal-400"
     },
     {
       date: "2022",
       title: "Java, C#, and Unity",
       description: "Expanded skills with Java and C# to enhance my app and experimented with Unity for game development.",
-      color: "blue-400"
     },
     {
       date: "Late 2022",
       title: "JavaScript Projects",
       description: "Learned JavaScript and developed multiple impressive projects.",
-      color: "green-400"
     },
     {
       date: "2023",
       title: "React and Rejangpedia",
       description: "Learned React, updated my websites, and built Rejangpedia. Participated in Garuda Hack 3.0.",
-      color: "purple-400"
     },
     {
       date: "2024",
       title: "Next.js",
       description: "Started learning Next.js to build more advanced and optimized web projects.",
-      color: "pink-400"
     }
   ];
 
@@ -50,21 +44,28 @@ function Path() {
       >
         My Journey
       </h3>
-      <div className="mt-12 flex justify-center gap-2"><span className="h-1 w-20 bg-gray-200 rounded-full"></span><span className="h-1 w-10 bg-gray-200/30 rounded-full"></span><span className="h-1 w-5 bg-gray-200/10 rounded-full"></span></div>
+      <div className="mt-12 flex justify-center gap-2">
+        <span className="h-1 w-20 bg-gray-200 rounded-full"></span>
+        <span className="h-1 w-10 bg-gray-200/30 rounded-full"></span>
+        <span className="h-1 w-5 bg-gray-200/10 rounded-full"></span>
+      </div>
       <ol className="relative border-s border-gray-300 dark:border-gray-600">
         {timelineData.map((item, index) => (
           <li key={index} className="mb-5 ms-4">
+            {/* Lingkaran di timeline */}
             <div
-              className={`absolute w-3 h-3 bg-${item.color} rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900`}
+              className={`absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900`}
             />
-            <time 
-              className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${index === 0 ? "bg-white text-black" : "bg-gray-600 text-white"}`}
+            {/* Tanggal timeline */}
+            <time
+              className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
+                index === 0 ? "bg-white text-black" : "bg-gray-600 text-white"
+              }`}
             >
               {item.date}
             </time>
-            <h3 className="text-lg font-semibold text-white">
-              {item.title}
-            </h3>
+            {/* Judul dan deskripsi timeline */}
+            <h3 className="text-lg font-semibold text-white">{item.title}</h3>
             <p className="text-base font-normal text-gray-700 dark:text-gray-400">
               {item.description}
             </p>
