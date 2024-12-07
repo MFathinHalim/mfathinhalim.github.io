@@ -147,7 +147,7 @@ function Portofolio() {
       develop: ["website"],
     },
   ];
-  
+
 
   return (
     <>
@@ -165,16 +165,25 @@ function Portofolio() {
           <a
             href="https://github.com/mfathinhalim"
             data-aos="zoom-in"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center sm:col-span-2"
+            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-github mr-1" aria-hidden="true" />
             GitHub
           </a>
           <a
+            href="https://play.google.com/store/apps/dev?id=5920539852130258160"
+            data-aos="zoom-in"
+            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:text-black hover:bg-orange-400 border-yellow-600 border bg-b items-center justify-center"
+            style={{ textDecoration: "none !important" }}
+          >
+            <i className="fa-brands fa-google-play mr-1" aria-hidden="true" />
+            Play Store
+          </a>
+          <a
             data-aos="zoom-in"
             href="https://codepen.io/MFathin-Halim-Doma"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700 lg:col-span-1 sm:col-span-2"
+            className="text-xl text-white text-center super-rounded p-8 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-codepen mr-1" aria-hidden="true" />

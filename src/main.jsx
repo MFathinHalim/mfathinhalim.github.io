@@ -13,7 +13,6 @@ import Aos from "nitlix-aos";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import Path from "./Path.jsx";
-
 //@ts-ignore
 /* eslint-disable react/prop-types */
 const LazyLoadIframe = ({ src }) => {
@@ -56,7 +55,7 @@ const LazyLoadIframe = ({ src }) => {
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
-    className="rounded-lg"
+    className="border-gray-700 border rounded-sm"
     data-scroll
   />
 </div>

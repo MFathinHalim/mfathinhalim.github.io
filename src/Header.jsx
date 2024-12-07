@@ -38,7 +38,7 @@ function Header() {
             data-aos-easing="linear"
             data-aos-duration={3100}
             id="card"
-            className="p-12 pt-3 pl-3 pr-3 border rounded-2xl shadow border-gray-700"
+            className="p-12 pt-3 pl-3 pr-3 md:border rounded-2xl shadow border-gray-700"
             style={{
               backgroundColor: "rgba(28, 29, 29, 0.288)",
 
@@ -51,8 +51,8 @@ function Header() {
                   <div
                     className="bg-red-400"
                     style={{
-                      width: "20px",
-                      height: "20px",
+                      width: "18px",
+                      height: "18px",
                       borderRadius: "50%",
                       cursor: "pointer"
                     }}
@@ -60,8 +60,8 @@ function Header() {
                   <div
                     className="bg-yellow-400"
                     style={{
-                      width: "20px",
-                      height: "20px",
+                      width: "18px",
+                      height: "18px",
                       borderRadius: "50%",
                       cursor: "pointer"
                     }}
@@ -69,8 +69,8 @@ function Header() {
                   <div
                     className="bg-green-400"
                     style={{
-                      width: "20px",
-                      height: "20px",
+                      width: "18px",
+                      height: "18px",
                       borderRadius: "50%",
                       cursor: "pointer"
                     }}
@@ -81,7 +81,7 @@ function Header() {
                   className="px-2 py-1"
                   style={{ width: "fit-content" }}
                 >
-                  🍉Free Palestine | Indie Dev
+                  🍉 Indie Dev
                 </p>
 
               </div>
@@ -233,27 +233,10 @@ function Header() {
               </div>
             </div>
           </div>
-          <div className="text-center max-w-screen-xl pt-7 pb-0">
-            <a href="#who"><i className="text-center fa-solid fa-arrow-down text-3xl bounce"></i></a>
-          </div>
         </div>
       </section>
     </>
   );
 }
-/*
-  * <div
-  !  id="car"
-  ?  className="car-movement hide-on-mobile"
-  *  style={{ zIndex: "-1000 !important" }}>
-  !  <div className="car">
-  ?   <img
-  *      loading="lazy"
-  !      draggable="false"
-  ?      alt="anime"
-  *      style={{ width: 150, height: 150 }}
-  !      src="./ngoding.webp"
-  ?    />
-  *  </div>
-  ! </div>*/
+
 export default Header;
