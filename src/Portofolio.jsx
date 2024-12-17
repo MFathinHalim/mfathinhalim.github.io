@@ -137,11 +137,11 @@ function Portofolio() {
         },
         {
           class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
-          image: "https://upload.wikimedia.org/wikipedia/commons/4/43/Lambang_Kabupaten_Rejang_Lebong.png",
-          title: "Feedback BPKD",
-          desc: "Feedback BPKD.",
-          link: "https://feedbackbpkd-demo.glitch.me/",
-          framework: ["Tailwind", "Node", "MongoDB"],
+          image: "https://yt3.googleusercontent.com/9AahDsxJeIN1785XKuy1szYLqppVS9sJd7q1Nn-wOMzJw4MGxoqVhoVcjgArIRYIlLOG8ni6=s120-c-k-c0x00ffffff-no-rj",
+          title: "Empire of Caveine landing page concept",
+          desc: "Empire of Caveine landing page concept.",
+          link: "https://caveine.glitch.me/",
+          framework: ["Bootstrap", "HTML"],
           develop: ["website"],
       },
     ];
