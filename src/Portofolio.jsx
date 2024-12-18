@@ -131,7 +131,7 @@ function Portofolio() {
             image: "https://ik.imagekit.io/9hpbqscxd/SG/image-83.jpg?updatedAt=1705798245623",
             title: "IMPHNEN",
             desc: "Ingin Menjadi Programmer Handal Namun Enggan Ngoding landing page",
-            link: "https://www.fathin.my.id/learnjs",
+            link: "https://imphnen.glitch.me",
             framework: ["HTML", "Bootstrap"],
             develop: ["website"],
         },
