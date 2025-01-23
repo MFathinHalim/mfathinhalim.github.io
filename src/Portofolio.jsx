@@ -113,7 +113,7 @@ function Portofolio() {
             image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
             title: "Learn JS",
             desc: "Learn Javascript With Fathin.",
-            link: "https://www.fathin.my.id/learnjs",
+            link: "https://mfathinhalim.github.io/learnjs",
             framework: ["HTML", "Bootstrap"],
             develop: ["website"],
         },
