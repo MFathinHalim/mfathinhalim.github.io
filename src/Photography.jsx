@@ -11,15 +11,16 @@ function Photography() {
     <>
       <article id="Photography" className=" p-3">
         <h3
+          id="Name"
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="text-4xl text-center sm:text-8xl m-3 text-gray-300"
+          className="text-4xl sm:text-8xl m-3 text-gray-300"
           style={{ fontWeight: "bold" }}
         >
           Photos
         </h3>
-        <p className="text-lg text-center text-gray-400 mb-6">
+        <p className="text-lg text-gray-400 mb-6">
         Preserving memories and narratives through photography. A curated collection of my most cherished images, each reflecting unique styles and viewpoints.        </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {Photographys.map((Photography) => (

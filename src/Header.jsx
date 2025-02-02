@@ -26,116 +26,69 @@ function Header() {
   return (
     <>
       <section
-        id="bg-img"
-        className="pb-0 bg-no-repeat bg-gray-600 bg-blend-multiply bg-cover bg-attachment-fixed"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.2)",
         }}
       >
-        <div className="px-0 md:px-4 mx-auto max-w-screen-xl max-h-screen-xl py-0 md:py-24">
+        <div className="px-0 md:px-4 mx-auto max-w-screen-xl max-h-screen-xl px-3 py-0 pt-10 md:py-60">
           <div
             data-aos="fade-top"
             data-aos-easing="linear"
             data-aos-duration={3100}
-            id="card"
-            className="p-12 pt-3 pl-3 pr-3 md:border rounded-2xl shadow border-gray-700"
-            style={{
-              backgroundColor: "rgba(28, 29, 29, 0.288)",
-
-            }}
           >
-            <div className="flex flex-col space-y-4 sm:space-y-0 mb-5">
-              <div className="flex space-x-2 justify-between">
-                <div className="flex space-x-2 px-2 py-1">
-
-                  <div
-                    className="bg-red-400"
-                    style={{
-                      width: "18px",
-                      height: "18px",
-                      borderRadius: "50%",
-                      cursor: "pointer"
-                    }}
-                  ></div>
-                  <div
-                    className="bg-yellow-400"
-                    style={{
-                      width: "18px",
-                      height: "18px",
-                      borderRadius: "50%",
-                      cursor: "pointer"
-                    }}
-                  ></div>
-                  <div
-                    className="bg-green-400"
-                    style={{
-                      width: "18px",
-                      height: "18px",
-                      borderRadius: "50%",
-                      cursor: "pointer"
-                    }}
-                  ></div>
-                </div>
-
+            <div>
+              <div className="flex flex-col-reverse text-center md:text-left md:flex-row md:px-7">
+                <div className="flex-1">
                 <p
-                  className="px-2 py-1"
-                  style={{ width: "fit-content" }}
+                  data-aos="fade-right"
+                  className="font-normal text-red-400 lg:text-3xl"
                 >
-                  🍉 Indie Dev
+                  Free Palestine
                 </p>
-
+                <h1
+                  id="Name"
+                  data-value="MFATHINHALIM"
+                  className="mb-2 text-4xl md:text-8xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white"
+                  style={{
+                    position: "relative",
+                    width: "fit-content",
+                    height: "fit-content",
+                    overflow: "hidden",
+                    transition: "background-color 0.3s ease",
+                  }}
+                >
+                  M. Fathin Halim
+                </h1>
+                <p
+                  data-aos="fade-right"
+                  className="mb-8 font-normal text-green-400 lg:text-3xl"
+                >
+                  An Indie Highschool Developer
+                </p>
               </div>
-
-              <h2 className="text-1xl px-3 py-1 text-center">
-                <span>
-                  System: <strong className="text-green-300">Success</strong>
-                </span>
-              </h2>
-
-            </div>
-            <div className="text-center">
               <img
                 loading="lazy"
                 draggable="false"
                 data-aos="fade-down"
-                className="mb-4 mx-auto object-center rounded-full border-4 border-transparent border-x-blue-500 border-y-gray-700"
+                className="mb-4 mx-auto object-center rounded-full object-center border-4 border-transparent"
                 style={{ height: 150, width: 150, objectFit: "cover" }}
                 alt="Fathin"
-                src="https://yt3.ggpht.com/y1I7pI25kVOkeLqTVGVvTJUsau4ZrW6ItxxTCc-pi15LkhJPgPTMweDMAacaAu7Gp4lxETKU=s600-c-k-c0x00ffffff-no-rj-rp-mo"
+                src="https://i.pinimg.com/736x/4c/1d/56/4c1d568638959fc8bf661bcfd5d92ca8.jpg"
               />
-              <h1
-                id="Name"
-                data-value="MFATHINHALIM"
-                className="p-3 mb-4 text-4xl md:text-7xl text-center rounded hover:bg-gray-200 hover:text-black font-extrabold tracking-tight leading-none text-white w-auto mx-auto"
-                style={{
-                  position: "relative",
-                  width: "fit-content",
-                  height: "fit-content",
-                  overflow: "hidden",
-                  transition: "background-color 0.3s ease",
-                }}
-              >
-                M. Fathin Halim
-              </h1>
-              <p
-                data-aos="fade-right"
-                className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 text-left md:text-center"
-              >
-                Embark on a journey with <strong>M.Fathin Halim</strong>, an
-                indie middle school <strong>Programmer</strong>, a Boundless
-                enthusiasm for learning and fueled by <strong>Dreams</strong>
-              </p>
+              </div>
+              
+             
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mb-8">
                 <div className="mr-4 flex items-center">
                   <i
                     className="fas fa-code mr-2"
-                    style={{ color: "#25b3ef" }}
+                    style={{ color: "gold" }}
                   />
                   <p>Indie Dev</p>
                 </div>
                 <div className="mr-4 flex items-center">
-                  <i className="fab fa-linux mr-2" style={{ color: "gold" }} />
-                  <p>Linux Enthusiast</p>
+                  <i className="fab fa-linux mr-2" style={{ color: "#25b3ef" }} />
+                  <p>I use Arch btw</p>
                 </div>
                 <div className="flex items-center">
                   <i className="fas fa-heart mr-2" style={{ color: "red" }} />
@@ -145,20 +98,20 @@ function Header() {
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <a
                   href="https://saweria.co/mfathinhalim"
-                  className="transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-md md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
                 >
                   <i className="fa fa-coffee mr-2" aria-hidden="true" /> Buy me
                   a Coffee
                 </a>
                 <a
                   href="https://discordapp.com/users/1156486226094870569"
-                  className="transition ease-in-out delay-150 hover:-translate-y-1 md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white rounded-full bg-indigo-600 hover:bg-indigo-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+                  className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-md md-hover:scale-110 duration-300 inline-flex justify-center items-center py-3 px-5 text-base sm:ms-4 font-medium text-center text-white bg-indigo-500 hover:bg-indigo-300 focus:ring-4 ring-purple-300"
                 >
                   Chat me
                   <i className="fa-brands fa-discord ml-2" aria-hidden="true" />
                 </a>
               </div>
-              <hr className="w-48 h-1 mx-auto my-4 bg-gray-500 border-0 rounded md:my-10" />
+              <hr className="w-48 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10" />
               <div className="flex flex-col space-y-4 mt-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <a
                   data-social=" @mfathinhalim"

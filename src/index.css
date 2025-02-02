@@ -128,10 +128,11 @@ html.has-scroll-dragging {
 }
 
 /* For Firefox */
+
 * {
-  font-family: "Mulish", sans-serif;
+  font-family: "Sen", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -153,11 +154,11 @@ hr {
   margin-bottom: 30px !important;
 }
 :root {
-  --text: #eceeee;
-  --background: #090f1a;
-  --primary: #25b3ef;
-  --secondary: #756b6b;
-  --accent: #22a4db;
+  --text: #f8fbfc;
+  --background: #000000;
+  --primary: #59CE8F;
+  --secondary: #E8F9FD;
+  --accent: #59CE8F;  
 }
 ::selection {
   background: lightslategray;
@@ -177,6 +178,10 @@ body {
 .bg-b {
   background: var(--background);
   padding: 20px;
+}
+#Name {
+  font-family: "Noto Serif" !important;
+  
 }
 #navbar {
   transition: top 0.3s ease-in-out;

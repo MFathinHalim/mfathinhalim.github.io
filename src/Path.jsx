@@ -36,10 +36,11 @@ function Path() {
   return (
     <>
       <h3
+        id="Name"
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl text-center sm:text-8xl m-3 text-gray-300 mt-14"
+        className="text-4xl sm:text-8xl m-3 text-gray-300 mt-14"
         style={{ fontWeight: "bold" }}
       >
         My Journey

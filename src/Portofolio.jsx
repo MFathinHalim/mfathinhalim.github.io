@@ -54,6 +54,7 @@ function Portofolio() {
             framework: ["Express", "Bootstrap"],
             develop: ["website"],
         },
+        /*
         {
             class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
             image: "./images",
@@ -143,16 +144,16 @@ function Portofolio() {
           link: "https://caveine.glitch.me/",
           framework: ["Bootstrap", "HTML"],
           develop: ["website"],
-      },
+      }, */
     ];
 
     return (
         <>
             <article id='project' className='mb-8 p-3' style={{ marginTop: 30 }}>
-                <h3 data-aos='fade-up' data-aos-easing='linear' className='text-6xl text-center sm:text-8xl m-3 mb-4 text-gray-600' style={{ fontWeight: "bold" }}>
+                <h3 id="Name" data-aos='fade-up' data-aos-easing='linear' className='text-6xl sm:text-8xl m-3 mb-4 text-gray-200' style={{ fontWeight: "bold" }}>
                     Projects
                 </h3>
-                <p className='text-lg text-center text-gray-400 mb-6'> My collection of projects, each filled with countless cherished memories for Fathin.</p>
+                <p className='text-lg text-gray-400 mb-6'> My collection of projects, each filled with countless cherished memories for Fathin.</p>
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0'>
                     <a
                         href='https://github.com/mfathinhalim'
@@ -195,7 +196,7 @@ function Portofolio() {
                                 alt={project.title}
                                 style={{ objectFit: "cover", height: 300 }}
                             />
-                            <a className='text-2xl ease-in-out delay-150 mt-3 text-gray-300 font-semibold decoration-blue-500' href={project.link}>
+                            <a id="Name" className='text-2xl ease-in-out delay-150 mt-3 text-gray-300 font-semibold decoration-blue-500' href={project.link}>
                                 {project.title}
                             </a>
                             <div className='flex flex-wrap gap-2 mt-2 mb-2'>

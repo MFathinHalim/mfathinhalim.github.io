@@ -2,45 +2,43 @@ function Intro() {
   return (
     <div className='p-2'>
       <article id='who' className='mb-8'>
-        <h3 className='underlinee text-3xl text-center sm:text-7xl m-3 text-gray-200'>I am M. Fathin Halim</h3>
+        <h3 id="Name" className='underlinee text-3xl sm:text-7xl m-3 mb-1 text-gray-200'>I am <span id="Name" className="text-primary" style={{
+          color: "#fff162"
+        }}>M. Fathin Halim</span></h3>
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
           <article>
-            <p className='p-3 text-justify'>
+            <p className='p-3 text-justify font-normal'>
               <strong>M.Fathin Halim</strong> is a student secondary school in Indonesia with a strong interest in
               <strong> Programming</strong> since childhood. He has a deep love for <strong> Japan</strong> and the technology. Fathin has developed various innovative applications, from
               <strong> Educational Applications</strong> to social media. Every app he creates is a result of creativity and determination to
               <strong> continue learning</strong> and developing.
             </p>
-            <div className='p-6 ml-3 mt-3 mr-3 border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg' data-aos='zoom-in' id='contact'>
-              <h6 className='text-4xl text-center mb-4'>
-                <strong className='text-white'>Let's Get Connected</strong>
+            <div className='p-6 ml-3 mt-3 mr-3 border border-gray-200 shadow dark:border-gray-700 rounded-lg' data-aos='zoom-in' id='contact'>
+              <h6 id="Name" className='text-4xl text-center mb-4'>
+                Let's Get <strong id="Name" className="text-green-400">Connected</strong>
               </h6>
 
               <div className='flex flex-col gap-2 mt-2'>
                 <a
-                  style={{ color: "#25b3ef", width: "100%" }}
-                  className='border p-2 rounded border-2 bg-gray-700 bg-opacity-60  border-gray-600 border border-2 hover:bg-gray-600 border-gray-500'
+                  className='p-2 rounded  border-gray-600 hover:bg-gray-600 border-gray-500'
                   href='https://www.linkedin.com/in/m-fathin-halim-8b8198288/'>
                   <i style={{ color: "white", marginRight: "4px" }} className='fa-brands fa-linkedin text-2xl' aria-hidden='true' />
                   M.Fathin Halim
                 </a>
                 <a
-                  style={{ color: "#25b3ef", width: "100%" }}
-                  className='border p-2 rounded border-2 bg-gray-700 bg-opacity-60  border-gray-600 border border-2 hover:bg-gray-600 border-gray-500'
+                  className=' p-2 rounded border-gray-600  hover:bg-gray-600 border-gray-500'
                   href='https://discordapp.com/users/1156486226094870569'>
                   <i style={{ color: "white", marginRight: "4px" }} className='fa-brands fa-discord text-1xl' />
                   @mfathinhalim
                 </a>
                 <a
-                  style={{ color: "#25b3ef", width: "100%" }}
-                  className='border p-2 rounded border-2 bg-gray-700 bg-opacity-60  border-gray-600 border border-2 hover:bg-gray-600 border-gray-500'
+                  className=' p-2 rounded border-gray-600 hover:bg-gray-600 border-gray-500'
                   href='https://wa.me/+6282281627963'>
                   <i style={{ color: "white", marginRight: "4px" }} className='fa-brands fa-whatsapp text-2xl' aria-hidden='true' />
                   +62 822 8162 7963
                 </a>
                 <a
-                  style={{ color: "#25b3ef", width: "100%" }}
-                  className='border p-2 rounded border-2 bg-gray-700 bg-opacity-60  border-gray-600 border border-2 hover:bg-gray-600 border-gray-500'
+                  className='p-2 rounded border-gray-600 hover:bg-gray-600 border-gray-500'
                   href='halimfathin7@gmail.com'>
                   <i style={{ color: "white", marginRight: "4px" }} className='fa fa-envelope text-1xl' aria-hidden='true' />
                   halimfathin7@gmail.com
@@ -57,24 +55,24 @@ function Intro() {
         </div>
       </article>
       <article style={{ marginTop: 100 }} className='mb-3'>
-        <h3 data-aos='fade-up' data-aos-easing='linear' data-aos-duration={1000} className='text-4xl sm:text-8xl m-3 text-gray-300 text-center' style={{ fontWeight: "bold" }}>
+        <h3 id="Name" data-aos='fade-up' data-aos-easing='linear' data-aos-duration={1000} className='text-4xl sm:text-8xl m-3 text-gray-300' style={{ fontWeight: "bold" }}>
           Tools
         </h3>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-down' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Programming Languages</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Python, Java, TypeScript</li>
             </ul>
           </div>
-          <div data-aos='fade-up' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-up' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Web Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Bootstrap, Tailwind, React</li>
             </ul>
           </div>
-          <div data-aos='fade-down' className='bg-gray-700 border-gray-600 border border-2 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-down' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Mobile Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Android Studio</li>

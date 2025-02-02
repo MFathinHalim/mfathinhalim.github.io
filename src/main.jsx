@@ -91,19 +91,11 @@ function App() {
       <Header />
       <div className='container mx-auto p-0 mt-8'>
         <Intro />
-
-        <div id="p" className='parallax' data-speed='0.5'>
-          <h3 className='text-4xl sm:text-8xl mt-3 mb-3 text-gray-800' data-aos='fade-up' style={{ marginTop: 120, fontWeight: "bold" }}>
-            More About Me
-          </h3>
-          <Award />
-        </div>
-        
-        <div className='parallax'>
-          <Service />
-        </div>
         <div className='parallax'>
           <Path />
+        </div>
+        <div className='parallax'>
+          <Service />
         </div>
         <div className='parallax'>
           <Portofolio />
@@ -112,11 +104,11 @@ function App() {
           <Photography />
         </div>
         <article
-          className='text-center'
           data-aos='fade-up'
           style={{ marginTop: 120, fontWeight: "bold" }}
         >
           <a
+          id="Name"
             href='https://www.youtube.com/@mfathinhalim'
             className='text-2xl sm:text-4xl pb-0 text-gray-200 font-extrabold'
             data-scroll

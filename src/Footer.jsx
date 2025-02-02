@@ -3,9 +3,9 @@ function Footer() {
     <>
       <div className='flex flex-wrap mt-9'>
         {/* Left Section with Image */}
-        <div className='w-full md:w-1/2 pt-3 mb-3' data-aos='fade-up'>
-          <h3 className='text-3xl sm:text-4xl text-white text-left font-bold drop-shadow-lg'>
-            <p className='text-sm bg-white text-black p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold' style={{ width: "fit-content" }}>
+        <div  className='w-full md:w-1/2 pt-3 mb-3' data-aos='fade-up'>
+          <h3 id="Name" className='text-3xl sm:text-4xl text-white text-left font-bold drop-shadow-lg'>
+            <p id="Name" className='text-sm bg-white text-black p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold' style={{ width: "fit-content" }}>
               FAQ
             </p>
             Things You Are Probably Wondering
@@ -15,21 +15,21 @@ function Footer() {
         {/* Right Section with Q&A and Icons */}
         <div className='w-full md:w-1/2' data-aos='fade-up'>
           <div className='space-y-4'>
-            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-code text-blue-400 text-3xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Does Fathin&apos;s parent also programmers?</h4>
                 <p className='text-white mt-2'>No, they are not programmers :)</p>
               </div>
             </div>
-            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-clock text-green-400 text-4xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Since when did Fathin learn programming?</h4>
                 <p className='text-white mt-2'>Since 2020, when Fathin was in 5th grade.</p>
               </div>
             </div>
-            <div className='bg-gray-700 hover:bg-gray-800 hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
+            <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-gamepad text-red-400 text-3xl mr-4'></i>
               <div>
                 <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Why did Fathin study programming?</h4>
