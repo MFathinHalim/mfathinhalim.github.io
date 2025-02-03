@@ -89,7 +89,7 @@ function App() {
   return (
     <div  data-scroll-container>
       <Header />
-      <div className='container mx-auto p-0 mt-8'>
+      <div className='px-2 mx-auto p-0 mt-8 container'>
         <Intro />
         <div className='parallax'>
           <Path />
