@@ -18,21 +18,21 @@ function Footer() {
             <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-code text-blue-400 text-3xl mr-4'></i>
               <div>
-                <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Does Fathin&apos;s parent also programmers?</h4>
+                <h4 className='text-xl text-white font-bold drop-shadow-lg'>Does Fathin&apos;s parent also programmers?</h4>
                 <p className='text-white mt-2'>No, they are not programmers :)</p>
               </div>
             </div>
             <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-clock text-green-400 text-4xl mr-4'></i>
               <div>
-                <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Since when did Fathin learn programming?</h4>
+                <h4 className='text-xl text-white font-bold drop-shadow-lg'>Since when did Fathin learn programming?</h4>
                 <p className='text-white mt-2'>Since 2020, when Fathin was in 5th grade.</p>
               </div>
             </div>
             <div className='hover:-translate-y-1 transition-all border-2 border-gray-600 p-4 rounded-xl shadow-md flex items-center'>
               <i className='fa-solid fa-gamepad text-red-400 text-3xl mr-4'></i>
               <div>
-                <h4 className='text-2xl text-white font-bold drop-shadow-lg'>Why did Fathin study programming?</h4>
+                <h4 className='text-xl text-white font-bold drop-shadow-lg'>Why did Fathin study programming?</h4>
                 <p className='text-white mt-2'>Because my parents said, &quot;Rather than being a gamer, how about you make the game?&quot;</p>
               </div>
             </div>
@@ -45,23 +45,13 @@ function Footer() {
           <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>Made By M.Fathin Halim</span>
           <ul className='flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
             <li>
-              <a href='#' className='hover:text-3xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500 me-4 md:me-6'>
-                About
+              <a href='/' className='hover:text-xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500 me-4 md:me-6'>
+                Home
               </a>
             </li>
             <li>
-              <a href='#award' className='hover:text-2xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500 me-4 md:me-6'>
-                Awards
-              </a>
-            </li>
-            <li>
-              <a href='#contact' className='hover:text-2xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500 me-4 md:me-6'>
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href='#services' className='hover:text-2xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500'>
-                Service
+              <a href='/journey/' className='hover:text-xl ease-in-out delay-150 mt-3 font-semibold decoration-blue-500 me-4 md:me-6'>
+                Journey
               </a>
             </li>
           </ul>

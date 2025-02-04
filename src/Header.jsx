@@ -89,7 +89,7 @@ function Header() {
                 <h1
                   id="Name"
                   data-value="MFATHINHALIM"
-                  className="mb-2 text-4xl md:text-8xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white"
+                  className="mb-2 text-4xl md:text-5xl lg:text-8xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white"
                   style={{
                     position: "relative",
                     width: "fit-content",

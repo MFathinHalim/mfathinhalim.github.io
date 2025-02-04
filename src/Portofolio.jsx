@@ -1,17 +1,8 @@
 function Portofolio() {
     const projects = [
         {
-            class: "max-w-full border-gray-700 bg-b hover:bg-gray-900 p-4 super-rounded h-auto sm:col-span-2 lg:col-span-1",
-            image: "./LogoISK.jpg",
-            title: "ISK Website",
-            desc: "A website dedicated to exploring science content by Fajrul Fx.",
-            link: "https://sciencekingdom.gg/",
-            framework: ["Bootstrap", "Express"],
-            develop: ["website"],
-        },
-        {
-            class: "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-2",
-            image: "./kamus.png",
+            class: "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-3",
+            image: "../../kamus.png",
             title: "Kamus Bahasa Rejang",
             desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
             link: "https://kamusrejang.glitch.me/",
@@ -20,7 +11,7 @@ function Portofolio() {
         },
         {
             class: "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
-            image: "./logo.png",
+            image: "../../logo.png",
             title: "rejangpedia",
             desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
             link: "https://rejangpedia.glitch.me/",
@@ -47,17 +38,17 @@ function Portofolio() {
         },
         {
             class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
-            image: "./PVZ.png",
+            image: "../../PVZ.png",
             title: "Yunation",
             desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
             link: "https://yunation.glitch.me/",
             framework: ["Express", "Bootstrap"],
             develop: ["website"],
         },
-        /*
+
         {
             class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
-            image: "./images",
+            image: "../../images",
             title: "My Simple Notes",
             desc: "A website to store and organize notes. This platform offers a simple solution for users to securely save their valuable insights and learnings.",
             link: "https://mysimplenotes.glitch.me/",
@@ -66,7 +57,7 @@ function Portofolio() {
         },
         {
             class: "max-w-full border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
-            image: "./medium.jpg",
+            image: "../../medium.jpg",
             title: "Cerdas AI",
             desc: "A user-friendly bot app that brings AI to everyone.",
             link: "https://cerdasai.fatih-jihadijih.repl.co/",
@@ -93,7 +84,7 @@ function Portofolio() {
         },
         {
             class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
-            image: "./logo(1).png",
+            image: "../../logo(1).png",
             title: "SMP Negeri 1 Rejang Lebong's Website",
             desc: "Website page for SMP Negeri 1 Rejang Lebong.",
             link: "https://smpn1rl.glitch.me/",
@@ -131,7 +122,7 @@ function Portofolio() {
             class: "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
             image: "https://ik.imagekit.io/9hpbqscxd/SG/image-83.jpg?updatedAt=1705798245623",
             title: "IMPHNEN",
-            desc: "Ingin Menjadi Programmer Handal Namun Enggan Ngoding landing page",
+            desc: "Ingin Menjadi Programmer Handal Namun Enggan Ngoding page",
             link: "https://imphnen.glitch.me",
             framework: ["HTML", "Bootstrap"],
             develop: ["website"],
@@ -144,7 +135,7 @@ function Portofolio() {
           link: "https://caveine.glitch.me/",
           framework: ["Bootstrap", "HTML"],
           develop: ["website"],
-      }, */
+      }, 
     ];
 
     return (

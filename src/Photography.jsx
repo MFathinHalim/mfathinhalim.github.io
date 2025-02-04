@@ -15,7 +15,7 @@ function Photography() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="text-4xl sm:text-8xl m-3 text-gray-300"
+          className="text-4xl sm:text-8xl my-3 text-gray-300"
           style={{ fontWeight: "bold" }}
         >
           Photos
