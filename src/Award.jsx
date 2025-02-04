@@ -27,7 +27,7 @@ function Award() {
   ];
   return (
     <>
-      <article id="award" className="mb-8 p-3">
+      <article id="award" className="mb-8 p-1">
         <h3
           data-aos="fade-up"
           data-aos-easing="linear"
@@ -61,7 +61,7 @@ function Award() {
             ))}
             </section>
 
-            <section className="p-3">
+            <section>
               <h6 className="text-2xl ease-in-out delay-150">{award.name}</h6>
               <p className="mt-3 mb-3">
                 <strong className="text-sky-400">Year: </strong> {award.year}
@@ -79,7 +79,7 @@ function Award() {
             </section>
             
           </div>
-          <hr className="w-full h-1 mx-auto bg-gray-700 border-0 rounded md:my-10" />
+          <hr className="w-full h-1 mx-auto bg-transparent border-0 rounded my-5 mt-8" />
           </>
         ))}
       </article>

@@ -40,16 +40,11 @@ function Path() {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl sm:text-8xl m-3 text-gray-300 mt-14"
+        className="text-4xl sm:text-8xl mb-8 text-gray-300"
         style={{ fontWeight: "bold" }}
       >
         My Journey
       </h3>
-      <div className="mt-12 flex justify-center gap-2">
-        <span className="h-1 w-20 bg-gray-200 rounded-full"></span>
-        <span className="h-1 w-10 bg-gray-200/30 rounded-full"></span>
-        <span className="h-1 w-5 bg-gray-200/10 rounded-full"></span>
-      </div>
       <ol className="relative border-s border-gray-300 dark:border-gray-600">
         {timelineData.map((item, index) => (
           <li key={index} className="mb-5 ms-4">

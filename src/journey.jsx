@@ -29,7 +29,7 @@ const LazyLoadIframe = ({ src }) => {
   }, []);
   
   return (
-    <div ref={ref} className='parallax mt-4' data-speed='0.3'>
+    <div ref={ref} className='parallax mt-4 mx-1' data-speed='0.3'>
       {isVisible && (
         <div
   style={{
@@ -95,12 +95,12 @@ function App() {
         </div>
         <article
           data-aos='fade-up'
-          style={{ marginTop: 120, fontWeight: "bold" }}
+          style={{ fontWeight: "bold" }}
         >
           <a
           id="Name"
             href='https://www.youtube.com/@mfathinhalim'
-            className='text-2xl sm:text-4xl pb-0 text-gray-200 font-extrabold'
+            className='text-2xl sm:text-4xl pb-0 px-1 text-gray-200 font-extrabold'
             data-scroll
           >
 Check Out TVRI National Coverage About Me

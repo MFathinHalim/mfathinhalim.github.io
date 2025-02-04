@@ -140,8 +140,8 @@ function Portofolio() {
 
     return (
         <>
-            <article id='project' className='mb-8 p-3' style={{ marginTop: 30 }}>
-                <h3 id="Name" data-aos='fade-up' data-aos-easing='linear' className='text-6xl sm:text-8xl m-3 mb-4 text-gray-200' style={{ fontWeight: "bold" }}>
+            <article id='project' className='mb-8 p-1' style={{ marginTop: 30 }}>
+                <h3 id="Name" data-aos='fade-up' data-aos-easing='linear' className='text-6xl sm:text-8xl my-4 text-gray-200' style={{ fontWeight: "bold" }}>
                     Projects
                 </h3>
                 <p className='text-lg text-gray-400 mb-6'> My collection of projects, each filled with countless cherished memories for Fathin.</p>

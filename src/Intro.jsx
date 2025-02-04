@@ -60,19 +60,19 @@ function Intro() {
         </h3>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-          <div data-aos='fade-down' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
-            <h3 className='text-lg font-medium mb-2'>Programming Languages</h3>
+          <div data-aos='fade-down' className='border border-1 border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+            <h3 className='text-lg font-medium mb-2'>Languages</h3>
             <ul className='space-y-1 list-disc list-inside'>
-              <li>Python, Java, TypeScript</li>
+              <li>Python, TypeScript</li>
             </ul>
           </div>
-          <div data-aos='fade-up' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-up' className='border border-1 border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Web Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
-              <li>Bootstrap, Tailwind, React</li>
+              <li>React, NextJS</li>
             </ul>
           </div>
-          <div data-aos='fade-down' className='border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
+          <div data-aos='fade-down' className='border border-1 border-gray-600 text-white rounded-2xl shadow-md px-5 py-3 hover:bg-gray-600 border-gray-500 transition duration-300 ease-in-out'>
             <h3 className='text-lg font-medium mb-2'>Mobile Development</h3>
             <ul className='space-y-1 list-disc list-inside'>
               <li>Android Studio</li>
