@@ -1,7 +1,16 @@
 function Portofolio() {
     const projects = [
         {
-            class: "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-3",
+            class: "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-1",
+            image: "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
+            title: "Contribute to Hexagrab",
+            desc: "Find colors from image. Made by Adityo, ui/ux by Fathin.",
+            link: "https://kamusrejang.glitch.me/",
+            framework: ["NextJS", "TailwindCSS"],
+            develop: ["website"],
+        },
+        {
+            class: "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-1 lg:col-span-2",
             image: "../../kamus.png",
             title: "Kamus Bahasa Rejang",
             desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
