@@ -75,11 +75,11 @@ function Portofolio() {
         },
         {
             class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
-            image: "https://e1.pxfuel.com/desktop-wallpaper/240/812/desktop-wallpaper-best-music-electronic-no-copyright-sounds-sounds.jpg",
-            title: "Do Music",
-            desc: "A Simple Music Player!",
-            link: "https://domusik.glitch.me/",
-            framework: ["Node", "Express", "Bootstrap"],
+            image: "https://media.tenor.com/t9pwGPO3TpoAAAAM/apt.gif",
+            title: "Cardcozy",
+            desc: "Cardcozy is ai quote web to confess feeling to other!",
+            link: "https://cardcozy.vercel.app",
+            framework: ["NextJS", "AI", "Bootstrap"],
             develop: ["website"],
         },
         {
