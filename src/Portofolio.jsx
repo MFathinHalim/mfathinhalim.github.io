@@ -145,6 +145,24 @@ function Portofolio() {
           framework: ["Bootstrap", "HTML"],
           develop: ["website"],
       }, 
+      {
+        class: "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
+        image: "https://png.pngtree.com/element_our/sm/20180415/sm_5ad31d9b53530.jpg",
+        title: "DoMusik",
+        desc: "Music Player from Fathin",
+        link: "https://domusik.glitch.me/",
+        framework: ["Bootstrap", "Node", "MongoDB"],
+        develop: ["website"],
+    },
+    {
+        class: "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
+        image: "https://ik.imagekit.io/9hpbqscxd/SG/image-86.jpg?updatedAt=1705798245623",
+        title: "Story Book",
+        desc: "Online notes app by Fathin",
+        link: "https://story-book-self.vercel.app/",
+        framework: ["Bootstrap", "NextJS", "MongoDB"],
+        develop: ["website"],
+    },
     ];
 
     return (
