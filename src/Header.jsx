@@ -112,9 +112,9 @@ function Header() {
                 draggable="false"
                 data-aos="fade-down"
                 className="mb-4 mx-auto object-center rounded-full object-center border-4 border-transparent"
-                style={{ height: 150, width: 150, objectFit: "cover" }}
+                style={{ height: 170, width: 170, objectFit: "cover" }}
                 alt="Fathin"
-                src="https://i.pinimg.com/736x/4c/1d/56/4c1d568638959fc8bf661bcfd5d92ca8.jpg"
+                src="https://ik.imagekit.io/9hpbqscxd/SG/image-97.jpg?updatedAt=1705798245623"
               />
               </div>
               
