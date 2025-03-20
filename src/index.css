@@ -135,6 +135,29 @@ html.has-scroll-dragging {
   -webkit-text-fill-color: transparent;
   animation: gradientMove 5s infinite linear;
 }
+@media (min-width: 768px) {
+  /* Aturan CSS tambahan untuk dekstop */
+  img:hover {
+    cursor: none;
+  }
+				/* CSS umum untuk kursor */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(.3);
+  z-index: 3000;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(.7) !important;
+}
+}
 
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
@@ -407,15 +430,6 @@ p {
   to {
     transform: rotate(360deg);
   }
-}
-
-#cursor:after,
-#cursor:before,
-#cursor2:after,
-#cursor2:before {
-  content: "";
-  text-decoration: none;
-  padding: none;
 }
 
 /* The loader was developed by Iddar Olivares (https://codepen.io/iddar/pen/xwXowq) */
