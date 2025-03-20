@@ -82,13 +82,14 @@ function Header() {
                 <div className="flex-1">
                 <p
                   data-aos="fade-right"
-                  className="font-normal text-red-400 lg:text-3xl"
+                  className="font-normal gradient-text lg:text-3xl"
                 >
                   Free Palestine
                 </p>
                 <h1
                   id="Name"
                   data-value="MFATHINHALIM"
+                  data-aos="fade-right"
                   className="mb-2 text-4xl md:text-5xl lg:text-8xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white"
                   style={{
                     position: "relative",
@@ -102,7 +103,7 @@ function Header() {
                 </h1>
                 <p
                   data-aos="fade-right"
-                  className="mb-8 font-normal text-green-400 lg:text-3xl"
+                  className="mb-8 font-normal text-yellow-300 lg:text-3xl"
                 >
                   An Indie Highschool Developer
                 </p>
@@ -111,10 +112,10 @@ function Header() {
                 loading="lazy"
                 draggable="false"
                 data-aos="fade-down"
-                className="mb-4 mx-auto object-center rounded-full object-center border-4 border-transparent"
+                className="mb-4 mx-auto object-center rounded-full object-center "
                 style={{ height: 170, width: 170, objectFit: "cover" }}
                 alt="Fathin"
-                src="https://ik.imagekit.io/9hpbqscxd/SG/image-97.jpg?updatedAt=1705798245623"
+                src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
               />
               </div>
               

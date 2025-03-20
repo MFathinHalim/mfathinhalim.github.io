@@ -128,6 +128,19 @@ html.has-scroll-dragging {
 }
 
 /* For Firefox */
+.gradient-text {
+  background: linear-gradient(90deg, #fc524c, #1dc870, #FFFFFF);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s infinite linear;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
 * {
   font-family: "Sen", sans-serif;
