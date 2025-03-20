@@ -217,6 +217,7 @@ function Portofolio() {
                         </div>
                     ))}
                 </div>
+                    <a href="../../CV.pdf" className="inline-flex justify-center hover:text-gray-200 items-center py-2 px-6 mt-4 text-base font-medium text-center text-gray-200 rounded-full border border-gray-600 hover:bg-gray-600 focus:ring-4 focus:ring-gray-700" download>Download Fathin's CV</a>
             </article>
         </>
     );
