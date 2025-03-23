@@ -23,7 +23,7 @@ function Portofolio() {
             image: "../../logo.png",
             title: "rejangpedia",
             desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
-            link: "https://rejangpedia.glitch.me/",
+            link: "https://rejangpedia.vercel.app/",
             framework: ["React", "Node", "Express", "MongoDB", "Bootstrap"],
             develop: ["website", "mobile application"],
         },
