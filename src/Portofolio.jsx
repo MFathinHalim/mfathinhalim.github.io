@@ -20,7 +20,7 @@ function Portofolio() {
         },
         {
             class: "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
-            image: "../../logo.png",
+            image: "https://rejangpedia.vercel.app/logo-icon.png",
             title: "rejangpedia",
             desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
             link: "https://rejangpedia.vercel.app/",
