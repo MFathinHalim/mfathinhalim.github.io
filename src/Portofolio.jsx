@@ -14,8 +14,8 @@ function Portofolio() {
             image: "../../kamus.png",
             title: "Kamus Bahasa Rejang",
             desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
-            link: "https://kamusrejang.glitch.me/",
-            framework: ["React", "Node", "Express", "MongoDB", "Bootstrap"],
+            link: "https://kamusrejang.vercel.app",
+            framework: ["React", "NextJS", "MongoDB", "TailwindCSS"],
             develop: ["website", "mobile application"],
         },
         {
@@ -24,7 +24,7 @@ function Portofolio() {
             title: "rejangpedia",
             desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
             link: "https://rejangpedia.vercel.app/",
-            framework: ["React", "Node", "Express", "MongoDB", "Bootstrap"],
+            framework: ["React", "NextJS", "MongoDB", "Bootstrap", "ImageKit.io"],
             develop: ["website", "mobile application"],
         },
         {
