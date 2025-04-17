@@ -9,52 +9,19 @@ import Footer from "./Footer.jsx";
 import "aos/dist/aos.css";
 import Aos from "nitlix-aos";
 import Navbar from "./Navbar.jsx";
-import { gsap } from "gsap"; // Import GSAP
 
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
 function App() {
   useEffect(() => {
-    Aos.init({ duration: 500, once: false });
-
-    // GSAP Animations for elements
-    gsap.fromTo(
-      "#header",
-      { opacity: 0, y: -50 },
-      { opacity: 1, y: 0, duration: 1 }
-    );
-
-    gsap.fromTo(
-      "#intro",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
-    );
-
-    gsap.fromTo(
-      "#service",
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1, delay: 1 }
-    );
-
-    gsap.fromTo(
-      "#photography",
-      { opacity: 0, x: 100 },
-      { opacity: 1, x: 0, duration: 1, delay: 1.5 }
-    );
-
-    gsap.fromTo(
-      "#footer",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, delay: 2 }
-    );
+    Aos.init({ once: false });    
   }, []);
 
   return (
     <div>
+      <div className="px-5 sm:pr-0 mx-auto md:w-[75%]">
       <Header id="header" />
-      <div className="mx-auto p-0 mt-8 container">
-        <Navbar />
         <Intro id="intro" />
         <div className="parallax" id="service">
           <Service />

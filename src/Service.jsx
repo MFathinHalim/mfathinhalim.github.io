@@ -3,7 +3,7 @@ function Service() {
     <>
       <div
         id='services'
-        className='relative px-3 py-4 md:py-9 md:px-8 super-rounded shadow-lg bg-gray-800 mt-4 bg-opacity-80 bg-blend-overlay bg-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl'
+        className='relative px-3 py-4 md:py-9 md:px-8 super-rounded shadow-lg bg-gray-800 mt-8 bg-opacity-80 bg-blend-overlay bg-center transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl'
         style={{
           backgroundSize: "cover",
           backgroundImage: "url('https://ik.imagekit.io/9hpbqscxd/SG/image-55.jpg?updatedAt=1705798245623')",

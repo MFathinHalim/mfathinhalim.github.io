@@ -33,7 +33,7 @@
 
   background: rgb(255, 255, 255); /* Color of the scrollbar track */
 }
-html, body {
+body {
   overflow-x: hidden !important;
 }
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */

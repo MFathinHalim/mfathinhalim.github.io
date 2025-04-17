@@ -3,7 +3,7 @@ function Footer() {
     <>
       <div className='flex flex-wrap mt-9'>
         {/* Left Section with Image */}
-        <div  className='w-full md:w-1/2 pt-3 mb-3' data-aos='fade-up'>
+        <div  className='w-full md:w-1/2 pt-3 mb-3'>
           <h3 id="Name" className='text-3xl sm:text-4xl text-white text-left font-bold drop-shadow-lg'>
             <p id="Name" className='text-sm bg-white text-black p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold' style={{ width: "fit-content" }}>
               FAQ
