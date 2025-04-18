@@ -1,11 +1,19 @@
+import { Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
+
+const ICONS = {
+  linkedin: <Linkedin className="w-5 h-5" />,
+  discord: <MessageCircle className="w-5 h-5" />,
+  whatsapp: <Phone className="w-5 h-5" />,
+  envelope: <Mail className="w-5 h-5" />,
+};
 function Intro() {
   return (
-    <div className="py-20 text-white font-sans mx-auto">
+    <div className="pt-20 text-white font-sans mx-auto">
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
-          <h1 className="text-5xl sm:text-7xl font-extrabold leading-tight">
-            I’m <span className="text-yellow-300">M. Fathin Halim</span>
+          <h1 className="text-5xl font-extrabold leading-tight">
+            <span id="Name" className="text-yellow-300">M. Fathin Halim</span>
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
             A passionate student from Indonesia who loves{" "}
@@ -35,51 +43,7 @@ function Intro() {
       </section>
 
       {/* Contact Box */}
-      {/* Contact Section */}
-      <section className="mt-28" data-aos="fade-up">
-        <div className="border border-gray-700 rounded-2xl p-10 shadow-lg">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-            Let’s <span className="text-green-400">Connect</span> and
-            Collaborate 🤝
-          </h2>
-          <p className="text-gray-400 text-center max-w-2xl mx-auto mb-10">
-            Whether you're a fellow dev, a curious learner, or just want to say
-            hi — I’d love to hear from you!
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <ContactLink
-              icon="linkedin"
-              label="M.Fathin Halim"
-              url="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
-            />
-            <ContactLink
-              icon="discord"
-              label="@mfathinhalim"
-              url="https://discordapp.com/users/1156486226094870569"
-            />
-            <ContactLink
-              icon="whatsapp"
-              label="+62 822 8162 7963"
-              url="https://wa.me/+6282281627963"
-            />
-            <ContactLink
-              icon="envelope"
-              label="halimfathin7@gmail.com"
-              url="mailto:halimfathin7@gmail.com"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Tools Section */}
-    {/* Tools Section */}
-<section className="mt-32 text-white">
-  <h2
-    className="text-4xl sm:text-6xl font-bold text-center mb-16"
-    data-aos="fade-up"
-  >
-    Tools I Use
-  </h2>
+      <section className="mt-10 text-white">
   <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[140px] gap-5 px-4 sm:px-0">
     {[
       {
@@ -146,8 +110,41 @@ function Intro() {
     ))}
   </div>
 </section>
-
-
+      {/* Contact Section */}
+      <section className="mt-10" data-aos="fade-up">
+        <div className="border border-gray-700 rounded-2xl p-4 py-10 shadow-lg">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
+            Let’s <span className="text-green-400">Connect</span> and
+            Collaborate 🤝
+          </h2>
+          <p className="hidden md:block text-gray-400 text-center max-w-2xl mx-auto mb-10">
+            Whether you're a fellow dev, a curious learner, or just want to say
+            hi — I’d love to hear from you!
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <ContactLink
+              icon="linkedin"
+              label="M.Fathin Halim"
+              url="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
+            />
+            <ContactLink
+              icon="discord"
+              label="@mfathinhalim"
+              url="https://discordapp.com/users/1156486226094870569"
+            />
+            <ContactLink
+              icon="whatsapp"
+              label="+62 822 8162 7963"
+              url="https://wa.me/+6282281627963"
+            />
+            <ContactLink
+              icon="envelope"
+              label="halimfathin7@gmail.com"
+              url="mailto:halimfathin7@gmail.com"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
@@ -156,11 +153,11 @@ function Intro() {
 const ContactLink = ({ icon, label, url }) => (
   <a
     href={url}
-    className="flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition duration-300"
+    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition duration-300"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <i className={`fa fa-${icon} text-white text-xl`} />
+    {ICONS[icon] || <span className="w-5 h-5" />} {/* Fallback */}
     <span>{label}</span>
   </a>
 );

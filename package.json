@@ -19,6 +19,7 @@
     "aos": "^2.3.4",
     "gsap": "^3.12.7",
     "locomotive-scroll": "^4.1.4",
+    "lucide-react": "^0.488.0",
     "nitlix-aos": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

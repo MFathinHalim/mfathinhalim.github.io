@@ -9,7 +9,7 @@ import Footer from "./Footer.jsx";
 import "aos/dist/aos.css";
 import Aos from "nitlix-aos";
 import Navbar from "./Navbar.jsx";
-
+import ScrollingText from "./ScrollingText.jsx"
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
@@ -20,15 +20,19 @@ function App() {
 
   return (
     <div>
-      <div className="px-5 sm:pr-0 mx-auto md:w-[75%]">
       <Header id="header" />
+      <ScrollingText />
+      <div className="parallax" id="photography">
+          <Photography />
+        </div>
+      <div className="px-5 mx-auto md:w-[75%]">
+        <Navbar />
         <Intro id="intro" />
+
         <div className="parallax" id="service">
           <Service />
         </div>
-        <div className="parallax" id="photography">
-          <Photography />
-        </div>
+ 
         <div className="parallax" id="footer">
           <Footer />
         </div>

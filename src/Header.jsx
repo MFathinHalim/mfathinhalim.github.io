@@ -56,14 +56,14 @@ function Header() {
     <>
       <section
         ref={sectionRef}
-        className="p-5 md:p-0 md:flex md:justify-center md:items-center min-h-screen"
+        className="p-5 md:p-0 md:flex md:justify-center md:items-center min-h-screen w-full"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.2)",
         }}
       >
-        <div className="px-0 py-0">
+        <div className="px-0 py-0 ">
           <div
-            className="md:px-4 md:py-6 md:border rounded-2xl shadow bg-neutral-950 bg-opacity-50 shadow-md border-gray-700"
+            className="md:px-4 w-full md:py-6 md:border rounded-2xl shadow bg-neutral-950 bg-opacity-50 shadow-md border-gray-700"
             data-aos="fade-top"
             data-aos-easing="linear"
             data-aos-duration={3100}
@@ -74,8 +74,8 @@ function Header() {
                   <div
                     className="bg-red-400"
                     style={{
-                      width: "30px", // Diperbesar
-                      height: "30px", // Diperbesar
+                      width: "20px", // Diperbesar
+                      height: "20px", // Diperbesar
                       borderRadius: "50%",
                       cursor: "pointer",
                     }}
@@ -83,8 +83,8 @@ function Header() {
                   <div
                     className="bg-yellow-400"
                     style={{
-                      width: "30px", // Diperbesar
-                      height: "30px", // Diperbesar
+                      width: "20px", // Diperbesar
+                      height: "20px", // Diperbesar
                       borderRadius: "50%",
                       cursor: "pointer",
                     }}
@@ -92,8 +92,8 @@ function Header() {
                   <div
                     className="bg-green-500"
                     style={{
-                      width: "30px", // Diperbesar
-                      height: "30px", // Diperbesar
+                      width: "20px", // Diperbesar
+                      height: "20px", // Diperbesar
                       borderRadius: "50%",
                       cursor: "pointer",
                     }}
