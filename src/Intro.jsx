@@ -1,5 +1,4 @@
 import { Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
-
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
   discord: <MessageCircle className="w-5 h-5" />,
@@ -7,13 +6,14 @@ const ICONS = {
   envelope: <Mail className="w-5 h-5" />,
 };
 function Intro() {
+ 
   return (
     <div className="pt-20 text-white font-sans mx-auto">
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
-          <h1 className="text-5xl font-extrabold leading-tight">
-            <span id="Name" className="text-yellow-300">M. Fathin Halim</span>
+          <h1 id="Name" className="text-5xl leading-tight">
+            M. Fathin Halim
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed">
             A passionate student from Indonesia who loves{" "}
@@ -26,11 +26,11 @@ function Intro() {
             impact.
           </p>
           <a
-          href="/journey/"
-          className="inline-block mt-6 px-6 py-3 bg-yellow-300 text-black font-semibold rounded-xl hover:bg-yellow-400 transition"
-        >
-          See My Journey 🚀
-        </a>
+            href="/journey/"
+            className="inline-block mt-6 px-6 py-3 bg-yellow-300 text-black font-semibold rounded-xl hover:bg-yellow-400 transition"
+          >
+            See My Journey 🚀
+          </a>
         </div>
 
         <div className="lg:col-span-5" data-aos="fade-left">
@@ -41,78 +41,9 @@ function Intro() {
           />
         </div>
       </section>
-
-      {/* Contact Box */}
-      <section className="mt-10 text-white">
-  <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[140px] gap-5 px-4 sm:px-0">
-    {[
-      {
-        col: 2,
-        row: 2,
-        src: "https://cdn.worldvectorlogo.com/logos/javascript-r.svg",
-        name: "JavaScript",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg",
-        name: "VS Code",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-        name: "React",
-      },
-      {
-        col: 2,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-        name: "Python",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
-        name: "TypeScript",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/android-5.svg",
-        name: "Android",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
-        name: "Bootstrap",
-      },
-      {
-        col: 1,
-        row: 1,
-        src: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
-        name: "Tailwind CSS",
-      },
-    ].map((tool, i) => (
-      <div
-        key={i}
-        className={`col-span-${tool.col} row-span-${tool.row} bg-neutral-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex items-center justify-center shadow-xl hover:scale-[1.03] transition-all duration-300`}
-        data-aos="zoom-in"
-        title={tool.name}
-      >
-        <img
-          src={tool.src}
-          alt={tool.name}
-          className="object-contain max-h-full max-w-full"
-        />
-      </div>
-    ))}
-  </div>
-</section>
-      {/* Contact Section */}
-      <section className="mt-10" data-aos="fade-up">
-        <div className="border border-gray-700 rounded-2xl p-4 py-10 shadow-lg">
+            {/* Contact Section */}
+            <section id="contact" className="my-20" data-aos="fade-up">
+        <div className="border border-gray-700 bg-black rounded-2xl p-4 py-10 shadow-lg">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
             Let’s <span className="text-green-400">Connect</span> and
             Collaborate 🤝
@@ -143,6 +74,118 @@ function Intro() {
               url="mailto:halimfathin7@gmail.com"
             />
           </div>
+        </div>
+      </section>
+      {/* Skills Breakdown Section */}
+      <section className="mt-20 text-white" data-aos="fade-up">
+        <div className="grid md:grid-cols-3 gap-5">
+          {/* Frontend */}
+          <div  className="bg-neutral-800/80 p-6 hover:border-neutral-500 transition-all rounded-2xl border border-white/10 shadow-lg">
+            <h3 className="text-xl font-semibold text-yellow-300 mb-3">
+              Frontend
+            </h3>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+              <li>HTML, CSS, Javascript, Typescript</li>
+              <li>React.js, Next.js</li>
+              <li>Tailwind CSS, Bootstrap</li>
+              <li>GSAP (basic)</li>
+            </ul>
+          </div>
+          {/* Backend */}
+          <div
+ className="bg-neutral-800/80 p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg">
+            <h3 className="text-xl font-semibold text-green-400 mb-3">
+              Backend
+            </h3>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+              <li>Node.js (Express)</li>
+              <li>MongoDB, Firebase</li>
+              <li>REST API</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+          {/* Others */}
+          <div
+ className="bg-neutral-800/80 p-6 rounded-2xl border  hover:border-neutral-500 transition-all border-white/10 shadow-lg">
+            <h3 className="text-xl font-semibold text-blue-400 mb-3">
+              Tools & Other Skills
+            </h3>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+              <li>Git & GitHub</li>
+              <li>Android Studio, Figma</li>
+              <li>Python</li>
+              <li>Unity & C# (basic game dev)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Box */}
+      <section className="mt-5 text-white">
+        <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[140px] gap-5 px-4 sm:px-0">
+          {[
+            {
+              col: 2,
+              row: 2,
+              src: "https://cdn.worldvectorlogo.com/logos/javascript-r.svg",
+              name: "JavaScript",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg",
+              name: "VS Code",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+              name: "React",
+            },
+            {
+              col: 2,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+              name: "Python",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+              name: "TypeScript",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/android-5.svg",
+              name: "Android",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
+              name: "Bootstrap",
+            },
+            {
+              col: 1,
+              row: 1,
+              src: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+              name: "Tailwind CSS",
+            },
+          ].map((tool, i) => (
+            <div
+              key={i}
+              className={`col-span-${tool.col} row-span-${tool.row} bg-neutral-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex items-center justify-center shadow-xl hover:scale-[1.03] transition-all duration-300`}
+              data-aos="zoom-in"
+              title={tool.name}
+            >
+              <img
+                src={tool.src}
+                alt={tool.name}
+                className="object-contain max-h-full max-w-full"
+              />
+            </div>
+          ))}
         </div>
       </section>
     </div>

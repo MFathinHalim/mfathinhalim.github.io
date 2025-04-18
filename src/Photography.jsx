@@ -17,8 +17,8 @@ function Photography() {
     "https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-89.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-80.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-71.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-83.jpg?updatedAt=1705798245623",
+    "https://ik.imagekit.io/9hpbqscxd/SG/image-104.jpg?updatedAt=1705798245623",
+    "https://ik.imagekit.io/9hpbqscxd/SG/image-105.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-71.jpg?updatedAt=1705798245623",
   ];
 

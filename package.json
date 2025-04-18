@@ -22,6 +22,7 @@
     "lucide-react": "^0.488.0",
     "nitlix-aos": "^1.0.1",
     "react": "^18.2.0",
+    "react-device-mockup": "^1.0.0",
     "react-dom": "^18.2.0",
     "react-locomotive-scroll": "^0.2.2",
     "react-slick": "^0.30.2",

@@ -85,8 +85,8 @@ function App() {
 
   return (
     <div  data-scroll-container>
-      <Navbar />
       <div className='px-2 mx-auto p-0 mt-8 container'>
+      <Navbar />
         <div className='parallax'>
           <Path />
         </div>
@@ -110,10 +110,10 @@ Check Out TVRI National Coverage About Me
         <div className='parallax'>
           <Portofolio />
         </div>
+      </div>
         <div className='parallax'>
           <Footer />
         </div>
-      </div>
     </div>
   );
 }
