@@ -10,10 +10,8 @@
   font-weight: bolder;
 }
 
-[data-scroll-container] {
-  overflow-y: scroll; /* Always show vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  position: relative; /* Relative positioning for smooth scrolling */
+body{
+  overflow-x: hidden !important;
 }
 
 /* Style for the scrollbar */
@@ -33,20 +31,20 @@
 
   background: rgb(255, 255, 255); /* Color of the scrollbar track */
 }
-body, div {
-  overflow-x: hidden !important;
-}
-div {
-  overflow-y: hidden;
-}
-/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
-  overflow: hidden;
-}
+
 @keyframes twinkle {
-  0% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(0.8); }
-  100% { opacity: 0.8; transform: scale(1); }
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
 }
 
 .star {
@@ -61,10 +59,6 @@ html.has-scroll-dragging {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.has-scroll-smooth body {
-  overflow: hidden;
 }
 
 .has-scroll-smooth [data-scroll-container] {
@@ -147,40 +141,48 @@ html.has-scroll-dragging {
 
 /* For Firefox */
 .gradient-text {
-  background: linear-gradient(90deg, #fc524c, #1dc870, #FFFFFF);
+  background: linear-gradient(90deg, #fc524c, #1dc870, #ffffff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientMove 5s infinite linear;
 }
+
 @media (min-width: 768px) {
   /* Aturan CSS tambahan untuk dekstop */
   img:hover {
     cursor: none;
   }
-				/* CSS umum untuk kursor */
-.custom-cursor {
-  position: fixed;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: white;
-  transition: transform 350ms ease;
-  transform: translate(-50%, -50%) scale(.3);
-  z-index: 3000;
+  /* CSS umum untuk kursor */
+  .custom-cursor {
+    background-color: white;
+      height: 300px;
+      width: 300px; /* Explicit width for aspect ratio */
+      pointer-events: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%) !important; /* Use transform for centering */
+      border-radius: 50%;
+      background: linear-gradient(to right, rgba(247, 172, 10, 0.322), rgba(215, 219, 226, 0.322));
+      animation: rotate 20s linear infinite; /* Changed timing function for smoother rotation */
+      backdrop-filter: blur(150px);
+      opacity: 0.6;
+      filter: blur(140px);
+      will-change: transform, opacity; /* Hint for browser optimization */
+    }
 }
-
-.custom-cursor--link {
-  transform: translate(-50%, -50%) scale(.7) !important;
-}
-}
-
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {
@@ -210,9 +212,9 @@ hr {
 :root {
   --text: #f8fbfc;
   --background: #000000;
-  --primary: #59CE8F;
-  --secondary: #E8F9FD;
-  --accent: #59CE8F;  
+  --primary: #59ce8f;
+  --secondary: #e8f9fd;
+  --accent: #59ce8f;
 }
 ::selection {
   background: lightslategray;
@@ -235,7 +237,6 @@ body {
 }
 #Name {
   font-family: "Noto Serif" !important;
-  
 }
 #navbar {
   transition: top 0.3s ease-in-out;
@@ -246,16 +247,15 @@ body {
   body {
     transition: 0.3s;
   }
-    
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
     }
-    
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
   .custom-cursor--link {
     transform: translate(-50%, -50%) scale(1) !important;
@@ -287,7 +287,6 @@ body {
 }
 body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -408,22 +407,20 @@ p {
 /* Keyframe values control where the element will begin
         and end its trajectory across the screen. Each rule
         represents a path the element follows across the screen. */
-.car-movement {
-  overflow: hidden;
-}
+
 .car-movement > .car {
   position: absolute;
   display: inline-block;
   animation: run 8s linear infinite;
 }
 .social {
-  width: 70px; /* Lebar awal */
+  width: 60px; /* Lebar awal */
   transition: all 0.2s ease; /* Transisi lebar */
   max-width: 100%;
 }
 
 .social:hover {
-  width: 200px; /* Lebar saat dihover */
+  width: 220px; /* Lebar saat dihover */
 }
 @media only screen and (max-width: 639px) {
   .social {
@@ -438,9 +435,7 @@ p {
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.photos {
-  -ms-overflow-style: none;  /* IE and Edge */
-}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -488,7 +483,11 @@ h1 {
 }
 /* styles.css atau file CSS kamu */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {

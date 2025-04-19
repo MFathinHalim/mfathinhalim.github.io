@@ -63,48 +63,11 @@ function Header() {
       >
         <div className="px-0 py-0 ">
           <div
-            className="md:px-4 w-full md:py-6 md:border rounded-2xl shadow bg-neutral-950 bg-opacity-50 shadow-md border-gray-700"
+            className="md:px-4 w-full md:py-6"
             data-aos="fade-top"
             data-aos-easing="linear"
             data-aos-duration={3100}
           >
-            <div className="flex flex-col space-y-4 sm:space-y-0 mb-5 hidden md:block ">
-              <div className="flex space-x-2 justify-between">
-                <div className="flex space-x-2 px-2 py-1">
-                  <div
-                    className="bg-red-400"
-                    style={{
-                      width: "20px", // Diperbesar
-                      height: "20px", // Diperbesar
-                      borderRadius: "50%",
-                      cursor: "pointer",
-                    }}
-                  ></div>
-                  <div
-                    className="bg-yellow-400"
-                    style={{
-                      width: "20px", // Diperbesar
-                      height: "20px", // Diperbesar
-                      borderRadius: "50%",
-                      cursor: "pointer",
-                    }}
-                  ></div>
-                  <div
-                    className="bg-green-500"
-                    style={{
-                      width: "20px", // Diperbesar
-                      height: "20px", // Diperbesar
-                      borderRadius: "50%",
-                      cursor: "pointer",
-                    }}
-                  ></div>
-                </div>
-                <p className="px-2 py-1" style={{ width: "fit-content" }}>
-                  🍉Free Palestine | Indie Dev
-                </p>
-              </div>
-            </div>
-
             <div>
               <div className="flex flex-col-reverse text-center md:text-left md:flex-row md:px-7 md:gap-20">
                 <div className="flex-1">

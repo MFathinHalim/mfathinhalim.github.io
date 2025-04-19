@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Header.jsx";
 import "./index.css";
@@ -14,12 +14,42 @@ import ScrollingText from "./ScrollingText.jsx"
 /* eslint-disable react/prop-types */
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 639);
+  const cursorRef = useRef(null); // Using useRef to store the cursor element
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 639);
+  };
+
   useEffect(() => {
-    Aos.init({ once: false });    
+    Aos.init({ once: false });  
+    const handleMouseMove = (e) => {
+      if (cursorRef.current) {
+        cursorRef.current.animate(
+          {
+            left: `${e.clientX}px`,
+            top: `${e.clientY}px`,
+          },
+          { duration: 3000, fill: "forwards" }
+        );
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("mousemove", handleMouseMove); // Add mousemove listener
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("mousemove", handleMouseMove); // Cleanup
+    };  
   }, []);
 
   return (
     <div>
+      <div
+      className={`custom-cursor`}
+      id="cursor2"
+      ref={cursorRef} // Attach the ref here
+    />  
       <Header id="header" />
       <ScrollingText />
       <div className="parallax" id="photography">
