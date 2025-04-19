@@ -8,14 +8,14 @@ const ICONS = {
 function Intro() {
  
   return (
-    <div className="pt-20 text-white font-sans mx-auto">
+    <div className="text-white font-sans mx-auto">
       {/* Hero Section */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="grid pb-32 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
           <h1 id="Name" className="text-5xl leading-tight">
             M. Fathin Halim
           </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-xl text-gray-300 leading-relaxed text-justify">
             A passionate student from Indonesia who loves{" "}
             <span className="font-semibold text-yellow-300">Programming</span>{" "}
             and{" "}
@@ -33,16 +33,34 @@ function Intro() {
           </a>
         </div>
 
-        <div className="lg:col-span-5" data-aos="fade-left">
-          <img
-            src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
-            alt="M.Fathin Halim"
-            className="rounded-3xl object-cover w-full h-auto shadow-2xl"
-          />
-        </div>
+        <div className="xl:relative w-full xl:h-[500px] lg:col-span-5" data-aos="fade-left">
+  {/* Gambar besar kiri */}
+
+  {/* Gambar tengah */}
+  <img
+    src="https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623"
+    alt="Fathin 2"
+    className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+  />
+  <img
+    src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
+    alt="Fathin 1"
+    className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 rounded-2xl border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
+  />
+
+  {/* Gambar kanan bawah */}
+  <img
+    src="https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623"
+    alt="Fathin 3"
+    className="hidden xl:inline absolute top-1/3 left-3/4 -translate-y-1/2 translate-x-6 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+  />
+</div>
+
+
+
       </section>
             {/* Contact Section */}
-            <section id="contact" className="my-20" data-aos="fade-up">
+            <section id="contact" className="my-32" data-aos="fade-up">
         <div className="border border-gray-700 bg-black rounded-2xl p-4 py-10 shadow-lg">
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
             Let’s <span className="text-green-400">Connect</span> and
@@ -70,14 +88,14 @@ function Intro() {
             />
             <ContactLink
               icon="envelope"
-              label="halimfathin7@gmail.com"
+              label="Email Me"
               url="mailto:halimfathin7@gmail.com"
             />
           </div>
         </div>
       </section>
       {/* Skills Breakdown Section */}
-      <section className="mt-20 text-white" data-aos="fade-up">
+      <section className="text-white" data-aos="fade-up">
         <div className="grid md:grid-cols-3 gap-5">
           {/* Frontend */}
           <div  className="bg-neutral-800/80 p-6 hover:border-neutral-500 transition-all rounded-2xl border border-white/10 shadow-lg">

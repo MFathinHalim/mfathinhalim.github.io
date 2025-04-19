@@ -150,9 +150,6 @@ html.has-scroll-dragging {
 
 @media (min-width: 768px) {
   /* Aturan CSS tambahan untuk dekstop */
-  img:hover {
-    cursor: none;
-  }
   /* CSS umum untuk kursor */
   .custom-cursor {
     background-color: white;

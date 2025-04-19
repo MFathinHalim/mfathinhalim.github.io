@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="sticky w-screen-xl flex flex-wrap items-center justify-between mt-20">
+      <div className="sticky w-screen-xl flex flex-wrap items-center justify-between mt-64">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span id="Name" className="self-center text-2xl font-semibold whitespace-nowrap text-white">
           </span>

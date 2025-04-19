@@ -136,18 +136,6 @@ function Footer() {
           <a href="https://mahiru-istri-fathin.glitch.me">
             Mahiru is my wife ✨
           </a>
-          <div className="mt-7 flex justify-center">
-            <img
-              src="https://s1.zerochan.net/Shiina.Mahiru.600.3898961.jpg"
-              alt="Mahiru"
-              style={{
-                width: '400px',
-                height: '250px',
-                objectFit: 'cover'
-              }}
-              className="rounded-2xl border border-gray-600 shadow-md"
-            />
-          </div>
         </div>
       </footer>
     </>

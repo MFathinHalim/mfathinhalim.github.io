@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Header() {
   const [hover, setHover] = useState("");
@@ -16,32 +16,6 @@ function Header() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 639);
   const nameRef = useRef(null);
 
-  const sectionRef = useRef(null);
-
-  useLayoutEffect(() => {
-    const handleMouseMove = (e) => {
-      const { clientX: mouseX, clientY: mouseY } = e;
-
-      const x = (mouseX / window.innerWidth) * 30 - 15;
-      const y = (mouseY / window.innerHeight) * 30 - 15;
-
-      gsap.to(sectionRef.current, {
-        rotateX: -y,
-        rotateY: x,
-        transformPerspective: 5000,
-        ease: "power2.out",
-        duration: 0.1,
-      });
-    };
-
-    const section = sectionRef.current;
-    section.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      section.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 639);
@@ -55,7 +29,6 @@ function Header() {
   return (
     <>
       <section
-        ref={sectionRef}
         className="p-5 md:p-0 md:flex md:justify-center md:items-center min-h-screen w-full"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.2)",
@@ -101,18 +74,20 @@ function Header() {
                   </p>
                 </div>
                 <img
-                  loading="lazy"
-                  draggable="false"
-                  data-aos="fade-down"
-                  className="mb-4 mx-auto object-center rounded-full object-center"
-                  style={{
-                    height: 250, // Diperbesar
-                    width: 250, // Diperbesar
-                    objectFit: "cover",
-                  }}
-                  alt="Fathin"
-                  src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
-                />
+  loading="lazy"
+  draggable="false"
+  className="mb-4 mx-auto object-center md:grayscale hover:grayscale-0 transition-all duration-300 ease-in-out rounded-full object-center"
+  style={{
+    height: 250,
+    width: 250,
+    objectFit: "cover",
+    willChange: "filter",
+  }}
+  alt="Fathin"
+  src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
+/>
+
+
               </div>
 
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mb-8">
