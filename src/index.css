@@ -154,7 +154,11 @@ html.has-scroll-dragging {
 .animate-scrollReverse {
   animation: scrollReverse 40s linear infinite;
 }
-
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 @media (min-width: 768px) {
   /* Aturan CSS tambahan untuk dekstop */
   /* CSS umum untuk kursor */

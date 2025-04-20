@@ -1,17 +1,78 @@
 import { Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
   discord: <MessageCircle className="w-5 h-5" />,
   whatsapp: <Phone className="w-5 h-5" />,
   envelope: <Mail className="w-5 h-5" />,
 };
+
 function Intro() {
- 
+  const [position, setPosition] = useState({ top: 30, left: 20 });
+  const [showContact, setShowContact] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const elmnt = headerRef.current;
+    let pos1 = 0,
+      pos2 = 0,
+      pos3 = 0,
+      pos4 = 0;
+
+    const dragMouseDown = (e) => {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+    };
+
+    const elementDrag = (e) => {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+
+      setPosition((prev) => ({
+        top: prev.top - pos2,
+        left: prev.left - pos1,
+      }));
+    };
+
+    const closeDragElement = () => {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    };
+
+    if (elmnt) {
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    return () => {
+      if (elmnt) {
+        elmnt.onmousedown = null;
+      }
+      document.onmouseup = null;
+      document.onmousemove = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("contactPosition", JSON.stringify(position));
+  }, [position]);
   return (
     <div className="text-white font-sans mx-auto">
       {/* Hero Section */}
       <section className="grid pb-32 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
+        <div
+          id="contact"
+          className="lg:col-span-7 space-y-6"
+          data-aos="fade-right"
+        >
           <h1 id="Name" className="text-4xl leading-tight">
             M. Fathin Halim
           </h1>
@@ -29,76 +90,128 @@ function Intro() {
             href="/journey/"
             className="inline-block mt-6 px-6 py-3 bg-yellow-300 text-black font-semibold rounded-xl hover:bg-yellow-400 transition"
           >
-            See My Journey 🚀
+            See My Journey
           </a>
+          <button
+            onClick={() => setShowContact((prev) => !prev)}
+            className="inline-block ml-2 mt-6 px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-xl hover:bg-white hover:text-black transition"
+          >
+            Contact
+          </button>
         </div>
 
-        <div className="xl:relative w-full xl:h-[500px] lg:col-span-5" data-aos="fade-left">
-  {/* Gambar besar kiri */}
+        <div
+          className="xl:relative w-full xl:h-[500px] lg:col-span-5"
+          data-aos="fade-left"
+        >
+          {/* Gambar besar kiri */}
 
-  {/* Gambar tengah */}
-  <img
-    src="https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623"
-    alt="Fathin 2"
-    className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
-  />
-  <img
-    src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
-    alt="Fathin 1"
-    className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 rounded-2xl border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
-  />
+          {/* Gambar tengah */}
+          <img
+            src="https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623"
+            alt="Fathin 2"
+            className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+          />
+          <img
+            src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
+            alt="Fathin 1"
+            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 rounded-2xl border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
+          />
 
-  {/* Gambar kanan bawah */}
-  <img
-    src="https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623"
-    alt="Fathin 3"
-    className="hidden xl:inline absolute top-1/3 left-3/4 -translate-y-1/2 translate-x-6 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
-  />
-</div>
-
-
-
+          {/* Gambar kanan bawah */}
+          <img
+            src="https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623"
+            alt="Fathin 3"
+            className="hidden xl:inline absolute top-1/3 left-3/4 -translate-y-1/2 translate-x-6 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+          />
+        </div>
       </section>
-            {/* Contact Section */}
-            <section id="contact" className="my-32" data-aos="fade-up">
-        <div className="border border-gray-700 bg-black rounded-2xl p-4 py-10 shadow-lg">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">
-            Let’s <span className="text-green-400">Connect</span> and
-            Collaborate 🤝
-          </h2>
-          <p className="hidden md:block text-gray-400 text-center max-w-2xl mx-auto mb-10">
-            Whether you're a fellow dev, a curious learner, or just want to say
-            hi — I’d love to hear from you!
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <ContactLink
-              icon="linkedin"
-              label="M.Fathin Halim"
-              url="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
-            />
-            <ContactLink
-              icon="discord"
-              label="@mfathinhalim"
-              url="https://discordapp.com/users/1156486226094870569"
-            />
-            <ContactLink
-              icon="whatsapp"
-              label="+62 822 8162 7963"
-              url="https://wa.me/+6282281627963"
-            />
-            <ContactLink
-              icon="envelope"
-              label="Email Me"
-              url="mailto:halimfathin7@gmail.com"
-            />
-          </div>
-        </div>
+      {/* Contact Section */}
+      <section
+        className={`my-32 transition-opacity duration-500 ${
+          showContact
+            ? "opacity-100 scale-1"
+            : "scale-0 opacity-0 pointer-events-none"
+        }`}
+        id="header"
+        ref={headerRef}
+        style={{
+          position: "fixed",
+          top: `${position.top}px`,
+          left: `${position.left}px`,
+          cursor: "grab",
+          zIndex: "50",
+        }}
+      >
+        {showContact && (
+          <section
+            style={{
+              position: "fixed",
+              top: `${position.top}px`,
+              left: `${position.left}px`,
+              cursor: "grab",
+              zIndex: 9999,
+            }}
+            className="transition-opacity duration-300 opacity-100"
+          >
+            <div className="bg-stone-900 prevent-select border border-stone-700 rounded-2xl p-5 shadow-xl w-[90vw] sm:w-[600px]">
+              {/* Header Bar */}
+              <div
+                id="header"
+                ref={headerRef}
+                className="flex items-center mb-4"
+              >
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setShowContact(false)}
+                    className="w-5 h-5 bg-red-400 hover:bg-red-500 rounded-full"
+                  ></button>{" "}
+                </div>
+              </div>
+
+              {/* Title & Description */}
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold" draggable="false">
+                  Let’s <span className="text-green-400">Connect</span> 🤝
+                </h2>
+                <p className="text-gray-400 mt-2">
+                  Whether you're a fellow dev, a curious learner, or just want
+                  to say hi — I’d love to hear from you!
+                </p>
+              </div>
+
+              {/* Contact Links */}
+              <div className="grid sm:grid-cols-2 gap-4">
+                <ContactLink
+                  icon="linkedin"
+                  label="M.Fathin Halim"
+                  url="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
+                />
+                <ContactLink
+                  icon="discord"
+                  label="@mfathinhalim"
+                  url="https://discordapp.com/users/1156486226094870569"
+                />
+                <ContactLink
+                  icon="whatsapp"
+                  label="+62 822 8162 7963"
+                  url="https://wa.me/+6282281627963"
+                />
+                <ContactLink
+                  icon="envelope"
+                  label="Email Me"
+                  url="mailto:halimfathin7@gmail.com"
+                />
+              </div>
+            </div>
+          </section>
+        )}
       </section>
       {/* Skills Breakdown Section */}
       <section className="text-white" data-aos="fade-up">
         <div className="grid md:grid-cols-3 gap-5">
           {/* Frontend */}
-          <div  className="bg-neutral-800/80 p-6 hover:border-neutral-500 transition-all rounded-2xl border border-white/10 shadow-lg">
+          <div className="bg-neutral-800/80 p-6 hover:border-neutral-500 transition-all rounded-2xl border border-white/10 shadow-lg">
             <h3 className="text-xl font-semibold text-yellow-300 mb-3">
               Frontend
             </h3>
@@ -110,8 +223,7 @@ function Intro() {
             </ul>
           </div>
           {/* Backend */}
-          <div
- className="bg-neutral-800/80 p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg">
+          <div className="bg-neutral-800/80 p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg">
             <h3 className="text-xl font-semibold text-green-400 mb-3">
               Backend
             </h3>
@@ -123,8 +235,7 @@ function Intro() {
             </ul>
           </div>
           {/* Others */}
-          <div
- className="bg-neutral-800/80 p-6 rounded-2xl border  hover:border-neutral-500 transition-all border-white/10 shadow-lg">
+          <div className="bg-neutral-800/80 p-6 rounded-2xl border  hover:border-neutral-500 transition-all border-white/10 shadow-lg">
             <h3 className="text-xl font-semibold text-blue-400 mb-3">
               Tools & Other Skills
             </h3>
@@ -214,7 +325,7 @@ function Intro() {
 const ContactLink = ({ icon, label, url }) => (
   <a
     href={url}
-    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-700 transition duration-300"
+    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-700 transition duration-300"
     target="_blank"
     rel="noopener noreferrer"
   >

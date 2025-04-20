@@ -29,7 +29,7 @@ function Header() {
   return (
     <>
       <section
-        className="p-5 md:p-0 md:flex md:justify-center md:items-center min-h-screen w-full"
+        className="p-5 md:p-0 md:flex md:justify-center md:items-center h-[100vh] w-full"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.2)",
         }}
@@ -42,21 +42,23 @@ function Header() {
             data-aos-duration={3100}
           >
             {" "}
-            <div className="hidden md:block absolute bottom-[-20%] z-50">
-              <a href="/learnjs/" className="flex items-center bg-neutral-100 backdrop-blur-md px-2 pr-3 py-2 rounded-md shadow-lg border">
+            <div className="hidden xl:block absolute right-2 bottom-1 xl:bottom-[-10%] z-50">
+              <a
+                href="/learnjs/"
+                className="flex items-center hover:text-black text-neutral-100 border-neutral-400 hover:bg-white backdrop-blur-md px-2 pr-3 py-2 shadow-lg border"
+              >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
                   alt="Avatar"
                   className="w-10 h-10 mr-4 object-cover"
                 />
                 <div>
-                  <p className="text-sm font-semibold text-black">
-                    Learn JS
-                  </p>
-                  <p className="text-xs text-gray-600">Learn JS with Fathin</p>
+                  <p className="text-sm font-semibold">Learn JS</p>
+                  <p className="text-xs opacity-60">Learn JS with Fathin</p>
                 </div>
               </a>
             </div>
+      
             <div>
               <div className="flex flex-col-reverse text-center md:text-left md:flex-row md:px-7 md:gap-20">
                 <div className="flex-1">
@@ -103,8 +105,7 @@ function Header() {
                   src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
                 />
               </div>
-
-              <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mb-8">
+              <div className="flex flex-col space-y-4 sm:flex-row md:px-7 sm:space-y-0 mb-8">
                 <div className="mr-4 flex items-center">
                   <i
                     className="fas fa-code mr-2"
@@ -127,7 +128,7 @@ function Header() {
                   <p className="text-xl">Japanese Lover</p> {/* Diperbesar */}
                 </div>
               </div>
-              <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+              <div className="flex flex-col space-y-4 sm:flex-row md:px-3 sm:space-y-0">
                 <a
                   href="https://saweria.co/mfathinhalim"
                   className="transition ease-in-out delay-150 hover:-translate-y-1 rounded-md md-hover:scale-110 duration-300 inline-flex justify-center items-center py-4 px-6 text-xl sm:ms-4 font-medium text-center text-white border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800" // Diperbesar
@@ -143,8 +144,24 @@ function Header() {
                   <i className="fa-brands fa-discord ml-2" aria-hidden="true" />
                 </a>
               </div>
-              <hr className="w-56 h-1 mx-auto my-4 bg-gray-300 border-0 rounded md:my-10" />
-              <div className="flex flex-col space-y-4 mt-4 sm:flex-row sm:justify-center sm:space-y-0">
+              <div class="inline-flex items-center pt-6 justify-center w-full">
+                <hr class="w-[90vw] h-px my-8 bg-gray-200 border-0" />
+                <span class="absolute px-3 rounded-full font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2">
+                  Social Media
+                </span>
+              </div>{" "}
+              <div className="mb-2 z-50">
+              <a
+                href="https://x.com/mfathinhalim/status/1913810154270953976"
+                className="flex items-center hover:bg-black-900 text-neutral-100 bg-black-800 border-stone-600 backdrop-blur-md p-3 pr-10 shadow-lg"
+              >
+                <div>
+                  <p className="text-sm opacity-60">M.Fathin Halim on Twitter</p>
+                  <p className="font-semibold">“I'll fix it later” is the biggest lie from programmer</p>
+                </div>
+              </a>
+            </div>
+              <div className="flex flex-col space-y-4 mt-4 sm:flex-row  sm:space-y-0">
                 <a
                   data-social=" @mfathinhalim"
                   onMouseEnter={() => onHover("Youtube")}
@@ -225,6 +242,7 @@ function Header() {
                   {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
                 </a>
               </div>
+
             </div>
           </div>
         </div>

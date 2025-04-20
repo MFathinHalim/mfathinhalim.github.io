@@ -13,7 +13,7 @@ const ScrollingZoomText = () => {
 
   const lines = isJourney
     ? ["Journey"]
-    : ["Hey you", "Let me introduce myself"];
+    : ["Hello, World!", "Let me introduce myself"];
   const stars = Array.from({ length: 100 }, (_, index) => ({
     id: index,
     animationDuration: Math.random() * 5 + 5,
