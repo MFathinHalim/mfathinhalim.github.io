@@ -152,7 +152,7 @@ function Intro() {
               cursor: "grab",
               zIndex: 9999,
             }}
-            className="duration-300 opacity-100"
+            className="opacity-100"
           >
             <div className="bg-stone-800/50 backdrop-blur-md prevent-select border border-stone-700 rounded-2xl p-5 shadow-xl w-[90vw] sm:w-[600px]">
               {/* Header Bar */}
