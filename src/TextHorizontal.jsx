@@ -27,7 +27,7 @@ const MarqueeText = () => {
       <div className="overflow-hidden bg-black">
         <div className=" text-center py-4 whitespace-nowrap">
             <span
-              className="text-center text-white text-[3rem] font-bold mx-10"
+              className="text-center text-white text-4xl font-bold mx-10"
             >
               Fathin's Journey
             </span>
