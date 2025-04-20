@@ -12,7 +12,7 @@ function Intro() {
       {/* Hero Section */}
       <section className="grid pb-32 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
-          <h1 id="Name" className="text-5xl leading-tight">
+          <h1 id="Name" className="text-4xl leading-tight">
             M. Fathin Halim
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed text-justify">
