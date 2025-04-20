@@ -40,10 +40,10 @@ function Path() {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl sm:text-8xl mb-8 text-gray-300"
+        className="text-2xl sm:text-8xl mb-8 text-white"
         style={{ fontWeight: "bold" }}
       >
-        My Journey
+        Timeline
       </h3>
       <ol className="relative border-s border-gray-300 dark:border-gray-600">
         {timelineData.map((item, index) => (

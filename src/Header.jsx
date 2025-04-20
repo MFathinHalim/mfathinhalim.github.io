@@ -41,6 +41,22 @@ function Header() {
             data-aos-easing="linear"
             data-aos-duration={3100}
           >
+            {" "}
+            <div className="hidden md:block absolute bottom-[-20%] z-50">
+              <a href="/learnjs/" className="flex items-center bg-neutral-100 backdrop-blur-md px-2 pr-3 py-2 rounded-md shadow-lg border">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                  alt="Avatar"
+                  className="w-10 h-10 mr-4 object-cover"
+                />
+                <div>
+                  <p className="text-sm font-semibold text-black">
+                    Learn JS
+                  </p>
+                  <p className="text-xs text-gray-600">Learn JS with Fathin</p>
+                </div>
+              </a>
+            </div>
             <div>
               <div className="flex flex-col-reverse text-center md:text-left md:flex-row md:px-7 md:gap-20">
                 <div className="flex-1">
@@ -55,7 +71,7 @@ function Header() {
                     data-value="MFATHINHALIM"
                     ref={nameRef}
                     data-aos="fade-right"
-                    className="mb-2 text-5xl md:text-6xl lg:text-9xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white" // Diperbesar
+                    className="mb-2 text-5xl md:text-6xl lg:text-8xl rounded mx-auto w-auto md:mx-0 hover:bg-gray-200 hover:text-black font-normal leading-none text-white" // Diperbesar
                     style={{
                       position: "relative",
                       width: "fit-content",
@@ -74,20 +90,18 @@ function Header() {
                   </p>
                 </div>
                 <img
-  loading="lazy"
-  draggable="false"
-  className="mb-4 mx-auto object-center md:grayscale hover:grayscale-0 transition-all duration-300 ease-in-out rounded-full object-center"
-  style={{
-    height: 250,
-    width: 250,
-    objectFit: "cover",
-    willChange: "filter",
-  }}
-  alt="Fathin"
-  src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
-/>
-
-
+                  loading="lazy"
+                  draggable="false"
+                  className="mb-4 mx-auto object-center md:grayscale hover:grayscale-0 transition-all duration-300 ease-in-out rounded-full object-center"
+                  style={{
+                    height: 200,
+                    width: 200,
+                    objectFit: "cover",
+                    willChange: "filter",
+                  }}
+                  alt="Fathin"
+                  src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
+                />
               </div>
 
               <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 mb-8">

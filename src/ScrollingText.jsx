@@ -1,14 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLocation } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ScrollingZoomText = () => {
   const containerRef = useRef(null);
   const textRefs = useRef([]);
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+  const isJourney = pathname.startsWith("/journey");
 
-  const lines = ["Hey you", "Let me introduce myself"];
+  const lines = isJourney
+    ? ["Journey"]
+    : ["Hey you", "Let me introduce myself"];
   const stars = Array.from({ length: 100 }, (_, index) => ({
     id: index,
     animationDuration: Math.random() * 5 + 5,
@@ -19,24 +24,35 @@ const ScrollingZoomText = () => {
 
   useEffect(() => {
     const container = containerRef.current;
+    let tl;
+    if(!isJourney) {
+      tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: "+=500", // Adjust as needed
+          pin: true,
+          scrub: true,
+          markers: false,
+        },
+      });
+    } else {
+      tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+          scrub: true,
+          markers: false,
+        },
+      });
+    }
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: container,
-        start: "top top",
-        end: "+=500", // Adjust as needed
-        pin: true,
-        scrub: true,
-        markers: false,
-      },
-    });
 
     textRefs.current.forEach((el) => {
       tl.fromTo(
         el,
         {
-          scale: 0.5,
-          opacity: 0,
+          scale: isJourney ? 1 : 0.5,
+          opacity: isJourney ? 0.3 : 0,
         },
         {
           scale: 1,
@@ -58,7 +74,7 @@ const ScrollingZoomText = () => {
       ref={containerRef}
       className="bg-black"
       style={{
-        height: "100vh",
+        height: isJourney ? '37vh' : "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

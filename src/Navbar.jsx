@@ -18,9 +18,10 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="sticky w-screen-xl flex flex-wrap items-center justify-between mt-64">
+      <div className="sticky w-screen-xl flex flex-wrap items-center justify-between mt-10 mb-5 md:mb-0">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <span id="Name" className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+          <span id="Name" className="self-center text-2xl font-semibold whitespace-nowrap text-white md:hidden">
+            M.Fathin Halim
           </span>
         </a>
         <button
@@ -47,7 +48,7 @@ function Navbar() {
             />
           </svg>
         </button>
-        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
+        <div className={`${isOpen ? 'block' : 'hidden'} mr-0 mb-10 w-full md:block md:w-auto`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent md:dark:bg-transparent dark:border-gray-700">
             <li>
               <a

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="border-t border-gray-700/50 bg-black text-gray-300 py-12 mt-16">
+      <footer className="border-t border-gray-700/50 bg-black text-gray-300 pt-12 pb-5 mt-16">
         <div className="px-5 md:px-32 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
@@ -133,7 +133,7 @@ function Footer() {
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>
-          <a href="https://mahiru-istri-fathin.glitch.me">
+          <a className="mb-0 pb-0" href="https://mahiru-istri-fathin.glitch.me">
             Mahiru is my wife ✨
           </a>
         </div>

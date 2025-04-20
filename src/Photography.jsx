@@ -67,9 +67,7 @@ function Photography() {
                   ? "col-span-2 row-span-2"
                   : "col-span-1 row-span-1"
               }`}
-              data-aos={`${
-                i % 3 === 1 ? "zoom-in" : i % 3 === 0 ? "fade-up" : "fade-down"
-              }`}
+              data-aos={`zoom-in`}
             >
               <img
                 src={photo}
