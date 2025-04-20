@@ -29,7 +29,7 @@ function Header() {
   return (
     <>
       <section
-        className="p-5 md:p-0 md:flex md:justify-center md:items-center h-[100vh] w-full"
+        className="p-5 md:p-0 md:flex md:justify-center md:items-center min-h-screen md:h-[100vh] w-full"
         style={{
           borderBottom: "1px solid rgba(59,59,59,0.2)",
         }}
