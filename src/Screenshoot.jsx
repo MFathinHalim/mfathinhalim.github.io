@@ -57,7 +57,7 @@ const Screenshoot = () => {
                   key={`${lineIndex}-${index}`}
                   src={src}
                   alt={`Work ${lineIndex}-${index}`}
-                  className="h-[250px] border border-neutral-400/50 w-auto object-cover"
+                  className="h-[12vw] min-h-[135px] border border-neutral-400/50 w-auto object-cover"
                 />
               ))}
             </div>

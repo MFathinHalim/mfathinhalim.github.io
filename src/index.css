@@ -154,23 +154,7 @@ html.has-scroll-dragging {
 .animate-scrollReverse {
   animation: scrollReverse 40s linear infinite;
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Assuming doubled images for seamless loop */
-  }
-}
 
-@keyframes scrollReverse {
-  0% {
-    transform: translateX(-20%); /* Assuming doubled images for seamless loop */
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 @media (min-width: 768px) {
   /* Aturan CSS tambahan untuk dekstop */
   /* CSS umum untuk kursor */
