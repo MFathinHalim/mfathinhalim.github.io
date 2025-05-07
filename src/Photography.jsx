@@ -82,7 +82,7 @@ function Photography() {
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            background: `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0, 1) 100%)`,
+            background: `linear-gradient(to bottom, rgb(3, 3, 8) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0, 1) 100%)`,
           }}
         ></div>
       </div>

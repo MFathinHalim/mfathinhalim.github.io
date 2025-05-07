@@ -2,6 +2,8 @@ import gsap from "gsap";
 import { useState, useEffect, useRef } from "react";
 import Photography from "./Photography";
 import Navbar from "./Navbar";
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(TextPlugin);
 
 function Header() {
   const [hover, setHover] = useState("");
@@ -17,6 +19,29 @@ function Header() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 639);
   const nameRef = useRef(null);
+  useEffect(() => {
+    const texts = ["Hello! I'm", "Halo! Saya", "M."];
+
+    // Langsung set teks pertama saat komponen load
+    gsap.set(nameRef.current, {
+      text: `${texts[0]} Fathin Halim`,
+    });
+
+    let tl = gsap.timeline({ repeat: -1 });
+
+    // animasi semua, mulai dari teks kedua
+    texts
+      .slice(1)
+      .concat(texts[0])
+      .forEach((txt) => {
+        tl.to(nameRef.current, {
+          duration: 3,
+          text: `${txt} Fathin Halim`, // Menangani kasus kosong
+          ease: "power2.inOut",
+          delay: 3,
+        });
+      });
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,12 +56,9 @@ function Header() {
 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
-    // Pindahkan image ke posisi mouse dengan gsap
-    gsap.to(imageRef.current, {
-      x: clientX + 20,
-      y: clientY + 20,
-      duration: 0.3,
-      ease: "power2.out",
+    gsap.set(imageRef.current, {
+      x: clientX - imageRef.current.offsetWidth / 2, // supaya gambar di tengah mouse
+      y: clientY - imageRef.current.offsetHeight / 2, // supaya gambar di tengah mouse
     });
   };
 
@@ -52,44 +74,38 @@ function Header() {
 
   return (
     <div>
-      <section
-        className="px-5 h-[100dvh] flex flex-col gap-2 justify-center items-center  w-screen relative overflow-hidden"
-        style={{
-          borderBottom: "1px solid rgba(59,59,59,0.2)",
-        }}
-      >
+      <section className="px-5 h-[100dvh] max-h-screen flex flex-col gap-4 justify-center items-center w-screen relative overflow-hidden bg-[url('https://i.pinimg.com/originals/63/ca/65/63ca65a0fcf1dd9edcb8f060372abda9.gif')] bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black/70">
         <Navbar />
         <h1
           ref={nameRef}
-          className="text-2xl font-bold md:text-7xl relative z-10 cursor-pointer"
-        >
-          Hello, I'm{" "}
-          <span
-            className="font-bold"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            M.Fathin Halim
-          </span>
-        </h1>
-        <h2 className="text-white/70 font-semibold md:text-3xl">
-          A person behind some silly idea
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className="text-2xl cursor-none font-extrabold md:text-7xl relative z-10 cursor-pointer"
+        ></h1>
+        <h2 className="text-white/50 font-bold md:text-3xl z-10">
+          Make <span className="bg-white/70 text-black px-5 rounded-full">Things</span>, Usually They Work
         </h2>
         {/* IMAGE FOLLOW MOUSE */}
         <img
           ref={imageRef}
-          src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623" // ganti dengan image yang kamu mau
+          src="https://ik.imagekit.io/9hpbqscxd/SG/image-110.jpg?updatedAt=1705798245623"
           alt="Follow"
-          className="w-[200px] h-[250px] object-cover rounded-full"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            pointerEvents: "none",
-            opacity: 0,
-            scale: 0.8,
-          }}
+          className="
+          z-50
+          cursor-none
+            fixed
+            top-0
+            left-0
+            w-[150px]
+            h-[280px]
+            object-cover
+            rounded-full
+            pointer-events-none
+            opacity-0
+            scale-y-125
+          "
         />
+
         <div className="flex flex-col justify-center items-center w-screen px-3 pt-5 space-y-4 sm:flex-row  sm:space-y-0">
           <a
             data-social=" @mfathinhalim"
@@ -171,8 +187,15 @@ function Header() {
             {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
           </a>
         </div>
-
       </section>
+      <a
+        href="https://in.pinterest.com/pin/297800594114406829/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-2 right-2 text-xs text-gray-400 hover:text-gray-200 opacity-50 hover:opacity-100 transition"
+      >
+        Source Background
+      </a>
     </div>
   );
 }

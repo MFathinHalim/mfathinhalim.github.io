@@ -18,9 +18,9 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="sticky flex flex-wrap items-center justify-between my-10 mb-0">
-        <div className={` mr-0 mb-10 w-full md:block md:w-auto`}>
-          <ul  className="font-medium flex  p-4 p-0 mt-4 border border-gray-100 rounded-lg  flex-row space-x-8 rtl:space-x-reverse mt-0 border-0 bg-transparent">
+      <div className={`sticky flex flex-wrap items-center ${currentPath !== "/" && "my-10"}`}>
+        <div className={` mr-0 w-full md:block md:w-auto`}>
+          <ul  className="font-medium flex  p-4 p-0 border border-gray-100 rounded-lg  flex-row space-x-8 rtl:space-x-reverse mt-0 border-0 bg-transparent">
             <li>
               <a
                 href="/"
