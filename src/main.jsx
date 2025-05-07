@@ -51,12 +51,10 @@ function App() {
       ref={cursorRef} // Attach the ref here
     />  
       <Header id="header" />
-      <ScrollingText />
-      <div className="parallax" id="photography">
-          <Photography />
-        </div>
-      <div className="px-5 mx-auto md:w-[75%]">
-        <Navbar />
+      <Photography />
+
+      <div className="px-5 py-auto mx-auto md:w-[75%]">
+        
         <Intro id="intro" />
 
         <div className="parallax" id="service">
