@@ -150,7 +150,7 @@ function Header() {
       onMouseEnter={() => onHover(social.name)}
       onMouseLeave={onLeave}
       href={social.href}
-      className={`social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-2 px-4 md:py-4 md:px-6 md:text-xl sm:mx-4 font-medium rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:${social.color}`}
+      className={`social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-2 px-4 md:py-4 md:px-6 md:text-xl sm:mx-4 font-medium rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-black hover:${social.color}`}
     >
       <i
         className={`fa-brands ${social.icon} ${

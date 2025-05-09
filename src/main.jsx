@@ -53,7 +53,7 @@ function App() {
       <Header id="header" />
       <Photography />
 
-      <div className="px-2 md:px-0 py-auto mx-auto md:w-[75%]">
+      <div className="px-2 md:px-0 py-auto mx-auto md:w-[85%]">
         
         <Intro id="intro" />
 

@@ -106,19 +106,12 @@ function Intro() {
           <img
             src="https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623"
             alt="Fathin 2"
-            className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+            className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
           />
           <img
             src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
             alt="Fathin 1"
-            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 rounded-2xl border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
-          />
-
-          {/* Gambar kanan bawah */}
-          <img
-            src="https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623"
-            alt="Fathin 3"
-            className="hidden xl:inline absolute top-1/3 left-3/4 -translate-y-1/2 translate-x-6 w-1/2 rounded-2xl grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
+            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
           />
         </div>
       </section>
