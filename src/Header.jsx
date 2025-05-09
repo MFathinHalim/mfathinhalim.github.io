@@ -63,7 +63,7 @@ function Header() {
   };
 
   const handleMouseEnter = () => {
-    gsap.to(imageRef.current, { opacity: 1, scale: 1, duration: 0.3 });
+    gsap.to(imageRef.current, { opacity: 0.9, scale: 1, duration: 0.3 });
     window.addEventListener("mousemove", handleMouseMove);
   };
 
@@ -71,19 +71,56 @@ function Header() {
     gsap.to(imageRef.current, { opacity: 0, scale: 0.8, duration: 0.3 });
     window.removeEventListener("mousemove", handleMouseMove);
   };
-
+  const socials = [
+    {
+      name: "Youtube",
+      icon: "fa-youtube",
+      href: "https://www.youtube.com/channel/UCP3UJwwVcg4UvaVve2pxbAw",
+      color: "text-red-600",
+      username: "@mfathinhalim",
+    },
+    {
+      name: "Facebook",
+      icon: "fa-facebook",
+      href: "https://www.facebook.com/profile.php?id=100085410154411",
+      color: "text-blue-600",
+      username: "FathinHalim",
+    },
+    {
+      name: "twitter",
+      icon: "fa-twitter",
+      href: "https://twitter.com/mfathinhalim",
+      color: "text-gray-800",
+      username: "@mfathinhalim",
+    },
+    {
+      name: "ig",
+      icon: "fa-instagram",
+      href: "https://www.instagram.com/mfathin_halim/",
+      color: "text-orange-600",
+      username: "@mfathin_halim",
+    },
+    {
+      name: "threads",
+      icon: "fa-threads",
+      href: "https://www.threads.net/@mfathin_halim",
+      color: "text-gray-800",
+      username: "@mfathin_halim",
+    },
+  ];
+  
   return (
     <div>
-      <section className="px-5 h-[100dvh] max-h-screen flex flex-col gap-4 justify-center items-center w-screen relative overflow-hidden bg-[url('https://i.pinimg.com/originals/63/ca/65/63ca65a0fcf1dd9edcb8f060372abda9.gif')] bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black/70">
+      <section className="px-2 h-[100dvh] max-h-screen flex flex-col gap-4 md:justify-center items-center text-center w-screen relative overflow-hidden bg-[url('https://i.pinimg.com/originals/63/ca/65/63ca65a0fcf1dd9edcb8f060372abda9.gif')] bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black/70">
         <Navbar />
         <h1
           ref={nameRef}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className="text-2xl cursor-none font-extrabold md:text-7xl relative z-10 cursor-pointer"
+          className="text-3xl cursor-none font-extrabold md:text-7xl relative z-10"
         ></h1>
         <h2 className="text-white/50 font-bold md:text-3xl z-10">
-          Make <span className="bg-white/70 text-black px-5 rounded-full">Things</span>, Usually They Work
+          Make <span className="font-bold bg-white/70 text-black px-3 rounded-full">Things</span>, Usually They Work
         </h2>
         {/* IMAGE FOLLOW MOUSE */}
         <img
@@ -106,87 +143,26 @@ function Header() {
           "
         />
 
-        <div className="flex flex-col justify-center items-center w-screen px-3 pt-5 space-y-4 sm:flex-row  sm:space-y-0">
-          <a
-            data-social=" @mfathinhalim"
-            onMouseEnter={() => onHover("Youtube")}
-            onMouseLeave={onLeave}
-            href="https://www.youtube.com/channel/UCP3UJwwVcg4UvaVve2pxbAw"
-            className="social group backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-4 px-6 md:text-xl sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-red-600"
-          >
-            <i
-              className={`fa-brands fa-youtube ${
-                hover === "Youtube" || isMobile ? "pr-1" : ""
-              }`}
-              aria-hidden="true"
-            />{" "}
-            {hover === "Youtube" || isMobile ? "@mfathinhalim" : ""}
-          </a>
+<div className="flex flex-col justify-center items-center w-screen px-3 pt-5 space-y-4 sm:flex-row sm:space-y-0">
+  {socials.map((social, index) => (
+    <a
+      key={index}
+      onMouseEnter={() => onHover(social.name)}
+      onMouseLeave={onLeave}
+      href={social.href}
+      className={`social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-2 px-4 md:py-4 md:px-6 md:text-xl sm:mx-4 font-medium rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:${social.color}`}
+    >
+      <i
+        className={`fa-brands ${social.icon} ${
+          hover === social.name || isMobile ? "pr-1" : ""
+        }`}
+        aria-hidden="true"
+      />
+      {hover === social.name || isMobile ? social.username : ""}
+    </a>
+  ))}
+</div>
 
-          <a
-            onMouseEnter={() => onHover("Facebook")}
-            onMouseLeave={onLeave}
-            data-social=" FathinHalim"
-            href="https://www.facebook.com/profile.php?id=100085410154411"
-            className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-4 px-6 md:text-xl sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-blue-600"
-          >
-            <i
-              className={`fa-brands fa-facebook ${
-                hover === "Facebook" || isMobile ? "pr-1" : ""
-              }`}
-              aria-hidden="true"
-            />{" "}
-            {hover === "Facebook" || isMobile ? "@mfathinhalim" : ""}
-          </a>
-
-          <a
-            onMouseEnter={() => onHover("twitter")}
-            onMouseLeave={onLeave}
-            data-social=" @mfathinhalim"
-            href="https://twitter.com/mfathinhalim"
-            className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-4 px-6 md:text-xl sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
-          >
-            <i
-              className={`fa-brands fa-twitter ${
-                hover === "twitter" || isMobile ? "pr-1" : ""
-              }`}
-              aria-hidden="true"
-            />{" "}
-            {hover === "twitter" || isMobile ? "@mfathinhalim" : ""}
-          </a>
-
-          <a
-            onMouseEnter={() => onHover("ig")}
-            onMouseLeave={onLeave}
-            data-social=" @mfathin_halim"
-            href="https://www.instagram.com/mfathin_halim/"
-            className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-4 px-6 md:text-xl sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-orange-600"
-          >
-            <i
-              className={`fa-brands fa-instagram ${
-                hover === "ig" || isMobile ? "pr-1" : ""
-              }`}
-              aria-hidden="true"
-            />{" "}
-            {hover === "ig" || isMobile ? "@mfathin_halim" : ""}
-          </a>
-
-          <a
-            onMouseEnter={() => onHover("threads")}
-            onMouseLeave={onLeave}
-            data-social=" @mfathin_halim"
-            href="https://www.threads.net/@mfathin_halim"
-            className="social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-4 px-6 md:text-xl sm:ms-4 font-medium text-center rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-gray-800"
-          >
-            <i
-              className={`fa-brands fa-threads ${
-                hover === "threads" || isMobile ? "pr-1" : ""
-              }`}
-              aria-hidden="true"
-            />{" "}
-            {hover === "threads" || isMobile ? "@mfathin_halim" : ""}
-          </a>
-        </div>
       </section>
       <a
         href="https://in.pinterest.com/pin/297800594114406829/"

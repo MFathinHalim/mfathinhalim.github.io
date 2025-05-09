@@ -9,7 +9,7 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center my-32">
+    <div className="flex justify-center mb-32">
       <div className="w-full bg-[#2b2d31] rounded-2xl shadow-lg flex flex-col overflow-hidden">
         
         {/* Header */}

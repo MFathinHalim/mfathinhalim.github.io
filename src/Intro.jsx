@@ -1,5 +1,6 @@
 import { Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import Portofolio from "./Portofolio";
 
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
@@ -67,23 +68,18 @@ function Intro() {
   return (
     <div className="text-white font-sans mx-auto">
       {/* Hero Section */}
-      <section className="grid pb-32 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="grid pb-20 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div
           id="contact"
           className="lg:col-span-7 space-y-6"
           data-aos="fade-right"
         >
-          <h1 id="Name" className="text-4xl leading-tight">
-            M. Fathin Halim
+          <h1 className="text-4xl leading-tight font-bold">
+            Hey, Nice to meet you
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed text-justify">
             A passionate student from Indonesia who loves{" "}
-            <span className="font-semibold text-yellow-300">Programming</span>{" "}
-            and{" "}
-            <span className="font-semibold text-yellow-300">
-              Japanese Culture
-            </span>
-            . I enjoy building educational and creative platforms that bring
+            <span className="font-semibold text-yellow-300">Programming</span>. I enjoy building educational and creative platforms that bring
             impact.
           </p>
           <a
@@ -128,7 +124,7 @@ function Intro() {
       </section>
       {/* Contact Section */}
       <section
-        className={`my-32 ${
+        className={`mt-32 ${
           showContact
             ? "opacity-100 scale-1"
             : "scale-0 opacity-0 pointer-events-none"
@@ -317,6 +313,8 @@ function Intro() {
           ))}
         </div>
       </section>
+      <Portofolio max={1}/>
+
     </div>
   );
 }

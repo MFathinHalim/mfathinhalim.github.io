@@ -11,8 +11,7 @@ function Award() {
         interested in the region's linguistic diversity.`,
       link: "https://play.google.com/store/apps/details?id=org.kamusbahasarejang.kamusbahasarejang",
       img: [
-        "https://play-lh.googleusercontent.com/UgCNG2x18CiA6nu4TUHwP9b-QhH3FnlU3WP0812FMMpRmBs6YO5phTLZ9PM3Ab5Jd2o=w2560-h1440-rw",
-        "https://play-lh.googleusercontent.com/AleA5pJ6XfoXT1RtdvLw5U0oYccWrebhD5DNpFc7oTrcfPWxHvbZFmSGgKeJlS0Qtw=w2560-h1440-rw",
+     
       ],
     },
     {
@@ -32,34 +31,36 @@ function Award() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          id="Name"
-          className="text-4xl text-center text-white sm:text-8xl m-3"
+          className="font-bold text-white text-4xl m-3"
         >
           Award
         </h3>
-        <p className="text-lg text-center text-gray-400 mb-6">  Acknowledging achievements and milestones.</p>
+        <p className="text-lg text-gray-400 mb-6">  Acknowledging achievements and milestones.</p>
 
 
         {awards.map((award) => (
           <>
           <div
             key={award.name}
-            className="grid grid-cols-1 gap-6 sm:grid-cols-2"
+            className={`grid gap-6 mt-10`}
           >
-            <section 
-              className={`grid grid-cols-${award.img.length} gap-4`} // Set grid columns dynamically based on number of images
-            >
-          {award.img.map((image) => (
-              <img
-                loading="lazy"
-                draggable="false"
-                className="mt-3 w-full h-full mx-auto sm:mx-0 m-3 super-rounded"
-                style={{ objectFit: "cover", maxHeight: 460 }}
-                src={image}
-                data-aos="fade-right"
-              />
-            ))}
-            </section>
+            {award.img.length > 0 && (
+           <section 
+           className={`grid grid-cols-${award.img.length} gap-6`} // Set grid columns dynamically based on number of images
+         >
+       {award.img.map((image) => (
+           <img
+             loading="lazy"
+             draggable="false"
+             className="mt-3 w-full h-full mx-auto sm:mx-0 m-3 super-rounded"
+             style={{ objectFit: "cover", maxHeight: 460 }}
+             src={image}
+             data-aos="fade-right"
+           />
+         ))}
+         </section>
+            )}
+ 
 
             <section>
               <h6 className="text-2xl ease-in-out delay-150">{award.name}</h6>

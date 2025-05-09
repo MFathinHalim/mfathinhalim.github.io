@@ -36,11 +36,10 @@ function Path() {
   return (
     <>
       <h3
-        id="Name"
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-2xl sm:text-8xl mb-8 text-white"
+        className="text-4xl mb-8 text-white"
         style={{ fontWeight: "bold" }}
       >
         Timeline

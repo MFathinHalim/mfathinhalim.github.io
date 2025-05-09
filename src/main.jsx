@@ -53,14 +53,15 @@ function App() {
       <Header id="header" />
       <Photography />
 
-      <div className="px-5 py-auto mx-auto md:w-[75%]">
+      <div className="px-2 md:px-0 py-auto mx-auto md:w-[75%]">
         
         <Intro id="intro" />
 
         <div className="parallax" id="service">
           <Service />
         </div>
-        <div className='flex flex-wrap mt-9'>
+        </div>
+        <div className='flex flex-wrap mt-9 md:w-[85%] mx-auto '>
         {/* Left Section with Image */}
         <div  className='w-full md:w-1/2 pt-3 mb-3'>
           <h3 id="Name" className='text-3xl sm:text-4xl text-white text-left font-bold drop-shadow-lg'>
@@ -97,7 +98,6 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
       </div>
         <div className="parallax" id="footer">
           <Footer />

@@ -1,8 +1,33 @@
-function Portofolio() {
+function Portofolio({ max }) {
+  const pathname = window.location.pathname;
   const projects = [
     {
       class:
-        "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-1",
+      "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
+      image: "/Screenshot/Screenshot%20(7).png",
+      title: "Kamus Bahasa Rejang",
+      desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
+      link: "https://kamusrejang.vercel.app",
+      framework: ["React", "NextJS", "MongoDB", "TailwindCSS"],
+      develop: ["website", "mobile application"],
+      date: "September 2020",
+    },  
+    {
+      class:
+      "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
+
+
+      image: "/Screenshot/Screenshot%20(6).png",
+      title: "rejangpedia",
+      desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
+      link: "https://rejangpedia.vercel.app/",
+      framework: ["React", "NextJS", "MongoDB", "Bootstrap", "ImageKit.io"],
+      develop: ["website", "mobile application"],
+      date: "June 2023",
+    },
+    {
+      class:
+        "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
       image:
         "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
       title: "Contribute to Hexagrab",
@@ -11,28 +36,6 @@ function Portofolio() {
       framework: ["NextJS", "TailwindCSS"],
       develop: ["website"],
       date: "February 2025",
-    },
-    {
-      class:
-        "max-w-full h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded sm:col-span-1 lg:col-span-2",
-      image: "../../kamus.png",
-      title: "Kamus Bahasa Rejang",
-      desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
-      link: "https://kamusrejang.vercel.app",
-      framework: ["React", "NextJS", "MongoDB", "TailwindCSS"],
-      develop: ["website", "mobile application"],
-      date: "September 2020",
-    },
-    {
-      class:
-        "max-w-full sm:col-span-2 border-gray-700 bg-b hover:bg-gray-900 p-4 rounded-lg h-auto sm:col-span-2 super-rounded",
-      image: "https://rejangpedia.vercel.app/logo-icon.png",
-      title: "rejangpedia",
-      desc: "rejangpedia is an all-in application with a spirit of mutual cooperation form of digital literacy where everyone can participate.",
-      link: "https://rejangpedia.vercel.app/",
-      framework: ["React", "NextJS", "MongoDB", "Bootstrap", "ImageKit.io"],
-      develop: ["website", "mobile application"],
-      date: "June 2023",
     },
     {
       class:
@@ -60,7 +63,7 @@ function Portofolio() {
     {
       class:
         "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 sm:col-span-2 super-rounded h-auto",
-      image: "../../PVZ.png",
+      image: "/Screenshot/Screenshot%20(2).png",
       title: "Yunation",
       desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
       link: "https://yunation.glitch.me/",
@@ -201,7 +204,7 @@ function Portofolio() {
       class:
         "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
       image:
-        "https://ik.imagekit.io/9hpbqscxd/SG/image-86.jpg?updatedAt=1705798245623",
+        " /Screenshot/Screenshot%20(5).png",
       title: "Story Book",
       desc: "Online notes app by Fathin",
       link: "https://story-book-self.vercel.app/",
@@ -215,24 +218,22 @@ function Portofolio() {
     <>
       <article id="project" className="mb-8 p-1" style={{ marginTop: 30 }}>
         <h3
-          id="Name"
           data-aos="fade-up"
           data-aos-easing="linear"
-          className="text-6xl sm:text-8xl my-4 text-gray-200"
+          className="text-4xl my-4 text-gray-200"
           style={{ fontWeight: "bold" }}
         >
-          Projects
+          Yeah, i code them
         </h3>
-        <p className="text-lg text-gray-400 mb-6">
+        <p className="text-gray-400 mb-6">
           {" "}
-          My collection of projects, each filled with countless cherished
-          memories for Fathin.
+          This is my collection i made
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0">
           <a
             href="https://github.com/mfathinhalim"
             data-aos="zoom-in"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center"
+            className="text-white text-center super-rounded p-4 h-300 flex hover:bg-gray-700 border-gray-600 border bg-b items-center justify-center"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-github mr-1" aria-hidden="true" />
@@ -241,7 +242,7 @@ function Portofolio() {
           <a
             href="https://play.google.com/store/apps/dev?id=5920539852130258160"
             data-aos="zoom-in"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex hover:text-black hover:bg-orange-400 border-yellow-600 border bg-b items-center justify-center"
+            className="text-white text-center super-rounded p-4 h-300 flex hover:text-black hover:bg-orange-400 border-yellow-600 border bg-b items-center justify-center"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-google-play mr-1" aria-hidden="true" />
@@ -250,13 +251,13 @@ function Portofolio() {
           <a
             data-aos="zoom-in"
             href="https://codepen.io/MFathin-Halim-Doma"
-            className="text-xl text-white text-center super-rounded p-8 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700"
+            className="text-white text-center super-rounded p-4 h-300 flex items-center justify-center border bg-b border-green-700 hover:bg-green-700"
             style={{ textDecoration: "none !important" }}
           >
             <i className="fa-brands fa-codepen mr-1" aria-hidden="true" />
             Codepen
           </a>
-          {projects.map((project) => (
+          {(max ? projects.slice(0, max) : projects).map((project) => (
             <div
               key={project.title}
               data-aos="fade-up"
@@ -287,8 +288,7 @@ function Portofolio() {
                 style={{ objectFit: "cover", height: 300 }}
               />
               <a
-                id="Name"
-                className="text-2xl ease-in-out delay-150 mt-3 text-gray-300 font-semibold decoration-blue-500"
+                className="text-xl ease-in-out delay-150 mt-3 text-gray-300 font-semibold decoration-blue-500"
                 href={project.link}
               >
                 {project.title}
@@ -315,13 +315,22 @@ function Portofolio() {
             </div>
           ))}
         </div>
-        <a
-          href="../../CV.pdf"
-          className="inline-flex justify-center hover:text-gray-200 items-center py-2 px-6 mt-4 text-base font-medium text-center text-gray-200 rounded-full border border-gray-600 hover:bg-gray-600 focus:ring-4 focus:ring-gray-700"
-          download
-        >
-          Download Fathin's CV
-        </a>
+        {pathname === "/journey/" ? (
+          <a
+            href="../../CV.pdf"
+            className="inline-flex justify-center hover:text-gray-200 items-center py-2 mt-3 px-5 text-base font-medium text-center text-gray-200 rounded-full border border-gray-600 hover:bg-gray-600 focus:ring-4 focus:ring-gray-700"
+          >
+            Download CV
+            <i className="fa-solid fa-download ml-2" />
+          </a>
+        ) : (
+          <a
+            href="/journey/"
+            className="inline-flex justify-center hover:text-gray-200 items-center py-2 mt-3 px-5 text-base font-medium text-center text-gray-200 rounded-full border border-gray-600 hover:bg-gray-600 focus:ring-4 focus:ring-gray-700"
+          >
+            See Other Projects
+          </a>
+        )}
       </article>
     </>
   );
