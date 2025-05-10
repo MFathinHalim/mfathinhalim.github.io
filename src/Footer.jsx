@@ -9,7 +9,7 @@ function Footer() {
               M. Fathin Halim
             </h2>
             <p className="text-sm mb-4 text-justify">
-              an Indonesian developer very love programming but sometimes
+              a developer very love programming but sometimes
               capturing silly bugs.
             </p>
             <a

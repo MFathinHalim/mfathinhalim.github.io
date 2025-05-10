@@ -78,7 +78,7 @@ function Intro() {
             Hey, Nice to meet you
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed text-justify">
-            A passionate student from Indonesia who loves{" "}
+            A passionate programming student who loves{" "}
             <span className="font-semibold text-yellow-300">Programming</span>. I enjoy building educational and creative platforms that bring
             impact.
           </p>

@@ -31,7 +31,7 @@ function Award() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="font-bold text-white text-4xl m-3"
+          className="font-bold text-white text-4xl"
         >
           Award
         </h3>
