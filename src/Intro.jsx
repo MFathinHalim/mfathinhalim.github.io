@@ -81,10 +81,10 @@ function Intro() {
   return (
     <div className="text-white font-sans mx-auto">
       {/* Hero Section */}
-      <section className="grid pb-20 pt-7 grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="flex flex-col lg:flex-row justify-between items-center gap-12 pb-20 pt-7">
         <div
           id="contact"
-          className="lg:col-span-7 space-y-6"
+          className="w-full lg:w-7/12 space-y-6"
           data-aos="fade-right"
         >
           <h1 className="text-4xl leading-tight font-bold">
@@ -111,17 +111,17 @@ function Intro() {
         </div>
 
         <div
-          className="xl:relative w-full xl:h-[500px] lg:col-span-5"
+          className="xl:h-[500px] flex justify-center rounded-xl overflow-hidden"
           data-aos="fade-left"
         >
-          {/* Gambar besar kiri */}
           <img
-            src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
+            src="https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg"
             alt="Fathin 1"
-            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 xl:w-2/3 border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
+            className="h-full border border-gray-500/50 rounded-xl scale-125 hover:scale-[1.9] cursor-none shadow-xl transition-all duration-300 ease-in-out object-cover"
           />
         </div>
       </section>
+
       {/* Contact Section */}
       <section
         className={`mt-32 ${
@@ -320,10 +320,10 @@ function Intro() {
           Latest Instagram Posts
         </h2>
         <div className="flex justify-center rounded-xl overflow-hidden">
-            <div
-              className="elfsight-app-34fd1377-c484-4942-9043-99b6a5fd31ac"
-              data-elfsight-app-lazy
-            ></div>
+          <div
+            className="elfsight-app-34fd1377-c484-4942-9043-99b6a5fd31ac"
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </section>
     </div>

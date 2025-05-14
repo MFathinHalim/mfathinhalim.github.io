@@ -108,7 +108,7 @@ function Header() {
       username: "@mfathin_halim",
     },
   ];
-  
+
   return (
     <div>
       <section className="px-2 h-[100dvh] max-h-screen flex flex-col gap-4 md:justify-center items-center text-center w-screen relative overflow-hidden bg-[url('https://i.pinimg.com/originals/63/ca/65/63ca65a0fcf1dd9edcb8f060372abda9.gif')] bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black/70">
@@ -120,12 +120,16 @@ function Header() {
           className="text-3xl cursor-none font-extrabold md:text-7xl relative z-10"
         ></h1>
         <h2 className="text-white/50 font-bold md:text-3xl z-10">
-          Make <span className="font-bold bg-white/70 text-black px-3 rounded-full">Things</span>, Usually They Work
+          Make{" "}
+          <span className="font-bold bg-white/70 text-black px-3 rounded-full">
+            Things
+          </span>
+          , Usually They Work
         </h2>
         {/* IMAGE FOLLOW MOUSE */}
         <img
           ref={imageRef}
-          src="https://ik.imagekit.io/9hpbqscxd/SG/image-110.jpg?updatedAt=1705798245623"
+          src="https://ik.imagekit.io/yjtsof0mw/Txtr/image-wujud_aseli_gua-texter-5_14_2025.jpg"
           alt="Follow"
           className="
           z-50
@@ -143,26 +147,25 @@ function Header() {
           "
         />
 
-<div className="flex flex-col justify-center items-center w-screen px-3 pt-5 space-y-4 sm:flex-row sm:space-y-0">
-  {socials.map((social, index) => (
-    <a
-      key={index}
-      onMouseEnter={() => onHover(social.name)}
-      onMouseLeave={onLeave}
-      href={social.href}
-      className={`social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-2 px-4 md:py-4 md:px-6 md:text-xl sm:mx-4 font-medium rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-black hover:${social.color}`}
-    >
-      <i
-        className={`fa-brands ${social.icon} ${
-          hover === social.name || isMobile ? "pr-1" : ""
-        }`}
-        aria-hidden="true"
-      />
-      {hover === social.name || isMobile ? social.username : ""}
-    </a>
-  ))}
-</div>
-
+        <div className="flex flex-col justify-center items-center w-screen px-3 pt-5 space-y-4 sm:flex-row sm:space-y-0">
+          {socials.map((social, index) => (
+            <a
+              key={index}
+              onMouseEnter={() => onHover(social.name)}
+              onMouseLeave={onLeave}
+              href={social.href}
+              className={`social ease-in-out backdrop-blur-lg transition ease-in-out delay-150 duration-300 inline-flex justify-center items-center py-2 px-4 md:py-4 md:px-6 md:text-xl sm:mx-4 font-medium rounded-full border border-gray-500 hover:bg-white focus:ring-4 focus:ring-gray-400 hover:text-black hover:${social.color}`}
+            >
+              <i
+                className={`fa-brands ${social.icon} ${
+                  hover === social.name || isMobile ? "pr-1" : ""
+                }`}
+                aria-hidden="true"
+              />
+              {hover === social.name || isMobile ? social.username : ""}
+            </a>
+          ))}
+        </div>
       </section>
       <a
         href="https://in.pinterest.com/pin/297800594114406829/"

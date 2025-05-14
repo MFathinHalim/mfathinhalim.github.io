@@ -15,10 +15,10 @@ function Photography() {
     "https://ik.imagekit.io/9hpbqscxd/SG/image-97.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-77.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-89.jpg?updatedAt=1705798245623",
+    "./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-80.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-104.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-105.jpg?updatedAt=1705798245623",
+    "https://ik.imagekit.io/9hpbqscxd/SG/image-89.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-71.jpg?updatedAt=1705798245623",
   ];
 
@@ -42,7 +42,10 @@ function Photography() {
         const visibleHeight = window.innerHeight;
 
         const scrollWithin = Math.max(0, scrollY - topOffset);
-        const opacity = Math.min(1, scrollWithin / (containerHeight - visibleHeight / 2));
+        const opacity = Math.min(
+          1,
+          scrollWithin / (containerHeight - visibleHeight / 2)
+        );
 
         setScrollPosition(opacity);
       }
@@ -63,9 +66,7 @@ function Photography() {
             <div
               key={i}
               className={`relative overflow-hidden rounded-2xl shadow-md transition-all duration-300  group ${
-                i % 5 === 0
-                  ? "col-span-2 row-span-2"
-                  : "col-span-1 row-span-1"
+                i % 5 === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
               }`}
               data-aos={`zoom-in`}
             >
