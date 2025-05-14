@@ -426,10 +426,21 @@ p {
   transition: all 0.2s ease; /* Transisi lebar */
   max-width: 100%;
 }
+a[href*="https://elfsight.com/instagram-feed-instashow/?utm_source=websites&utm_medium=clients&utm_content=instashow&utm_term=localhost&utm_campaign=free-widget"] {
+  display: none !important;
+  opacity: none !important;
+}
 
 .social:hover {
   width: 220px; /* Lebar saat dihover */
 }
+
+.eapps-instagram-feed-posts-grid.eapps-instagram-feed-posts.es-layout.es-layout-grid.eapps-instagram-feed-posts-medium {
+  border-radius: 24px;
+  overflow: hidden; /* agar isi di dalamnya juga mengikuti rounded */
+}
+
+
 @media only screen and (max-width: 639px) {
   .social {
     width: 100%;

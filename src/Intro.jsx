@@ -13,6 +13,19 @@ function Intro() {
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
   const headerRef = useRef(null);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const elfsightBadge = document.querySelector(
+        'a[href*="elfsight.com/instagram-feed-instashow"]'
+      );
+      if (elfsightBadge) {
+        elfsightBadge.style.display = "none";
+        clearInterval(interval); // stop setelah ketemu dan disembunyikan
+      }
+    }, 500); // cek tiap 0.5 detik (karena Elfsight munculnya dinamis)
+
+    return () => clearInterval(interval); // bersihkan kalau komponen unmount
+  }, []);
 
   useEffect(() => {
     const elmnt = headerRef.current;
@@ -79,7 +92,8 @@ function Intro() {
           </h1>
           <p className="text-xl text-gray-300 leading-relaxed text-justify">
             A passionate programming student who loves{" "}
-            <span className="font-semibold text-yellow-300">Programming</span>. I enjoy building educational and creative platforms that bring
+            <span className="font-semibold text-yellow-300">Programming</span>.
+            I enjoy building educational and creative platforms that bring
             impact.
           </p>
           <a
@@ -101,17 +115,10 @@ function Intro() {
           data-aos="fade-left"
         >
           {/* Gambar besar kiri */}
-
-          {/* Gambar tengah */}
-          <img
-            src="https://ik.imagekit.io/9hpbqscxd/SG/image-76.jpg?updatedAt=1705798245623"
-            alt="Fathin 2"
-            className="hidden xl:inline absolute top-3/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-1/2 grayscale hover:grayscale-0 shadow-xl transition-all duration-300 ease-in-out object-cover"
-          />
           <img
             src="./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg"
             alt="Fathin 1"
-            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 z-10 xl:w-2/3 border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
+            className="xl:absolute xl:top-1/2 xl:left-1/3 xl:-translate-y-1/2 xl:w-2/3 border border-gray-500/50 shadow-xl transition-all duration-300 ease-in-out object-cover"
           />
         </div>
       </section>
@@ -306,8 +313,19 @@ function Intro() {
           ))}
         </div>
       </section>
-      <Portofolio max={1}/>
-
+      <Portofolio max={1} />
+      {/* Instagram Feed Section */}
+      <section className="my-10">
+        <h2 className="text-4xl font-bold text-white mb-4 text-center">
+          Latest Instagram Posts
+        </h2>
+        <div className="flex justify-center rounded-xl overflow-hidden">
+            <div
+              className="elfsight-app-34fd1377-c484-4942-9043-99b6a5fd31ac"
+              data-elfsight-app-lazy
+            ></div>
+        </div>
+      </section>
     </div>
   );
 }
