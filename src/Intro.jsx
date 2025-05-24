@@ -12,6 +12,13 @@ const ICONS = {
 function Intro() {
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
+  const [hover, setHover] = useState("");
+  console.log(hover);
+
+  const onLeave = () => {
+    setHover("");
+  };
+
   const headerRef = useRef(null);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -207,7 +214,15 @@ function Intro() {
       <section className="text-white" data-aos="fade-up">
         <div className="grid md:grid-cols-3 gap-5">
           {/* Frontend */}
-          <div className="bg-neutral-800/80 p-6 hover:border-neutral-500 transition-all rounded-2xl border border-white/10 shadow-lg">
+          <div
+            onMouseEnter={() => setHover("frontend")}
+            onMouseLeave={onLeave}
+            className={`bg-neutral-800/80 ${
+              (hover === "frontend" && "bg-yellow-300/30") ||
+              (hover === "backend" && "bg-green-400/30") ||
+              (hover === "tools" && "bg-blue-400/30")
+            } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
+          >
             <h3 className="text-xl font-semibold text-yellow-300 mb-3">
               Frontend
             </h3>
@@ -219,7 +234,15 @@ function Intro() {
             </ul>
           </div>
           {/* Backend */}
-          <div className="bg-neutral-800/80 p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg">
+          <div
+            onMouseEnter={() => setHover("backend")}
+            onMouseLeave={onLeave}
+            className={`bg-neutral-800/80 ${
+              (hover === "frontend" && "bg-yellow-300/30") ||
+              (hover === "backend" && "bg-green-400/30") ||
+              (hover === "tools" && "bg-blue-400/30")
+            } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
+          >
             <h3 className="text-xl font-semibold text-green-400 mb-3">
               Backend
             </h3>
@@ -231,7 +254,15 @@ function Intro() {
             </ul>
           </div>
           {/* Others */}
-          <div className="bg-neutral-800/80 p-6 rounded-2xl border  hover:border-neutral-500 transition-all border-white/10 shadow-lg">
+          <div
+            onMouseEnter={() => setHover("tools")}
+            onMouseLeave={onLeave}
+            className={`bg-neutral-800/80 ${
+              (hover === "frontend" && "bg-yellow-300/30") ||
+              (hover === "backend" && "bg-green-400/30") ||
+              (hover === "tools" && "bg-blue-400/30")
+            } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
+          >
             <h3 className="text-xl font-semibold text-blue-400 mb-3">
               Tools & Other Skills
             </h3>
@@ -254,55 +285,69 @@ function Intro() {
               row: 2,
               src: "https://cdn.worldvectorlogo.com/logos/javascript-r.svg",
               name: "JavaScript",
+              class: ["frontend", "backend"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg",
               name: "VS Code",
+              class: ["tools"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
               name: "React",
+              class: ["frontend"],
             },
             {
               col: 2,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
               name: "Python",
+              class: ["backend"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
               name: "TypeScript",
+              class: ["backend"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/android-5.svg",
               name: "Android",
+              class: ["tools"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
               name: "Bootstrap",
+              class: ["frontend"],
             },
             {
               col: 1,
               row: 1,
               src: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
               name: "Tailwind CSS",
+              class: ["tools"],
             },
           ].map((tool, i) => (
             <div
               key={i}
-              className={`col-span-${tool.col} row-span-${tool.row} bg-neutral-800/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 flex items-center justify-center shadow-xl hover:scale-[1.03] transition-all duration-300`}
-              data-aos="zoom-in"
+              className={`col-span-${tool.col} row-span-${tool.row} ${
+                tool.class.includes(hover)
+                  ? (hover === "frontend" && "bg-yellow-300/30") ||
+                    (hover === "backend" && "bg-green-400/30") ||
+                    (hover === "tools" && "bg-blue-400/30")
+                  : "bg-neutral-800/80"
+              } backdrop-blur-md border border-white/10 rounded-2xl p-6 flex items-center justify-center shadow-xl hover:scale-[1.03] transition-all duration-300`}
               title={tool.name}
+              onMouseEnter={() => setHover(tool.class[0])}
             >
               <img
                 src={tool.src}
