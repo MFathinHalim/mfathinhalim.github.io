@@ -27,9 +27,15 @@ function Intro() {
       );
       if (elfsightBadge) {
         elfsightBadge.style.display = "none";
-        clearInterval(interval); // stop setelah ketemu dan disembunyikan
       }
-    }, 500); // cek tiap 0.5 detik (karena Elfsight munculnya dinamis)
+      const unwantedLink = document.querySelector(
+        "a[href*='apps.elfsight.com/panel/applications/instashow']"
+      );
+      if (unwantedLink) {
+        unwantedLink.remove();
+        clearInterval(interval);
+      }
+    }, 500);
 
     return () => clearInterval(interval); // bersihkan kalau komponen unmount
   }, []);
@@ -81,7 +87,6 @@ function Intro() {
       document.onmousemove = null;
     };
   }, []);
-
   useEffect(() => {
     localStorage.setItem("contactPosition", JSON.stringify(position));
   }, [position]);
@@ -217,10 +222,8 @@ function Intro() {
           <div
             onMouseEnter={() => setHover("frontend")}
             onMouseLeave={onLeave}
-            className={`bg-neutral-800/80 ${
-              (hover === "frontend" && "bg-yellow-300/30") ||
-              (hover === "backend" && "bg-green-400/30") ||
-              (hover === "tools" && "bg-blue-400/30")
+            className={` ${
+              hover === "frontend" ? "bg-yellow-300/30" : "bg-neutral-800/80"
             } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
           >
             <h3 className="text-xl font-semibold text-yellow-300 mb-3">
@@ -237,10 +240,8 @@ function Intro() {
           <div
             onMouseEnter={() => setHover("backend")}
             onMouseLeave={onLeave}
-            className={`bg-neutral-800/80 ${
-              (hover === "frontend" && "bg-yellow-300/30") ||
-              (hover === "backend" && "bg-green-400/30") ||
-              (hover === "tools" && "bg-blue-400/30")
+            className={` ${
+              hover === "backend" ? "bg-green-400/30" : "bg-neutral-800/80"
             } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
           >
             <h3 className="text-xl font-semibold text-green-400 mb-3">
@@ -257,10 +258,8 @@ function Intro() {
           <div
             onMouseEnter={() => setHover("tools")}
             onMouseLeave={onLeave}
-            className={`bg-neutral-800/80 ${
-              (hover === "frontend" && "bg-yellow-300/30") ||
-              (hover === "backend" && "bg-green-400/30") ||
-              (hover === "tools" && "bg-blue-400/30")
+            className={` ${
+              hover === "tools" ? "bg-blue-400/30" : "bg-neutral-800/80"
             } p-6 rounded-2xl hover:border-neutral-500 transition-all border border-white/10 shadow-lg`}
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-3">

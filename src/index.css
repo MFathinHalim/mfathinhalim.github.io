@@ -430,7 +430,10 @@ a[href*="https://elfsight.com/instagram-feed-instashow/?utm_source=websites&utm_
   display: none !important;
   opacity: none !important;
 }
-
+a[href*="https://apps.elfsight.com/panel/applications/instashow/?utm_source=websites&utm_medium=clients&utm_content=instagram-feed&utm_term=localhost:5173&utm_campaign=deactivated-widget&show_pricing=true"] {
+  display: none !important;
+  opacity: none !important; 
+}
 .social:hover {
   width: 220px; /* Lebar saat dihover */
 }
