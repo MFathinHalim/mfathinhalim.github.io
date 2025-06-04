@@ -3,7 +3,7 @@ function Portofolio({ max }) {
   const projects = [
     {
       class:
-      "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
+        "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
       image: "/Screenshot/Screenshot%20(7).png",
       title: "Kamus Bahasa Rejang",
       desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
@@ -11,11 +11,10 @@ function Portofolio({ max }) {
       framework: ["React", "NextJS", "MongoDB", "TailwindCSS"],
       develop: ["website", "mobile application"],
       date: "September 2020",
-    },  
+    },
     {
       class:
-      "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
-
+        "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-900 p-4 super-rounded",
 
       image: "/Screenshot/Screenshot%20(6).png",
       title: "rejangpedia",
@@ -180,13 +179,13 @@ function Portofolio({ max }) {
       class:
         "max-w-full border-gray-600 border bg-b hover:bg-gray-900 p-4 rounded-lg h-auto super-rounded sm:col-span-2 lg:col-span-1",
       image:
-        "https://ik.imagekit.io/9hpbqscxd/SG/image-85.jpg?updatedAt=1705798245623",
-      title: "Empire of Caveine",
-      desc: "Empire of Caveine page concept.",
-      link: "https://caveine.glitch.me/",
-      framework: ["Bootstrap", "HTML"],
+        "https://i.pinimg.com/736x/4f/e1/79/4fe179337e0feede1f9192c1bc536a10.jpg",
+      title: "Fathin's Anime List",
+      desc: "Fathin's anime list... A simple website to search anime.",
+      link: "https://fanimelist.vercel.app/",
+      framework: ["TailwindCSS", "NextJS"],
       develop: ["website"],
-      date: "January 2025",
+      date: "June 2025",
     },
     {
       class:
@@ -203,8 +202,7 @@ function Portofolio({ max }) {
     {
       class:
         "max-w-full border-gray-700 bg-b hover:bg-gray-900 sm:col-span-2 p-4 rounded-lg h-auto super-rounded",
-      image:
-        " /Screenshot/Screenshot%20(5).png",
+      image: " /Screenshot/Screenshot%20(5).png",
       title: "Story Book",
       desc: "Online notes app by Fathin",
       link: "https://story-book-self.vercel.app/",
@@ -225,10 +223,7 @@ function Portofolio({ max }) {
         >
           Yeah, i code them
         </h3>
-        <p className="text-gray-400 mb-6">
-          {" "}
-          This is my collection i made
-        </p>
+        <p className="text-gray-400 mb-6"> This is my collection i made</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-0">
           <a
             href="https://github.com/mfathinhalim"
