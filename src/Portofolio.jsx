@@ -76,6 +76,18 @@ function Portfolio({ max }) {
     },
     {
       class:
+        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+      image:
+        "https://i.pinimg.com/736x/0e/37/5c/0e375c0d864cb30410be98d8fcdf4b09.jpg",
+      title: "Fanimelist",
+      desc: "Anime List made by M.Fathin Halim",
+      link: "https://fanimelist.vercel.app/",
+      framework: ["Tailwind", "NextJS"],
+      develop: ["website"],
+      date: "June 2025",
+    },
+    {
+      class:
         "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-50 p-4 super-rounded",
 
       image: "/Screenshot/Screenshot%20(6).png",
