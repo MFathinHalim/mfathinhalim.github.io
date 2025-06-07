@@ -3,7 +3,7 @@ import React from "react";
 function ProjectCard({ project }) {
   return (
     <div
-      className={`border bg-b hover:bg-gray-50 p-4 super-rounded ${project.class}`}
+      className={`border bg-b hover:bg-gray-50 py-4 super-rounded ${project.class}`}
     >
       <div className="flex flex-wrap gap-2 mb-2">
         <span className="px-3 py-1 text-xs font-semibold text-gray-800 bg-gray-200 rounded-lg border-2 border-transparent">
@@ -112,7 +112,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
+        "max-w-full border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image: "https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg",
       title: "Shared Gallery",
       desc: "You can share cherished moments through images.",
@@ -156,7 +156,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image: "https://media.tenor.com/t9pwGPO3TpoAAAAM/apt.gif",
       title: "Cardcozy",
       desc: "Cardcozy is ai quote web to confess feeling to other!",
@@ -202,7 +202,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
+        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       title: "Learn JS",
@@ -239,53 +239,59 @@ function Portfolio({ max }) {
   ];
 
   return (
-    <>
-      <section className="socials mb-4 grid grid-cols-4 grid-cols-8 md:grid-cols-10 xl:grid-cols-12 gap-3 max-w-[900px] m-auto">
+    <div className="py-8">
+      <section className="socials my-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <a
-          href="https://github.com/fathin-jihadijih"
+          href="https://github.com/MFathinHalim"
           target="_blank"
+          className="w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2 col-span-3 lg:col-span-1"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-github fa-xl cursor-pointer hover:text-blue-600"></i>
+          <i className="fa-brands fa-github fa-xl cursor-pointer hover:text-blue-600 mr-2"></i>{" "}
+          GitHub
         </a>
         <a
           href="https://play.google.com/store/apps/dev?id=9479403092297008477"
           target="_blank"
+          className="w-full border-gray-700 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-google-play fa-xl cursor-pointer hover:text-green-600"></i>
+          <i className="fa-brands fa-google-play fa-xl cursor-pointer hover:text-green-600 mr-2"></i>
+          Google Play
         </a>
         <a
-          href="https://codepen.io/fathin-jihadijih"
+          href="https://codepen.io/mfathinhalim"
           target="_blank"
+          className="w-full border-gray-700 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
           rel="noreferrer"
         >
-          <i className="fa-brands fa-codepen fa-xl cursor-pointer hover:text-black"></i>
+          <i className="fa-brands fa-codepen fa-xl cursor-pointer hover:text-black mr-2"></i>
+          Codepen
         </a>
       </section>
 
       <section
         id="projects"
-        className="max-w-[1100px] m-auto grid grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-5"
+        className="grid grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-5"
       >
         {(max ? projects.slice(0, max) : projects).map((project, i) => (
           <ProjectCard key={i} project={project} />
         ))}
       </section>
 
-      <section className="flex flex-wrap justify-center gap-3 mt-6 mb-10 max-w-[900px] m-auto">
+      <section className="flex flex-wrap gap-3 mt-6 mb-10 ">
         {pathname !== "/journey/" ? (
           <a
             href="/journey/"
-            className="btn-green"
+            className="border px-5 border-black hover:bg-gray-50 py-2"
             style={{ borderRadius: 9999 }}
           >
             View Journey
           </a>
         ) : (
           <a
-            href="/public/Fathin_Jihadi_Jih.pdf"
-            className="btn-green"
+            href="/public/CV.pdf"
+            className="border px-5 border-black hover:bg-gray-50 py-2"
             style={{ borderRadius: 9999 }}
             download
           >
@@ -293,7 +299,7 @@ function Portfolio({ max }) {
           </a>
         )}
       </section>
-    </>
+    </div>
   );
 }
 
