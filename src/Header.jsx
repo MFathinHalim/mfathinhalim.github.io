@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import DarkModeToggle from "./DarkModeToggle";
 
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
@@ -25,6 +26,8 @@ const ICONS = {
 
 function Header() {
   const headerRef = useRef(null);
+  const audioOpenRef = useRef(null);
+  const audioCloseRef = useRef(null);
 
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
@@ -64,6 +67,15 @@ function Header() {
       setPosition({ top: centerTop, left: centerLeft });
     }
   }, []);
+  useEffect(() => {
+    if (showContact && audioOpenRef.current) {
+      audioOpenRef.current.currentTime = 0;
+      audioOpenRef.current.play().catch((e) => {
+        console.warn("Gagal play sound open:", e);
+      });
+    }
+  }, [showContact]);
+
   useEffect(() => {
     const elmnt = headerRef.current;
     let pos1 = 0,
@@ -114,10 +126,11 @@ function Header() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-20 md:py-32 bg-gray-50">
+      <section className="sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white h-screen">
+        <DarkModeToggle />
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
-            className="h-[170px] w-[170px] md:h-[190px] md:w-[350px] rounded-full object-cover"
+            className="h-[170px] w-[170px] md:h-[175px] md:w-[350px] rounded-full object-cover"
             src="https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg"
             animate={{ y: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -140,7 +153,7 @@ function Header() {
               </motion.h2>
             </AnimatePresence>
 
-            <p className="max-w-xl text-gray-700 text-justify md:text-left text-lg">
+            <p className="max-w-xl text-gray-700 dark:text-gray-200/80 text-justify md:text-left text-lg">
               I am an indie developer and designer based in Indonesia,
               specializing in crafting intuitive and visually compelling digital
               experiences. I focus on creating products that seamlessly blend
@@ -152,7 +165,7 @@ function Header() {
             </p>
             <div className="flex flex-row items-center gap-3 mt-5">
               <a
-                className="inline-block px-6 font-bold py-3 hover:text-black hover:bg-transparent border border-black rounded-xl bg-black text-white transition"
+                className="inline-block px-6 font-bold py-3 hover:text-black hover:bg-transparent border border-black rounded-xl bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white/60 transition"
                 href="https://github.com/mfathinhalim"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -161,7 +174,7 @@ function Header() {
               </a>
               <button
                 onClick={() => setShowContact((prev) => !prev)}
-                className="inline-block px-6 font-bold py-3 bg-transparent border border-black rounded-xl hover:bg-black hover:text-white transition"
+                className="inline-block px-6 font-bold py-3 dark:hover:bg-white dark:hover:text-black dark:border-white bg-transparent border border-black rounded-xl hover:bg-black hover:text-white transition"
               >
                 Contact
               </button>
@@ -194,21 +207,29 @@ function Header() {
                 cursor: "grab",
                 zIndex: 9999,
               }}
-              className="opacity-100  border border-stone-700 rounded-2xl bg-white"
+              className="opacity-100  border border-stone-700 rounded-2xl bg-white dark:bg-stone-800 dark:text-white transition-transform duration-300 ease-in-out pointer-events-auto"
             >
               <div className="prevent-select rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw] md:w-[600px]">
                 {/* Header Bar */}
                 <div
                   id="header"
                   ref={headerRef}
-                  className="flex items-center bg-black rounded-t-2xl p-3"
+                  className="flex items-center bg-black dark:bg-stone-900 rounded-t-2xl p-3"
                 >
                   <div className="flex justify-between w-full px-2 space-x-2">
                     <p className="text-white">Contact Me</p>
                     <button
-                      onClick={() => setShowContact(false)}
+                      onClick={() => {
+                        if (audioCloseRef.current) {
+                          audioCloseRef.current.currentTime = 0;
+                          audioCloseRef.current.play().catch((e) => {
+                            console.warn("Gagal play sound close:", e);
+                          });
+                        }
+                        setShowContact(false);
+                      }}
                       className="w-5 h-5 bg-red-400 hover:bg-red-500 rounded-full"
-                    ></button>{" "}
+                    ></button>
                   </div>
                 </div>
 
@@ -217,7 +238,7 @@ function Header() {
                   <h2 className="text-2xl font-bold" draggable="false">
                     Let’s <span className="font-bold">Connect</span> 🤝
                   </h2>
-                  <p className="text-gray-600 mt-2">
+                  <p className="text-gray-600 mt-2 dark:text-gray-200/80">
                     Whether you're a fellow dev, a curious learner, or just want
                     to say hi — I’d love to hear from you!
                   </p>
@@ -275,9 +296,11 @@ function Header() {
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="flex justify-center w-full mt-10"
         >
-          <ChevronDown className="w-6 h-6 text-gray-400" />
+          <ChevronDown className="w-6 h-6 text-stone-400" />
         </motion.div>
       </section>
+      <audio ref={audioOpenRef} src="/public/open.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/public/close.mp3" preload="auto" />
     </>
   );
 }

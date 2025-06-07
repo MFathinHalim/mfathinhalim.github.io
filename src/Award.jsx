@@ -29,18 +29,21 @@ function Award() {
           data-aos="fade-up"
           data-aos-easing="linear"
           data-aos-duration={1000}
-          className="font-bold text-4xl"
+          className="font-bold text-4xl dark:text-white"
         >
           Award
         </h3>
-        <p className="text-lg text-gray-400 mb-6">
+        <p className="text-lg text-stone-400">
           {" "}
           Acknowledging achievements and milestones.
         </p>
 
         {awards.map((award) => (
           <>
-            <div key={award.name} className={`grid gap-6 mt-10`}>
+            <div
+              key={award.name}
+              className={`grid gap-6 mt-10 dark:text-white`}
+            >
               {award.img.length > 0 && (
                 <section
                   className={`grid grid-cols-${award.img.length} gap-6`} // Set grid columns dynamically based on number of images

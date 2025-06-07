@@ -9,6 +9,7 @@ import SkillsTools from "./SkillsTools.jsx";
 import Footer from "./Footer.jsx";
 import Service from "./Service.jsx";
 import Photography from "./Photography.jsx";
+import { ThemeProvider } from "./contect/ThemeProvider.jsx";
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
@@ -18,14 +19,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <div className="rounded-xl">
+    <ThemeProvider>
+      <div className="dark:bg-stone-900">
         <Header />
         <Intro />
         <SkillsTools />
         <Service />
         <Photography />
-        <div className="flex bg-gray-50 rounded-3xl flex-wrap px-4 py-20 md:px-10 mx-auto ">
+        <div className="flex bg-gray-50 dark:bg-stone-800 dark:text-white flex-wrap px-4 py-20 md:px-10 mx-auto ">
           {/* Left Section with Image */}
           <div className="w-full md:w-1/2 pt-3 mb-3">
             <h3
@@ -34,7 +35,7 @@ function App() {
             >
               <p
                 id="Name"
-                className="text-sm bg-gray-700 text-white p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold"
+                className="text-sm bg-stone-700 text-white p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold"
                 style={{ width: "fit-content" }}
               >
                 FAQ
@@ -47,8 +48,8 @@ function App() {
             data-aos="fade-up"
           >
             <div className="space-y-4">
-              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-                <i className="fa-solid fa-code text-black text-3xl mr-4"></i>
+              <div className="hover:-translate-y-1 transition-all border border-black dark:border-white/40 p-4 flex items-center">
+                <i className="fa-solid fa-code text-black dark:text-white/80 text-3xl mr-4"></i>
                 <div>
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Does Fathin&apos;s parent also programmers?
@@ -56,8 +57,8 @@ function App() {
                   <p className=" mt-2">No, they are not programmers :)</p>
                 </div>
               </div>
-              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-                <i className="fa-solid fa-clock text-black text-4xl mr-4"></i>
+              <div className="hover:-translate-y-1 transition-all border border-black dark:border-white/40 p-4 flex items-center">
+                <i className="fa-solid fa-clock text-black dark:text-white/80 text-4xl mr-4"></i>
                 <div>
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Since when did Fathin learn programming?
@@ -67,8 +68,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-                <i className="fa-solid fa-gamepad text-black text-3xl mr-4"></i>
+              <div className="hover:-translate-y-1 transition-all border border-black dark:border-white/40 p-4 flex items-center">
+                <i className="fa-solid fa-gamepad text-black dark:text-white/80 text-3xl mr-4"></i>
                 <div>
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Why did Fathin study programming?
@@ -82,14 +83,14 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="relative py-10 md:py-32 border-b-4 bg-gray-100 px-10 lg:px-64 rounded-b-[32px] md:rounded-b-[64px] mx-auto">
+        <div className="relative py-10 md:py-32 border-b-4 dark:border-stone-600 bg-gray-100 dark:bg-stone-900 dark:text-white px-10 lg:px-64 rounded-b-[32px] md:rounded-b-[64px] mx-auto">
           {/* Amplop penutup */}
 
           {/* Form Kontak */}
-          <h2 className="text-4xl font-extrabold text-center mb-4">
+          <h2 className="text-4xl font-extrabold text-center mb-2">
             GET IN TOUCH
           </h2>
-          <p className="text-center text-gray-500 mb-6">
+          <p className="text-center text-gray-500 dark:text-white/60 mt-0 pt-0 mb-6">
             Have a project you’d like to bring to life? Let’s collaborate!
           </p>
           <form
@@ -134,9 +135,9 @@ function App() {
             </div>
           </form>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </ThemeProvider>
   );
 }
 

@@ -1,26 +1,35 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Screenshoot from "./Screenshoot";
 
 function Intro() {
   const [showContact, setShowContact] = useState(false);
-
+  const audioOpenRef = useRef(null);
+  const audioCloseRef = useRef(null);
+  useEffect(() => {
+    if (showContact && audioOpenRef.current) {
+      audioOpenRef.current.currentTime = 0;
+      audioOpenRef.current.play().catch((e) => {
+        console.warn("Gagal play sound open:", e);
+      });
+    }
+  }, [showContact]);
   return (
     <>
-      <div className="bg-gray-100 py-16 px-2 md:px-20">
-        <div className="border pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto">
+      <div className="bg-gray-100 dark:bg-stone-800 dark:text-stone-200 py-16 px-2 md:px-20">
+        <div className="border dark:border-white/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto">
           <Screenshoot />
 
           <div className="px-2 md:px-6 md:pt-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mt-4 leading-snug">
               Check My Journey of Programming
             </h2>
-            <p className="text-gray-600 mb-5 mt-2 text-lg">
+            <p className="text-gray-600 dark:text-gray-200/50 mb-5 mt-2 text-lg">
               A collection of apps, experiments, and challenges I've built over
               time.
             </p>
             <button
               onClick={() => setShowContact((prev) => !prev)}
-              className="bg-black px-5 mt-0 text-white py-3 rounded-full"
+              className="bg-black dark:bg-white dark:text-black px-5 mt-0 text-white py-3 rounded-full"
             >
               Check Now
             </button>
@@ -38,14 +47,22 @@ function Intro() {
               <div className="flex justify-between w-full px-2 space-x-2">
                 <p className="text-white">My Work</p>
                 <button
-                  onClick={() => setShowContact(false)}
+                  onClick={() => {
+                    if (audioCloseRef.current) {
+                      audioCloseRef.current.currentTime = 0;
+                      audioCloseRef.current.play().catch((e) => {
+                        console.warn("Gagal play sound close:", e);
+                      });
+                    }
+                    setShowContact(false);
+                  }}
                   className="w-5 h-5 bg-red-400 hover:bg-red-500 rounded-full"
                 ></button>
               </div>
             </div>
 
             {/* Content (Iframe) */}
-            <div className="h-[calc(93vh-50px)]">
+            <div className="h-[calc(93vh-50px)] dark:bg-stone-900">
               <iframe
                 src="/journey/"
                 title="Journey Page"
@@ -56,6 +73,8 @@ function Intro() {
           </div>
         </section>
       )}
+      <audio ref={audioOpenRef} src="/public/open2.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/public/close.mp3" preload="auto" />
     </>
   );
 }

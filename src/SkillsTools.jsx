@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const tools = [
   {
@@ -29,7 +29,7 @@ const tools = [
   },
   {
     name: "Next.js",
-    icon: "https://cdn.worldvectorlogo.com/logos/nextjs-2.svg",
+    icon: "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png",
     skills: [
       "web development",
       "next.js routing",
@@ -150,18 +150,27 @@ const highlightColors = [
 
 export default function SkillsTools() {
   const [hoveredSkills, setHoveredSkills] = useState([]);
+  const shineSoundRef = useRef(null);
 
   return (
-    <div className="md:pr-8 py-5 md:py-32 bg-gray-50">
+    <div className="md:pr-8 py-5 md:py-32 bg-gray-50 dark:bg-stone-900 dark:text-stone-200">
       <div className="grid md:grid-cols-2 gap-8 px-4 md:pl-20 md:pr-10">
         {/* Tool Icons */}
         <div className="grid grid-cols-4 gap-4">
           {tools.map((tool, i) => (
             <div
               key={i}
-              onMouseEnter={() => setHoveredSkills(tool.skills)}
+              onMouseEnter={() => {
+                setHoveredSkills(tool.skills);
+                if (shineSoundRef.current) {
+                  shineSoundRef.current.currentTime = 0;
+                  shineSoundRef.current
+                    .play()
+                    .catch((e) => console.warn("Gagal play sound:", e));
+                }
+              }}
               onMouseLeave={() => setHoveredSkills([])}
-              className="group w-20 h-20 bg-white border border-gray-200 rounded-full flex items-center justify-center transition-transform hover:scale-105 cursor-pointer"
+              className="group w-20 h-20 bg-white dark:bg-stone-900 dark:border-gray-200/20 border border-gray-200 rounded-full flex items-center justify-center transition-transform hover:scale-105 cursor-pointer"
               title={tool.name}
             >
               <img
@@ -189,7 +198,7 @@ export default function SkillsTools() {
                   className={`text-sm py-1 px-2 rounded-lg transition-all duration-300 whitespace-nowrap ${
                     isHovered
                       ? `${colorClass} font-semibold shadow`
-                      : "text-gray-700"
+                      : "text-gray-700 dark:text-gray-300 "
                   }`}
                 >
                   {skill}
@@ -199,6 +208,7 @@ export default function SkillsTools() {
           </div>
         </div>
       </div>
+      <audio ref={shineSoundRef} src="/public/shine.mp3" preload="auto" />
     </div>
   );
 }

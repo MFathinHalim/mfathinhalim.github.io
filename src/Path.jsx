@@ -45,31 +45,33 @@ function Path() {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl my-8 "
+        className="text-4xl my-8 dark:text-white"
         style={{ fontWeight: "bold" }}
       >
         Timeline
       </h3>
-      <ol className="relative border-s border-gray-300 dark:border-gray-600">
+      <ol className="relative border-s border-gray-300 dark:border-stone-600">
         {timelineData.map((item, index) => (
           <li key={index} className="mb-5 ms-4">
             {/* Lingkaran di timeline */}
             <div
-              className={`absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-black`}
+              className={`absolute w-3 h-3 bg-black dark:bg-stone-600 rounded-full mt-1.5 -start-1.5 border border-black`}
             />
             {/* Tanggal timeline */}
             <time
               className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
                 index === 0
-                  ? "border border-black px-2 text-black"
-                  : "bg-gray-600 text-white"
+                  ? "border border-black px-2 text-black dark:bg-white"
+                  : "bg-gray-600 text-white dark:bg-white/40 dark:text-white"
               }`}
             >
               {item.date}
             </time>
             {/* Judul dan deskripsi timeline */}
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-base font-normal text-gray-700 dark:text-gray-400">
+            <h3 className="text-lg font-semibold dark:text-white">
+              {item.title}
+            </h3>
+            <p className="text-base font-normal text-gray-700 dark:text-stone-300/80">
               {item.description}
             </p>
           </li>

@@ -11,6 +11,7 @@ import Footer from "./Footer.jsx";
 import Screenshoot from "./Screenshoot.jsx";
 import ScrollingText from "./ScrollingText.jsx";
 import MarqueeText from "./TextHorizontal.jsx";
+import { ThemeProvider } from "./contect/ThemeProvider.jsx";
 
 //@ts-ignore
 /* eslint-disable react/prop-types */
@@ -91,7 +92,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <ThemeProvider>
       <div
         className={`custom-cursor`}
         id="cursor2"
@@ -108,7 +109,7 @@ function App() {
           <a
             id="Name"
             href="https://www.youtube.com/@mfathinhalim"
-            className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold"
+            className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-white"
           >
             Check Out TVRI National Coverage About Me
           </a>
@@ -121,7 +122,7 @@ function App() {
       <div className="parallax">
         <Footer />
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 

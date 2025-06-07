@@ -3,16 +3,16 @@ import React from "react";
 function ProjectCard({ project }) {
   return (
     <div
-      className={`border bg-b hover:bg-gray-50 py-4 super-rounded ${project.class}`}
+      className={`border bg-b hover:bg-gray-50 dark:hover:bg-stone-800 py-4 super-rounded ${project.class}`}
     >
       <div className="flex flex-wrap gap-2 mb-2">
-        <span className="px-3 py-1 text-xs font-semibold text-gray-800 bg-gray-200 rounded-lg border-2 border-transparent">
+        <span className="px-3 py-1 text-xs font-semibold text-gray-800 bg-stone-200 rounded-lg border-2 border-transparent">
           {project.date}
         </span>
         {project.develop.map((tag) => (
           <span
             key={tag}
-            className="px-3 py-1 text-xs font-semibold text-white bg-gray-700 rounded-lg border-2 border-transparent"
+            className="px-3 py-1 text-xs font-semibold text-white bg-gray-700 dark:bg-stone-600 rounded-lg border-2 border-transparent"
           >
             {tag}
           </span>
@@ -39,18 +39,18 @@ function ProjectCard({ project }) {
         {project.framework.map((fw) => (
           <span
             key={fw}
-            className="px-3 py-1 text-xs font-semibold border border-gray-600 rounded-full"
+            className="px-3 py-1 text-xs font-semibold border border-stone-600 rounded-full"
           >
             {fw}
           </span>
         ))}
       </div>
 
-      <p className="text-gray-600">{project.desc}</p>
+      <p className="text-gray-600 dark:text-gray-300/60">{project.desc}</p>
 
       <a
         href={project.link}
-        className="inline-flex items-center justify-center mt-3 px-5 py-2 text-base font-medium border border-gray-600 rounded-full hover:bg-gray-200"
+        className="inline-flex items-center dark:hover:bg-stone-700 justify-center mt-3 px-5 py-2 text-base font-medium border border-stone-600 rounded-full hover:bg-gray-200"
         style={{ marginBottom: 2 }}
       >
         Visit
@@ -65,7 +65,7 @@ function Portfolio({ max }) {
   const projects = [
     {
       class:
-        "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-50 p-4 super-rounded",
+        "max-w-full col-span-3 h-auto border-stone-600 border bg-b hover:bg-gray-50 p-4 super-rounded",
       image: "/Screenshot/Screenshot%20(7).png",
       title: "Kamus Bahasa Rejang",
       desc: "A digital dictionary application that helps users understand and learn the Rejang language, one of the regional languages in Indonesia.",
@@ -76,7 +76,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
       image:
         "https://i.pinimg.com/736x/0e/37/5c/0e375c0d864cb30410be98d8fcdf4b09.jpg",
       title: "Fanimelist",
@@ -88,7 +88,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full col-span-3 h-auto border-gray-600 border bg-b hover:bg-gray-50 p-4 super-rounded",
+        "max-w-full col-span-3 h-auto border-stone-600 border bg-b hover:bg-gray-50 p-4 super-rounded",
 
       image: "/Screenshot/Screenshot%20(6).png",
       title: "rejangpedia",
@@ -100,7 +100,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full col-span-3 border border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto col-span-3 super-rounded",
+        "max-w-full col-span-3 border border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto col-span-3 super-rounded",
       image:
         "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
       title: "Contribute to Hexagrab",
@@ -112,7 +112,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded lg:col-span-1 col-span-3",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded lg:col-span-1 col-span-3",
       image:
         "https://ik.imagekit.io/9hpbqscxd/SG/image-66.jpg?updatedAt=1705798245623",
       title: "Texter",
@@ -124,7 +124,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image: "https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg",
       title: "Shared Gallery",
       desc: "You can share cherished moments through images.",
@@ -135,7 +135,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
       image: "/Screenshot/Screenshot%20(2).png",
       title: "Yunation",
       desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
@@ -146,7 +146,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
       image: "../../images",
       title: "My Simple Notes",
       desc: "A website to store and organize notes. This platform offers a simple solution for users to securely save their valuable insights and learnings.",
@@ -157,7 +157,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
       image: "../../medium.jpg",
       title: "Cerdas AI",
       desc: "A user-friendly bot app that brings AI to everyone.",
@@ -168,7 +168,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image: "https://media.tenor.com/t9pwGPO3TpoAAAAM/apt.gif",
       title: "Cardcozy",
       desc: "Cardcozy is ai quote web to confess feeling to other!",
@@ -179,7 +179,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
       image:
         "https://img.itch.zone/aW1hZ2UvMTg0MzUyMy8xMDgxODczMy5wbmc=/347x500/i8%2FXQY.png",
       title: "Plane vs Zombie",
@@ -191,7 +191,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
       image: "../../logo(1).png",
       title: "SMP Negeri 1 Rejang Lebong's Website",
       desc: "Website page for SMP Negeri 1 Rejang Lebong.",
@@ -202,7 +202,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
       image:
         "https://cdn.glitch.global/415b2a45-a913-4f2c-96ca-b6598c3c6e8a/logo.png?v=1718077655964",
       title: "Fathin Chat",
@@ -214,7 +214,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       title: "Learn JS",
@@ -226,7 +226,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
       image:
         "https://i.pinimg.com/originals/44/94/3b/44943b3d9b339f4b8eac2efd27024411.png",
       title: "Domainshort",
@@ -238,7 +238,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
       image:
         "https://ik.imagekit.io/9hpbqscxd/SG/image-83.jpg?updatedAt=1705798245623",
       title: "IMPHNEN",
@@ -251,12 +251,12 @@ function Portfolio({ max }) {
   ];
 
   return (
-    <div className="py-8">
+    <div className="py-8 dark:text-white">
       <section className="socials my-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <a
           href="https://github.com/MFathinHalim"
           target="_blank"
-          className="w-full border-gray-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2 col-span-3 lg:col-span-1"
+          className="w-full border-stone-600 border bg-b dark:hover:bg-stone-800 hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2 col-span-3 lg:col-span-1"
           rel="noreferrer"
         >
           <i className="fa-brands fa-github fa-xl cursor-pointer hover:text-blue-600 mr-2"></i>{" "}
@@ -265,7 +265,7 @@ function Portfolio({ max }) {
         <a
           href="https://play.google.com/store/apps/dev?id=9479403092297008477"
           target="_blank"
-          className="w-full border-gray-700 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
+          className="w-full border-stone-700 border bg-b dark:hover:bg-stone-800 hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
           rel="noreferrer"
         >
           <i className="fa-brands fa-google-play fa-xl cursor-pointer hover:text-green-600 mr-2"></i>
@@ -274,7 +274,7 @@ function Portfolio({ max }) {
         <a
           href="https://codepen.io/mfathinhalim"
           target="_blank"
-          className="w-full border-gray-700 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
+          className="w-full border-stone-700 border bg-b dark:hover:bg-stone-800 hover:bg-gray-50 p-4 h-auto super-rounded flex items-center justify-center space-x-2"
           rel="noreferrer"
         >
           <i className="fa-brands fa-codepen fa-xl cursor-pointer hover:text-black mr-2"></i>
