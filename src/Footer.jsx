@@ -1,29 +1,26 @@
 function Footer() {
   return (
     <>
-      <footer className="border-t border-gray-700/50 bg-black text-gray-300 pt-12 pb-5 mt-16">
-        <div className="px-5 md:px-32 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <footer className="text-gray-800 bg-gray-50 pb-5 pt-16">
+        <div className="px-5 md:px-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-2">
-              M. Fathin Halim
-            </h2>
+            <h2 className=" text-xl font-bold mb-2">M. Fathin Halim</h2>
             <p className="text-sm mb-4 text-justify">
-              a developer very love programming but sometimes
-              capturing silly bugs.
+              a developer very love programming but sometimes capturing silly
+              bugs.
             </p>
             <a
               href="mailto:halimfathin7@gmail.com"
-              className="inline-flex items-center px-4 py-2 border border-white rounded-md text-white hover:bg-white hover:text-black transition-all text-sm font-semibold"
+              className="inline-flex items-center px-4 py-2 border border-black rounded-md  hover:bg-white hover:text-black transition-all text-sm font-semibold"
             >
               Let's collaborate
-              <span className="ml-2">↗</span>
             </a>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="text-white font-semibold mb-3">Navigation</h3>
+            <h3 className=" font-semibold mb-3">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="hover:underline">
@@ -45,7 +42,7 @@ function Footer() {
 
           {/* Skills / Focus */}
           <div>
-            <h3 className="text-white font-semibold mb-3">Favorites</h3>
+            <h3 className=" font-semibold mb-3">Favorites</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
@@ -84,10 +81,10 @@ function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="text-white font-semibold mb-3">Connect</h3>
+            <h3 className=" font-semibold mb-3">Connect</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <i className="fa-brands fa-github text-white"></i>
+                <i className="fa-brands fa-github "></i>
                 <a
                   href="https://github.com/MFathinHalim"
                   target="_blank"
@@ -97,7 +94,7 @@ function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fa-brands fa-instagram text-white"></i>
+                <i className="fa-brands fa-instagram "></i>
                 <a
                   href="https://instagram.com/@mfathin_halim"
                   target="_blank"
@@ -107,7 +104,7 @@ function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fa-brands fa-linkedin text-white"></i>
+                <i className="fa-brands fa-linkedin "></i>
                 <a
                   href="https://linkedin.com/in/mfathinhalim"
                   target="_blank"
@@ -117,7 +114,7 @@ function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fa-solid fa-envelope text-white"></i>
+                <i className="fa-solid fa-envelope "></i>
                 <a
                   href="mailto:halimfathin7@gmail.com"
                   className="hover:underline"

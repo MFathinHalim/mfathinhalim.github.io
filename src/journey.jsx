@@ -39,7 +39,7 @@ const LazyLoadIframe = ({ src }) => {
             width: "100%",
             paddingBottom: "56.25%", // 16:9
           }}
-          className="rounded-2xl overflow-hidden"
+          className="overflow-hidden"
         >
           <iframe
             style={{
@@ -63,10 +63,10 @@ const LazyLoadIframe = ({ src }) => {
 };
 
 function App() {
-    const cursorRef = useRef(null); // Using useRef to store the cursor element
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 639);
-    };
+  const cursorRef = useRef(null); // Using useRef to store the cursor element
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 639);
+  };
   useEffect(() => {
     Aos.init({ once: false });
     const handleMouseMove = (e) => {
@@ -97,10 +97,7 @@ function App() {
         id="cursor2"
         ref={cursorRef} // Attach the ref here
       />
-      <MarqueeText />
-      <Screenshoot />
       <div className="px-2 mx-auto container">
-        <Navbar />
         <div className="parallax">
           <Path />
         </div>
@@ -111,7 +108,7 @@ function App() {
           <a
             id="Name"
             href="https://www.youtube.com/@mfathinhalim"
-            className="text-2xl sm:text-4xl pb-0 px-1 text-gray-200 font-extrabold"
+            className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold"
           >
             Check Out TVRI National Coverage About Me
           </a>
