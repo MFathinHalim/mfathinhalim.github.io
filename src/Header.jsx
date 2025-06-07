@@ -196,7 +196,7 @@ function Header() {
               }}
               className="opacity-100  border border-stone-700 rounded-2xl bg-white"
             >
-              <div className="prevent-select rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw]">
+              <div className="prevent-select rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw] md:w-[600px]">
                 {/* Header Bar */}
                 <div
                   id="header"
