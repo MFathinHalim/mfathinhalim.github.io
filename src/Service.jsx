@@ -15,7 +15,7 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center items-center px-20 h-screen  bg-[#2b2d31] py-4 text-white">
+    <div className="flex justify-center items-center px-2 md:px-20 h-screen  bg-[#2b2d31] py-10 text-white">
       <div className="w-full  rounded-2xl flex flex-col overflow-hidden">
         {/* Header */}
         <div className="px-6 py-4">
