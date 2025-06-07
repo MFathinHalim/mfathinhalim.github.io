@@ -129,7 +129,7 @@ function App() {
             </div>
 
             <div className="flex justify-center">
-              <button className="bg-black hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-full shadow-md">
+              <button className="bg-black dark:bg-stone-300 dark:text-black hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-full shadow-md">
                 Send Message
               </button>
             </div>
