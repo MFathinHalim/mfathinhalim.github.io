@@ -82,7 +82,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="relative py-32 border-b-4 bg-gray-100 px-10 lg:px-64 rounded-b-[64px] mx-auto">
+        <div className="relative py-10 md:py-32 border-b-4 bg-gray-100 px-10 lg:px-64 rounded-b-[32px] md:rounded-b-[64px] mx-auto">
           {/* Amplop penutup */}
 
           {/* Form Kontak */}
