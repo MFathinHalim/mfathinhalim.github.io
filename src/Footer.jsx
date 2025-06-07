@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="text-gray-800 bg-gray-50 pb-5 pt-16">
+      <footer className="text-gray-800 pb-5 pt-16">
         <div className="px-5 md:px-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
@@ -126,7 +126,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-700/50 mt-12 pt-6 text-center text-sm text-gray-500">
+        <div className="border-gray-700/50 pt-14 text-center text-sm text-gray-500">
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>

@@ -15,7 +15,7 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center mb-32 px-20  bg-[#2b2d31] py-4 text-white">
+    <div className="flex justify-center items-center px-20 h-screen  bg-[#2b2d31] py-4 text-white">
       <div className="w-full  rounded-2xl flex flex-col overflow-hidden">
         {/* Header */}
         <div className="px-6 py-4">
@@ -50,17 +50,16 @@ function Service() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA button */}
-        <div className="px-6 py-4 text-center">
-          <a
-            href="https://discordapp.com/users/1156486226094870569"
-            className="inline-flex items-center w-[100%] justify-center px-5 py-3 text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600 rounded-lg transition"
-          >
-            Chat with me
-            <i className="fa-brands fa-discord ml-2 text-lg" />
-          </a>
+          {/* CTA button */}
+          <div className="py-4 text-center">
+            <a
+              href="https://discordapp.com/users/1156486226094870569"
+              className="inline-flex items-center w-[100%] justify-center px-5 py-3 text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600 rounded-lg transition"
+            >
+              Chat with me
+              <i className="fa-brands fa-discord ml-2 text-lg" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

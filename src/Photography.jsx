@@ -60,12 +60,15 @@ function Photography() {
 
   return (
     <>
-      <div className="relative" ref={containerRef}>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 auto-rows-[150px]">
+      <div className="relativ px-2 pb-32 pt-20 bg-gray-100" ref={containerRef}>
+        <h1 className="px-2 text-4xl mb-7 font-extrabold text-center">
+          Photography
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[150px]">
           {Photographys.map((photo, i) => (
             <div
               key={i}
-              className={`relative overflow-hidden rounded-2xl shadow-md transition-all duration-300  group ${
+              className={`relative overflow-hidden transition-all duration-300  group ${
                 i % 5 === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
               }`}
               data-aos={`zoom-in`}
@@ -78,14 +81,6 @@ function Photography() {
             </div>
           ))}
         </div>
-
-        {/* Gradient Black Overlay */}
-        <div
-          className="absolute top-0 left-0 w-full h-full"
-          style={{
-            background: `linear-gradient(to bottom, rgb(3, 3, 8) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0, 1) 100%)`,
-          }}
-        ></div>
       </div>
     </>
   );

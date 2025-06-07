@@ -8,6 +8,7 @@ import Intro from "./Intro.jsx";
 import SkillsTools from "./SkillsTools.jsx";
 import Footer from "./Footer.jsx";
 import Service from "./Service.jsx";
+import Photography from "./Photography.jsx";
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
@@ -18,65 +19,120 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <Intro />
-      <SkillsTools />
-      <Service />
-      <div className="flex flex-wrap mb-20 md:w-[85%] mx-auto ">
-        {/* Left Section with Image */}
-        <div className="w-full md:w-1/2 pt-3 mb-3">
-          <h3
-            id="Name"
-            className="text-3xl sm:text-4xl text-left font-bold drop-shadow-lg"
-          >
-            <p
+      <div className="rounded-xl">
+        <Header />
+        <Intro />
+        <SkillsTools />
+        <Service />
+        <Photography />
+        <div className="flex bg-gray-50 rounded-3xl flex-wrap px-4 py-20 md:px-10 mx-auto ">
+          {/* Left Section with Image */}
+          <div className="w-full md:w-1/2 pt-3 mb-3">
+            <h3
               id="Name"
-              className="text-sm bg-gray-700 text-white p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold"
-              style={{ width: "fit-content" }}
+              className="text-3xl sm:text-4xl text-left font-bold drop-shadow-lg"
             >
-              FAQ
-            </p>
-            Things You Are Probably Wondering
-          </h3>
-        </div>
-        <div
-          className="w-full z-20 overflow-visible md:w-1/2"
-          data-aos="fade-up"
-        >
-          <div className="space-y-4">
-            <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-              <i className="fa-solid fa-code text-black text-3xl mr-4"></i>
-              <div>
-                <h4 className="text-xl  font-bold drop-shadow-lg">
-                  Does Fathin&apos;s parent also programmers?
-                </h4>
-                <p className=" mt-2">No, they are not programmers :)</p>
+              <p
+                id="Name"
+                className="text-sm bg-gray-700 text-white p-1 mb-2 px-2 ps-2 rounded-lg font-extrabold"
+                style={{ width: "fit-content" }}
+              >
+                FAQ
+              </p>
+              Things You Are Probably Wondering
+            </h3>
+          </div>
+          <div
+            className="w-full z-20 overflow-visible md:w-1/2"
+            data-aos="fade-up"
+          >
+            <div className="space-y-4">
+              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
+                <i className="fa-solid fa-code text-black text-3xl mr-4"></i>
+                <div>
+                  <h4 className="text-xl  font-bold drop-shadow-lg">
+                    Does Fathin&apos;s parent also programmers?
+                  </h4>
+                  <p className=" mt-2">No, they are not programmers :)</p>
+                </div>
               </div>
-            </div>
-            <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-              <i className="fa-solid fa-clock text-black text-4xl mr-4"></i>
-              <div>
-                <h4 className="text-xl  font-bold drop-shadow-lg">
-                  Since when did Fathin learn programming?
-                </h4>
-                <p className=" mt-2">
-                  Since 2020, when Fathin was in 5th grade.
-                </p>
+              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
+                <i className="fa-solid fa-clock text-black text-4xl mr-4"></i>
+                <div>
+                  <h4 className="text-xl  font-bold drop-shadow-lg">
+                    Since when did Fathin learn programming?
+                  </h4>
+                  <p className=" mt-2">
+                    Since 2020, when Fathin was in 5th grade.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
-              <i className="fa-solid fa-gamepad text-black text-3xl mr-4"></i>
-              <div>
-                <h4 className="text-xl  font-bold drop-shadow-lg">
-                  Why did Fathin study programming?
-                </h4>
-                <p className=" mt-2">
-                  Because my parents said, &quot;Rather than being a gamer, how
-                  about you make the game?&quot;
-                </p>
+              <div className="hover:-translate-y-1 transition-all border border-black p-4 flex items-center">
+                <i className="fa-solid fa-gamepad text-black text-3xl mr-4"></i>
+                <div>
+                  <h4 className="text-xl  font-bold drop-shadow-lg">
+                    Why did Fathin study programming?
+                  </h4>
+                  <p className=" mt-2">
+                    Because my parents said, &quot;Rather than being a gamer,
+                    how about you make the game?&quot;
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="relative py-32 border-b-4 bg-gray-100 px-10 lg:px-64 rounded-b-[64px] mx-auto">
+          {/* Amplop penutup */}
+
+          {/* Form Kontak */}
+          <h2 className="text-4xl font-extrabold text-center mb-4">
+            GET IN TOUCH
+          </h2>
+          <p className="text-center text-gray-500 mb-6">
+            Have a project you’d like to bring to life? Let’s collaborate!
+          </p>
+          <form
+            className="space-y-6 max-w-full"
+            action="https://formspree.io/f/xnnvjwnb"
+            method="POST"
+          >
+            <div>
+              <label className="font-bold">Name</label>
+              <input
+                type="text"
+                name="name"
+                className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
+                placeholder="What's your name?"
+                required
+              />
+            </div>
+            <div>
+              <label className="font-bold">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
+                placeholder="How can I get back to you?"
+                required
+              />
+            </div>
+            <div>
+              <label className="font-bold">Message</label>
+              <textarea
+                name="message"
+                className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
+                placeholder="What would you like to say?"
+                required
+              />
+            </div>
+
+            <div className="flex justify-center">
+              <button className="bg-black hover:bg-gray-800 text-white font-semibold py-2 px-6 rounded-full shadow-md">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       <Footer />

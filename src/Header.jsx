@@ -7,8 +7,10 @@ import {
   Twitter,
   Instagram,
   Facebook,
+  ChevronDown,
 } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
@@ -26,6 +28,29 @@ function Header() {
 
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
+  const titles = [
+    "Indie Developer",
+    "Web Developer",
+    "Mobile Developer",
+    "UI/UX Designer",
+    "Programmer",
+  ];
+
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // mulai hilang
+
+      setTimeout(() => {
+        setCurrentTitle((prev) => (prev + 1) % titles.length); // ganti teks
+        setFade(true); // muncul lagi
+      }, 300); // tunggu fade-out selesai
+    }, 3000); // tiap 3 detik
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Set posisi awal ke tengah layar saat pertama load kalau belum ada di localStorage
   useEffect(() => {
@@ -91,17 +116,30 @@ function Header() {
     <>
       <section className="sm:p-10 py-10 px-5 md:px-20 md:py-32 bg-gray-50">
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
-          <img
+          <motion.img
             className="h-[170px] w-[170px] md:h-[190px] md:w-[350px] rounded-full object-cover"
             src="https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
           />
+
           <div>
             <h1 className="text-2xl font-bold mb-2">
               Hi, i am M. Fathin Halim
             </h1>
-            <h2 className="text-6xl hidden md:block font-extrabold mb-4">
-              Indie Developer
-            </h2>
+            <AnimatePresence mode="wait">
+              <motion.h2
+                key={titles[currentTitle]}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="text-6xl hidden md:block font-extrabold mb-4"
+              >
+                {titles[currentTitle]}
+              </motion.h2>
+            </AnimatePresence>
+
             <p className="max-w-xl text-gray-700 text-justify md:text-left text-lg">
               I am an indie developer and designer based in Indonesia,
               specializing in crafting intuitive and visually compelling digital
@@ -158,7 +196,7 @@ function Header() {
               }}
               className="opacity-100  border border-stone-700 rounded-2xl bg-white"
             >
-              <div className="prevent-select rounded-2xl shadow-xl w-[90vw] sm:w-[600px]">
+              <div className="prevent-select rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw] sm:w-[600px]">
                 {/* Header Bar */}
                 <div
                   id="header"
@@ -232,6 +270,13 @@ function Header() {
             </section>
           )}
         </section>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="flex justify-center w-full mt-10"
+        >
+          <ChevronDown className="w-6 h-6 text-gray-400" />
+        </motion.div>
       </section>
     </>
   );
@@ -240,7 +285,7 @@ function Header() {
 const ContactLink = ({ icon, label, url }) => (
   <a
     href={url}
-    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-700 transition duration-300"
+    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-100 transition duration-300"
     target="_blank"
     rel="noopener noreferrer"
   >

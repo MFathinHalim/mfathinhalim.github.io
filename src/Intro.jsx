@@ -7,7 +7,7 @@ function Intro() {
   return (
     <>
       <div className="bg-gray-100 py-16 px-6 md:px-20">
-        <div className="border-2 h-[75vh] border-black rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto">
+        <div className="border h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto">
           <Screenshoot />
 
           <div className="px-2 md:px-6 md:pt-8 text-center">
