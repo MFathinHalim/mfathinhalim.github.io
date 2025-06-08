@@ -322,7 +322,7 @@ function Header() {
 const ContactLink = ({ icon, label, url }) => (
   <a
     href={url}
-    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-100 transition duration-300"
+    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-600 transition duration-300"
     target="_blank"
     rel="noopener noreferrer"
   >
