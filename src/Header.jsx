@@ -299,8 +299,8 @@ function Header() {
           <ChevronDown className="w-6 h-6 text-stone-400" />
         </motion.div>
       </section>
-      <audio ref={audioOpenRef} src="/public/open.mp3" preload="auto" />
-      <audio ref={audioCloseRef} src="/public/close.mp3" preload="auto" />
+      <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
     </>
   );
 }

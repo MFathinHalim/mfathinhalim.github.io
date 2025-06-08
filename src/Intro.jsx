@@ -73,8 +73,8 @@ function Intro() {
           </div>
         </section>
       )}
-      <audio ref={audioOpenRef} src="/public/open2.mp3" preload="auto" />
-      <audio ref={audioCloseRef} src="/public/close.mp3" preload="auto" />
+      <audio ref={audioOpenRef} src="/open2.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
     </>
   );
 }

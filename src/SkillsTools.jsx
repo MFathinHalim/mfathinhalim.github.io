@@ -208,7 +208,7 @@ export default function SkillsTools() {
           </div>
         </div>
       </div>
-      <audio ref={shineSoundRef} src="/public/shine.mp3" preload="auto" />
+      <audio ref={shineSoundRef} src="/shine.mp3" preload="auto" />
     </div>
   );
 }
