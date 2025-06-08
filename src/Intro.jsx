@@ -22,8 +22,8 @@ function Intro() {
         >
           <Screenshoot />
 
-          <div className="px-2 md:px-6 md:pt-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mt-4 leading-snug">
+          <div className="px-2 md:px-6 pt-8 md:pt-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold leading-snug">
               My Journey of Programming
             </h2>
             <p className="text-gray-600 dark:text-gray-200/50 mb-5 mt-2 text-lg">
