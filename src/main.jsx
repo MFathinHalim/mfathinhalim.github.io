@@ -10,6 +10,7 @@ import Footer from "./Footer.jsx";
 import Service from "./Service.jsx";
 import Photography from "./Photography.jsx";
 import { ThemeProvider } from "./contect/ThemeProvider.jsx";
+import Little from "./Little.jsx";
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
@@ -25,6 +26,7 @@ function App() {
         <Intro />
         <SkillsTools />
         <Service />
+        <Little />
         <Photography />
         <div className="flex bg-gray-50 dark:bg-stone-800 dark:text-white flex-wrap px-4 py-20 md:px-10 mx-auto ">
           {/* Left Section with Image */}

@@ -61,7 +61,7 @@ function Photography() {
   return (
     <>
       <div
-        className="relativ px-2 pb-32 pt-20 bg-gray-100 dark:bg-stone-900 text-white"
+        className="relativ px-2 pb-32 pt-20 bg-gray-100 dark:bg-stone-900 dark:text-white"
         ref={containerRef}
       >
         <h1 className="px-2 text-4xl mb-7 font-extrabold text-center">

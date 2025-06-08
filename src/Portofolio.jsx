@@ -302,8 +302,8 @@ function Portfolio({ max }) {
           </a>
         ) : (
           <a
-            href="/public/CV.pdf"
-            className="border px-5 border-black hover:bg-gray-50 py-2"
+            href="/CV.pdf"
+            className="border px-5 border-black dark:border-white dark:hover:text-black hover:bg-gray-50 py-2"
             style={{ borderRadius: 9999 }}
             download
           >
