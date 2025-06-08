@@ -37,6 +37,12 @@ function Path() {
       description:
         "Started learning Next.js to build more advanced and optimized web projects.",
     },
+    {
+      date: "2025",
+      title: "Present",
+      description:
+        "Still learning and create connection with other cool developer. At may 2025, i also participated on Google Developer Group Bandung to learning something new and meet with the developer community.",
+    },
   ];
 
   return (
@@ -60,7 +66,7 @@ function Path() {
             {/* Tanggal timeline */}
             <time
               className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
-                index === 0
+                index === 0 || index === timelineData.length - 1
                   ? "border border-black px-2 text-black dark:bg-white"
                   : "bg-gray-600 text-white dark:bg-white/40 dark:text-white"
               }`}
@@ -68,7 +74,7 @@ function Path() {
               {item.date}
             </time>
             {/* Judul dan deskripsi timeline */}
-            <h3 className="text-lg font-semibold dark:text-white">
+            <h3 className="text-lg mt-1 font-semibold dark:text-white">
               {item.title}
             </h3>
             <p className="text-base font-normal text-gray-700 dark:text-stone-300/80">

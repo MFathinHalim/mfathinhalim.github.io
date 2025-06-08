@@ -156,7 +156,7 @@ export default function SkillsTools() {
     <div className="md:pr-8 py-5 md:py-32 bg-gray-50 dark:bg-stone-900 dark:text-stone-200">
       <div className="grid md:grid-cols-2 gap-8 px-4 md:pl-20 md:pr-10">
         {/* Tool Icons */}
-        <div className="grid grid-cols-4 gap-4">
+        <div data-aos="fade-down" className="grid grid-cols-4 gap-4">
           {tools.map((tool, i) => (
             <div
               key={i}
@@ -176,12 +176,12 @@ export default function SkillsTools() {
               <img
                 src={tool.icon}
                 alt={tool.name}
-                className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
+                className="w-10 h-10 transition-transform group-hover:scale-[150%]"
               />
             </div>
           ))}
         </div>
-        <div>
+        <div data-aos="fade-right" data-aos-delay="400">
           <h2 className="text-6xl font-extrabold mb-3 pl-2">Skills & Tools</h2>
           <h2 className="text-xl font-bold mb-3 pl-2">
             My friends that helped me

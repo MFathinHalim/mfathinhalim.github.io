@@ -1,11 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "./contect/ThemeProvider";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Pause, Play } from "lucide-react";
 
 export default function DarkModeToggle() {
   const { isDarkMode, setIsDarkMode } = useTheme();
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioOpenRef = useRef(null);
   const audioCloseRef = useRef(null);
+  const audioBgRef = useRef(null);
 
   useEffect(() => {
     // optional, bisa buat testing sound awal
@@ -38,16 +40,40 @@ export default function DarkModeToggle() {
 
   return (
     <div className="flex justify-between">
-      <button
-        onClick={handleToggle}
-        className="pb-5 rounded-lg border-0 flex items-center gap-2 hover:text-yellow-600 dark:hover:text-yellow-300 transition-colors duration-300"
-      >
-        {isDarkMode ? <Moon /> : <Sun />}{" "}
-      </button>
+      <div className="flex gap-5">
+        <button
+          className="pb-5 rounded-lg border-0 flex items-center gap-2 hover:text-green-600 dark:hover:text-green-300 transition-colors duration-300"
+          onClick={() => {
+            if (!audioBgRef.current) return;
+            audioBgRef.current.volume = 0.5;
+
+            if (isPlaying) {
+              audioBgRef.current.pause();
+            } else {
+              audioBgRef.current.currentTime = 0;
+              audioBgRef.current.play().catch((e) => {
+                console.warn("Gagal play sound:", e);
+              });
+            }
+
+            setIsPlaying((prev) => !prev);
+          }}
+        >
+          {isPlaying ? <Pause /> : <Play />}
+        </button>
+        <button
+          onClick={handleToggle}
+          className="pb-5 rounded-lg border-0 flex items-center gap-2 hover:text-yellow-600 dark:hover:text-yellow-300 transition-colors duration-300"
+        >
+          {isDarkMode ? <Moon /> : <Sun />}{" "}
+        </button>
+      </div>
 
       {/* Jangan pakai /public di path, cukup dari root */}
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
       <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
+      <audio ref={audioBgRef} src="/bg.mp3" preload="auto" loop />
+
       <span className="font-extrabold ">
         {new Date().toLocaleTimeString("id-ID", {
           hour: "2-digit",

@@ -126,8 +126,9 @@ function Header() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white h-screen">
+      <section className="sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white flex flex-col justify-center">
         <DarkModeToggle />
+
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
             className="h-[170px] w-[170px] md:h-[175px] md:w-[350px] rounded-full object-cover"
@@ -137,7 +138,11 @@ function Header() {
           />
 
           <div>
-            <h1 className="text-2xl font-bold mb-2">
+            <h1
+              data-aos="zoom-in"
+              data-aos-duration="700"
+              className="text-2xl font-bold mb-2"
+            >
               Hi, i am M. Fathin Halim
             </h1>
             <AnimatePresence mode="wait">
@@ -153,18 +158,24 @@ function Header() {
               </motion.h2>
             </AnimatePresence>
 
-            <p className="max-w-xl text-gray-700 dark:text-gray-200/80 text-justify md:text-left text-lg">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="max-w-xl text-gray-700 dark:text-gray-200/80 text-justify md:text-left text-lg"
+            >
               I am an indie developer and designer based in Indonesia,
               specializing in crafting intuitive and visually compelling digital
               experiences. I focus on creating products that seamlessly blend
               form and function. Passionate about{" "}
               <strong>Mobile App Development</strong>,{" "}
-              <strong>Web Development</strong>, and desktop applications, I
-              strive to bring intention, creativity, and fun to every project I
-              undertake.
+              <strong>Web Development</strong>, and{" "}
+              <strong>Desktop Applications</strong>, I strive to bring
+              intention, creativity, and fun to every project I undertake.
             </p>
             <div className="flex flex-row items-center gap-3 mt-5">
               <a
+                data-aos="fade-down"
+                data-aos-delay="400"
                 className="inline-block px-6 font-bold py-3 hover:text-black hover:bg-transparent border border-black rounded-xl bg-black text-white dark:bg-white dark:text-black dark:hover:bg-white/60 transition"
                 href="https://github.com/mfathinhalim"
                 target="_blank"
@@ -173,6 +184,8 @@ function Header() {
                 <i className="fa-brands fa-github"></i> Github
               </a>
               <button
+                data-aos="fade-up"
+                data-aos-delay="400"
                 onClick={() => setShowContact((prev) => !prev)}
                 className="inline-block px-6 font-bold py-3 dark:hover:bg-white dark:hover:text-black dark:border-white bg-transparent border border-black rounded-xl hover:bg-black hover:text-white transition"
               >
@@ -300,6 +313,7 @@ function Header() {
         </motion.div>
       </section>
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
+
       <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
     </>
   );

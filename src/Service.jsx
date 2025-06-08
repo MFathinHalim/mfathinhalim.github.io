@@ -15,8 +15,12 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center items-center px-2 md:px-20 h-screen  bg-[#2b2d31] py-10 text-white">
-      <div className="w-full  rounded-2xl flex flex-col overflow-hidden">
+    <div className="flex justify-center items-center px-2 md:px-20 h-screen  bg-[#2b2d31] md:py-10 text-white">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="400"
+        className="w-full  rounded-2xl flex flex-col overflow-hidden"
+      >
         {/* Header */}
         <div className="px-6 py-4">
           <h1 className="text-white text-2xl font-bold">

@@ -11,6 +11,8 @@ import Service from "./Service.jsx";
 import Photography from "./Photography.jsx";
 import { ThemeProvider } from "./contect/ThemeProvider.jsx";
 import Little from "./Little.jsx";
+import Cursor from "./Cursor.jsx";
+import ScrollBubbleBar from "./ScrollBubbleBar.jsx";
 //@ts-ignore
 /* eslint-disable react/prop-types */
 
@@ -21,12 +23,15 @@ function App() {
 
   return (
     <ThemeProvider>
+      <ScrollBubbleBar />
+
+      <Cursor />
       <div className="dark:bg-stone-900">
         <Header />
         <Intro />
         <SkillsTools />
-        <Service />
         <Little />
+        <Service />
         <Photography />
         <div className="flex bg-gray-50 dark:bg-stone-800 dark:text-white flex-wrap px-4 py-20 md:px-10 mx-auto ">
           {/* Left Section with Image */}
@@ -56,7 +61,9 @@ function App() {
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Does Fathin&apos;s parent also programmers?
                   </h4>
-                  <p className=" mt-2">No, they are not programmers :)</p>
+                  <p className="opacity-60 mt-2">
+                    No, they are not programmers :)
+                  </p>
                 </div>
               </div>
               <div className="hover:-translate-y-1 transition-all border border-black dark:border-white/40 p-4 flex items-center">
@@ -65,7 +72,7 @@ function App() {
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Since when did Fathin learn programming?
                   </h4>
-                  <p className=" mt-2">
+                  <p className="opacity-60 mt-2">
                     Since 2020, when Fathin was in 5th grade.
                   </p>
                 </div>
@@ -76,7 +83,7 @@ function App() {
                   <h4 className="text-xl  font-bold drop-shadow-lg">
                     Why did Fathin study programming?
                   </h4>
-                  <p className=" mt-2">
+                  <p className="opacity-60 mt-2">
                     Because my parents said, &quot;Rather than being a gamer,
                     how about you make the game?&quot;
                   </p>

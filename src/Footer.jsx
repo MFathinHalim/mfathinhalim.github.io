@@ -21,26 +21,6 @@ function Footer() {
           </div>
 
           {/* Navigation */}
-          <div>
-            <h3 className=" font-semibold mb-3 dark:text-white">Navigation</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/" className="hover:underline">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/journey/" className="hover:underline">
-                  Journey
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:underline">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
 
           {/* Skills / Focus */}
           <div>
@@ -76,6 +56,37 @@ function Footer() {
                   className="hover:underline"
                 >
                   CardCozy
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className=" font-semibold mb-3 dark:text-white">
+              Random Stuff
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://fanimelist.vercel.app/"
+                  className="hover:underline"
+                >
+                  Fanimelist
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://yunation.glitch.me/"
+                  className="hover:underline"
+                >
+                  Yunation
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mfathinhalim.github.io/learnjs"
+                  className="hover:underline"
+                >
+                  Learn JS
                 </a>
               </li>
             </ul>
