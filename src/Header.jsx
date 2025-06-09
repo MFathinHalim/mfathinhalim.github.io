@@ -126,7 +126,7 @@ function Header() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white flex flex-col justify-center">
+      <section className="min-h-screen sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white flex flex-col justify-center">
         <DarkModeToggle />
 
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
