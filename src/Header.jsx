@@ -172,6 +172,15 @@ function Header() {
               <strong>Desktop Applications</strong>, I strive to bring
               intention, creativity, and fun to every project I undertake.
             </p>
+            <p className="max-w-xl mt-5 mb-7 text-gray-700 dark:text-gray-100/80 text-justify md:text-left text-lg">
+              Check my{" "}
+              <a
+                className="underline font-bold text-white"
+                href="https://www.fiverr.com/fathin_halim"
+              >
+                Fiverr
+              </a>
+            </p>
             <div className="flex flex-row items-center gap-3 mt-5">
               <a
                 data-aos="fade-down"
