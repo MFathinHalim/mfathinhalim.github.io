@@ -133,7 +133,7 @@ function Little() {
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
             className="w-[300px] h-[500px] object-cover"
-            src="https://scontent.fplm4-1.fna.fbcdn.net/v/t39.30808-6/499758472_673975585459441_7115555707845015504_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH0q--6Cnaf5qk4hIFKUezjLjEtoBkBvt0uMS2gGQG-3Sj0ZgVzTrcyWMXPDMn0YTdnFO7v6Eo-xG3XAe_DRtvG&_nc_ohc=cGwcsIV1shMQ7kNvwH_a8Xi&_nc_oc=AdnAHrstGpAmQ53ARfdM7-ViawHaE_p-Z0aiqmlvj6x7C_90yy7TgjdTMNSnSB5kOhc&_nc_zt=23&_nc_ht=scontent.fplm4-1.fna&_nc_gid=ahPIjQbsWJlq8D6Td367XQ&oh=00_AfPSMaW1QTFD4FJ5fZOjQJBIAmHqq6bAkluGs9zO4AvpfQ&oe=684AC8CB"
+            src="https://ik.imagekit.io/9hpbqscxd/SG/image-111.jpg?updatedAt=1705798245623"
             animate={{ x: [0, -20, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
           />
