@@ -15,7 +15,7 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center items-center px-2 md:px-20 h-screen  bg-[#2b2d31] md:py-10 text-white">
+    <div className="flex justify-center items-center px-2 md:px-20 py-14 md:py-32 text-white">
       <div
         data-aos="fade-up"
         data-aos-delay="400"

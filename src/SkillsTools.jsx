@@ -99,7 +99,7 @@ const tools = [
   },
   {
     name: "Postman",
-    icon: "https://cdn.worldvectorlogo.com/logos/postman.svg",
+    icon: "https://cdn.iconscout.com/icon/free/png-256/free-postman-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945092.png?f=webp",
     skills: ["api testing", "api consumption", "debugging"],
   },
 ];
@@ -153,7 +153,7 @@ export default function SkillsTools() {
   const shineSoundRef = useRef(null);
 
   return (
-    <div className="md:pr-8 py-5 md:py-32 bg-gray-50 dark:bg-stone-900 dark:text-stone-200">
+    <div className="md:pr-8 py-20 md:py-32 bg-gray-50 dark:bg-stone-900 dark:text-stone-200">
       <div className="grid md:grid-cols-2 gap-8 px-4 md:pl-20 md:pr-10">
         {/* Tool Icons */}
         <div data-aos="fade-down" className="grid grid-cols-4 gap-4">
@@ -195,10 +195,10 @@ export default function SkillsTools() {
               return (
                 <span
                   key={i}
-                  className={`text-sm py-1 px-2 rounded-lg transition-all duration-300 whitespace-nowrap ${
+                  className={`text-sm py-1 px-2 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap ${
                     isHovered
-                      ? `${colorClass} font-semibold shadow`
-                      : "text-gray-700 dark:text-gray-300 "
+                      ? `${colorClass}`
+                      : "text-gray-700 dark:text-gray-300"
                   }`}
                 >
                   {skill}

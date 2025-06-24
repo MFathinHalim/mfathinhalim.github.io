@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Screenshoot from "./Screenshoot";
+import { motion } from "framer-motion";
 
 function Intro() {
   const [showContact, setShowContact] = useState(false);
@@ -15,10 +16,17 @@ function Intro() {
   }, [showContact]);
   return (
     <>
-      <div className="bg-gray-100 dark:bg-stone-800 dark:text-stone-200 py-16 px-2 md:px-20">
-        <div
+      <div className="bg-gray-50 dark:bg-stone-900 dark:text-stone-200 py-16 px-2 md:px-20">
+        <motion.div
+          animate={{ y: [0, -15, 0] }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          }}
           data-aos="fade-right"
-          className="border dark:border-white/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto"
+          className="border dark:bg-stone-800 dark:border-white/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto"
         >
           <Screenshoot />
 
@@ -38,7 +46,7 @@ function Intro() {
               Check Now
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
       {showContact && (
         <section className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/30">

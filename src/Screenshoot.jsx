@@ -37,7 +37,7 @@ const lineOrders = [
 
 const Screenshoot = () => {
   return (
-    <section className="bg-gray-black rounded-t-2xl h-60 overflow-hidden">
+    <section className="bg-gray-black rounded-t-2xl h-32 md:h-60 overflow-hidden">
       <div className="rotate-[10deg] -mt-64 space-y-3 -ml-5">
         {/* Gradient Black Overlay */}
         {lineOrders.map((lineImages, lineIndex) => {

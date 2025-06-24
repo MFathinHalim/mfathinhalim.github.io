@@ -33,7 +33,7 @@ function App() {
         <Little />
         <Service />
         <Photography />
-        <div className="flex bg-gray-50 dark:bg-stone-800 dark:text-white flex-wrap px-4 py-20 md:px-10 mx-auto ">
+        <div className="flex bg-gray-100 dark:bg-stone-900 dark:text-white flex-wrap px-4 py-20 md:py-40 md:px-10 mx-auto ">
           {/* Left Section with Image */}
           <div className="w-full md:w-1/2 pt-3 mb-3">
             <h3
@@ -92,7 +92,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="relative py-10 md:py-32 border-b-4 dark:border-stone-600 bg-gray-100 dark:bg-stone-900 dark:text-white px-10 lg:px-64 rounded-b-[32px] md:rounded-b-[64px] mx-auto">
+        <div className="relative py-10 md:py-32 border-b-4 dark:border-stone-600 bg-gray-100 dark:bg-stone-800 dark:text-white px-10 lg:px-64 rounded-b-[32px] md:rounded-b-[64px] mx-auto">
           {/* Amplop penutup */}
 
           {/* Form Kontak */}
