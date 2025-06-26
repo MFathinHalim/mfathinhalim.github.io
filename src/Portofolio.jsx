@@ -124,18 +124,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
-      image: "https://ik.imagekit.io/9hpbqscxd/SG/image-3.jpg",
-      title: "Shared Gallery",
-      desc: "You can share cherished moments through images.",
-      link: "https://shared-gallery.glitch.me/",
-      framework: ["React", "Express", "Node", "Bootstrap"],
-      develop: ["website"],
-      date: "August 2023",
-    },
-    {
-      class:
-        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
+        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image: "/Screenshot/Screenshot%20(2).png",
       title: "Yunation",
       desc: "A website dedicated for Yunation! Yunayu's Art Community ( ^ v ^ ). This website let user upload their artwork too :D",
@@ -191,29 +180,6 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 col-span-3 super-rounded h-auto",
-      image: "../../logo(1).png",
-      title: "SMP Negeri 1 Rejang Lebong's Website",
-      desc: "Website page for SMP Negeri 1 Rejang Lebong.",
-      link: "https://smpn1rl.glitch.me/",
-      framework: ["HTML", "Bootstrap"],
-      develop: ["website"],
-      date: "December 2023",
-    },
-    {
-      class:
-        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
-      image:
-        "https://cdn.glitch.global/415b2a45-a913-4f2c-96ca-b6598c3c6e8a/logo.png?v=1718077655964",
-      title: "Fathin Chat",
-      desc: "Simple Chatting app.",
-      link: "https://fathinchat.glitch.me/",
-      framework: ["Bootstrap", "Node", "Express", "Socket.io"],
-      develop: ["website"],
-      date: "October 2024",
-    },
-    {
-      class:
         "max-w-full border-stone-600 border bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-2",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
@@ -226,7 +192,7 @@ function Portfolio({ max }) {
     },
     {
       class:
-        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+        "max-w-full border-stone-700 bg-b hover:bg-gray-50 p-4 h-auto super-rounded col-span-3 lg:col-span-1",
       image:
         "https://i.pinimg.com/originals/44/94/3b/44943b3d9b339f4b8eac2efd27024411.png",
       title: "Domainshort",
@@ -235,18 +201,6 @@ function Portfolio({ max }) {
       framework: ["Tailwind", "Node", "MongoDB"],
       develop: ["website"],
       date: "June 2024",
-    },
-    {
-      class:
-        "max-w-full border-stone-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
-      image:
-        "https://ik.imagekit.io/9hpbqscxd/SG/image-83.jpg?updatedAt=1705798245623",
-      title: "IMPHNEN",
-      desc: "Ingin Menjadi Programmer Handal Namun Enggan Ngoding page",
-      link: "https://imphnen.glitch.me",
-      framework: ["HTML", "Bootstrap"],
-      develop: ["website"],
-      date: "April 2023",
     },
   ];
 
