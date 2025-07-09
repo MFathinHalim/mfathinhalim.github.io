@@ -153,8 +153,8 @@ export default function SkillsTools() {
   const shineSoundRef = useRef(null);
 
   return (
-    <div className="md:pr-8 py-20 md:py-32 bg-gray-50 dark:bg-stone-900 dark:text-stone-200">
-      <div className="grid md:grid-cols-2 gap-8 px-4 md:pl-20 md:pr-10">
+    <div className="px-2 xl:px-64 py-20 md:py-32 dark:text-slate-200">
+      <div className="grid md:grid-cols-2 gap-8 px-4 md:px-0">
         {/* Tool Icons */}
         <div data-aos="fade-down" className="grid grid-cols-4 gap-4">
           {tools.map((tool, i) => (
@@ -170,7 +170,7 @@ export default function SkillsTools() {
                 }
               }}
               onMouseLeave={() => setHoveredSkills([])}
-              className="group w-20 h-20 bg-white dark:bg-stone-900 dark:border-gray-200/20 border border-gray-200 rounded-full flex items-center justify-center transition-transform hover:scale-105 cursor-pointer"
+              className="group w-20 h-20 dark:border-gray-200/20 border border-gray-200 rounded-full flex items-center justify-center transition-transform hover:scale-105 cursor-pointer"
               title={tool.name}
             >
               <img
@@ -182,8 +182,8 @@ export default function SkillsTools() {
           ))}
         </div>
         <div data-aos="fade-right" data-aos-delay="400">
-          <h2 className="text-6xl font-extrabold mb-3 pl-2">Skills & Tools</h2>
-          <h2 className="text-xl font-bold mb-3 pl-2">
+          <h2 className="text-7xl tracking-normal font-passion uppercase pl-2">Skills & Tools</h2>
+          <h2 className="text-xl font-bold opacity-70 mb-6 pl-2">
             My friends that helped me
           </h2>
 
@@ -195,7 +195,7 @@ export default function SkillsTools() {
               return (
                 <span
                   key={i}
-                  className={`text-sm py-1 px-2 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap ${
+                  className={`text-md py-1 px-2 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap ${
                     isHovered
                       ? `${colorClass}`
                       : "text-gray-700 dark:text-gray-300"

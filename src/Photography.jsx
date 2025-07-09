@@ -12,7 +12,7 @@ function Photography() {
     "https://ik.imagekit.io/9hpbqscxd/SG/image-102.jpg?updatedAt=1705798245623",
 
     "https://ik.imagekit.io/9hpbqscxd/SG/image-96.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-97.jpg?updatedAt=1705798245623",
+    "https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-77.jpg?updatedAt=1705798245623",
     "https://ik.imagekit.io/9hpbqscxd/SG/image-75.jpg?updatedAt=1705798245623",
     "./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg",
@@ -61,10 +61,10 @@ function Photography() {
   return (
     <>
       <div
-        className="relativ px-2 py-5 md:pb-32 md:pt-20 bg-gray-100 dark:bg-stone-800 dark:text-white"
+        className="relativ px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-white"
         ref={containerRef}
       >
-        <h1 className="px-2 text-4xl mb-7 font-extrabold text-center">
+        <h1 className="px-2 text-7xl mb-7 font-passion text-center">
           Gallery
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[150px]">

@@ -129,7 +129,7 @@ function Little() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-20 md:pb-20 bg-gray-100 dark:bg-stone-800 dark:text-white">
+      <section className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-white">
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
             className="w-[300px] h-[500px] object-cover"
@@ -149,7 +149,7 @@ function Little() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="text-6xl hidden md:block font-extrabold mb-4"
+                className="text-8xl font-passion hidden md:block tracking-wide mb-6"
               >
                 {titles[currentTitle]}
               </motion.h2>

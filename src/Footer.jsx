@@ -1,8 +1,8 @@
 function Footer() {
   return (
     <>
-      <footer className="text-gray-800 dark:text-stone-300 pb-5 pt-16">
-        <div className="px-5 md:px-20 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      <footer className="relative text-gray-800 dark:text-gray-300 pb-5 pt-16">
+        <div className="px-5 md:px-32 xl:px-64 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <h2 className=" text-xl font-bold mb-2 dark:text-white">
@@ -13,8 +13,8 @@ function Footer() {
               bugs.
             </p>
             <a
-              href="mailto:halimfathin7@gmail.com"
-              className="inline-flex items-center px-4 py-2 border border-black dark:border-stone-600 rounded-md  hover:bg-white hover:text-black transition-all text-sm font-semibold"
+              href="#mail"
+              className="inline-flex items-center px-4 py-2 border border-black dark:border-gray-600 rounded-md  hover:bg-white hover:text-black transition-all text-sm font-semibold"
             >
               Let's collaborate
             </a>
@@ -139,7 +139,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-gray-700/50 pt-14 text-center text-sm text-gray-500 dark:text-stone-400">
+        <div className="border-gray-700/50 pt-14 text-center text-sm text-gray-500 dark:text-gray-400">
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>

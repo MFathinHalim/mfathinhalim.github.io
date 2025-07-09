@@ -98,29 +98,34 @@ function App() {
         id="cursor2"
         ref={cursorRef} // Attach the ref here
       />
-      <div className="px-2 mx-auto container">
-        <div className="parallax">
-          <Path />
+      <div className="fixed inset-0 z-0 bg-[url('https://img.freepik.com/premium-photo/blue-watercolor-texture-background_469760-1573.jpg')] dark:hidden bg-cover bg-center bg-no-repeat"></div>
+      <div className="fixed inset-0 z-0 hidden dark:block bg-[url('https://wallpaper.dog/large/20622098.jpg')] bg-cover bg-center bg-no-repeat"></div>
+      <div className="fixed inset-0 dark:bg-black/50 z-0"></div>
+      <div className="relative z-10  backdrop-blur-lg">
+        <div className="px-2 mx-auto container">
+          <div className="parallax">
+            <Path />
+          </div>
+          <div className="parallax">
+            <Award />
+          </div>
+          <article data-aos="fade-up" style={{ fontWeight: "bold" }}>
+            <a
+              id="Name"
+              href="https://www.youtube.com/@mfathinhalim"
+              className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-white"
+            >
+              Check Out TVRI National Coverage About Me
+            </a>
+          </article>
+          <LazyLoadIframe src="https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF" />
+          <div className="parallax">
+            <Portofolio />
+          </div>
         </div>
         <div className="parallax">
-          <Award />
+          <Footer />
         </div>
-        <article data-aos="fade-up" style={{ fontWeight: "bold" }}>
-          <a
-            id="Name"
-            href="https://www.youtube.com/@mfathinhalim"
-            className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-white"
-          >
-            Check Out TVRI National Coverage About Me
-          </a>
-        </article>
-        <LazyLoadIframe src="https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF" />
-        <div className="parallax">
-          <Portofolio />
-        </div>
-      </div>
-      <div className="parallax">
-        <Footer />
       </div>
     </ThemeProvider>
   );

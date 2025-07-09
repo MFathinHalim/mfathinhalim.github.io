@@ -15,7 +15,7 @@ function Service() {
   ];
 
   return (
-    <div className="flex justify-center items-center px-2 md:px-20 py-14 md:py-32 text-white">
+    <div className="flex justify-center items-center px-2 md:px-32 xl:px-64 py-14 md:py-32 dark:text-white">
       <div
         data-aos="fade-up"
         data-aos-delay="400"
@@ -23,7 +23,7 @@ function Service() {
       >
         {/* Header */}
         <div className="px-6 py-4">
-          <h1 className="text-white text-2xl font-bold">
+          <h1 className="dark:text-white text-2xl font-bold">
             Our conversation maybe?
           </h1>
         </div>
@@ -43,7 +43,7 @@ function Service() {
               />
               <div className="flex flex-col space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-white">
+                  <span className="text-sm font-semibold dark:text-white">
                     {message.sender === "user" ? "You" : "Your Future Dev"}
                   </span>
                   <span className="text-xs text-gray-400">just now</span>

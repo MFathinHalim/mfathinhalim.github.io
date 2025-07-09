@@ -56,7 +56,7 @@ function Path() {
       >
         Timeline
       </h3>
-      <ol className="relative border-s border-gray-300 dark:border-stone-600">
+      <ol className="relative border-s border-gray-300">
         {timelineData.map((item, index) => (
           <li key={index} className="mb-5 ms-4">
             {/* Lingkaran di timeline */}

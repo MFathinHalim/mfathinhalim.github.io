@@ -16,9 +16,8 @@ function Intro() {
   }, [showContact]);
   return (
     <>
-      <div className="bg-gray-50 dark:bg-stone-900 dark:text-stone-200 py-16 px-2 md:px-20">
+      <div className="backdrop-blur dark:text-stone-200 py-16 px-2 md:px-32 xl:px-64">
         <motion.div
-          animate={{ y: [0, -15, 0] }}
           transition={{
             duration: 2.5,
             repeat: Infinity,
@@ -26,7 +25,7 @@ function Intro() {
             ease: "easeInOut",
           }}
           data-aos="fade-right"
-          className="border dark:bg-stone-800 dark:border-white/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden max-w-6xl mx-auto"
+          className="border dark:border-white/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
         >
           <Screenshoot />
 

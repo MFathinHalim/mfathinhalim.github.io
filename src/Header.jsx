@@ -126,22 +126,15 @@ function Header() {
 
   return (
     <>
-      <section className="min-h-screen sm:p-10 py-10 px-5 md:px-20 md:py-20 bg-gray-50 dark:bg-stone-900 dark:text-white flex flex-col justify-center">
+      <section className="relative sm:p-10 py-10 px-5 xl:px-64 min-h-screen text-black dark:text-white flex flex-col justify-center bg-cover bg-center bg-no-repeat">
         <DarkModeToggle />
 
-        <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
-          <motion.img
-            className="h-[170px] w-[170px] md:h-[175px] md:w-[350px] rounded-full object-cover"
-            src="https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg"
-            animate={{ y: [0, -20, 0] }}
-            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-          />
-
+        <div className="flex flex-col-reverse md:justify-between items-center md:flex-row gap-5 md:gap-10">
           <div>
             <h1
               data-aos="zoom-in"
               data-aos-duration="700"
-              className="text-2xl font-bold mb-2"
+              className="text-2xl font-bold mb-4"
             >
               Hi, i am M. Fathin Halim
             </h1>
@@ -152,11 +145,22 @@ function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="text-6xl hidden md:block font-extrabold mb-4"
+                className="text-8xl uppercase hidden md:block font-passion tracking-normal mb-4"
               >
                 {titles[currentTitle]}
               </motion.h2>
             </AnimatePresence>
+            <div className="flex gap-2 mb-5">
+              <span className="inline-block px-4 py-1 text-sm font-mono dark:text-white border dark:border-white/20 rounded-full bg-white/5 backdrop-blur-sm shadow-sm hover:bg-white/10 transition">
+                &lt;Developer/&gt;
+              </span>
+              <span className="inline-block px-4 py-1 text-sm font-mono dark:text-white border dark:border-white/20 rounded-full bg-white/5 backdrop-blur-sm shadow-sm hover:bg-white/10 transition">
+                &lt;UI/UX/&gt;
+              </span>
+              <span className="inline-block px-4 py-1 text-sm font-mono dark:text-white border dark:border-white/20 rounded-full bg-white/5 backdrop-blur-sm shadow-sm hover:bg-white/10 transition">
+                &lt;Student/&gt;
+              </span>
+            </div>
 
             <p
               data-aos="fade-up"
@@ -175,7 +179,7 @@ function Header() {
             <p className="max-w-xl mt-5 mb-7 text-gray-700 dark:text-gray-100/80 text-justify md:text-left text-lg">
               Check my{" "}
               <a
-                className="underline font-bold text-white"
+                className="underline font-bold dark:text-white"
                 href="https://www.fiverr.com/fathin_halim"
               >
                 Fiverr
@@ -201,6 +205,60 @@ function Header() {
                 Contact
               </button>
             </div>
+          </div>
+          <div className="flex flex-col gap-4 justify-center h-full items-end">
+            
+            <div>
+              <p className="font-mono mb-2 font-bold text-lg">~/about.md</p>
+              <div className="bg-gray-200/30 dark:bg-[#0f0f13]/30 text-green-900 dark:text-green-300 font-mono px-6 py-5 rounded-xl shadow-xl text-sm w-full lg:w-fit border dark:border-green-800/30 backdrop-blur-sm hover:scale-[1.02] transition">
+                <p>
+                  <span className="text-red-600 dark:text-red-300">const</span>{" "}
+                  <span className="text-black dark:text-white font-semibold">
+                    developer = &#123;
+                  </span>
+                </p>
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">name:</span> "M.
+                  Fathin Halim",
+                </p>
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">age:</span> "16
+                  years old",
+                </p>
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">role:</span>{" "}
+                  "Fullstack Developer",
+                </p>
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">passion:</span>{" "}
+                  "Make good apps",
+                </p>
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">status:</span>{" "}
+                  "Learning & Growing",
+                </p>
+
+                <p className="pl-6">
+                  <span className="text-black dark:text-white">hobbies:</span>{" "}
+                  ["Ngoding", "Design", "Game", "Musik"],
+                </p>
+                <p className="text-black dark:text-white">&#125;</p>
+              </div>
+            </div>
+
+            {/* Status Card */}
+            <div className="bg-gray-200/30 dark:bg-[#0f0f13]/30 font-mono px-6 py-5 rounded-xl shadow-xl text-sm w-full lg:w-fit border dark:border-green-800/30 backdrop-blur-sm hover:scale-[1.02] transition">
+              <p className="flex items-center gap-2 text-sm">
+                <span className="w-2 h-2 bg-green-800 dark:bg-green-200 rounded-full animate-pulse"></span>
+                <span className="text-gray-800 dark:text-gray-400">
+                  status:
+                </span>
+              </p>
+              <p className="mt-1 text-sm dark:text-white">
+                The best revenge is to make yourself better
+              </p>
+            </div>
+            
           </div>
         </div>
         {/* Contact Section */}
@@ -229,17 +287,17 @@ function Header() {
                 cursor: "grab",
                 zIndex: 9999,
               }}
-              className="opacity-100  border border-stone-700 rounded-2xl bg-white dark:bg-stone-800 dark:text-white transition-transform duration-300 ease-in-out pointer-events-auto"
+              className="opacity-100  border border-gray-700 rounded-2xl backdrop-blur bg-white/30 dark:bg-black/30 dark:text-white transition-transform duration-300 ease-in-out pointer-events-auto"
             >
               <div className="prevent-select rounded-2xl shadow-xl max-h-[90vh] overflow-auto w-[90vw] md:w-[600px]">
                 {/* Header Bar */}
                 <div
                   id="header"
                   ref={headerRef}
-                  className="flex items-center bg-black dark:bg-stone-900 rounded-t-2xl p-3"
+                  className="flex items-center backdrop-blur rounded-t-2xl p-3"
                 >
                   <div className="flex justify-between w-full px-2 space-x-2">
-                    <p className="text-white">Contact Me</p>
+                    <p>Contact Me</p>
                     <button
                       onClick={() => {
                         if (audioCloseRef.current) {
@@ -318,7 +376,7 @@ function Header() {
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="flex justify-center w-full mt-10"
         >
-          <ChevronDown className="w-6 h-6 text-stone-400" />
+          <ChevronDown className="w-6 h-6 text-gray-400" />
         </motion.div>
       </section>
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
@@ -331,7 +389,7 @@ function Header() {
 const ContactLink = ({ icon, label, url }) => (
   <a
     href={url}
-    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-600 transition duration-300"
+    className="max-w-100 flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300"
     target="_blank"
     rel="noopener noreferrer"
   >
