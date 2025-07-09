@@ -150,7 +150,7 @@ function Header() {
                 {titles[currentTitle]}
               </motion.h2>
             </AnimatePresence>
-            <div className="flex gap-2 mb-5">
+            <div className="flex flex-wrap gap-2 mb-5">
               <span className="inline-block px-4 py-1 text-sm font-mono dark:text-white border dark:border-white/20 rounded-full bg-white/5 backdrop-blur-sm shadow-sm hover:bg-white/10 transition">
                 &lt;Developer/&gt;
               </span>
