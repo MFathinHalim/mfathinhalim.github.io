@@ -73,7 +73,7 @@ function Intro() {
             </div>
 
             {/* Content (Iframe) */}
-            <div className="h-[calc(93vh-50px)] dark:bg-[#060b04]>
+            <div className="h-[calc(93vh-50px)] dark:bg-[#060b04]">
               <iframe
                 src="/journey/"
                 title="Journey Page"
