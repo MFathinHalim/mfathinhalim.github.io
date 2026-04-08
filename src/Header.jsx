@@ -116,7 +116,7 @@ function Header() {
           transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }} // smooth ease, mirip dynamic island
           className="fixed inset-x-0 top-4 z-500 pointer-events-none"
         >
-          <div className="flex justify-center">
+          <div className="hidden md:flex justify-center">
             <div className="w-1/2 justify-between backdrop-blur-xl bg-white/60 dark:bg-black/60 dark:text-white border border-white/40 dark:border-white/20 rounded-full px-4 py-3 shadow-lg ring-1 ring-white/20 dark:ring-white/10 pointer-events-auto flex items-center gap-6 text-sm font-semibold">
               <a
                 href="#hero-header"

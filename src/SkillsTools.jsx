@@ -183,7 +183,7 @@ export default function SkillsTools() {
           </div>
         </div>
 
-        <div className="flex justify-center items-stretch">
+        <div className="hidden md:flex justify-center items-stretch">
           <h2 className="mx-4 text-center self-center text-xl opacity-60 tracking-normal font-bold uppercase [writing-mode:vertical-rl] [text-orientation:mixed]">
             ============= hover us! =============
           </h2>
