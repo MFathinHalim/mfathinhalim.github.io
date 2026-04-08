@@ -129,7 +129,7 @@ function Little() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-white">
+      <section className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-[#edf6ea]">
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
             className="w-[300px] h-[500px] object-cover"
@@ -139,7 +139,7 @@ function Little() {
           />
 
           <div>
-            <h1 data-aos="fade-right" className="text-2xl mb-2">
+            <h1 data-aos="fade-right" className="text-xl mb-2">
               a little more things
             </h1>
             <AnimatePresence mode="wait">
@@ -149,7 +149,7 @@ function Little() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.3 }}
-                className="text-8xl font-passion hidden md:block tracking-wide mb-6"
+                className="text-5xl font-bold hidden md:block tracking-wide mb-6"
               >
                 {titles[currentTitle]}
               </motion.h2>
@@ -158,7 +158,7 @@ function Little() {
             <p
               data-aos="fade-down"
               data-aos-delay="400"
-              className="max-w-xl text-gray-700 dark:text-gray-200/80 text-justify md:text-left text-lg mb-5"
+              className="max-w-xl text-gray-700 dark:text-[#edf6ea]/80 text-justify md:text-left text-lg mb-5"
             >
               I’ve spent my past 5 years experience building projects both
               independently and collaboratively. Outside of tech, I enjoy
@@ -168,7 +168,7 @@ function Little() {
             <p
               data-aos="fade-up"
               data-aos-delay="400"
-              className="max-w-xl text-gray-700 dark:text-gray-200/80 text-justify md:text-left text-lg"
+              className="max-w-xl text-gray-700 dark:text-[#edf6ea]/80 text-justify md:text-left text-lg"
             >
               In my free time, I enjoy drawing,{" "}
               <span className="inline-flex items-center gap-1">

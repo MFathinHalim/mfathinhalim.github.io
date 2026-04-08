@@ -44,7 +44,7 @@ function Photography() {
         const scrollWithin = Math.max(0, scrollY - topOffset);
         const opacity = Math.min(
           1,
-          scrollWithin / (containerHeight - visibleHeight / 2)
+          scrollWithin / (containerHeight - visibleHeight / 2),
         );
 
         setScrollPosition(opacity);
@@ -61,12 +61,10 @@ function Photography() {
   return (
     <>
       <div
-        className="relativ px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-white"
+        className="relativ px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
         ref={containerRef}
       >
-        <h1 className="px-2 text-7xl mb-7 font-passion text-center">
-          Gallery
-        </h1>
+        <h1 className="px-2 text-5xl mb-7 font-bold text-center">Gallery</h1>
         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[150px]">
           {Photographys.map((photo, i) => (
             <div

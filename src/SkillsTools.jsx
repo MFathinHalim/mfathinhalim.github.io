@@ -18,7 +18,7 @@ const tools = [
   },
   {
     name: "React",
-    icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1280px-React_Logo_SVG.svg.png",
     skills: [
       "frontend",
       "web development",
@@ -153,9 +153,8 @@ export default function SkillsTools() {
   const shineSoundRef = useRef(null);
 
   return (
-    <div className="px-2 xl:px-64 py-20 md:py-32 dark:text-slate-200">
+    <div className="px-2 xl:px-64 py-20 md:py-32 dark:text-[#edf6ea]">
       <div className="grid md:grid-cols-2 gap-8 px-4 md:px-0">
-        {/* Tool Icons */}
         <div data-aos="fade-down" className="grid grid-cols-4 gap-4">
           {tools.map((tool, i) => (
             <div
@@ -182,8 +181,10 @@ export default function SkillsTools() {
           ))}
         </div>
         <div data-aos="fade-right" data-aos-delay="400">
-          <h2 className="text-7xl tracking-normal font-passion uppercase pl-2">Skills & Tools</h2>
-          <h2 className="text-xl font-bold opacity-70 mb-6 pl-2">
+          <h2 className="text-5xl tracking-normal font-bold uppercase pl-2">
+            Skills & Tools
+          </h2>
+          <h2 className="text-xl font-semibold opacity-70 my-3 pl-2">
             My friends that helped me
           </h2>
 
@@ -196,9 +197,7 @@ export default function SkillsTools() {
                 <span
                   key={i}
                   className={`text-md py-1 px-2 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap ${
-                    isHovered
-                      ? `${colorClass}`
-                      : "text-gray-700 dark:text-gray-300"
+                    isHovered ? `${colorClass}` : "dark:text-[#edf6ea]/80"
                   }`}
                 >
                   {skill}

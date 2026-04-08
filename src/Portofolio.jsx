@@ -202,6 +202,18 @@ function Portfolio({ max }) {
       develop: ["website"],
       date: "June 2024",
     },
+    {
+      class:
+        "max-w-full border-gray-700 bg-b hover:bg-gray-50 col-span-3 p-4 h-auto super-rounded",
+      image:
+        "https://img.itch.zone/aW1hZ2UvMTg0MzUyMy8xMDgxODczMy5wbmc=/347x500/i8%2FXQY.png",
+      title: "Plane vs Zombie",
+      desc: "PVZ is a game made by Fathin and Nabeel for a game jam in 2 DAYS!",
+      link: "https://nabeela.itch.io/plane-vs-zombie-desktop",
+      framework: ["C#", "Unity"],
+      develop: ["game development"],
+      date: "December 2022",
+    },
   ];
 
   return (

@@ -73,13 +73,6 @@ export default function DarkModeToggle() {
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
       <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
       <audio ref={audioBgRef} src="/bg.mp3" preload="auto" loop />
-
-      <span className="font-extrabold ">
-        {new Date().toLocaleTimeString("id-ID", {
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
-      </span>
     </div>
   );
 }

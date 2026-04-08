@@ -77,7 +77,7 @@ function App() {
             left: `${e.clientX}px`,
             top: `${e.clientY}px`,
           },
-          { duration: 3000, fill: "forwards" }
+          { duration: 3000, fill: "forwards" },
         );
       }
     };
@@ -98,10 +98,8 @@ function App() {
         id="cursor2"
         ref={cursorRef} // Attach the ref here
       />
-      <div className="fixed inset-0 z-0 bg-[url('https://img.freepik.com/premium-photo/blue-watercolor-texture-background_469760-1573.jpg')] dark:hidden bg-cover bg-center bg-no-repeat"></div>
-      <div className="fixed inset-0 z-0 hidden dark:block bg-[url('https://wallpaper.dog/large/20622098.jpg')] bg-cover bg-center bg-no-repeat"></div>
-      <div className="fixed inset-0 dark:bg-black/50 z-0"></div>
-      <div className="relative z-10  backdrop-blur-lg">
+
+      <div className="relative z-10 dark:bg-[#060b04]">
         <div className="px-2 mx-auto container">
           <div className="parallax">
             <Path />
@@ -113,7 +111,7 @@ function App() {
             <a
               id="Name"
               href="https://www.youtube.com/@mfathinhalim"
-              className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-white"
+              className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-[#edf6ea]"
             >
               Check Out TVRI National Coverage About Me
             </a>
@@ -134,5 +132,5 @@ function App() {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );

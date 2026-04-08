@@ -1,11 +1,11 @@
 function Footer() {
   return (
     <>
-      <footer className="relative text-gray-800 dark:text-gray-300 pb-5 pt-16">
+      <footer className="relative text-gray-800 dark:text-[#edf6ea]/80 pb-5 pt-16">
         <div className="px-5 md:px-32 xl:px-64 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h2 className=" text-xl font-bold mb-2 dark:text-white">
+            <h2 className=" text-xl font-bold mb-2 dark:text-[#edf6ea]">
               M. Fathin Halim
             </h2>
             <p className="text-sm mb-4 text-justify">
@@ -24,7 +24,9 @@ function Footer() {
 
           {/* Skills / Focus */}
           <div>
-            <h3 className=" font-semibold mb-3 dark:text-white">Favorites</h3>
+            <h3 className=" font-semibold mb-3 dark:text-[#edf6ea]">
+              Favorites
+            </h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
@@ -61,7 +63,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className=" font-semibold mb-3 dark:text-white">
+            <h3 className=" font-semibold mb-3 dark:text-[#edf6ea]">
               Random Stuff
             </h3>
             <ul className="space-y-2 text-sm">
@@ -94,7 +96,7 @@ function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className=" font-semibold mb-3 dark:text-white">Connect</h3>
+            <h3 className=" font-semibold mb-3 dark:text-[#edf6ea]">Connect</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <i className="fa-brands fa-github "></i>
@@ -139,12 +141,13 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-gray-700/50 pt-14 text-center text-sm text-gray-500 dark:text-gray-400">
+        <div className="border-gray-700/50 pt-14 text-center text-sm text-gray-500 dark:text-[#edf6ea]/80">
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>
           <a className="mb-0 pb-0" href="https://mahiru-istri-fathin.glitch.me">
-            Mahiru is my wife ✨
+            <span className="font-bold dark:text-[#edf6ea]">Mahiru Shiina</span>{" "}
+            is my wife
           </a>
         </div>
       </footer>
