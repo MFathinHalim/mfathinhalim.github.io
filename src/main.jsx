@@ -24,9 +24,11 @@ function App() {
   return (
     <ThemeProvider>
       <ScrollBubbleBar />
-
       <Cursor />
-      <div className="dark:bg-[#060b04]">
+
+      <div className="relative dark:bg-[#060b04] overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-30 dark:opacity-20 bg-[linear-gradient(to_right,rgba(0,0,0,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.2)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.5)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.5)_1px,transparent_1px)] bg-[size:85px_85px,85px_85px] bg-[position:0_0,0_0,0_0]" />
+
         <Header />
         <div className="relative z-10">
           <SkillsTools />
@@ -152,7 +154,6 @@ function App() {
             </form>
           </div>
         </div>
-
         <Footer />
       </div>
     </ThemeProvider>

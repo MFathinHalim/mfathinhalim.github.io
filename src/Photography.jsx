@@ -61,6 +61,7 @@ function Photography() {
   return (
     <>
       <div
+        id="gallery"
         className="relativ px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
         ref={containerRef}
       >

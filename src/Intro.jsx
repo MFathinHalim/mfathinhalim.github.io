@@ -16,7 +16,7 @@ function Intro() {
   }, [showContact]);
   return (
     <>
-      <div className="backdrop-blur dark:text-[#edf6ea] py-16 px-2 md:px-32 xl:px-64">
+      <div id="projects" div className="py-16 px-2 md:px-32 xl:px-64">
         <motion.div
           transition={{
             duration: 2.5,
@@ -25,7 +25,7 @@ function Intro() {
             ease: "easeInOut",
           }}
           data-aos="fade-right"
-          className="border dark:border-[#edf6ea]/50 pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
+          className="bg-[#edf6ea] pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
         >
           <Screenshoot />
 
@@ -33,13 +33,13 @@ function Intro() {
             <h2 className="text-2xl md:text-3xl font-bold leading-snug">
               My Journey of Programming
             </h2>
-            <p className="dark:text-[#edf6ea]/50 mb-5 mt-2 text-lg">
+            <p className="opacity-50 mb-5 mt-2 text-lg">
               A collection of apps, experiments, and challenges I've built over
               time.
             </p>
             <button
               onClick={() => setShowContact((prev) => !prev)}
-              className="group relative overflow-hidden bg-black  dark:bg-[#edf6ea] dark:text-black hover:bg-transparent hover:text-black dark:hover:text-[#edf6ea] border dark:border-[#edf6ea] dark:hover:bg-transparent px-5 mt-0 py-3 rounded-full transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden bg-black text-[#edf6ea] hover:bg-transparent hover:text-black border dark:border-black dark:hover:bg-transparent px-5 mt-0 py-3 rounded-full transition-all duration-300 hover:-translate-y-1"
             >
               <span className="absolute -top-5 left-1/2 w-32 h-32 z-100 -translate-x-1/2 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 pointer-events-none sparkle" />
               Check Now

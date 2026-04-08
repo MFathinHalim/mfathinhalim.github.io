@@ -32,11 +32,22 @@ function Header() {
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
   const [showPortofolio, setShowPortofolio] = useState(false);
+  const [isMiniHeader, setIsMiniHeader] = useState(false);
 
   useEffect(() => {
-    const centerTop = window.innerHeight / 2 - 150;
-    const centerLeft = window.innerWidth / 2 - 300;
-    setPosition({ top: centerTop, left: centerLeft });
+    const hero = document.querySelector("#hero-header");
+    const heroOffset = hero?.offsetHeight ?? 0;
+
+    const onScroll = () => {
+      if (window.scrollY > heroOffset * 0.7) {
+        setIsMiniHeader(true);
+      } else {
+        setIsMiniHeader(false);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -93,7 +104,74 @@ function Header() {
 
   return (
     <>
-      <section className="relative px-5 py-10 sm:p-10 xl:px-64 min-h-screen text-black dark:text-[#edf6ea] flex flex-col justify-center">
+      {/* Mini navbar fixed di atas kiri */}
+      {isMiniHeader && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          style={{
+            zIndex: 500,
+          }}
+          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }} // smooth ease, mirip dynamic island
+          className="fixed inset-x-0 top-4 z-500 pointer-events-none"
+        >
+          <div className="flex justify-center">
+            <div className="w-1/2 justify-between backdrop-blur-xl bg-white/60 dark:bg-black/60 dark:text-white border border-white/40 dark:border-white/20 rounded-full px-4 py-3 shadow-lg ring-1 ring-white/20 dark:ring-white/10 pointer-events-auto flex items-center gap-6 text-sm font-semibold">
+              <a
+                href="#hero-header"
+                className="flex items-center gap-2 px-4 py-1 rounded-full hover:bg-white/30 dark:hover:bg-white/10 transition"
+              >
+                M.FATHIN HALIM
+              </a>
+
+              <div className="flex items-center gap-1 group">
+                <a
+                  href="#projects"
+                  className="px-3 py-1 hover:underline rounded-full transition"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#gallery"
+                  className="px-3 py-1 rounded-full hover:underline transition"
+                >
+                  Gallery
+                </a>
+                <button
+                  onClick={() => setShowContact(true)}
+                  className="px-3 py-1 rounded-full hover:underline transition"
+                >
+                  Contact
+                </button>
+                <a
+                  href="#more"
+                  className="px-3 py-1 rounded-full hover:underline transition"
+                >
+                  More About Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      <section
+        id="hero-header"
+        className="relative px-5 py-10 sm:p-10 xl:px-64 min-h-screen text-black dark:text-[#edf6ea] flex flex-col justify-center"
+      >
+        <div className="flex flex-col sm:flex-row sm:justify-end sm:items-end gap-1 sm:gap-0">
+          <img
+            src="/my.jpg"
+            className="hidden md:block border-yellow-300 border border-2"
+            style={{
+              rotate: "5deg",
+              width: "150px",
+              height: "150px",
+              zIndex: 50,
+            }}
+          />
+        </div>
         <DarkModeToggle />
 
         {/* Tags */}
@@ -113,22 +191,36 @@ function Header() {
 
         {/* Nama & Role — stack di mobile, side-by-side di desktop */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
-          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight">
+          <h1
+            className={`text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
+              isMiniHeader ? "opacity-0" : "opacity-100"
+            }`}
+          >
             M.FATHIN HALIM
           </h1>
-          <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight sm:text-right">
+          <h1
+            className={`text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight sm:text-right ${
+              isMiniHeader ? "opacity-0" : "opacity-100"
+            }`}
+          >
             INDIE DEV
           </h1>
         </div>
 
         {/* Tanggal & Exp */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0 dark:text-[#edf6ea]/80 mt-1">
-          <h2 className="text-2xl sm:text-4xl xl:text-6xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight">
+          <h2
+            className={`text-2xl sm:text-4xl xl:text-6xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
+              isMiniHeader ? "opacity-0" : "opacity-100"
+            }`}
+          >
             March 7th 2010
           </h2>
           <button
             onClick={() => setShowPortofolio((prev) => !prev)}
-            className="text-3xl sm:text-5xl xl:text-6xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 sm:text-right"
+            className={`text-3xl sm:text-5xl xl:text-7xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left ${
+              isMiniHeader ? "opacity-0" : "opacity-100"
+            }`}
           >
             5 Years Exp
             <span className="absolute bottom-0 left-0 w-full h-1 bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -136,7 +228,11 @@ function Header() {
         </div>
 
         {/* CTA — stack di mobile */}
-        <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0 mt-4">
+        <div
+          className={`flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0 mt-4 ${
+            isMiniHeader ? "opacity-0" : "opacity-100"
+          }`}
+        >
           <button
             onClick={() => setShowContact((prev) => !prev)}
             className="text-3xl sm:text-5xl xl:text-7xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left"
@@ -156,7 +252,11 @@ function Header() {
         </div>
 
         {/* Deskripsi */}
-        <div className="flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-8 mt-6">
+        <div
+          className={`flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-8 mt-6 ${
+            isMiniHeader ? "opacity-0" : "opacity-100"
+          }`}
+        >
           <p className="text-base sm:text-lg dark:text-[#edf6ea]/80">
             I'm an{" "}
             <span className="font-bold hover:opacity-60 transition-opacity duration-300">
@@ -190,6 +290,35 @@ function Header() {
         >
           <ChevronDown className="w-6 h-6 text-gray-400" />
         </motion.div>
+
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
+          <iframe
+            className="hidden md:block border-red-300 border border-2"
+            style={{
+              rotate: "-3deg",
+              width: "414px",
+              height: "212px",
+              zIndex: 50,
+            }}
+            src="https://www.youtube.com/embed/Ww9RtlRdMT0"
+            title="Hey, i am here :D"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          <img
+            src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/11979084/373169dddb3c43209069775a112fb838/eyJ3Ijo2MjB9/9.gif?token-hash=1sjuVb83beMHkejZ0-43rG1-VAahWVKUH5rIVXXg-hQ%3D"
+            className="hidden md:block border-green-300 border border-2"
+            style={{
+              objectFit: "cover",
+              rotate: "3deg",
+              width: "120px",
+              height: "120px",
+              zIndex: 50,
+            }}
+          />
+        </div>
       </section>
 
       {/* Contact Window */}
@@ -272,56 +401,12 @@ function Header() {
 
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
       <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
-      <img
-        src="/my.jpg"
-        className="hidden xl:block border-yellow-300 border border-2"
-        style={{
-          rotate: "5deg",
-          position: "absolute",
-          top: "7vh",
-          right: "190px",
-          width: "10vw",
-          height: "10vw",
-          zIndex: 50,
-        }}
-      />
-      <img
-        src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/11979084/373169dddb3c43209069775a112fb838/eyJ3Ijo2MjB9/9.gif?token-hash=1sjuVb83beMHkejZ0-43rG1-VAahWVKUH5rIVXXg-hQ%3D"
-        className="hidden xl:block border-green-300 border border-2"
-        style={{
-          objectFit: "cover",
-          rotate: "3deg",
-          position: "absolute",
-          bottom: "7vh",
-          right: "250px",
-          width: "7vw",
-          height: "7vw",
-          zIndex: 50,
-        }}
-      />
-      <iframe
-        className="hidden xl:block border-red-300 border border-2"
-        style={{
-          position: "absolute",
-          bottom: "5vh",
-          left: "190px",
-          rotate: "-3deg",
-          width: "18vw",
-          height: "10vw",
-          zIndex: 50,
-        }}
-        src="https://www.youtube.com/embed/Ww9RtlRdMT0"
-        title="Hey, i am here :D"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+
       {showPortofolio && (
         <section className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/30">
           <div
             className="rounded-2xl shadow-xl border border-stone-700 bg-white h-[93vh] w-[95vw] transition-opacity duration-300 ease-in-out pointer-events-auto"
-            style={{ pointerEvents: "auto" }} // Extra safety
+            style={{ pointerEvents: "auto" }}
           >
             {/* Header Bar */}
             <div className="flex items-center bg-black rounded-t-2xl p-3 overflow-hidden">

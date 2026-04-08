@@ -44,7 +44,21 @@ function Little() {
 
   const [currentTitle, setCurrentTitle] = useState(0);
   const [fade, setFade] = useState(true);
+  const [hover, setHover] = useState("");
 
+  const onHover = (name) => setHover(name);
+  const onLeave = () => setHover("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 639);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 639);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(false); // mulai hilang
@@ -129,7 +143,10 @@ function Little() {
 
   return (
     <>
-      <section className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-[#edf6ea]">
+      <section
+        id="more"
+        className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-[#edf6ea]"
+      >
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img
             className="w-[300px] h-[500px] object-cover"
@@ -162,7 +179,7 @@ function Little() {
             >
               I’ve spent my past 5 years experience building projects both
               independently and collaboratively. Outside of tech, I enjoy
-              creative outlets like sketching and exploring storytelling — often
+              creative outlets like sketching and exploring storytelling often
               finding inspiration in everyday moments and digital trends.
             </p>
             <p
@@ -187,40 +204,97 @@ function Little() {
               <br />I love learning new things and sharing knowledge with others
               on social media, especially Discord.
             </p>
-            <p className="mt-10 font-bold">You can find me on</p>
+            <p className="mt-10 font-bold text-sm sm:text-base">
+              You can also find me on
+            </p>
+
             <div
               data-aos="fade-right"
               className="flex flex-row items-center justify-between md:justify-start gap-10 mt-5"
             >
               <a
-                className="hover:text-blue-400 transition-all"
+                className="social ease-in-out transition inline-flex justify-center items-center dark:hover:text-blue-300"
+                onMouseEnter={() => onHover("facebook")}
+                onMouseLeave={onLeave}
+                data-social="MFathinHalim"
                 href="https://facebook.com/MFathinHalim"
               >
                 <FacebookIcon />
+                <span
+                  className={
+                    hover !== "facebook" ? "hidden" : "pl-2 font-bold text-sm"
+                  }
+                >
+                  {hover === "facebook" || isMobile ? "MFathinHalim" : ""}
+                </span>
               </a>
+
               <a
-                className="hover:text-orange-400 transition-all"
-                href="https://instagram.com/mfathin_halim"
+                className="social ease-in-out transition inline-flex justify-center items-center dark:hover:text-orange-400"
+                onMouseEnter={() => onHover("ig")}
+                onMouseLeave={onLeave}
+                data-social="@mfathin_halim"
+                href="https://instagram.com/mfathinhalim"
               >
                 <InstagramIcon />
+                <span
+                  className={
+                    hover !== "ig" ? "hidden" : "pl-2 font-bold text-sm"
+                  }
+                >
+                  {hover === "ig" || isMobile ? "@mfathinhalim" : ""}
+                </span>
               </a>
+
               <a
-                className="hover:text-blue-300 transition-all"
+                className="social ease-in-out transition inline-flex justify-center items-center dark:hover:text-blue-300"
+                onMouseEnter={() => onHover("twitter")}
+                onMouseLeave={onLeave}
+                data-social="@mfathinhalim"
                 href="https://twitter.com/mfathinhalim"
               >
                 <TwitterIcon />
+                <span
+                  className={
+                    hover !== "twitter" ? "hidden" : "pl-2 font-bold text-sm"
+                  }
+                >
+                  {hover === "twitter" || isMobile ? "@mfathinhalim" : ""}
+                </span>
               </a>
+
               <a
-                className="hover:text-blue-500 transition-all"
+                className="social ease-in-out transition inline-flex justify-center items-center dark:hover:text-blue-500"
+                onMouseEnter={() => onHover("linkedin")}
+                onMouseLeave={onLeave}
+                data-social="/in/m-fathin-halim"
                 href="https://www.linkedin.com/in/m-fathin-halim-8b8198288/"
               >
                 <LinkedinIcon />
+                <span
+                  className={
+                    hover !== "linkedin" ? "hidden" : "pl-2 font-bold text-sm"
+                  }
+                >
+                  {hover === "linkedin" || isMobile ? "/in/m-fathin-halim" : ""}
+                </span>
               </a>
+
               <a
-                className="hover:text-red-400 transition-all"
+                className="social ease-in-out transition inline-flex justify-center items-center dark:hover:text-red-400"
+                onMouseEnter={() => onHover("youtube")}
+                onMouseLeave={onLeave}
+                data-social="@mfathinhalim"
                 href="https://www.youtube.com/@mfathinhalim"
               >
                 <YoutubeIcon />
+                <span
+                  className={
+                    hover !== "youtube" ? "hidden" : "pl-2 font-bold text-sm"
+                  }
+                >
+                  {hover === "youtube" || isMobile ? "@mfathinhalim" : ""}
+                </span>
               </a>
             </div>
           </div>

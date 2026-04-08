@@ -27,7 +27,7 @@ function Cursor() {
             top: `${e.clientY}px`,
           },
         ],
-        { duration: 300, fill: "forwards" } // jangan 3000ms, nanti lambat banget
+        { duration: 300, fill: "forwards" }, // jangan 3000ms, nanti lambat banget
       );
     };
 
@@ -40,7 +40,7 @@ function Cursor() {
       {!isMobile && (
         <span
           id="cursor2"
-          className="pointer-events-none bg-yellow-400/20 opacity-30 dark:bg-stone-400/20 rounded-full blur-2xl"
+          className="pointer-events-none bg-yellow-400/20 opacity-50 dark:opacity-30 rounded-full blur-2xl"
           style={{
             position: "fixed",
             left: 0,
@@ -48,7 +48,7 @@ function Cursor() {
             height: "300px",
             width: "300px",
             transform: "translate(-50%, -50%)",
-            zIndex: 0,
+            zIndex: 2500,
           }}
         />
       )}
