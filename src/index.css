@@ -7,3 +7,24 @@
 body {
     font-family: "Figtree", "Avenir", sans-serif;
 }
+
+.overflow-x-auto::-webkit-scrollbar {
+    height: 3px;
+}
+
+/* Track (background) */
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+/* Thumb (draggable part) */
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* Thumb on hover */
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
