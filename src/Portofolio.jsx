@@ -248,7 +248,7 @@ function Portfolio({ max }) {
           </a>
         ) : (
           <a
-            href="/Portofolio.pdf"
+            href="/PORTOFOLIO_FATHIN.pdf"
             download
             className="inline-flex items-center px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-white/10 transition"
           >
