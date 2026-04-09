@@ -10,11 +10,11 @@ export default function ScrollBubbleBar() {
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = docHeight ? scrollTop / docHeight : 0;
 
-      const totalBubbles = 20; // jumlah total bubble
+      const totalBubbles = 20;
       const visibleBubbles = Math.round(scrollPercent * totalBubbles);
 
       if (bar) {
-        bar.innerHTML = ""; // hapus bubble lama
+        bar.innerHTML = "";
 
         for (let i = 0; i < totalBubbles; i++) {
           const bubble = document.createElement("div");

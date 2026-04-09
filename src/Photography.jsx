@@ -1,25 +1,26 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Heart, MessageCircle, Share, Bookmark } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import React, { useEffect, useState, useRef } from "react";
+import { Heart, MessageCircle, Share, Bookmark } from "lucide-react";
+
 function Photography() {
   const Photographys = [
-    "https://ik.imagekit.io/yjtsof0mw/Txtr/image-full_body-texter-5_14_2025.jpg",
-    "./f7-A-Fathin-pembuat-aplikasi-Kamus-Kata-Bahasa-Rejang.jpg",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-73.jpg?updatedAt=1705798245623",
+    "/Fathins/sigma.jpg",
+    "/Fathins/Fathin.jpg",
+    "/Fathins/Fathin (7).jpg",
     "/Fathins/Fathin (5).png",
     "/Fathins/Fathin (2).png",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-102.jpg?updatedAt=1705798245623",
+    "/Fathins/banner.jpg",
     "/Fathins/Fathin (3).png",
     "/Fathins/Fathin (6).png",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-77.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-96.jpg?updatedAt=1705798245623",
+    "/Photography/image (1).jpg",
+    "/Photography/image (2).jpg",
     "/Fathins/Fathin (1).png",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-74.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-80.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-71.jpg?updatedAt=1705798245623",
-    "https://ik.imagekit.io/9hpbqscxd/SG/image-78.jpg?updatedAt=1705798245623",
+    "/Photography/image (3).jpg",
+    "/Photography/image (4).jpg",
+    "/Photography/image (5).jpg",
+    "/Photography/image (6).jpg",
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -62,7 +63,6 @@ function Photography() {
         <p className="px-2 text-end mb-3 font-bold text-xl">
           *These are Fathin
         </p>
-
         <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[150px]">
           {Photographys.map((photo, i) => (
             <div
@@ -82,13 +82,11 @@ function Photography() {
             </div>
           ))}
         </div>
-
         <p className="px-2 mt-3 font-bold text-xl">
           *These are Fathin's Photos
         </p>
       </div>
 
-      {/* Instagram-style Modal */}
       {selectedIndex !== null && (
         <div
           className="fixed inset-0 bg-black/75 z-50 flex  items-center justify-center p-4"
@@ -111,21 +109,17 @@ function Photography() {
               >
                 ‹
               </button>
-
               <img
                 src={Photographys[selectedIndex]}
                 alt={`photo-${selectedIndex}`}
                 className="h-[30vh] md:h-full md:max-h-[85vh] max-w-full object-contain"
               />
-
               <button
                 onClick={next}
                 className="absolute right-2 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full w-8 h-8 flex items-center justify-center transition"
               >
                 ›
               </button>
-
-              {/* Dot indicators */}
               <div className="absolute bottom-3 flex gap-1.5">
                 {Photographys.map((_, i) => (
                   <div
@@ -138,10 +132,7 @@ function Photography() {
                 ))}
               </div>
             </div>
-
-            {/* Right sidebar */}
             <div className="md:w-72 flex-shrink-0 flex flex-col border-l border-zinc-200 dark:border-zinc-700">
-              {/* Header */}
               <div className="flex items-center gap-3 px-4 py-3 border-b border-zinc-200 dark:border-zinc-700">
                 <img
                   src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
@@ -155,8 +146,6 @@ function Photography() {
                   <p className="text-xs text-zinc-500">Curup, Bengkulu</p>
                 </div>
               </div>
-
-              {/* Caption */}
               <div className="flex-1 overflow-y-auto px-4 py-3 hidden md:block">
                 <div className="flex gap-2">
                   <img
@@ -170,8 +159,6 @@ function Photography() {
                   </p>
                 </div>
               </div>
-
-              {/* Actions */}
               <div className="border-t border-zinc-200 dark:border-zinc-700 px-4 py-3">
                 <div className="flex gap-4 mb-2">
                   <button
@@ -199,8 +186,6 @@ function Photography() {
                 </p>
                 <p className="text-xs text-zinc-400 mt-0.5">March 7th 2010</p>
               </div>
-
-              {/* Comment input */}
               <div className="border-t border-zinc-200 dark:border-zinc-700 px-4 py-2 flex gap-2 items-center">
                 <input
                   placeholder="Add a comment... (it's static btw)"

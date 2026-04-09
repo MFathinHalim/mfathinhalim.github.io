@@ -1,3 +1,7 @@
+import DarkModeToggle from "./DarkModeToggle";
+
+import { useEffect, useState, useRef, useCallback } from "react";
+import { motion } from "framer-motion";
 import {
   Linkedin,
   Mail,
@@ -9,9 +13,6 @@ import {
   Facebook,
   ChevronDown,
 } from "lucide-react";
-import { useEffect, useState, useRef, useCallback } from "react";
-import { motion } from "framer-motion";
-import DarkModeToggle from "./DarkModeToggle";
 
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
@@ -23,6 +24,18 @@ const ICONS = {
   instagram: <Instagram className="w-5 h-5" />,
   facebook: <Facebook className="w-5 h-5" />,
 };
+
+const ContactLink = ({ icon, label, url }) => (
+  <a
+    href={url}
+    className="flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {ICONS[icon] || <span className="w-5 h-5" />}
+    <span>{label}</span>
+  </a>
+);
 
 function Header() {
   const headerRef = useRef(null);
@@ -95,16 +108,13 @@ function Header() {
           }));
         };
       };
-
       node.onmousedown = dragMouseDown;
     }
-
     headerRef.current = node;
   }, []);
 
   return (
     <>
-      {/* Mini navbar fixed di atas kiri */}
       {isMiniHeader && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -113,7 +123,7 @@ function Header() {
           style={{
             zIndex: 500,
           }}
-          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }} // smooth ease, mirip dynamic island
+          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
           className="fixed inset-x-0 top-4 z-500 pointer-events-none"
         >
           <div className="hidden md:flex justify-center">
@@ -162,7 +172,7 @@ function Header() {
       >
         <div className="flex flex-col sm:flex-row sm:justify-end sm:items-end gap-1 sm:gap-0">
           <img
-            src="/my.jpg"
+            src="/Fathins/my.jpg"
             className="hidden md:block border-yellow-600 dark:border-yellow-300 border border-2"
             style={{
               rotate: "5deg",
@@ -172,9 +182,9 @@ function Header() {
             }}
           />
         </div>
+
         <DarkModeToggle />
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 my-5 justify-between">
           <div className="flex flex-wrap gap-2">
             <span className="inline-block px-4 py-1 text-sm font-mono dark:text-white border border-black/50 text-black dark:border-white/20 rounded-full bg-white/5 backdrop-blur-sm shadow-sm hover:bg-white/10 transition">
@@ -189,7 +199,6 @@ function Header() {
           </span>
         </div>
 
-        {/* Nama & Role — stack di mobile, side-by-side di desktop */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
           <h1
             className={`text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
@@ -207,7 +216,6 @@ function Header() {
           </h1>
         </div>
 
-        {/* Tanggal & Exp */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0 dark:text-[#edf6ea]/80 mt-1">
           <h2
             className={`text-2xl sm:text-4xl xl:text-6xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
@@ -227,7 +235,6 @@ function Header() {
           </button>
         </div>
 
-        {/* CTA — stack di mobile */}
         <div
           className={`flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0 mt-4 ${
             isMiniHeader ? "opacity-0" : "opacity-100"
@@ -251,7 +258,6 @@ function Header() {
           </a>
         </div>
 
-        {/* Deskripsi */}
         <div
           className={`flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-8 mt-6 ${
             isMiniHeader ? "opacity-0" : "opacity-100"
@@ -321,7 +327,6 @@ function Header() {
         </div>
       </section>
 
-      {/* Contact Window */}
       {showContact && (
         <section
           style={{
@@ -398,10 +403,6 @@ function Header() {
           </div>
         </section>
       )}
-
-      <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
-      <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
-
       {showPortofolio && (
         <section className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/30">
           <div
@@ -427,7 +428,6 @@ function Header() {
               </div>
             </div>
 
-            {/* Content (Iframe) */}
             <div className="h-[calc(93vh-50px)] dark:bg-[#060b04]">
               <iframe
                 src="/journey/"
@@ -439,20 +439,11 @@ function Header() {
           </div>
         </section>
       )}
+
+      <audio ref={audioOpenRef} src="/Sounds/open.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/Sounds/close.mp3" preload="auto" />
     </>
   );
 }
-
-const ContactLink = ({ icon, label, url }) => (
-  <a
-    href={url}
-    className="flex items-center gap-3 px-4 py-3 rounded-lg border border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-300"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {ICONS[icon] || <span className="w-5 h-5" />}
-    <span>{label}</span>
-  </a>
-);
 
 export default Header;

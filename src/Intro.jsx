@@ -28,7 +28,6 @@ function Intro() {
           className="bg-[#edf6ea] pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
         >
           <Screenshoot />
-
           <div className="px-2 md:px-6 pt-8 md:pt-6 text-center">
             <h2 className="text-2xl md:text-3xl font-bold leading-snug">
               My Journey of Programming
@@ -51,9 +50,8 @@ function Intro() {
         <section className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/30">
           <div
             className="rounded-2xl shadow-xl border border-stone-700 bg-white h-[93vh] w-[95vw] transition-opacity duration-300 ease-in-out pointer-events-auto"
-            style={{ pointerEvents: "auto" }} // Extra safety
+            style={{ pointerEvents: "auto" }}
           >
-            {/* Header Bar */}
             <div className="flex items-center bg-black rounded-t-2xl p-3 overflow-hidden">
               <div className="flex justify-between w-full px-2 space-x-2">
                 <p className="text-white">My Work</p>
@@ -71,8 +69,6 @@ function Intro() {
                 ></button>
               </div>
             </div>
-
-            {/* Content (Iframe) */}
             <div className="h-[calc(93vh-50px)] dark:bg-[#060b04]">
               <iframe
                 src="/journey/"
@@ -84,8 +80,8 @@ function Intro() {
           </div>
         </section>
       )}
-      <audio ref={audioOpenRef} src="/open2.mp3" preload="auto" />
-      <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
+      <audio ref={audioOpenRef} src="/Sounds/open2.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/Sounds/close.mp3" preload="auto" />
     </>
   );
 }

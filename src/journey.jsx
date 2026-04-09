@@ -1,20 +1,20 @@
+//@ts-ignore
+/* eslint-disable react/prop-types */
+import "./index.css";
+import "aos/dist/aos.css";
+
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import Aos from "nitlix-aos";
+
 import Award from "./Award.jsx";
 import Navbar from "./Navbar.jsx";
 import Portofolio from "./Portofolio.jsx";
-import "aos/dist/aos.css";
-import Aos from "nitlix-aos";
 import Path from "./Path.jsx";
 import Footer from "./Footer.jsx";
 import Screenshoot from "./Screenshoot.jsx";
-import ScrollingText from "./ScrollingText.jsx";
-import MarqueeText from "./TextHorizontal.jsx";
 import { ThemeProvider } from "./contect/ThemeProvider.jsx";
 
-//@ts-ignore
-/* eslint-disable react/prop-types */
 const LazyLoadIframe = ({ src }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
@@ -38,7 +38,7 @@ const LazyLoadIframe = ({ src }) => {
           style={{
             position: "relative",
             width: "100%",
-            paddingBottom: "56.25%", // 16:9
+            paddingBottom: "56.25%",
           }}
           className="overflow-hidden"
         >
@@ -64,7 +64,7 @@ const LazyLoadIframe = ({ src }) => {
 };
 
 function App() {
-  const cursorRef = useRef(null); // Using useRef to store the cursor element
+  const cursorRef = useRef(null);
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 639);
   };
@@ -83,30 +83,22 @@ function App() {
     };
 
     window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove); // Add mousemove listener
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("mousemove", handleMouseMove); // Cleanup
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
     <ThemeProvider>
-      <div
-        className={`custom-cursor`}
-        id="cursor2"
-        ref={cursorRef} // Attach the ref here
-      />
+      <div className={`custom-cursor`} id="cursor2" ref={cursorRef} />
 
       <div className="relative z-10 dark:bg-[#060b04]">
         <div className="px-2 mx-auto container">
-          <div className="parallax">
-            <Path />
-          </div>
-          <div className="parallax">
-            <Award />
-          </div>
+          <Path />
+          <Award />
           <article data-aos="fade-up" style={{ fontWeight: "bold" }}>
             <a
               id="Name"
@@ -117,13 +109,9 @@ function App() {
             </a>
           </article>
           <LazyLoadIframe src="https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF" />
-          <div className="parallax">
-            <Portofolio />
-          </div>
+          <Portofolio />
         </div>
-        <div className="parallax">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </ThemeProvider>
   );

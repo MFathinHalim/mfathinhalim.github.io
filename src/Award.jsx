@@ -45,9 +45,7 @@ function Award() {
               className={`grid gap-6 mt-10 dark:text-white`}
             >
               {award.img.length > 0 && (
-                <section
-                  className={`grid grid-cols-${award.img.length} gap-6`} // Set grid columns dynamically based on number of images
-                >
+                <section className={`grid grid-cols-${award.img.length} gap-6`}>
                   {award.img.map((image) => (
                     <img
                       loading="lazy"

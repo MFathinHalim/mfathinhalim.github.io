@@ -1,44 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Passion+One:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@keyframes sparkle {
-  0%, 100% {
-    opacity: 0.2;
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-10px) scale(1.2);
-  }
-}
-
-.sparkle::before,
-.sparkle::after {
-  content: "✨";
-  position: absolute;
-  font-size: 1.2rem;
-  animation: sparkle 1.5s ease-in-out infinite;
-}
-
-.sparkle::before {
-  top: 10%;
-  left: 20%;
-  animation-delay: 0s;
-}
-
-.sparkle::after {
-  top: 50%;
-  left: 60%;
-  animation-delay: 0.5s;
-}
-
-body{
-  font-family: 'Figtree', 'Avenir', sans-serif;
-}
-.font-passion {
-  font-family: 'Passion One', cursive;
-  font-weight: 700;
+body {
+    font-family: "Figtree", "Avenir", sans-serif;
 }

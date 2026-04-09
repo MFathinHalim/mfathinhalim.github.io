@@ -1,3 +1,7 @@
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import DarkModeToggle from "./DarkModeToggle";
+
 import {
   Linkedin,
   Mail,
@@ -18,9 +22,6 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import DarkModeToggle from "./DarkModeToggle";
 
 const ICONS = {
   linkedin: <Linkedin className="w-5 h-5" />,
@@ -34,56 +35,55 @@ const ICONS = {
 };
 
 function Little() {
+  const titles = ["About Me"];
+  const [currentTitle, setCurrentTitle] = useState(0);
+
   const headerRef = useRef(null);
   const audioOpenRef = useRef(null);
   const audioCloseRef = useRef(null);
 
   const [position, setPosition] = useState({ top: 30, left: 20 });
   const [showContact, setShowContact] = useState(false);
-  const titles = ["About Me"];
 
-  const [currentTitle, setCurrentTitle] = useState(0);
   const [fade, setFade] = useState(true);
-  const [hover, setHover] = useState("");
 
+  const [hover, setHover] = useState("");
   const onHover = (name) => setHover(name);
   const onLeave = () => setHover("");
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 639);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 639);
     };
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false); // mulai hilang
-
+      setFade(false);
       setTimeout(() => {
-        setCurrentTitle((prev) => (prev + 1) % titles.length); // ganti teks
-        setFade(true); // muncul lagi
-      }, 300); // tunggu fade-out selesai
-    }, 3000); // tiap 3 detik
+        setCurrentTitle((prev) => (prev + 1) % titles.length);
+        setFade(true);
+      }, 300);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Set posisi awal ke tengah layar saat pertama load kalau belum ada di localStorage
   useEffect(() => {
     const savedPos = localStorage.getItem("contactPosition");
     if (savedPos) {
       setPosition(JSON.parse(savedPos));
     } else {
-      // Dapatkan ukuran viewport
-      const centerTop = window.innerHeight / 2 - 150; // 150 kira2 tinggi contact box / 2
-      const centerLeft = window.innerWidth / 2 - 300; // 300 kira2 lebar contact box / 2
+      const centerTop = window.innerHeight / 2 - 150;
+      const centerLeft = window.innerWidth / 2 - 300;
       setPosition({ top: centerTop, left: centerLeft });
     }
   }, []);
+
   useEffect(() => {
     if (showContact && audioOpenRef.current) {
       audioOpenRef.current.currentTime = 0;
@@ -300,8 +300,8 @@ function Little() {
           </div>
         </div>
       </section>
-      <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
-      <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
+      <audio ref={audioOpenRef} src="/Sounds/open.mp3" preload="auto" />
+      <audio ref={audioCloseRef} src="/Sounds/close.mp3" preload="auto" />
     </>
   );
 }

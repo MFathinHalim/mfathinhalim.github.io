@@ -21,14 +21,12 @@ function Service() {
         data-aos-delay="400"
         className="w-full  rounded-2xl flex flex-col overflow-hidden"
       >
-        {/* Header */}
         <div className="px-6 py-4">
           <h1 className="dark:text-[#edf6ea] text-2xl font-bold">
             Our conversation maybe?
           </h1>
         </div>
 
-        {/* Chat messages */}
         <div className="flex-1 overflow-y-auto px-4 pt-6 pb-3 space-y-6 scrollbar-thin scrollbar-thumb-[#404249]">
           {messages.map((message, index) => (
             <div key={index} className="flex items-start gap-3">
@@ -54,7 +52,7 @@ function Service() {
               </div>
             </div>
           ))}
-          {/* CTA button */}
+
           <div className="py-4 text-center">
             <a
               href="https://discordapp.com/users/1156486226094870569"

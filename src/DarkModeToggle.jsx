@@ -10,7 +10,6 @@ export default function DarkModeToggle() {
   const audioBgRef = useRef(null);
 
   useEffect(() => {
-    // optional, bisa buat testing sound awal
     if (audioOpenRef.current && isDarkMode) {
       audioOpenRef.current.currentTime = 0;
       audioOpenRef.current.play().catch((e) => {
@@ -69,7 +68,6 @@ export default function DarkModeToggle() {
         </button>
       </div>
 
-      {/* Jangan pakai /public di path, cukup dari root */}
       <audio ref={audioOpenRef} src="/open.mp3" preload="auto" />
       <audio ref={audioCloseRef} src="/close.mp3" preload="auto" />
       <audio ref={audioBgRef} src="/bg.mp3" preload="auto" loop />

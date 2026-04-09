@@ -1,5 +1,4 @@
 function Path() {
-  // Data timeline dalam bentuk array objek
   const timelineData = [
     {
       date: "Late 2020",
@@ -59,11 +58,9 @@ function Path() {
       <ol className="relative border-s border-gray-300">
         {timelineData.map((item, index) => (
           <li key={index} className="mb-5 ms-4">
-            {/* Lingkaran di timeline */}
             <div
               className={`absolute w-3 h-3 bg-black dark:bg-stone-600 rounded-full mt-1.5 -start-1.5 border border-black`}
             />
-            {/* Tanggal timeline */}
             <time
               className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
                 index === 0 || index === timelineData.length - 1
@@ -73,7 +70,6 @@ function Path() {
             >
               {item.date}
             </time>
-            {/* Judul dan deskripsi timeline */}
             <h3 className="text-lg mt-1 font-semibold dark:text-white">
               {item.title}
             </h3>

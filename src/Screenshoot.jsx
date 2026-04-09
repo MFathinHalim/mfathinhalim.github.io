@@ -17,36 +17,19 @@ const images = [
   "/Screenshot/Screenshot (13).png",
 ];
 
-// Urutan khusus untuk masing-masing line
 const lineOrders = [
-  [
-    images[2], // (4)
-    images[5], // (5)
-    images[4], // (6)
-    images[6], // (2)
-  ],
-  images, // Line 1: urutan default
-  [
-    images[7], // (4)
-    images[3], // (5)
-    images[5], // (6)
-    images[4], // (2)
-  ],
-  [
-    images[2], // (4)
-    images[1], // (5)
-    images[4], // (6)
-    images[6], // (2)
-  ],
+  [images[5], images[2], images[4], images[6]],
+  images,
+  [images[7], images[3], images[5], images[4]],
+  [images[2], images[1], images[4], images[6]],
 ];
 
 const Screenshoot = () => {
   return (
     <section className="bg-black rounded-t-2xl h-32 md:h-60 overflow-hidden">
       <div className="rotate-[10deg] -mt-64 space-y-3 -ml-5">
-        {/* Gradient Black Overlay */}
         {lineOrders.map((lineImages, lineIndex) => {
-          const loopedImages = [...lineImages, ...lineImages]; // Loop panjang
+          const loopedImages = [...lineImages, ...lineImages];
 
           return (
             <div

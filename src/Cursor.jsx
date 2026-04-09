@@ -4,11 +4,10 @@ function Cursor() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Handle screen resize
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 639);
     };
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -27,7 +26,7 @@ function Cursor() {
             top: `${e.clientY}px`,
           },
         ],
-        { duration: 300, fill: "forwards" }, // jangan 3000ms, nanti lambat banget
+        { duration: 300, fill: "forwards" },
       );
     };
 

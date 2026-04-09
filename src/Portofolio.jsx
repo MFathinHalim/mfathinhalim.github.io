@@ -202,7 +202,7 @@ function Portfolio({ max }) {
 
   return (
     <div className="py-8 dark:text-white">
-      <section className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <a
           href="https://github.com/MFathinHalim"
           target="_blank"
@@ -238,7 +238,7 @@ function Portfolio({ max }) {
         ))}
       </section>
 
-      <section className="mt-8">
+      <section className="mt-3">
         {pathname !== "/journey/" ? (
           <a
             href="/journey/"
@@ -250,7 +250,7 @@ function Portfolio({ max }) {
           <a
             href="/PORTOFOLIO_FATHIN.pdf"
             download
-            className="inline-flex items-center px-5 py-2 rounded-full border border-gray-300 dark:border-white/10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-white/10 transition"
+            className="inline-flex items-center px-5 py-2 rounded-full bg-white/70 dark:bg-[#0f140e] border border-gray-200 dark:border-white/10 text-sm font-medium hover:bg-gray-100 dark:hover:bg-white/10 transition"
           >
             Download Portofolio
           </a>
