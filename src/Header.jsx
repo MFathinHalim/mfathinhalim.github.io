@@ -163,7 +163,7 @@ function Header() {
         <div className="flex flex-col sm:flex-row sm:justify-end sm:items-end gap-1 sm:gap-0">
           <img
             src="/my.jpg"
-            className="hidden md:block border-yellow-300 border border-2"
+            className="hidden md:block border-yellow-600 dark:border-yellow-300 border border-2"
             style={{
               rotate: "5deg",
               width: "150px",
@@ -293,7 +293,7 @@ function Header() {
 
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
           <iframe
-            className="hidden md:block border-red-300 border border-2"
+            className="hidden md:block border-red-600 dark:border-red-300 border border-2"
             style={{
               rotate: "-3deg",
               width: "414px",
@@ -309,7 +309,7 @@ function Header() {
           ></iframe>
           <img
             src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/11979084/373169dddb3c43209069775a112fb838/eyJ3Ijo2MjB9/9.gif?token-hash=1sjuVb83beMHkejZ0-43rG1-VAahWVKUH5rIVXXg-hQ%3D"
-            className="hidden md:block border-green-300 border border-2"
+            className="hidden md:block border-green-600 dark:border-green-300 border border-2"
             style={{
               objectFit: "cover",
               rotate: "3deg",

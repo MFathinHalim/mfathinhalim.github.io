@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <footer className="relative text-gray-800 dark:text-[#edf6ea]/80 pb-5 pt-16">
+      <footer className="relative text-gray-800 dark:text-[#edf6ea]/80 pb-5 pt-16 bg-white dark:bg-[#060b04] border-t border-gray-200 dark:border-gray-700/40">
         <div className="px-5 md:px-32 xl:px-64 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
@@ -77,7 +77,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://yunation.glitch.me/"
+                  href="https://yunation.vercel.app/"
                   className="hover:underline"
                 >
                   Yunation
@@ -111,7 +111,7 @@ function Footer() {
               <li className="flex items-center gap-2">
                 <i className="fa-brands fa-instagram "></i>
                 <a
-                  href="https://instagram.com/@mfathin_halim"
+                  href="https://instagram.com/@mfathinhalim"
                   target="_blank"
                   className="hover:underline"
                 >
@@ -145,7 +145,7 @@ function Footer() {
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>
-          <a className="mb-0 pb-0" href="https://mahiru-istri-fathin.glitch.me">
+          <a className="mb-0 pb-0" href="https://mahiru-shiina.vercel.app">
             <span className="font-bold dark:text-[#edf6ea]">Mahiru Shiina</span>{" "}
             is my wife
           </a>
