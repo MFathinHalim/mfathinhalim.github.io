@@ -202,7 +202,7 @@ function Portfolio({ max }) {
 
   return (
     <div className="py-8 dark:text-white">
-      <section className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
         <a
           href="https://github.com/MFathinHalim"
           target="_blank"

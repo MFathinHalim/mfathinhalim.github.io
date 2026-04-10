@@ -307,7 +307,6 @@ function Header() {
               zIndex: 50,
             }}
             src="https://www.youtube.com/embed/Ww9RtlRdMT0"
-            title="Hey, i am here :D"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

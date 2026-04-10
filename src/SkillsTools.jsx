@@ -12,20 +12,19 @@ const tools = [
     ],
   },
   {
-    name: "Photoshop",
-    icon: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg",
-    skills: ["photo editing", "graphic design"],
+    name: "Lightroom",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/960px-Adobe_Photoshop_Lightroom_CC_logo.svg.png?_=20200616120137",
+    skills: ["photo editing"],
+  },
+  {
+    name: "Canva",
+    icon: "https://static.canva.com/domain-assets/canva/static/images/android-192x192-2.png",
+    skills: ["graphic design"],
   },
   {
     name: "React",
     icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1280px-React_Logo_SVG.svg.png",
-    skills: [
-      "frontend",
-      "web development",
-      "react hooks",
-      "form validation",
-      "dark mode ui",
-    ],
+    skills: ["frontend", "web development", "react hooks", "form validation"],
   },
   {
     name: "Next.js",
@@ -58,14 +57,19 @@ const tools = [
     skills: ["mobile development", "android development", "app debugging"],
   },
   {
-    name: "Visual Studio Code",
-    icon: "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg",
-    skills: ["development", "code editing", "extensions", "visual studio code"],
+    name: "Zed",
+    icon: "https://zed.dev/_next/static/media/stable-app-logo.9b5f959f.png",
+    skills: ["development", "code editing", "extensions", "zed editor"],
   },
   {
     name: "Bootstrap",
     icon: "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg",
-    skills: ["frontend", "bootstrap framework", "responsive design"],
+    skills: [
+      "frontend",
+      "bootstrap framework",
+      "responsive design",
+      "dark mode ui",
+    ],
   },
   {
     name: "Tailwind CSS",
@@ -75,17 +79,13 @@ const tools = [
       "tailwind css",
       "utility-first css",
       "responsive design",
+      "dark mode ui",
     ],
   },
   {
-    name: "Unity",
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMEpvhQOuCkjQFYaax3e8BMa9yk4Y6xt_HUQ&s",
-    skills: ["c# scripting", "game scripting"],
-  },
-  {
-    name: "C#",
-    icon: "https://cdn.worldvectorlogo.com/logos/c--4.svg",
-    skills: ["game scripting", "c# scripting", "backend"],
+    name: "Godot",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/godot-game-engine-icon.png",
+    skills: ["godot scripting", "game scripting"],
   },
   {
     name: "MongoDB",
@@ -123,7 +123,7 @@ const allSkills = [
   "typescript",
   "javascript",
   "python scripting",
-  "c# scripting",
+  "godot scripting",
   "tailwind css",
   "bootstrap framework",
   "react hooks",
@@ -134,7 +134,7 @@ const allSkills = [
   "debugging",
   "database integration",
   "figma prototyping",
-  "visual studio code",
+  "zed editor",
   "android development",
   "api consumption",
 ];

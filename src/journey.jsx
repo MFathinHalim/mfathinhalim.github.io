@@ -98,7 +98,6 @@ function App() {
       <div className="relative z-10 dark:bg-[#060b04]">
         <div className="px-2 mx-auto container">
           <Path />
-          <Award />
           <article data-aos="fade-up" style={{ fontWeight: "bold" }}>
             <a
               id="Name"
@@ -108,6 +107,7 @@ function App() {
               Check Out TVRI National Coverage About Me
             </a>
           </article>
+          <Award />
           <LazyLoadIframe src="https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF" />
           <Portofolio />
         </div>

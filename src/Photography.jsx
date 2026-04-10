@@ -59,7 +59,9 @@ function Photography() {
         className="relative px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
         ref={containerRef}
       >
-        <h1 className="px-2 text-5xl font-bold text-center">Gallery</h1>
+        <h1 className="px-2 text-5xl font-bold text-center mb-3 md:mb-0">
+          Gallery
+        </h1>
         <p className="px-2 text-end mb-3 font-bold text-xl">
           *These are Fathin
         </p>

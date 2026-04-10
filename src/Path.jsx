@@ -55,30 +55,41 @@ function Path() {
       >
         Timeline
       </h3>
-      <ol className="relative border-s border-gray-300">
-        {timelineData.map((item, index) => (
-          <li key={index} className="mb-5 ms-4">
-            <div
-              className={`absolute w-3 h-3 bg-black dark:bg-stone-600 rounded-full mt-1.5 -start-1.5 border border-black`}
-            />
-            <time
-              className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
-                index === 0 || index === timelineData.length - 1
-                  ? "border border-black px-2 text-black dark:bg-white"
-                  : "bg-gray-600 text-white dark:bg-white/40 dark:text-white"
-              }`}
-            >
-              {item.date}
-            </time>
-            <h3 className="text-lg mt-1 font-semibold dark:text-white">
-              {item.title}
-            </h3>
-            <p className="text-base font-normal text-gray-700 dark:text-stone-300/80">
-              {item.description}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="flex flex-row-reverse gap-1 sm:gap-0">
+        <img
+          src="/Fathins/Fathin (8).png"
+          className="hidden md:block border-yellow-600 dark:border-yellow-300 border border-2"
+          style={{
+            rotate: "3deg",
+            height: "500px",
+            zIndex: 50,
+          }}
+        />
+        <ol className="relative border-s border-gray-300">
+          {timelineData.map((item, index) => (
+            <li key={index} className="mb-5 ms-4">
+              <div
+                className={`absolute w-3 h-3 bg-black dark:bg-stone-600 rounded-full mt-1.5 -start-1.5 border border-black`}
+              />
+              <time
+                className={`mb-1 text-sm font-bold leading-none p-1 rounded-md ${
+                  index === 0 || index === timelineData.length - 1
+                    ? "border border-black px-2 text-black dark:bg-white"
+                    : "bg-gray-600 text-white dark:bg-white/40 dark:text-white"
+                }`}
+              >
+                {item.date}
+              </time>
+              <h3 className="text-lg mt-1 font-semibold dark:text-white">
+                {item.title}
+              </h3>
+              <p className="text-base font-normal text-gray-700 dark:text-stone-300/80">
+                {item.description}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </>
   );
 }

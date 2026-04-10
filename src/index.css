@@ -11,6 +11,13 @@ body {
 .overflow-x-auto::-webkit-scrollbar {
     height: 3px;
 }
+.pdf {
+    overflow: hidden;
+    scrollbar-width: none;
+}
+.pdf::-webkit-scrollbar {
+    display: none !important;
+}
 
 /* Track (background) */
 .overflow-x-auto::-webkit-scrollbar-track {
