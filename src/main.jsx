@@ -98,7 +98,7 @@ function App() {
 
           <div
             id="mail"
-            className="relative py-10 md:py-32 dark:border-stone-600 dark:text-[#edf6ea] px-10 md:px-32 xl:px-64 rounded-b-[32px] md:rounded-b-[150px] mx-auto"
+            className="hidden py-10 md:py-32 dark:border-stone-600 dark:text-[#edf6ea] px-10 md:px-32 xl:px-64 rounded-b-[32px] md:rounded-b-[150px] mx-auto"
           >
             <h2 className="text-5xl tracking-wide font-bold text-center mb-2">
               GET IN TOUCH
@@ -108,7 +108,7 @@ function App() {
             </p>
             <form
               className="space-y-6 max-w-full"
-              action="https://formspree.io/f/xnnvjwnb"
+              action="https://formspree.io/*/*****"
               method="POST"
             >
               <div>
