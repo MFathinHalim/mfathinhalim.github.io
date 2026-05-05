@@ -138,10 +138,11 @@ function Footer() {
           <p className="mb-1">
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>
-          <a className="mb-0 pb-0" href="https://mahiru-shiina.vercel.app">
-            <span className="font-bold dark:text-[#edf6ea]">Mahiru Shiina</span>{" "}
-            is my wife
-          </a>
+          <p className="mb-0 pb-0" href="https://mahiru-shiina.vercel.app">
+            <a className="font-bold dark:text-[#edf6ea]">Mahiru Shiina</a> and{" "}
+            <a className="font-bold dark:text-[#edf6ea]">Ishimi Yokoyama</a> are
+            my wives
+          </p>
         </div>
       </footer>
     </>
