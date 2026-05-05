@@ -139,9 +139,20 @@ function Footer() {
             © {new Date().getFullYear()} M. Fathin Halim. All rights reserved.
           </p>
           <p className="mb-0 pb-0" href="https://mahiru-shiina.vercel.app">
-            <a className="font-bold dark:text-[#edf6ea]">Mahiru Shiina</a> and{" "}
-            <a className="font-bold dark:text-[#edf6ea]">Ishimi Yokoyama</a> are
-            my wives
+            <a
+              href="https://mahiru-shiina.vercel.app"
+              className="font-bold dark:text-[#edf6ea]"
+            >
+              Mahiru Shiina
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://ishimi-yokoyama.vercel.app"
+              className="font-bold dark:text-[#edf6ea]"
+            >
+              Ishimi Yokoyama
+            </a>{" "}
+            are my wives
           </p>
         </div>
       </footer>
