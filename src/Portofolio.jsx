@@ -191,10 +191,29 @@ function Portfolio({ max }) {
         "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
       title: "Contribute to Hexagrab",
       desc: "A color picker tool that helps extract colors from images.",
-      link: "https://kamusrejang.vercel.app/",
+      link: "https://hexagrab.vercel.app/",
       framework: ["NextJS", "TailwindCSS"],
       develop: ["Website"],
       date: "February 2025",
+    },
+    {
+      image: "/Screenshot/Screenshot%20(14).png",
+
+      title: "Nantangin",
+      desc: "An all in one website for explore indonesian competitions",
+      link: "https://nantangin.fathincoding.workers.dev/",
+      framework: ["Tailwind", "NextJS"],
+      develop: ["Website"],
+      date: "Mei 2026",
+    },
+    {
+      image: "/Screenshot/Screenshot%20(15).png",
+      title: "Goresan",
+      desc: "Goresan adalah platform untuk berbagi karya seni, tulisan, dan inspirasi.",
+      link: "https://goresan.vercel.app/",
+      framework: ["NextJS", "TailwindCSS", "Mongoose", "Imagekit.io", "Huggingface"],
+      develop: ["Website"],
+      date: "June 2026",
     },
   ];
 

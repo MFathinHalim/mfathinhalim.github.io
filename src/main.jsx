@@ -37,7 +37,7 @@ function App() {
           <Little />
           <Service />
           <Photography />
-          <div className="flex dark:text-[#edf6ea] flex-wrap px-4 py-20 md:py-40 lg:px-32 xl:px-64 mx-auto ">
+          <div className="flex dark:text-[#edf6ea] flex-wrap px-4 py-20 xl:px-32 mx-auto ">
             <div className="w-full lg:w-1/2 pt-3 mb-3">
               <h3
                 id="Name"

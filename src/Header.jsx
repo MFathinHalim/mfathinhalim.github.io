@@ -168,7 +168,7 @@ function Header() {
 
       <section
         id="hero-header"
-        className="relative px-5 py-10 sm:p-10 xl:px-64 min-h-screen text-black dark:text-[#edf6ea] flex flex-col justify-center"
+        className="relative px-5 py-10 sm:p-10 xl:px-16 min-h-screen text-black dark:text-[#edf6ea] flex flex-col justify-center"
       >
         <div className="flex flex-col sm:flex-row sm:justify-end sm:items-end gap-1 sm:gap-0">
           <img
@@ -201,14 +201,14 @@ function Header() {
 
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0">
           <h1
-            className={`text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
+            className={`text-4xl sm:text-6xl xl:text-7xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
               isMiniHeader ? "opacity-0" : "opacity-100"
             }`}
           >
             M.FATHIN HALIM
           </h1>
           <h1
-            className={`text-4xl sm:text-6xl xl:text-8xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight sm:text-right ${
+            className={`text-4xl sm:text-6xl xl:text-7xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight sm:text-right ${
               isMiniHeader ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -218,7 +218,7 @@ function Header() {
 
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-1 sm:gap-0 dark:text-[#edf6ea]/80 mt-1">
           <h2
-            className={`text-2xl sm:text-4xl xl:text-6xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
+            className={`text-2xl sm:text-4xl xl:text-5xl font-bold hover:opacity-60 transition-opacity duration-300 leading-tight ${
               isMiniHeader ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -226,7 +226,7 @@ function Header() {
           </h2>
           <button
             onClick={() => setShowPortofolio((prev) => !prev)}
-            className={`text-3xl sm:text-5xl xl:text-7xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left ${
+            className={`text-3xl sm:text-5xl xl:text-6xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left ${
               isMiniHeader ? "opacity-0" : "opacity-100"
             }`}
           >
@@ -242,7 +242,7 @@ function Header() {
         >
           <button
             onClick={() => setShowContact((prev) => !prev)}
-            className="text-3xl sm:text-5xl xl:text-7xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left"
+            className="text-3xl sm:text-5xl xl:text-6xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 text-left"
           >
             LET'S CONNECT
             <span className="absolute bottom-0 left-0 w-full h-1 bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -251,7 +251,7 @@ function Header() {
             href="https://github.com/mfathinhalim"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl sm:text-5xl xl:text-7xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 sm:text-right"
+            className="text-3xl sm:text-5xl xl:text-6xl font-bold group relative overflow-hidden cursor-pointer hover:opacity-60 transition-opacity duration-300 sm:text-right"
           >
             MY GITHUB
             <span className="absolute bottom-0 left-0 w-full h-1 bg-current transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />

@@ -2,7 +2,7 @@ function Footer() {
   return (
     <>
       <footer className="relative text-gray-800 dark:text-[#edf6ea]/80 pb-5 pt-16 bg-white dark:bg-[#060b04] border-t border-gray-200 dark:border-gray-700/40">
-        <div className="px-5 md:px-32 xl:px-64 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div className="px-5 lg:px-32 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           <div>
             <h2 className=" text-xl font-bold mb-2 dark:text-[#edf6ea]">
               M. Fathin Halim

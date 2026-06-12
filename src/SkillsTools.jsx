@@ -138,6 +138,7 @@ const allSkills = [
   "android development",
   "api consumption",
 ];
+
 const highlightColors = [
   "bg-yellow-300 text-black",
   "bg-green-300 text-black",
@@ -150,44 +151,61 @@ const highlightColors = [
 
 export default function SkillsTools() {
   const [hoveredSkills, setHoveredSkills] = useState([]);
+  const [activeSkill, setActiveSkill] = useState(null); // State tambahan untuk hover tulisan skill
   const shineSoundRef = useRef(null);
 
+  // Fungsi reusable untuk memutar suara efek
+  const playShineSound = () => {
+    if (shineSoundRef.current) {
+      shineSoundRef.current.currentTime = 0;
+      shineSoundRef.current
+        .play()
+        .catch((e) => console.warn("Gagal play sound:", e));
+    }
+  };
+
   return (
-    <div className="px-2 xl:px-64 py-20 md:py-32 dark:text-[#edf6ea]">
-      <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-12 px-4 md:px-0 items-start">
-        <div data-aos="fade-down" className="flex justify-center w-full">
-          <div className="grid w-full grid-cols-4 place-items-center gap-3">
-            {tools.map((tool, i) => (
-              <div
-                key={i}
-                onMouseEnter={() => {
-                  setHoveredSkills(tool.skills);
-                  if (shineSoundRef.current) {
-                    shineSoundRef.current.currentTime = 0;
-                    shineSoundRef.current
-                      .play()
-                      .catch((e) => console.warn("Gagal play sound:", e));
-                  }
-                }}
-                onMouseLeave={() => setHoveredSkills([])}
-                className="bg-white dark:bg-[#060b04] group w-20 h-20 dark:border-gray-200/20 border border-gray-200 rounded-full flex items-center justify-center transition-transform hover:scale-105 cursor-pointer"
-                title={tool.name}
-              >
-                <img
-                  src={tool.icon}
-                  alt={tool.name}
-                  className="w-10 h-10 transition-transform group-hover:scale-[150%]"
-                />
-              </div>
-            ))}
+    <div className="px-4 xl:px-32 py-20 md:py-32 dark:text-[#edf6ea]">
+      {/* Perbaikan Grid: Menggunakan 2 kolom yang responsif */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* SISI KIRI: GRID LOGO TOOLS */}
+        <div data-aos="fade-down" className="flex justify-center w-full order-2 lg:order-1">
+          <div className="grid w-full grid-cols-4 place-items-center gap-4">
+            {tools.map((tool, i) => {
+              // Logo ikut menyala jika salah satu skill-nya di-hover oleh user
+              const isToolHighlighted = activeSkill && tool.skills.includes(activeSkill);
+
+              return (
+                <div
+                  key={i}
+                  onMouseEnter={() => {
+                    setHoveredSkills(tool.skills);
+                    playShineSound();
+                  }}
+                  onMouseLeave={() => setHoveredSkills([])}
+                  className={`bg-white dark:bg-[#060b04] group w-20 h-20 dark:border-gray-200/20 border border-gray-200 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer ${
+                    isToolHighlighted ? "ring-4 ring-emerald-400 scale-105" : ""
+                  }`}
+                  title={tool.name}
+                >
+                  <img
+                    src={tool.icon}
+                    alt={tool.name}
+                    className="w-10 h-10 transition-transform group-hover:scale-125 object-contain"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        <div data-aos="fade-right" data-aos-delay="400">
-          <h2 className="text-5xl tracking-normal font-bold uppercase pl-2">
+        {/* SISI KANAN: TEXT & SKILLS */}
+        <div data-aos="fade-right" data-aos-delay="400" className="order-1 lg:order-2">
+          <h2 className="text-4xl md:text-5xl tracking-normal font-bold uppercase mb-2">
             Skills & Tools
           </h2>
-          <h2 className="text-xl font-semibold opacity-70 my-3 pl-2">
+          <h2 className="text-xl font-semibold opacity-70 mb-6">
             My friends that helped me
           </h2>
 
@@ -195,11 +213,19 @@ export default function SkillsTools() {
             {allSkills.map((skill, i) => {
               const isHovered = hoveredSkills.includes(skill);
               const colorClass = highlightColors[i % highlightColors.length];
+              
               return (
                 <span
                   key={i}
-                  className={`text-md py-1 px-2 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap ${
-                    isHovered ? `${colorClass}` : "dark:text-[#edf6ea]/80"
+                  onMouseEnter={() => {
+                    setActiveSkill(skill);
+                    playShineSound();
+                  }}
+                  onMouseLeave={() => setActiveSkill(null)}
+                  className={`text-sm md:text-md py-1 px-1.5 rounded-lg transition-all duration-300 font-semibold whitespace-nowrap cursor-default ${
+                    isHovered || activeSkill === skill
+                      ? `${colorClass} scale-105 shadow-sm`
+                      : "dark:text-[#edf6ea]/80 bg-gray-100 dark:bg-gray-900/50"
                   }`}
                 >
                   {skill}
@@ -208,6 +234,7 @@ export default function SkillsTools() {
             })}
           </div>
         </div>
+
       </div>
       <audio ref={shineSoundRef} src="/Sounds/shine.mp3" preload="auto" />
     </div>

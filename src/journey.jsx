@@ -32,7 +32,7 @@ const LazyLoadIframe = ({ src }) => {
   }, []);
 
   return (
-    <div ref={ref} className="parallax mt-4 mx-1">
+    <div ref={ref} className="parallax my-3 mx-1">
       {isVisible && (
         <div
           style={{
@@ -102,13 +102,13 @@ function App() {
             <a
               id="Name"
               href="https://www.youtube.com/@mfathinhalim"
-              className="text-2xl sm:text-4xl pb-0 px-1 font-extrabold dark:text-[#edf6ea]"
+              className="text-2xl my-3 sm:text-4xl pb-0 px-1 font-extrabold dark:text-[#edf6ea]"
             >
               Check Out TVRI National Coverage About Me
             </a>
           </article>
-          <Award />
           <LazyLoadIframe src="https://www.youtube.com/embed/D34ydqP3sK8?si=2ybXlAI46BjMiECF" />
+          <Award />
           <Portofolio />
         </div>
         <Footer />

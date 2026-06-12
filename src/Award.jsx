@@ -96,7 +96,7 @@ function Award() {
 
   return (
     <>
-      <article id="award" className="mb-8 p-1">
+      <article id="award" className="my-8 p-1">
         <h3
           data-aos="fade-up"
           data-aos-easing="linear"

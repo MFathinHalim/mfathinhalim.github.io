@@ -16,7 +16,7 @@ function Intro() {
   }, [showContact]);
   return (
     <>
-      <div id="projects" div className="py-16 px-2 lg:px-32 xl:px-64">
+      <div id="projects" div className="py-16 px-2 lg:px-32">
         <motion.div
           transition={{
             duration: 2.5,

@@ -50,12 +50,12 @@ function Path() {
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration={1000}
-        className="text-4xl my-8 dark:text-white"
+        className="text-4xl my-3 dark:text-white"
         style={{ fontWeight: "bold" }}
       >
         Timeline
       </h3>
-      <div className="flex flex-row-reverse gap-1 sm:gap-0">
+      <div className="flex flex-row-reverse mb-8 gap-1 sm:gap-0">
         <img
           src="/Fathins/Fathin (8).png"
           className="hidden md:block border-yellow-600 dark:border-yellow-300 border border-2"
