@@ -17,34 +17,55 @@ function Intro() {
   return (
     <>
       <div id="projects" div className="py-16 px-2 lg:px-32">
-        <motion.div
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-          }}
-          data-aos="fade-right"
-          className="bg-[#edf6ea] pb-5 lg:max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
-        >
-          <Screenshoot />
-          <div className="px-2 md:px-6 pt-8 md:pt-6 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold leading-snug">
-              My Journey of Programming
-            </h2>
-            <p className="opacity-50 mb-5 mt-2 text-lg">
-              A collection of apps, experiments, and challenges I've built over
-              time.
-            </p>
-            <button
-              onClick={() => setShowContact((prev) => !prev)}
-              className="group relative overflow-hidden bg-black text-[#edf6ea] hover:bg-transparent hover:text-black border dark:border-black dark:hover:bg-transparent px-5 mt-0 py-3 rounded-full transition-all duration-300 hover:-translate-y-1"
-            >
-              <span className="absolute -top-5 left-1/2 w-32 h-32 z-100 -translate-x-1/2 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 pointer-events-none sparkle" />
-              Check Now
-            </button>
-          </div>
-        </motion.div>
+       <motion.div
+  animate={{
+    y: [0, -8, 0],
+  }}
+  data-aos="fade-right"
+  className="
+    bg-[#edf6ea]
+    rounded-3xl
+    
+    overflow-hidden
+    mx-auto
+  "
+>
+  <Screenshoot />
+
+  <div className="px-4 md:px-8 py-8 md:py-10 text-center">
+    <h2 className="text-2xl md:text-4xl font-bold">
+      My Journey of Programming
+    </h2>
+
+    <p className="opacity-60 mt-3 mb-8 text-base md:text-lg max-w-2xl mx-auto">
+      A collection of apps, experiments, and challenges I've built over time.
+    </p>
+
+    <button
+      onClick={() => setShowContact((prev) => !prev)}
+      className="
+        group
+        relative
+        overflow-hidden
+        bg-black
+        text-[#edf6ea]
+        border
+        border-black
+        px-6
+        py-3
+        rounded-full
+        transition-all
+        duration-300
+        hover:bg-transparent
+        hover:text-black
+        hover:-translate-y-1
+      "
+    >
+      <span className="absolute -top-5 left-1/2 w-32 h-32 -translate-x-1/2 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 pointer-events-none sparkle" />
+      Check Now
+    </button>
+  </div>
+</motion.div>
       </div>
       {showContact && (
         <section className="fixed inset-0 flex items-center justify-center z-[9999] bg-black/30">

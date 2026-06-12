@@ -35,3 +35,34 @@ body {
 .overflow-x-auto::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollReverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 35s linear infinite;
+}
+
+.animate-scrollReverse {
+  animation: scrollReverse 35s linear infinite;
+}
+
+/* Tambahkan ini untuk nge-pause animasi */
+.animation-paused {
+  animation-play-state: paused !important;
+}

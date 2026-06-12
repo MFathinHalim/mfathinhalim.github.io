@@ -102,6 +102,7 @@ function Portfolio({ max }) {
       develop: ["Website", "Mobile"],
       date: "June 2023",
     },
+
     {
       image: "/Screenshot/Screenshot%20(2).png",
       title: "Yunation",
@@ -111,15 +112,7 @@ function Portfolio({ max }) {
       develop: ["Website"],
       date: "June 2024",
     },
-    {
-      image: "/Screenshot/Screenshot%20(10).png",
-      title: "Play Review",
-      desc: "Analysis Hundred of Reviews with AI",
-      link: "https://playreview.vercel.app/",
-      framework: ["Python", "Bootstrap", "WhatsApp Bot"],
-      develop: ["Website"],
-      date: "December 2025",
-    },
+
     {
       image: "/Screenshot/Screenshot%20(3).png",
       title: "Mahiru is Fathin's Wife",
@@ -129,6 +122,25 @@ function Portfolio({ max }) {
       develop: ["Website"],
       date: "September 2023",
     },
+     {
+      image: "/Screenshot/Screenshot%20(17).png",
+      title: "Ishimi is Fathin's Wife",
+      desc: "Ishimi Yokoyama is Fathin's Wife.",
+      link: "https://ishimi-yokoyama.vercel.app/",
+      framework: ["Next.js", "TailwindCSS"],
+      develop: ["Website"],
+      date: "April 2026",
+    },
+            {
+      image:
+        "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
+      title: "Contribute to Hexagrab",
+      desc: "A color picker tool that helps extract colors from images.",
+      link: "https://hexagrab.vercel.app/",
+      framework: ["NextJS", "TailwindCSS"],
+      develop: ["Website"],
+      date: "February 2025",
+    },
     {
       image: "/Screenshot/Screenshot%20(4).png",
       title: "Cardcozy",
@@ -137,6 +149,34 @@ function Portfolio({ max }) {
       framework: ["NextJS", "AI", "Bootstrap"],
       develop: ["Website"],
       date: "March 2025",
+    },
+        {
+      image: "/Screenshot/Screenshot%20(14).png",
+
+      title: "Nantangin",
+      desc: "An all in one website for explore indonesian competitions",
+      link: "https://nantangin.fathincoding.workers.dev/",
+      framework: ["Tailwind", "NextJS"],
+      develop: ["Website"],
+      date: "May 2026",
+    },
+        {
+      image: "/Screenshot/Screenshot%20(16).png",
+      title: "DevTycoon",
+      desc: "for GDG - #JuaraVibeCoding, DevTycoon is a (fun) scalability platform that allows you to optimize the infrastructure of a global (in this web) ecosystem/",
+      link: "https://devtycoon-game-212836286422.asia-southeast2.run.app/",
+      framework: ["ViteJS", "TailwindCSS", "Firebase", "#JuaraVibeCoding"],
+      develop: ["Website"],
+      date: "May 2026",
+    },
+        {
+      image: "/Screenshot/Screenshot%20(12).png",
+      title: "Moody",
+      desc: "Track your moodswing",
+      link: "https://moody-hours.vercel.app/",
+      framework: ["React", "Bootstrap"],
+      develop: ["Website"],
+      date: "September 2025",
     },
     {
       image:
@@ -158,15 +198,7 @@ function Portfolio({ max }) {
       develop: ["Website", "Game"],
       date: "June 2025",
     },
-    {
-      image: "/Screenshot/Screenshot%20(12).png",
-      title: "Moody",
-      desc: "Track your moodswing",
-      link: "https://moody-hours.vercel.app/",
-      framework: ["React", "Bootstrap"],
-      develop: ["Website"],
-      date: "September 2025",
-    },
+
     {
       image: "/Screenshot/Screenshot%20(13).png",
       title: "Learn JS",
@@ -187,26 +219,6 @@ function Portfolio({ max }) {
       date: "June 2025",
     },
     {
-      image:
-        "https://github.com/ramadityo/hexagrab/raw/main/assets/20250218_070002_hexagrab.png",
-      title: "Contribute to Hexagrab",
-      desc: "A color picker tool that helps extract colors from images.",
-      link: "https://hexagrab.vercel.app/",
-      framework: ["NextJS", "TailwindCSS"],
-      develop: ["Website"],
-      date: "February 2025",
-    },
-    {
-      image: "/Screenshot/Screenshot%20(14).png",
-
-      title: "Nantangin",
-      desc: "An all in one website for explore indonesian competitions",
-      link: "https://nantangin.fathincoding.workers.dev/",
-      framework: ["Tailwind", "NextJS"],
-      develop: ["Website"],
-      date: "May 2026",
-    },
-    {
       image: "/Screenshot/Screenshot%20(15).png",
       title: "Goresan",
       desc: "Goresan adalah platform untuk berbagi karya seni, tulisan, dan inspirasi.",
@@ -215,14 +227,15 @@ function Portfolio({ max }) {
       develop: ["Website"],
       date: "June 2026",
     },
-    {
-      image: "/Screenshot/Screenshot%20(16).png",
-      title: "DevTycoon",
-      desc: "for GDG - #JuaraVibeCoding, DevTycoon is a (fun) scalability platform that allows you to optimize the infrastructure of a global (in this web) ecosystem/",
-      link: "https://devtycoon-game-212836286422.asia-southeast2.run.app/",
-      framework: ["ViteJS", "TailwindCSS", "Firebase", "#JuaraVibeCoding"],
+
+        {
+      image: "/Screenshot/Screenshot%20(10).png",
+      title: "Play Review",
+      desc: "Analysis Hundred of Reviews with AI",
+      link: "https://playreview.vercel.app/",
+      framework: ["Python", "Bootstrap", "WhatsApp Bot"],
       develop: ["Website"],
-      date: "May 2026",
+      date: "December 2025",
     },
   ];
 
