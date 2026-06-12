@@ -145,7 +145,7 @@ function Little() {
     <>
       <section
         id="more"
-        className="sm:p-10 py-10 px-5 md:px-32 xl:px-64 md:pb-20 dark:text-[#edf6ea]"
+        className="sm:p-10 py-10 px-5 lg:px-32 xl:px-64 md:pb-20 dark:text-[#edf6ea]"
       >
         <div className="flex flex-col md:justify-between items-center md:flex-row-reverse gap-5 md:gap-10">
           <motion.img

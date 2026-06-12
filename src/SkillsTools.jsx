@@ -53,13 +53,13 @@ const tools = [
   },
   {
     name: "Android Studio",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Android_Studio_icon_%282023%29.svg/1200px-Android_Studio_icon_%282023%29.svg.png",
+    icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/android-studio-icon.png",
     skills: ["mobile development", "android development", "app debugging"],
   },
   {
-    name: "Zed",
-    icon: "https://zed.dev/_next/static/media/stable-app-logo.9b5f959f.png",
-    skills: ["development", "code editing", "extensions", "zed editor"],
+    name: "VSC",
+    icon: "https://code.visualstudio.com/assets/branding/app-icon.png",
+    skills: ["development", "code editing", "extensions", "vsc editor"],
   },
   {
     name: "Bootstrap",
@@ -154,7 +154,7 @@ export default function SkillsTools() {
 
   return (
     <div className="px-2 xl:px-64 py-20 md:py-32 dark:text-[#edf6ea]">
-      <div className="grid md:grid-cols-[1fr_auto_1fr] gap-12 px-4 md:px-0 items-start">
+      <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-12 px-4 md:px-0 items-start">
         <div data-aos="fade-down" className="flex justify-center w-full">
           <div className="grid w-full grid-cols-4 place-items-center gap-3">
             {tools.map((tool, i) => (
@@ -181,12 +181,6 @@ export default function SkillsTools() {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="hidden md:flex justify-center items-stretch">
-          <h2 className="mx-4 text-center self-center text-xl opacity-60 tracking-normal font-bold uppercase [writing-mode:vertical-rl] [text-orientation:mixed]">
-            ============= hover us! =============
-          </h2>
         </div>
 
         <div data-aos="fade-right" data-aos-delay="400">

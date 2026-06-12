@@ -16,7 +16,7 @@ function Intro() {
   }, [showContact]);
   return (
     <>
-      <div id="projects" div className="py-16 px-2 md:px-32 xl:px-64">
+      <div id="projects" div className="py-16 px-2 lg:px-32 xl:px-64">
         <motion.div
           transition={{
             duration: 2.5,
@@ -25,7 +25,7 @@ function Intro() {
             ease: "easeInOut",
           }}
           data-aos="fade-right"
-          className="bg-[#edf6ea] pb-5 max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
+          className="bg-[#edf6ea] pb-5 lg:max-h-[75vh] border-black/40 rounded-3xl shadow-md overflow-hidden mx-auto"
         >
           <Screenshoot />
           <div className="px-2 md:px-6 pt-8 md:pt-6 text-center">

@@ -56,7 +56,7 @@ function Photography() {
     <>
       <div
         id="gallery"
-        className="relative px-2 md:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
+        className="relative px-2 lg:px-32 xl:px-64 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
         ref={containerRef}
       >
         <h1 className="px-2 text-5xl font-bold text-center mb-3 md:mb-0">
