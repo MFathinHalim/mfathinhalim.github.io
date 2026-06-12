@@ -204,7 +204,7 @@ function Portfolio({ max }) {
       link: "https://nantangin.fathincoding.workers.dev/",
       framework: ["Tailwind", "NextJS"],
       develop: ["Website"],
-      date: "Mei 2026",
+      date: "May 2026",
     },
     {
       image: "/Screenshot/Screenshot%20(15).png",
@@ -214,6 +214,15 @@ function Portfolio({ max }) {
       framework: ["NextJS", "TailwindCSS", "Mongoose", "Imagekit.io", "Huggingface"],
       develop: ["Website"],
       date: "June 2026",
+    },
+    {
+      image: "/Screenshot/Screenshot%20(16).png",
+      title: "DevTycoon",
+      desc: "for GDG - #JuaraVibeCoding, DevTycoon is a (fun) scalability platform that allows you to optimize the infrastructure of a global (in this web) ecosystem/",
+      link: "https://devtycoon-game-212836286422.asia-southeast2.run.app/",
+      framework: ["ViteJS", "TailwindCSS", "Firebase", "#JuaraVibeCoding"],
+      develop: ["Website"],
+      date: "May 2026",
     },
   ];
 
