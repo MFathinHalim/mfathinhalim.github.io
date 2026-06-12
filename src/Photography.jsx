@@ -1,8 +1,9 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-import React, { useEffect, useState, useRef } from "react";
-import { Heart, MessageCircle, Share, Bookmark } from "lucide-react";
+gsap.registerPlugin(ScrollTrigger);
 
 function Photography() {
   const Photographys = [
@@ -20,188 +21,153 @@ function Photography() {
     "/Photography/image (3).jpg",
     "/Photography/image (4).jpg",
     "/Photography/image (5).jpg",
-    "/Photography/image (6).jpg",
   ];
 
-  const [selectedIndex, setSelectedIndex] = useState(null);
-  const [liked, setLiked] = useState(false);
-  const containerRef = useRef(null);
+  const introSectionRef = useRef(null);
+  const imagesRef = useRef([]);
+  const titleRef = useRef(null);
+  const instagramRef = useRef(null);
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
-  }, []);
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: introSectionRef.current,
+        start: "top top",
+        end: "+=300%", 
+        pin: true,     
+        scrub: 1,      
+      }
+    });
 
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (selectedIndex === null) return;
-      if (e.key === "ArrowRight")
-        setSelectedIndex((i) => (i + 1) % Photographys.length);
-      if (e.key === "ArrowLeft")
-        setSelectedIndex(
-          (i) => (i - 1 + Photographys.length) % Photographys.length,
-        );
-      if (e.key === "Escape") setSelectedIndex(null);
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [selectedIndex]);
+    // POSISI ENDING YANG TETAP MESSY/ACAK (Hanya digeser menjauh dari tengah agar teks kebaca)
+    const scatteredPositionsEnd = [
+      { x: "-26vw", y: "-26vh", r: 12 },   
+      { x: "28vw",  y: "-20vh", r: -8 },   
+      { x: "-28vw", y: "26vh",  r: 6 },    
+      { x: "26vw",  y: "22vh",  r: -14 },  
+      { x: "-32vw", y: "-10vh", r: -9 },   
+      { x: "32vw",  y: "-4vh",  r: 7 },    
+      { x: "-18vw", y: "30vh",  r: -5 },   
+      { x: "16vw",  y: "28vh",  r: 11 },   
+      { x: "-36vw", y: "4vh",   r: 8 },    
+      { x: "35vw",  y: "-28vh", r: -10 },  
+      { x: "-10vw", y: "-30vh", r: 5 },    
+      { x: "12vw",  y: "-26vh", r: -6 },   
+      { x: "-34vw", y: "16vh",  r: -11 },  
+      { x: "30vw",  y: "10vh",  r: 4 },    
+    ];
 
-  const prev = () =>
-    setSelectedIndex(
-      (i) => (i - 1 + Photographys.length) % Photographys.length,
+    // 1. ANIMASI TRANSISE MEJA BERANTAKAN A -> MEJA BERANTAKAN B
+    imagesRef.current.forEach((img, index) => {
+      if (!img) return;
+
+      const targetPos = scatteredPositionsEnd[index % scatteredPositionsEnd.length];
+
+      tl.to(img, {
+        x: targetPos.x,
+        y: targetPos.y,
+        rotation: targetPos.r, // Berputar acak ke posisi kemiringan baru
+        scale: 0.93,          // Efek visual kertas agak merapat ke meja
+        duration: 2,
+        ease: "power2.out"
+      }, 0);
+    });
+
+    // 2. ANIMASI TEXT REVEAL
+    tl.fromTo(titleRef.current, 
+      { scale: 2, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1.2, ease: "back.out(1.2)" },
+      0
     );
-  const next = () => setSelectedIndex((i) => (i + 1) % Photographys.length);
+
+    tl.to(titleRef.current, { opacity: 0, scale: 0.8, duration: 0.8 }, 1.2);
+
+    tl.fromTo(instagramRef.current,
+      { scale: 0.8, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1, ease: "power2.out" },
+      1.4
+    );
+
+  }, { scope: introSectionRef });
 
   return (
-    <>
+    <div 
+      ref={introSectionRef} 
+      className="relative dark:text-[#edf6ea] w-full h-screen flex items-center justify-center overflow-hidden select-none"
+    >
+      {/* GALLERY FATHIN FRAME */}
       <div
-        id="gallery"
-        className="relative px-2 lg:px-32 py-5 md:pb-32 md:pt-20 dark:text-[#edf6ea]"
-        ref={containerRef}
+        ref={titleRef}
+        className="absolute z-20 pointer-events-none px-6 py-4 bg-white/95 dark:bg-[#060b04]/95 backdrop-blur-sm border-2 border-zinc-200 dark:border-zinc-700 shadow-xl rounded-sm text-center max-w-sm md:max-w-xl"
       >
-        <h1 className="px-2 text-5xl font-bold text-center mb-3 md:mb-0">
-          Gallery
-        </h1>
-        <p className="px-2 text-end mb-3 font-bold text-xl">
-          *These are Fathin
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-2 auto-rows-[150px]">
-          {Photographys.map((photo, i) => (
-            <div
-              key={i}
-              className={`relative overflow-hidden transition-all duration-300 group cursor-pointer ${
-                i % 5 === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"
-              }`}
-              data-aos="zoom-in"
-              onClick={() => setSelectedIndex(i)}
-            >
-              <img
-                src={photo}
-                alt={`photo-${i}`}
-                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-            </div>
-          ))}
-        </div>
-        <p className="px-2 mt-3 font-bold text-xl">
-          *These are Fathin's Photos
-        </p>
+        <h2 className="text-5xl font-bold tracking-wider">
+          Gallery Fathin
+        </h2>
       </div>
 
-      {selectedIndex !== null && (
-        <div
-          className="fixed inset-0 bg-black/75 z-50 flex  items-center justify-center p-4"
-          onClick={(e) =>
-            e.target === e.currentTarget && setSelectedIndex(null)
-          }
+      {/* INSTAGRAM FRAME */}
+      <div 
+        ref={instagramRef}
+        className="absolute z-20 pointer-events-auto mx-4 px-6 py-4 md:px-12 md:py-6 bg-white/95 dark:bg-zinc-800/95 backdrop-blur-sm border border-dashed border-zinc-200 dark:border-zinc-700 shadow-xl flex flex-col items-center justify-center max-w-xl text-center opacity-0 rounded-sm"
+      >
+        <h1 className="text-xl font-semibold tracking-wide font-sans mb-2">
+          Also more on my Instagram
+        </h1>
+        <a 
+          href="https://instagram.com/mfathinhalim" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="font-semibold underline hover:text-zinc-500 transition text-base relative z-30"
         >
-          <div className="bg-white dark:bg-zinc-900 rounded-xl overflow-hidden flex flex-col md:flex-row w-full max-w-5xl h-[60vh] relative">
-            <button
-              onClick={() => setSelectedIndex(null)}
-              className="absolute top-3 right-3 z-10 text-white bg-black/40 rounded-full w-8 h-8 flex items-center justify-center text-lg hover:bg-black/60 transition"
+          @mfathinhalim ↗
+        </a>
+      </div>
+
+      {/* COMPONENT FOTO DI ATAS MEJA */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none flex items-center justify-center">
+        {Photographys.map((photo, index) => {
+          
+          // KOORDINAT POSISI AWAL (MESSY FORMATION 1)
+          const scatteredPositionsStart = [
+            { x: "-18vw", y: "-22vh", r: -8 },   
+            { x: "16vw",  y: "-26vh", r: 6 },    
+            { x: "-24vw", y: "18vh",  r: -12 },  
+            { x: "22vw",  y: "24vh",  r: 10 },   
+            { x: "-12vw", y: "-8vh",  r: 4 },    
+            { x: "14vw",  y: "-6vh",  r: -5 },   
+            { x: "-8vw",  y: "22vh",  r: 7 },    
+            { x: "10vw",  y: "16vh",  r: -9 },   
+            { x: "-28vw", y: "-5vh",  r: -6 },   
+            { x: "28vw",  y: "-12vh", r: 11 },   
+            { x: "-5vw",  y: "-28vh", r: -4 },   
+            { x: "6vw",   y: "-20vh", r: 5 },    
+            { x: "-16vw", y: "5vh",   r: -7 },   
+            { x: "20vw",  y: "4vh",   r: 3 },    
+          ];
+
+          const current = scatteredPositionsStart[index % scatteredPositionsStart.length];
+
+          return (
+            <div
+              key={index}
+              ref={(el) => (imagesRef.current[index] = el)}
+              className="absolute w-[24vw] h-[16vh] md:w-[13vw] md:h-[18vh] shadow-md border border-zinc-200 dark:border-zinc-800 will-change-transform"
+              style={{ 
+                transform: `translate(${current.x}, ${current.y}) rotate(${current.r}deg)`,
+                zIndex: index + 1 
+              }}
             >
-              ✕
-            </button>
-
-            <div className="flex-1 bg-black flex items-center justify-center relative min-w-0">
-              <button
-                onClick={prev}
-                className="absolute left-2 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full w-8 h-8 flex items-center justify-center transition"
-              >
-                ‹
-              </button>
-              <img
-                src={Photographys[selectedIndex]}
-                alt={`photo-${selectedIndex}`}
-                className="h-[30vh] md:h-full md:max-h-[85vh] max-w-full object-contain"
+              <img 
+                src={photo} 
+                className="w-full h-full object-cover" 
+                alt={`scattered-img-${index}`} 
+                loading="eager"
               />
-              <button
-                onClick={next}
-                className="absolute right-2 z-10 bg-white/20 hover:bg-white/40 text-white rounded-full w-8 h-8 flex items-center justify-center transition"
-              >
-                ›
-              </button>
-              <div className="absolute bottom-3 flex gap-1.5">
-                {Photographys.map((_, i) => (
-                  <div
-                    key={i}
-                    onClick={() => setSelectedIndex(i)}
-                    className={`w-1.5 h-1.5 rounded-full cursor-pointer transition-all ${
-                      i === selectedIndex ? "bg-white" : "bg-white/40"
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
-            <div className="md:w-72 flex-shrink-0 flex flex-col border-l border-zinc-200 dark:border-zinc-700">
-              <div className="flex items-center gap-3 px-4 py-3 border-b border-zinc-200 dark:border-zinc-700">
-                <img
-                  src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
-                  className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white text-sm font-medium flex-shrink-0"
-                />
-
-                <div>
-                  <p className="text-sm font-bold dark:text-white">
-                    mfathinhalim
-                  </p>
-                  <p className="text-xs text-zinc-500">Curup, Bengkulu</p>
-                </div>
-              </div>
-              <div className="flex-1 overflow-y-auto px-4 py-3 hidden md:block">
-                <div className="flex gap-2">
-                  <img
-                    src="https://ik.imagekit.io/9hpbqscxd/SG/image-100.jpg?updatedAt=1705798245623"
-                    className="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white text-xs flex-shrink-0"
-                  />
-
-                  <p className="text-sm dark:text-zinc-200">
-                    <span className="font-bold">mfathinhalim</span> Hey, check
-                    this out
-                  </p>
-                </div>
-              </div>
-              <div className="border-t border-zinc-200 dark:border-zinc-700 px-4 py-3">
-                <div className="flex gap-4 mb-2">
-                  <button
-                    onClick={() => setLiked(!liked)}
-                    className="text-2xl transition-transform active:scale-125"
-                  >
-                    {liked ? (
-                      <Heart className="text-red-500" />
-                    ) : (
-                      <Heart className="text-xl dark:text-white" />
-                    )}
-                  </button>
-                  <button className="text-xl dark:text-white">
-                    <MessageCircle />
-                  </button>
-                  <button className="text-xl dark:text-white">
-                    <Share />
-                  </button>
-                  <button className="text-xl ml-auto dark:text-white">
-                    <Bookmark />
-                  </button>
-                </div>
-                <p className="text-xs font-semibold dark:text-white">
-                  {liked ? "7310" : "7309"} likes
-                </p>
-                <p className="text-xs text-zinc-400 mt-0.5">March 7th 2010</p>
-              </div>
-              <div className="border-t border-zinc-200 dark:border-zinc-700 px-4 py-2 flex gap-2 items-center">
-                <input
-                  placeholder="Add a comment... (it's static btw)"
-                  className="flex-1 text-sm bg-transparent outline-none dark:text-white dark:placeholder-zinc-500"
-                />
-                <p className="text-xs cursor-not-allowed font-semibold text-blue-500">
-                  Post
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
