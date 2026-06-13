@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
+import Screenshoot from "./Screenshoot";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +40,10 @@ function Intro() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
+    
+    // Langsung eksekusi saat client-side mounted
     checkMobile();
+    
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
@@ -141,7 +146,6 @@ function IntroDesktop({ onCheckNow }) {
         ease: "power2.inOut",
       }, 0);
 
-      // Menggunakan fromTo dengan yPercent agar aman dari bug kalkulasi pixel inline CSS
       tl.fromTo(textPanelRef.current,
         { yPercent: 100, opacity: 0 },
         { yPercent: 0, opacity: 1, duration: 1.2, ease: "power2.out" },
@@ -217,50 +221,60 @@ function IntroDesktop({ onCheckNow }) {
 // ==========================================
 function IntroMobile({ onCheckNow }) {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-transparent select-none p-4">
-      <div className="w-full border border-black/10 dark:border-white/10 shadow-2xl overflow-hidden bg-white dark:bg-black flex flex-col justify-between rounded-2xl">
-        
-        {/* IMAGE AREA - NATIVE SCROLL */}
-        <div className="flex-1 w-full flex items-center overflow-hidden py-6">
-          <div className="w-full overflow-x-auto snap-x snap-mandatory scrollbar-none px-4">
-            <div className="flex gap-4 w-max">
-              {images.map((src, index) => (
-                <div
-                  key={index}
-                  className="snap-center shrink-0 overflow-hidden rounded-2xl shadow-2xl border border-white/5 w-auto h-[200px]"
-                >
-                  <img
-                    src={src}
-                    alt={`Screenshot ${index + 1}`}
-                    loading={index < 2 ? "eager" : "lazy"}
-                    className="w-full h-full object-cover pointer-events-none"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <motion.div
+      animate={{
+        y: [0, -8, 0],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="bg-[#edf6ea] rounded-3xl overflow-hidden mx-auto max-w-[90vw] md:max-w-md my-8 shadow-lg"
+    >
+      {/* Catatan Penting: Jika di HP masih kosong, 
+        coba matikan sementara tag <Screenshoot /> di bawah ini 
+        untuk memastikan file Screenshoot.jsx tidak menyimpan error internal.
+      */}
+      <Screenshoot />
 
-        {/* TEXT PANEL MOBILE - STATIC */}
-        <div className="w-full p-6 flex flex-col gap-6 bg-[#edf6ea] border-t border-zinc-200 dark:border-zinc-800 shrink-0">
-          <div className="text-left">
-            <h2 className="text-2xl font-bold text-zinc-900">
-              My Journey of Programming
-            </h2>
-            <p className="opacity-60 mt-2 text-sm text-zinc-700 leading-relaxed">
-              A structured collection of apps, responsive UI experiments, and core architectural challenges built over my timeline.
-            </p>
-          </div>
+      <div className="px-5 py-8 text-center">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          My Journey of Programming
+        </h2>
 
-          <div className="w-full">
-            <button onClick={onCheckNow} className="group relative overflow-hidden bg-black text-[#edf6ea] border border-black w-full py-3.5 text-sm font-medium rounded-full shadow-md">
-              Check Now ↗
-            </button>
-          </div>
-        </div>
+        <p className="opacity-60 mt-3 mb-6 text-sm text-zinc-700 max-w-xs mx-auto leading-relaxed">
+          A collection of apps, experiments, and challenges I've built over time.
+        </p>
 
+        <button
+          onClick={onCheckNow}
+          className="
+            group
+            relative
+            overflow-hidden
+            bg-black
+            text-[#edf6ea]
+            border
+            border-black
+            px-6
+            py-3
+            text-sm
+            font-medium
+            rounded-full
+            transition-all
+            duration-300
+            hover:bg-transparent
+            hover:text-black
+            hover:-translate-y-1
+            active:scale-95
+          "
+        >
+          <span className="absolute -top-5 left-1/2 w-32 h-32 -translate-x-1/2 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-700 pointer-events-none sparkle" />
+          Check Now
+        </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
